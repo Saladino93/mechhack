@@ -1,0 +1,14 @@
+{
+  "_comment": "Residual-extraction config. Override any field via env var (uppercase, e.g. LAYERS=10,30,50).",
+
+  "model_key": "gemma4_31b",
+  "use_chat_template": true,
+
+  "_layers_help": "Layer-spec syntax: 'middle' | 'early' | 'late' | int | 'i,j,k' | 'start:stop:step' | 'all'. Indexes into hidden_states (0 = embeddings, 1..n_layers = transformer block outputs).",
+  "layers": "middle",
+
+  "_dtype_help": "Storage dtype on disk: 'fp16' (~2 bytes/value) or 'bf16'. fp16 is the default — small range loss, but ~half the disk of fp32.",
+  "dtype": "fp16",
+
+  "out_dir": "./extracts"
+}

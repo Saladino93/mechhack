@@ -1,0 +1,17 @@
+{
+  "version": "1.1",
+  "n_rollouts": 7259,
+  "n_dropped_above_8192": 370,
+  "max_tokens": 8192,
+  "split_seed": "sha1(sample_id) mod 100 < 70 \u2192 train",
+  "category_counts": {
+    "prohibited": 2574,
+    "dual_use": 952,
+    "high_risk_dual_use": 1495,
+    "benign": 2238
+  },
+  "split_counts": {
+    "train": 5079,
+    "test": 2180
+  }
+}
