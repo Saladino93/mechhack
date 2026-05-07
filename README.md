@@ -115,16 +115,16 @@ All starter scripts accept `--model_path` (or auto-resolve to `./models/<repo>` 
 
 ---
 
-## What to share
+## Submission
 
-No central submission system — Colab, repo, writeup, demo, whatever fits.
+A **Google Slides** deck presented live: **10 minutes + 2 minutes follow-up**. Cover your findings and a code overview. Suggested structure:
 
-A useful structure if you want one:
+- The `f` you built for Level 1 (method, layer/feature/circuit, AUCs across the 5 tasks).
+- Your Level-2 attack — attribution source, edit mechanism, results: `probe_flip_rate / behavior_flip_rate / concordance`, plus minimality and naturalness.
+- A few worked examples — original prompt, edited prompt, the tokens you changed and why your attribution flagged them.
+- What surprised you, what didn't work, where you'd take it next.
 
-- **Level 1**: a `predict.py` mapping `(model_internals, attention_mask) → probability` + the AUC numbers from `scoring/score_probes.py`.
-- **Level 2**: a function `disrupt(probe, prompt, model, tokenizer) → trajectory` + the per-rollout `probe_flip_rate / behavior_flip_rate / concordance / minimality / naturalness` numbers from `scoring/score_disrupt.py`.
-
-Either or both. Scoring scripts are references — extend or replace if your method is shaped differently.
+Either level alone is fine. Link your code (notebook / repo / gist) on the last slide so it's reproducible after the talk.
 
 ---
 

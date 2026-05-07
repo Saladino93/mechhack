@@ -117,9 +117,6 @@ editor = make_editor("minimax-m2.7")     # AIaaS, ~8-10 s/call, keep reasoning O
 
 Wrappers set `reasoning.enabled=False` for thinking models that need it (DeepSeek-V4-Pro, Kimi). MiniMax is the exception — leave reasoning on.
 
-## Checklist
+## Submission
 
-- [ ] `disrupt.py` (or alternative-system equivalent) reproducing your runs
-- [ ] `requirements.txt` for any deps beyond ours
-- [ ] Short README on your approach
-- [ ] Deterministic given seed
+10-minute Google Slides talk + 2 minutes follow-up. See README §Submission. Link your code (notebook / repo / gist) on the last slide so it's reproducible after the talk.
