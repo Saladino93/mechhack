@@ -49,15 +49,25 @@ Implement `disrupt` however you like — your attribution, your edit agent, your
 
 ## Alternative edit systems
 
-The agentic interface is one path. Equally fine:
-- **Steering / direction ablation** along the feature `f` captures ([Arditi 2024](https://arxiv.org/abs/2406.11717))
-- **SAE feature interventions** ([Templeton 2024](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html))
-- **Circuit-level patching** ([Meng ROME 2022](https://arxiv.org/abs/2202.05262))
-- **Gradient-guided embedding edits** projected back to vocabulary
-- **Beam / evolutionary search** over fluency-constrained natural-language rewrites
-- **Non-AI rule-based editors**
+The threat model is **text-only**: the prompt is the only thing you can change. The model is used as-is; you can't ablate directions, clamp features, or patch activations at inference time. (Those are valid mech-interp tools — use them as **attribution sources**, not as the edit mechanism. See below.)
+
+The agentic interface is one path. Equally fine — as long as the output is a text prompt:
+- **Gradient-guided embedding edits projected back to vocabulary** — optimize a continuous edit in embedding space, then snap to nearest in-vocab tokens (with a fluency filter).
+- **Beam / evolutionary search** over fluency-constrained natural-language rewrites — use `f` as a fitness signal, sample candidates, keep the best.
+- **Non-AI rule-based editors** — lexical-substitution from a fluency-constrained dictionary, parametric paraphrasers, etc.
 
 Ship a function `flip(probe, prompt, model, tokenizer) → {edited_prompt, trajectory}` that produces a natural-English edited prompt; the scoring template is identical.
+
+### Attribution sources (any mech-interp tool works)
+
+The above is about *how* to edit. Separately, *what to edit* — the attribution signal driving your edits — can come from any mech-interp tool:
+- **Probe-attribution methods** — gradient × input, integrated gradients, attention-rollout on `f`.
+- **SAE features** ([Templeton 2024](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)) — which features fire on which tokens; edit tokens that load on the refusal-relevant features.
+- **Circuit input attribution** ([Marks 2024](https://arxiv.org/abs/2403.19647) sparse feature circuits; [Meng ROME 2022](https://arxiv.org/abs/2202.05262) causal tracing) — find the input tokens that drive a circuit's output, edit those.
+- **Refusal-direction loadings** ([Arditi 2024](https://arxiv.org/abs/2406.11717)) — find tokens that contribute most to the refusal direction in residual stream, edit those.
+- **Attention-head specialization** — find heads that route refusal-relevant content, attribute back to their input tokens.
+
+Hybrid combinations are explicitly fine — bandits across attribution methods, ensembled scores, etc.
 
 ## Naturalness gate
 

@@ -75,14 +75,12 @@ def disrupt(probe, prompt, model, tokenizer) -> EditTrajectory:
     """Run ≤5 iters of: attribute → propose edits → verify → apply → re-score."""
 ```
 
-This is **one** way. Equally welcome:
-- **Steering / direction ablation** along the feature your `f` captures ([Arditi et al. 2024](https://arxiv.org/abs/2406.11717) — single-direction refusal ablation; [Panickssery et al. 2023](https://arxiv.org/abs/2312.06681) — contrastive activation addition)
-- **SAE feature interventions** — clamp the features your Level-1 system flagged ([Templeton et al. 2024](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html))
-- **Circuit-level patching** ([Meng et al. ROME, 2022](https://arxiv.org/abs/2202.05262); Marks 2024)
-- Gradient-guided embedding edits projected to vocabulary
-- Non-AI rule-based editors
+This is **one** way. The threat model is **text-only edits to a frozen model** — the prompt is the only thing you can change at inference time, and the model is used as-is. Within that, equally welcome:
+- **Gradient-guided embedding edits** projected to vocabulary
+- **Beam / evolutionary search** over fluency-constrained natural-language rewrites
+- **Non-AI rule-based editors**
 
-The constraints are about the output (your `f` flips, intent preserved, natural language) — not how you produced the edit.
+The *attribution signal* driving your edits — i.e., which tokens to change — can come from any mech-interp tool: probe-attribution (grad × input, integrated gradients), SAE features ([Templeton 2024](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)) loading on input tokens, circuit input attribution ([Marks 2024](https://arxiv.org/abs/2403.19647)), refusal-direction token loadings ([Arditi 2024](https://arxiv.org/abs/2406.11717)), attention-head analysis. The constraint is on the output (text edit), not how you derive what to edit.
 
 See [`rules/disrupt.md`](rules/disrupt.md).
 
