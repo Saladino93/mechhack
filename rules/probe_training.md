@@ -14,6 +14,8 @@ Five binary classifiers over residual-stream activations of a frozen LLM:
 
 Each is a separate probe with its own train/test set drawn from the master split.
 
+> **Why this taxonomy?** It mirrors the production deployment described in the [Claude Mythos Preview System Card](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) (April 2026, §3.2 Mitigations): probe classifiers monitor *prohibited use* (e.g., developing computer worms), *high-risk dual use* (e.g., exploit development), and *dual use* (e.g., vulnerability detection). Mythos was held back from general release because of cyber-capability uplift, with probe-based monitoring the primary mitigation for the limited-partner program ("Project Glasswing"). Recreating that exact guardrail in the open lets research on probing it transfer directly to the deployed setting.
+
 ### Refusal probes (per LLM target)
 
 | Probe | Positive | Negative |
