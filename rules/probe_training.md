@@ -58,8 +58,8 @@ You **must** keep the model frozen — the LLM weights cannot be fine-tuned.
 ## Training data extraction (provided)
 
 We provide a `starter_code/extract_residuals.py` GPU script that:
-- Loads Gemma 4-31B-it / Qwen 3.6-27B from `/mloscratch/.../models/`
-- For each rollout, runs `forward(input_ids, output_hidden_states=True)`
+- Loads Gemma 4-31B-it / Qwen 3.6-27B from `--model_path` (download via `starter_code/download_models.py`, or auto-resolve from `./models/<repo-name>` / HF cache).
+- For each rollout, runs `forward(input_ids, output_hidden_states=True)`.
 - Saves per-sample `.pt` files containing `residuals: (n_selected_layers, n_tokens, d_model)` at fp16, plus `input_ids`, `attention_mask`, `layer_idxs`, `label`.
 
 **Layer selection is configurable** via `starter_code/extract_config.json` (or the `LAYERS` env var). Default is **one layer at the middle of the stack** (`"middle"`). Other valid forms:
@@ -78,9 +78,9 @@ Storage scales linearly with `len(layer_idxs)`. The default 1-layer config is ~1
 
 Alternatively, run extraction on demand inside your probe training loop — slower per epoch but no disk cost.
 
-## Submission
+## Suggested probe interface
 
-Submit a single Python file `predict.py` with this contract:
+A small `predict.py` of this shape makes your probe runnable by anyone (and by `scoring/score_probes.py`):
 
 ```python
 def load_probe() -> Any:
@@ -97,28 +97,28 @@ def predict(probe, residuals: np.ndarray, attention_mask: np.ndarray | None = No
     """
 ```
 
-If your probe needs a different layer subset than the default, ship a `layers` field in your submission (or hard-code it in `predict.py`); the scorer will re-extract residuals for the layers you specify before calling your `predict`.
+If your probe needs a different layer subset, expose a `layers` constant or function so it's clear which residuals to extract before calling `predict`.
 
-Plus probe weights file (`probe.pt`).
+Plus a probe weights file (`probe.pt`).
 
-The scorer iterates the test split, runs your `predict` per row, and computes AUC.
+`scoring/score_probes.py` iterates the test split, runs `predict` per row, and computes AUC per probe.
 
-## Headline metric
+## Suggested metric to track
 
-**Mean AUC across 5 probes:**
+**Mean AUC across the 5 probes**:
 
 ```
-score = (auc_probe1 + auc_probe2 + auc_probe3 + auc_refusal_gemma + auc_refusal_qwen) / 5
+mean_auc = (auc_probe1 + auc_probe2 + auc_probe3 + auc_refusal_gemma + auc_refusal_qwen) / 5
 ```
 
-Tied submissions broken by lowest variance across the 5 AUCs (penalises specialists).
+Variance across the 5 is also worth reporting — a low-variance probe family that ties on mean is a more robust result than a specialist.
 
 ## Constraints
 
 - No external data: train only on the provided `train` rows.
 - Frozen LLM: you may not change Gemma/Qwen weights.
-- Reproducibility: your `predict.py` must be deterministic given the input residuals.
-- Fits A100-80GB: probe forward must run in ≤ 2 GB VRAM (residuals are pre-computed).
+- Reproducible: your `predict.py` should be deterministic given the input residuals.
+- A100-80GB-friendly: probe forward should fit in ≤ 2 GB VRAM (residuals are pre-computed).
 
 ## What's interesting / open
 

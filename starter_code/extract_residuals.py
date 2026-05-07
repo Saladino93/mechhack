@@ -2,14 +2,22 @@
 
 Per sample saves shape (n_selected_layers, n_tokens, d_model) at fp16, plus
 input_ids and attention_mask. By default extracts ONE layer (middle) — tweak
-`extract_config.json` or pass LAYERS env var for more.
+`extract_config.json`, pass --layers, or set LAYERS env var for more.
 
-Layer-spec syntax (in `extract_config.json` or `LAYERS` env var):
+Usage:
+    python extract_residuals.py \
+        --model_path ./models/Gemma-4-31B-it \
+        --samples_file ../datasets/refusal_probes/gemma4_31b/attacks_full.jsonl \
+        --out_dir ./extracts/gemma4_31b \
+        --layers middle
+    # or just rely on extract_config.json defaults
+
+Layer-spec syntax:
   "middle"             one layer at n_layers // 2
   "early" / "late"     n_layers // 4 / 3 * n_layers // 4
   "32"                 single index
   "10,30,50"           explicit list
-  "0:65:8"             python-range (start:stop:step), inclusive of stop-1
+  "0:65:8"             python-range (start:stop:step)
   "all"                every layer (embedding output + each block output, n_layers+1 total)
 
 Indices are into `output_hidden_states`: index 0 is the embedding output,
@@ -18,31 +26,34 @@ indices 1..n_layers are post-block residuals.
 Datasets are pre-filtered to ≤8192 tokens, so no token-level truncation.
 For Gemma uses chunked-sdpa scope (head_dim=512 needs it on H100/A100).
 """
-import os, sys, json, time
+import os, sys, json, time, argparse
 from pathlib import Path
 import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
-try:
-    from chunked_sdpa import chunked_sdpa_scope
-except ImportError:
-    sys.path.insert(0, "/mloscratch/protsenk-kaniko")
-    from chunked_sdpa import chunked_sdpa_scope
+from chunked_sdpa import chunked_sdpa_scope
 
 os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "1")
 
 
-def load_config() -> dict:
-    """Load extract_config.json next to this script; env vars override fields."""
+def load_config(cli_args=None) -> dict:
+    """Load extract_config.json next to this script; CLI args > env > config-file."""
     cfg_path = Path(__file__).parent / "extract_config.json"
     cfg = json.loads(cfg_path.read_text()) if cfg_path.exists() else {}
     # Env overrides
     for env_key, cfg_key in [("MODEL_KEY", "model_key"), ("LAYERS", "layers"),
                               ("USE_CT", "use_chat_template"), ("DTYPE", "dtype"),
-                              ("OUT_DIR", "out_dir")]:
+                              ("OUT_DIR", "out_dir"), ("MODEL_PATH", "model_path"),
+                              ("SAMPLES_FILE", "samples_file")]:
         if env_key in os.environ:
             v = os.environ[env_key]
             cfg[cfg_key] = (v == "1") if cfg_key == "use_chat_template" else v
+    # CLI overrides
+    if cli_args:
+        for k in ("model_key", "layers", "dtype", "out_dir", "model_path", "samples_file"):
+            v = getattr(cli_args, k, None)
+            if v is not None: cfg[k] = v
+        if cli_args.no_chat_template: cfg["use_chat_template"] = False
     return cfg
 
 
@@ -86,19 +97,42 @@ def parse_layers(spec, n_layers: int) -> list[int]:
     return sorted(set(idxs))
 
 
-def load_model(model_key: str, dtype):
+HF_REPOS = {
+    "gemma4_31b": "google/gemma-4-31B-it",
+    "qwen36":     "Qwen/Qwen3.6-27B",
+}
+
+
+def resolve_model_path(model_key: str, model_path: str | None) -> str:
+    """Resolve to a local directory containing the HF snapshot.
+
+    Priority: explicit `model_path` > local `./models/<repo-name>` next to repo
+    > HF cache (snapshot_download with local_files_only) > raise.
+    """
     from huggingface_hub import snapshot_download
+    if model_path and Path(model_path).exists():
+        return str(Path(model_path).resolve())
+    repo_id = HF_REPOS.get(model_key)
+    if not repo_id:
+        raise ValueError(f"Unknown model_key {model_key!r}; pass --model_path explicitly.")
+    # Try ./models/<basename> next to the repo root
+    repo_root = Path(__file__).resolve().parent.parent
+    guess = repo_root / "models" / repo_id.split("/")[-1]
+    if guess.exists():
+        return str(guess)
+    # Fall back to HF cache
+    try:
+        return snapshot_download(repo_id=repo_id, local_files_only=True)
+    except Exception as e:
+        raise FileNotFoundError(
+            f"Could not locate {model_key} ({repo_id}). "
+            f"Either pass --model_path, set MODEL_PATH, or run download_models.py first."
+        ) from e
+
+
+def load_model(model_key: str, model_path: str | None, dtype):
     from transformers import AutoTokenizer, AutoModelForCausalLM
-    LOCAL_PATHS = {
-        "qwen36": "/mloscratch/homes/protsenk/red-teaming/models/Qwen3.6-27B",
-        "gemma4_31b": "/mloscratch/homes/protsenk/red-teaming/models/Gemma-4-31B-it",
-    }
-    if model_key in LOCAL_PATHS and Path(LOCAL_PATHS[model_key]).exists():
-        p = LOCAL_PATHS[model_key]
-    elif model_key == "gemma4_31b":
-        p = snapshot_download(repo_id="google/gemma-4-31B-it", local_files_only=True)
-    else:
-        raise ValueError(f"No local path for {model_key}")
+    p = resolve_model_path(model_key, model_path)
     tok = AutoTokenizer.from_pretrained(p, trust_remote_code=True)
     if tok.pad_token is None: tok.pad_token = tok.eos_token
     model = AutoModelForCausalLM.from_pretrained(
@@ -108,9 +142,35 @@ def load_model(model_key: str, dtype):
     return model, tok
 
 
+def parse_args():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                  formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--model_key", choices=list(HF_REPOS.keys()), default=None,
+                    help="gemma4_31b or qwen36 (default from extract_config.json)")
+    ap.add_argument("--model_path", default=None,
+                    help="Local path to HF snapshot. If not given, falls back to "
+                         "./models/<repo-name> next to this repo, then HF cache.")
+    ap.add_argument("--samples_file", default=None,
+                    help="Path to JSONL of attack rollouts. Default: "
+                         "../datasets/refusal_probes/<model_key>/attacks_full.jsonl")
+    ap.add_argument("--out_dir", default=None,
+                    help="Where to write per-sample .pt extracts (default: ./extracts)")
+    ap.add_argument("--layers", default=None,
+                    help="Layer-spec (see top of file). Default 'middle'.")
+    ap.add_argument("--dtype", choices=["fp16", "bf16"], default=None,
+                    help="Storage dtype on disk (default fp16)")
+    ap.add_argument("--no_chat_template", action="store_true",
+                    help="Skip applying the model's chat template (raw prompt only)")
+    ap.add_argument("--sample_limit", type=int, default=0,
+                    help="Process only the first N samples (0 = all)")
+    return ap.parse_args()
+
+
 def main():
-    cfg = load_config()
+    args = parse_args()
+    cfg = load_config(args)
     model_key = cfg.get("model_key", "gemma4_31b")
+    model_path = cfg.get("model_path")
     use_ct = bool(cfg.get("use_chat_template", True))
     layers_spec = cfg.get("layers", "middle")
     dtype_name = cfg.get("dtype", "fp16")
@@ -118,20 +178,19 @@ def main():
     out_root = Path(cfg.get("out_dir", "./extracts")) / model_key
     out_root.mkdir(parents=True, exist_ok=True)
 
-    samples_file = cfg.get("samples_file") or os.environ.get("SAMPLES_FILE")
+    samples_file = cfg.get("samples_file")
     if not samples_file:
         # Default: refusal-probe attacks for the chosen model
         samples_file = str(Path(__file__).resolve().parent.parent /
                            f"datasets/refusal_probes/{model_key}/attacks_full.jsonl")
     samples = [json.loads(l) for l in open(samples_file)]
-    _lim = int(os.environ.get("SAMPLE_LIMIT", "0"))
-    if _lim > 0: samples = samples[:_lim]
+    if args.sample_limit > 0: samples = samples[:args.sample_limit]
 
     print(f"=== extract_residuals model={model_key} use_ct={use_ct} layers={layers_spec!r} dtype={dtype_name} ===", flush=True)
     print(f"samples_file={samples_file} (n={len(samples)})", flush=True)
     print(f"GPU: {torch.cuda.get_device_name(0)}", flush=True)
 
-    model, tok = load_model(model_key, torch.bfloat16)
+    model, tok = load_model(model_key, model_path, torch.bfloat16)
     n_layers = len(model.model.layers) if hasattr(model.model, "layers") else 64
     layer_idxs = parse_layers(layers_spec, n_layers)
     print(f"{model_key} loaded | n_layers={n_layers} | extracting {len(layer_idxs)} layer(s): {layer_idxs}", flush=True)

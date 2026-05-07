@@ -1,22 +1,22 @@
-"""Phase 2 probe training. Adds MLP and 4-head attention probe; layer sweep
-for linear (using cached final_token_all_layers); 5 seeds; saves probe weights.
+"""Probe training: linear / MLP / single- and 4-head attention probes.
+5 seeds per arch, two regimes (batch / incremental), saves probe weights.
 
-For Qwen refusal task, switches to the new chat-template extracts at
-extracts/qwen36_ct/ — every other task uses Phase 1 extracts.
+Usage:
+    python train_probe.py \
+        --extracts_dir ./extracts/gemma4_31b \
+        --manifest    ./extracts/gemma4_31b/extraction_metadata.json \
+        --out_dir     ./probes \
+        --task        refusal_gemma4_31b   # or cyber_*
+
+The extracts directory should contain per-sample .pt files produced by
+extract_residuals.py. Manifest is the JSON written alongside extracts.
 """
-import os, sys, json, time, math, random
+import os, sys, json, time, math, random, argparse
 from pathlib import Path
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-PHASE1 = Path(os.environ.get("PHASE1_DIR", "/mloscratch/protsenk-kaniko/probes/phase1"))
-PHASE2 = Path(os.environ.get("PHASE2_DIR", "/mloscratch/protsenk-kaniko/probes/phase2"))
-RESULTS = PHASE2 / "results"
-WEIGHTS = PHASE2 / "weights"
-RESULTS.mkdir(parents=True, exist_ok=True)
-WEIGHTS.mkdir(parents=True, exist_ok=True)
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.float32
@@ -84,15 +84,25 @@ def make_probe(arch, d):
 
 
 # ---------------- data loading ----------------
-def extracts_root_for(model_key, task):
-    """Refusal_qwen36 uses chat-template extracts; everything else uses Phase 1."""
-    if task == "refusal_qwen36":
-        return PHASE2 / "extracts" / "qwen36_ct"
-    return PHASE1 / "extracts" / model_key
-
-
 def load_extract(extracts_dir, sample_id):
     return torch.load(str(extracts_dir / f"{sample_id}.pt"), weights_only=False)
+
+
+def get_full_tokens(ex):
+    """Pick the per-token residual tensor regardless of which key was used.
+
+    extract_residuals.py writes 'residuals' (n_layers_selected, N, d). Older
+    extracts may have 'middle_layer_all_tokens' (N, d). Both supported.
+    """
+    if "residuals" in ex:
+        r = ex["residuals"]
+        # If multi-layer, default to first selected layer (match extract_config "middle")
+        if r.dim() == 3 and r.shape[0] > 1:
+            return r[0]   # (N, d)
+        return r.squeeze(0) if r.dim() == 3 else r
+    if "middle_layer_all_tokens" in ex:
+        return ex["middle_layer_all_tokens"]
+    raise KeyError(f"extract missing residuals key (looked for 'residuals' / 'middle_layer_all_tokens')")
 
 
 def build_dataset(samples, label_fn, extracts_dir):
@@ -103,7 +113,7 @@ def build_dataset(samples, label_fn, extracts_dir):
             ex = load_extract(extracts_dir, s["sample_id"])
         except FileNotFoundError:
             skipped += 1; continue
-        full = ex["middle_layer_all_tokens"].to(DTYPE)
+        full = get_full_tokens(ex).to(DTYPE)
         m = ex["attention_mask"]
         if not m.any():
             skipped += 1; continue
@@ -237,16 +247,38 @@ def task_specs(manifest):
                    (lambda s, _cls=cls: 1.0 if s["label"] == _cls else 0.0))
 
 
+def parse_args():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                  formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--extracts_dir", required=True,
+                    help="Directory of per-sample .pt extracts produced by extract_residuals.py")
+    ap.add_argument("--manifest", required=True,
+                    help="JSON manifest listing samples (with sample_id, label fields)")
+    ap.add_argument("--out_dir", default="./probes",
+                    help="Where to write probe weights + per-task metrics")
+    ap.add_argument("--task", default=None,
+                    help="Filter to a single task name (default: run all tasks the manifest defines)")
+    return ap.parse_args()
+
+
 def main():
-    manifest = json.load(open(PHASE1 / "phase1_manifest.json"))
+    args = parse_args()
+    extracts_dir = Path(args.extracts_dir)
+    out_dir = Path(args.out_dir)
+    results_dir = out_dir / "results"
+    weights_dir = out_dir / "weights"
+    results_dir.mkdir(parents=True, exist_ok=True)
+    weights_dir.mkdir(parents=True, exist_ok=True)
+
+    manifest = json.load(open(args.manifest))
     rows = []
-    log_path = RESULTS / "phase2_metrics.jsonl"
+    log_path = results_dir / "metrics.jsonl"
     log_f = open(log_path, "w")
 
     for task_name, model_key, samples, label_fn in task_specs(manifest):
+        if args.task and task_name != args.task: continue
         print(f"\n=== {task_name}  ({model_key}, {len(samples)}) ===")
-        extracts = extracts_root_for(model_key, task_name)
-        ds = build_dataset(samples, label_fn, extracts)
+        ds = build_dataset(samples, label_fn, extracts_dir)
         if ds is None:
             print("  no data"); continue
         d = ds["x_final"].shape[1]
@@ -258,7 +290,7 @@ def main():
         n_pt = int(len(pos_idx) * 0.3); n_nt = int(len(neg_idx) * 0.3)
         test_idx = np.concatenate([pos_idx[:n_pt], neg_idx[:n_nt]])
         train_idx = np.concatenate([pos_idx[n_pt:], neg_idx[n_nt:]])
-        print(f"  d={d} N={N} train={len(train_idx)} test={len(test_idx)} extracts={extracts.name}")
+        print(f"  d={d} N={N} train={len(train_idx)} test={len(test_idx)} extracts={extracts_dir.name}")
 
         best_attn_state = None  # save for dashboard
         best_attn_auc = -1
@@ -272,7 +304,7 @@ def main():
                     rec = {"task": task_name, "model_key": model_key, "arch": arch,
                            "regime": reg, "seed": seed, "elapsed_s": round(elapsed, 2),
                            "N_train": int(len(train_idx)), "N_test": int(len(test_idx)),
-                           "extracts": extracts.name, **metrics}
+                           "extracts": extracts_dir.name, **metrics}
                     metrics_seeds.append(metrics)
                     rows.append(rec)
                     log_f.write(json.dumps(rec) + "\n"); log_f.flush()
@@ -288,16 +320,16 @@ def main():
             torch.save({
                 "state": best_attn_state,
                 "task": task_name, "model_key": model_key,
-                "extracts_dir": extracts.name,
+                "extracts_dir": extracts_dir.name,
                 "test_idx": test_idx.tolist(),
                 "train_idx": train_idx.tolist(),
                 "d_model": d,
                 "best_auc_seed_max": best_attn_auc,
-            }, str(WEIGHTS / f"{task_name}_attention.pt"))
+            }, str(weights_dir / f"{task_name}_attention.pt"))
 
     log_f.close()
     print(f"\nFull metrics: {log_path}")
-    print(f"Probe weights: {WEIGHTS}")
+    print(f"Probe weights: {weights_dir}")
 
 
 if __name__ == "__main__":

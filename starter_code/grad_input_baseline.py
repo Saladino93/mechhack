@@ -4,22 +4,21 @@ For each rollout, run model forward+backward to compute:
     attrib[n] = (∂probe_logit / ∂input_embed[n]) · input_embed[n]
 
 This gives TRUE per-input-token attribution (vs the residual-stream gradient
-which only attributes at one layer).
+which only attributes at one layer). Reference baseline for Level 2.
 
-Reads:
-  - phase4 manifest (filtered rollouts) via probe weights' rows_test
-  - Phase 4 extracts (for input_ids, n_tokens_total)
-  - Probe weights for the chosen layer
+Usage:
+    python grad_input_baseline.py \
+        --model_path ./models/Gemma-4-31B-it \
+        --probe_weights ./probes/refusal_gemma4_31b_attention.pt \
+        --extracts_dir ./extracts/gemma4_31b \
+        --out_dir ./edit_eval \
+        --model_key gemma4_31b --variant middle
 
-Writes:
-  - eval_inputs_<model>_gradinput_embeds_<variant>.json (top-K per rollout)
-
-Env vars:
-  MODEL_KEY:   gemma4_31b | qwen36
-  VARIANT:     middle | late | early
-  SAMPLE_LIMIT: 0 = all uncapped refusals, else first N
+The probe-weights file should expose `state_dict` and a list of test rows in
+`rows_test` (sample_id, prob, label, split, n_tokens). Extracts are produced
+by extract_residuals.py.
 """
-import os, sys, json, time, math
+import os, sys, json, time, math, argparse
 from pathlib import Path
 import torch
 import torch.nn as nn
@@ -27,29 +26,43 @@ import torch.nn.functional as F
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-sys.path.insert(0, "/mloscratch/protsenk-kaniko")
+sys.path.insert(0, str(Path(__file__).parent))
 from chunked_sdpa import chunked_sdpa_scope
 
-PHASE4 = Path("/mloscratch/protsenk-kaniko/probes/phase4")
-OUT_DIR = PHASE4 / "edit_eval"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
-
-MODEL_KEY = os.environ.get("MODEL_KEY", "gemma4_31b")
-VARIANT   = os.environ.get("VARIANT",   "middle")
-SAMPLE_LIMIT = int(os.environ.get("SAMPLE_LIMIT", "0"))
-LIMIT_TOKENS = int(os.environ.get("LIMIT_TOKENS", "1024"))
-TOPK = int(os.environ.get("TOPK", "10"))
-
-MODEL_PATHS = {
-    "gemma4_31b": "/mloscratch/homes/protsenk/red-teaming/models/Gemma-4-31B-it",
-    "qwen36":     "/mloscratch/homes/protsenk/red-teaming/models/Qwen3.6-27B",
-}
-LAYER_IDX = {  # phase 4 used these
+# Per-model layer index for "early/middle/late" — into the (n_layers+1)
+# hidden_states tuple. Matches what extract_residuals.py would pick with
+# layers="early" / "middle" / "late" for these specific architectures.
+LAYER_IDX_DEFAULT = {
     "gemma4_31b": {"early": 10, "middle": 30, "late": 50},
     "qwen36":     {"early": 10, "middle": 32, "late": 54},
-}[MODEL_KEY][VARIANT]
+}
+
+HF_REPOS = {
+    "gemma4_31b": "google/gemma-4-31B-it",
+    "qwen36":     "Qwen/Qwen3.6-27B",
+}
 
 DEVICE, DTYPE = "cuda:0", torch.bfloat16
+
+
+def resolve_model_path(model_key: str, model_path: str | None) -> str:
+    from huggingface_hub import snapshot_download
+    if model_path and Path(model_path).exists():
+        return str(Path(model_path).resolve())
+    repo_id = HF_REPOS.get(model_key)
+    if not repo_id:
+        raise ValueError(f"Unknown model_key {model_key!r}; pass --model_path.")
+    repo_root = Path(__file__).resolve().parent.parent
+    guess = repo_root / "models" / repo_id.split("/")[-1]
+    if guess.exists():
+        return str(guess)
+    try:
+        return snapshot_download(repo_id=repo_id, local_files_only=True)
+    except Exception as e:
+        raise FileNotFoundError(
+            f"Could not locate {model_key} ({repo_id}). "
+            f"Pass --model_path or run download_models.py first."
+        ) from e
 
 
 # ---------- probe ----------
@@ -109,20 +122,50 @@ def topk_editable(scores, n_tokens, ids, functional_ids, k=TOPK):
     return out
 
 
+def parse_args():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                  formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--model_key", choices=["gemma4_31b", "qwen36"], default="gemma4_31b")
+    ap.add_argument("--model_path", default=None,
+                    help="Local HF snapshot dir. Falls back to ./models/<repo-name> or HF cache.")
+    ap.add_argument("--probe_weights", required=True,
+                    help="Path to .pt file with `state_dict` + `rows_test` list.")
+    ap.add_argument("--extracts_dir", required=True,
+                    help="Directory of per-sample .pt extracts (input_ids, n_tokens_total).")
+    ap.add_argument("--out_dir", default="./edit_eval",
+                    help="Where to write the JSON output.")
+    ap.add_argument("--variant", choices=["early", "middle", "late"], default="middle")
+    ap.add_argument("--layer_idx", type=int, default=None,
+                    help="Override the early/middle/late default for this model.")
+    ap.add_argument("--limit_tokens", type=int, default=2048,
+                    help="Skip rollouts longer than this (autograd-budget constraint).")
+    ap.add_argument("--topk", type=int, default=10)
+    ap.add_argument("--sample_limit", type=int, default=0,
+                    help="0 = all eligible refusals, else first N.")
+    return ap.parse_args()
+
+
 def main():
-    print(f"=== grad_input_embeds  model={MODEL_KEY}  variant={VARIANT}  layer={LAYER_IDX} ===", flush=True)
+    args = parse_args()
+    layer_idx = (args.layer_idx if args.layer_idx is not None
+                 else LAYER_IDX_DEFAULT[args.model_key][args.variant])
+    out_dir = Path(args.out_dir); out_dir.mkdir(parents=True, exist_ok=True)
+    extracts_dir = Path(args.extracts_dir)
+
+    print(f"=== grad_input_embeds  model={args.model_key}  variant={args.variant}  layer={layer_idx} ===", flush=True)
     print(f"GPU: {torch.cuda.get_device_name(0)}", flush=True)
 
-    weights_path = PHASE4 / "weights" / MODEL_KEY / VARIANT / "lam0_seed0.pt"
-    probe, probe_ckpt = load_probe(weights_path)
-    print(f"loaded probe: AUC={probe_ckpt['metrics']['auc']:.3f} H={probe_ckpt['metrics']['H_mean']:.2f}", flush=True)
+    probe, probe_ckpt = load_probe(args.probe_weights)
+    auc = probe_ckpt.get("metrics", {}).get("auc")
+    print(f"loaded probe ({args.probe_weights})" + (f" AUC={auc:.3f}" if auc else ""), flush=True)
     rows = probe_ckpt["rows_test"]
 
-    print(f"loading model from {MODEL_PATHS[MODEL_KEY]}", flush=True)
-    tok = AutoTokenizer.from_pretrained(MODEL_PATHS[MODEL_KEY], trust_remote_code=True, local_files_only=True)
+    model_path = resolve_model_path(args.model_key, args.model_path)
+    print(f"loading model from {model_path}", flush=True)
+    tok = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
     if tok.pad_token is None: tok.pad_token = tok.eos_token
     model = AutoModelForCausalLM.from_pretrained(
-        MODEL_PATHS[MODEL_KEY],
+        model_path,
         torch_dtype=DTYPE,
         attn_implementation="sdpa",
         device_map=DEVICE,
@@ -140,20 +183,21 @@ def main():
 
     functional_ids = get_functional_ids(tok)
 
-    # Filter to uncapped refusals
+    # Filter to refusals within the autograd-friendly token budget
     refs = []; skipped = 0
     for r in rows:
         if r["split"] != "test" or r["label"] != 1: continue
-        ex_path = PHASE4 / "extracts" / MODEL_KEY / f"{r['sample_id']}.pt"
+        ex_path = extracts_dir / f"{r['sample_id']}.pt"
         if not ex_path.exists(): continue
         ex = torch.load(str(ex_path), weights_only=False, map_location="cpu")
-        if ex["n_tokens_total"] > LIMIT_TOKENS: skipped += 1; continue
+        n_tot = ex.get("n_tokens_total") or ex.get("n_tokens")
+        if n_tot and n_tot > args.limit_tokens: skipped += 1; continue
         refs.append((r, ex))
     refs.sort(key=lambda t: -t[0]["prob"])
-    if SAMPLE_LIMIT > 0: refs = refs[:SAMPLE_LIMIT]
-    print(f"uncapped refusals: {len(refs)} (skipped {skipped} truncated)", flush=True)
+    if args.sample_limit > 0: refs = refs[:args.sample_limit]
+    print(f"eligible refusals: {len(refs)} (skipped {skipped} > {args.limit_tokens} tokens)", flush=True)
 
-    use_chunked = (MODEL_KEY == "gemma4_31b")
+    use_chunked = (args.model_key == "gemma4_31b")
     cm = chunked_sdpa_scope() if use_chunked else None
     if cm is not None: cm.__enter__()
 
@@ -185,7 +229,7 @@ def main():
                 # residual at chosen layer (layer_idx is for hidden_states tuple — index of post-layer i)
                 # hidden_states[L+1] = output of transformer block L
                 # Match Phase 4 indexing: phase4 used hidden_states[layer_idx_map[VARIANT]] from (n_layers+1) tuple
-                residual = out.hidden_states[LAYER_IDX][0].to(torch.float32)  # (N, d) cast to fp32 for probe
+                residual = out.hidden_states[layer_idx][0].to(torch.float32)  # (N, d) cast to fp32 for probe
                 mask = torch.ones(n, dtype=torch.bool, device=DEVICE)
                 probe_logit, alpha = probe(residual.unsqueeze(0), mask.unsqueeze(0))
                 probe_logit_scalar = probe_logit.squeeze()  # scalar
@@ -209,18 +253,18 @@ def main():
             pieces = [p.replace("Ġ", " ").replace("▁", " ").replace("Ċ", "\n") for p in pieces]
             text_full = tok.decode(ids_list, skip_special_tokens=False)
 
-            top = topk_editable(attrib, n, ids_list, functional_ids, k=TOPK)
+            top = topk_editable(attrib, n, ids_list, functional_ids, k=args.topk)
             if not top:
                 print(f"  [{i+1}/{len(refs)}] {sid}: no editable tokens after mask", flush=True); continue
 
             out_records.append({
                 "sample_id": sid,
-                "method": f"gradinput_embeds_{VARIANT}",
-                "model_key": MODEL_KEY,
+                "method": f"gradinput_embeds_{args.variant}",
+                "model_key": args.model_key,
                 "probe_prob": float(r["prob"]),
                 "label": int(r["label"]),
                 "n_tokens": n,
-                "n_tokens_total": ex["n_tokens_total"],
+                "n_tokens_total": ex.get("n_tokens_total") or ex.get("n_tokens"),
                 "prompt_text_decoded": text_full,
                 "top_k_tokens": [
                     {"position": int(p), "token_text": pieces[p] if p < len(pieces) else "",
@@ -237,7 +281,7 @@ def main():
     finally:
         if cm is not None: cm.__exit__(None, None, None)
 
-    out_path = OUT_DIR / f"eval_inputs_{MODEL_KEY}_gradinput_embeds_{VARIANT}.json"
+    out_path = out_dir / f"eval_inputs_{args.model_key}_gradinput_embeds_{args.variant}.json"
     out_path.write_text(json.dumps(out_records, indent=2, ensure_ascii=False))
     print(f"\nDONE: wrote {out_path} ({len(out_records)} records, total {(time.time()-t_start)/60:.1f} min)", flush=True)
 
