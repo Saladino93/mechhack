@@ -37,7 +37,7 @@ You're given two corpora to work with:
 
 **Headline metric**: AUC on the held-out test split (or the closest analog for your method — for SAE features feeding a downstream classifier, report classifier AUC; for a circuit-based predictor, report whatever scalar your predictor produces).
 
-See [`rules/probe_training.md`](rules/probe_training.md).
+See [`rules/predict.md`](rules/predict.md).
 
 ---
 
