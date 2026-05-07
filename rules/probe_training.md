@@ -1,8 +1,10 @@
-# Level 1 — Probe Training Rules
+# Level 1 — Predict the model's behavior from its internals
 
-## What you're training
+The task: build a function `f: model_internals | input_prompt → predicted_label` for five classification settings (3 cyber + 2 refusal). Probes are one path; SAE features, circuits, attention-head detectors, lens-based methods, etc. all qualify. We provide a probe-shaped scaffold (extracts, training, scoring) because it's the most accessible starting point.
 
-Five binary classifiers over residual-stream activations of a frozen LLM:
+**Constrain the input to the attack prompt.** Reasoning tokens are allowed sparingly if your method genuinely needs them, but the goal is monitors that fire as early as possible — before the model produces its answer or its CoT.
+
+## The five settings
 
 ### Cyber probes (graded harm levels)
 
@@ -14,7 +16,7 @@ Five binary classifiers over residual-stream activations of a frozen LLM:
 
 Each is a separate probe with its own train/test set drawn from the master split.
 
-> **Why this taxonomy?** It mirrors the production deployment described in the [Claude Mythos Preview System Card](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) (April 2026, §3.2 Mitigations): probe classifiers monitor *prohibited use* (e.g., developing computer worms), *high-risk dual use* (e.g., exploit development), and *dual use* (e.g., vulnerability detection). Mythos was held back from general release because of cyber-capability uplift, with probe-based monitoring the primary mitigation for the limited-partner program ("Project Glasswing"). Recreating that exact guardrail in the open lets research on probing it transfer directly to the deployed setting.
+> Cyber taxonomy: production probe-classifier deployment from the [Claude Mythos Preview System Card](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) (§3.2). Mythos was held back from general release because of cyber-capability uplift; probe-based monitoring of `prohibited` / `high_risk_dual_use` / `dual_use` is the primary misuse mitigation. We recreate that guardrail in the open.
 
 ### Refusal probes (per LLM target)
 
@@ -48,14 +50,9 @@ Different probes therefore have different test sets — that's intentional. Each
 
 ## Architectural freedom
 
-You choose:
-- **Layer** to attach to (early / middle / late / all-layer-concat / mixture)
-- **Probe arch** (linear, MLP, attention probe, learned-pool, …)
-- **Hyperparameters**
-- **Optimizer & schedule**
-- **Number of training steps**
+You choose everything: layer(s), method (linear probe, MLP, attention probe, SAE-feature classifier, circuit-based detector, lens-based predictor, anything that gives you `f → label`), hyperparameters, training schedule. The only hard constraint: **the LLM weights are frozen** — you can't fine-tune Gemma or Qwen.
 
-You **must** keep the model frozen — the LLM weights cannot be fine-tuned.
+If you go beyond the probe scaffold (e.g., SAEs trained on the same residuals, circuit discovery via [ACDC](https://arxiv.org/abs/2304.14997), sparse feature circuits à la [Marks 2024](https://arxiv.org/abs/2403.19647)), report whatever scalar your method produces and its AUC against the same test split.
 
 ## Training data extraction (provided)
 
@@ -124,8 +121,6 @@ Variance across the 5 is also worth reporting — a low-variance probe family th
 
 ## What's interesting / open
 
-- **Qwen vs Gemma**: Qwen has a hybrid attention architecture (mixed full-attention + linear-attention layers). Whether refusal signal lives at the same depth and same diffusion as in Gemma is an open question. Linear probes on a single layer's final-token may underperform across layers; layer-aware methods might help.
-- **Cyber probes**: the graded ladder (`benign → dual_use → high_risk_dual_use → prohibited`) implies the upper levels are easier to discriminate against the bottom (`prohibited` vs everything-else, P3) but harder to separate from neighbors (`high_risk_dual_use` vs `dual_use`). Expect P3 > P1 > P2 in difficulty; methods that share representations across the 3 probes may help on P2.
-- **All-layer methods vs single-layer**: more capacity, harder to optimize, more disk for extracts.
-
-Bring your favorite approach: linear, MLP, attention probe, all-layer-concat, mixture-of-layers, distilled, ensembled, etc.
+- **Qwen vs Gemma**: Qwen 3.6-27B has a hybrid attention architecture (16 full-attention + 48 DeltaNet linear-attention layers). Whether refusal signal lives at the same depth and diffusion as in Gemma is open. Single-layer linear probes may underperform; layer-aware or sparse methods may help.
+- **Cyber probes**: the graded ladder implies P3 (`prohibited` vs all) is easier than P2 (`high_risk_dual_use` vs neighbors). Methods that share representation across the three probes may help on the middle one.
+- **Beyond probes**: SAE features, circuits, attention-head detectors, and lens-based predictors are all valid `f`s — most of these would be novel for refusal/cyber-classification specifically.
