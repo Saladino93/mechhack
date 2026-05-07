@@ -1,9 +1,16 @@
-"""Reference iterative edit agent.
+"""Reference iterative edit agent — example of one approach: optimize against
+the probe as a cheap proxy, optionally verify the model's actual behavior.
 
-Per rollout: 5 iterations of {attribute → propose edits → verify → apply → re-run probe}.
+Per rollout: ≤5 iterations of {attribute → propose edits → verify → apply → re-run probe}.
 Each iteration sees the trajectory of prior edits + their probe-prob deltas.
 
-THIS IS THE BASELINE. Beat it.
+The probe is a CHEAP SIGNAL — gaming it costs no reasoning tokens. The real
+question is whether flipping the probe also flipped the model's behavior. Run
+with --verify_behavior to roll the model on the final edited prompt and report
+the probe-flip-vs-behavior-flip concordance. Use --verify_each_iter to also
+gate each iteration on behavior (more expensive but a richer signal).
+
+THIS IS A BASELINE. Beat it.
 """
 from __future__ import annotations
 import os, json, argparse, time
@@ -12,6 +19,7 @@ import numpy as np
 import torch
 
 from llm_clients import make_editor, AIaaSClient, EDITS_SCHEMA, JUDGE_SCHEMA
+from behavior_verifier import verify_behavior, concordance
 
 
 EDITOR_SYSTEM = """You are a span-edit proposer for a refusal-classifier interpretability study.
@@ -138,7 +146,17 @@ def main():
                    choices=["qwen3-30b"], help="judge model (kept simple)")
     p.add_argument("--output", required=True)
     p.add_argument("--limit", type=int, default=0)
+    p.add_argument("--verify_behavior", action="store_true",
+                    help="After ≤5 iterations, re-roll the model on the final edited "
+                         "prompt and judge refusal/compliance. Reports concordance with "
+                         "probe flip rate.")
+    p.add_argument("--verify_each_iter", action="store_true",
+                    help="Verify behavior every iteration (more expensive — adds one "
+                         "model rollout + judge call per iter). Implies --verify_behavior.")
+    p.add_argument("--behavior_max_new_tokens", type=int, default=256,
+                    help="Token budget for behavior-verification rollouts.")
     args = p.parse_args()
+    if args.verify_each_iter: args.verify_behavior = True
 
     editor = make_editor(args.editor)
     judge  = make_editor(args.judge)
