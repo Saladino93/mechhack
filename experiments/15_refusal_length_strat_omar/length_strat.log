@@ -1,0 +1,16 @@
+[refusal length-strat] mean-pool L32 LR probe per length tertile
+  loading 832 extracts...
+  loaded 832 samples (0 skipped); pos=419 neg=413
+  char-length cuts: short ≤ 6490, medium ≤ 11253, long > 11253
+   short: n=277 (pos=174, neg=103), chars∈[978,6480] tokens∈[200,1866]
+  medium: n=277 (pos=162, neg=115), chars∈[6490,11249] tokens∈[1272,3776]
+    long: n=278 (pos=83, neg=195), chars∈[11253,30536] tokens∈[2350,7594]
+
+=== per-length AUC (5-fold mean ± 1σ) ===
+   short: AUC=0.9274 ± 0.0161  acc=0.8302
+  medium: AUC=0.9135 ± 0.0481  acc=0.8000
+    long: AUC=0.9100 ± 0.0482  acc=0.8540
+  overall: AUC=0.9265  (vs exp 11 mean-pool 0.9265 ± 0.0134)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/15_refusal_length_strat_omar/results.json
+wrote /lambda/nfs/georgia/mechhack/experiments/15_refusal_length_strat_omar/auc_by_length.png

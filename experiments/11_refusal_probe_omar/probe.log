@@ -1,0 +1,31 @@
+[refusal probe + Arditi direction] Gemma layer 32
+  found 832 extracts in /home/ubuntu/extracts/gemma_refusal_L32/gemma4_31b
+  pooled 100/832 in 5.6s
+  pooled 200/832 in 11.9s
+  pooled 300/832 in 19.1s
+  pooled 400/832 in 25.2s
+  pooled 500/832 in 31.8s
+  pooled 600/832 in 38.8s
+  pooled 700/832 in 45.3s
+  pooled 800/832 in 51.7s
+  loaded 832 samples (refusal=419, complied=413) in 54.4s
+  saved Arditi direction to /lambda/nfs/georgia/mechhack/experiments/11_refusal_probe_omar/arditi_direction.npy  (L2 norm of raw diff-of-means = 5.5054)
+  Arditi-direction projection AUC (mean-pool, no fitting): 0.7582
+
+  === pooling = mean ===
+    fold 0: AUC=0.9269 acc=0.8263 train_auc=0.9999 | 4.6s
+    fold 1: AUC=0.9269 acc=0.8383 train_auc=0.9999 | 3.5s
+    fold 2: AUC=0.9173 acc=0.8313 train_auc=0.9998 | 4.8s
+    fold 3: AUC=0.9480 acc=0.8554 train_auc=0.9999 | 4.1s
+    fold 4: AUC=0.9135 acc=0.7952 train_auc=0.9999 | 5.0s
+        mean: AUC=0.9265 ± 0.0134 | acc=0.8293
+
+  === pooling = last_token ===
+    fold 0: AUC=0.9089 acc=0.8323 train_auc=1.0000 | 4.0s
+    fold 1: AUC=0.9049 acc=0.8204 train_auc=1.0000 | 3.7s
+    fold 2: AUC=0.9061 acc=0.7952 train_auc=1.0000 | 3.0s
+    fold 3: AUC=0.9418 acc=0.8735 train_auc=1.0000 | 3.5s
+    fold 4: AUC=0.9232 acc=0.8313 train_auc=0.9999 | 3.0s
+  last_token: AUC=0.9170 ± 0.0157 | acc=0.8305
+
+written to /lambda/nfs/georgia/mechhack/experiments/11_refusal_probe_omar/results.json

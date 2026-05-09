@@ -1,0 +1,20 @@
+[Cross-task generalization] mean-pool, each task at its own best layer
+
+Loading cyber_1 features (layer 40, mean)...
+  cyber_1: train n=999 (pos=500, neg=499)
+    train cyber_1 → test cyber_1: AUC=1.0000  (n=999)
+    train cyber_1 → test cyber_2: AUC=0.8864  (n=1000)
+    train cyber_1 → test cyber_3: AUC=0.7133  (n=1000)
+  cyber_2: train n=1000 (pos=500, neg=500)
+    train cyber_2 → test cyber_1: AUC=0.9126  (n=999)
+    train cyber_2 → test cyber_2: AUC=1.0000  (n=1000)
+    train cyber_2 → test cyber_3: AUC=0.7945  (n=1000)
+
+Loading cyber_3 features (layer 35, mean)...
+  cyber_3: train n=1000 (pos=500, neg=500)
+    train cyber_3 → test cyber_1: AUC=0.8030  (n=999)
+    train cyber_3 → test cyber_2: AUC=0.7331  (n=1000)
+    train cyber_3 → test cyber_3: AUC=1.0000  (n=1000)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/14_cross_task_omar/results.json
+wrote /lambda/nfs/georgia/mechhack/experiments/14_cross_task_omar/matrix.png

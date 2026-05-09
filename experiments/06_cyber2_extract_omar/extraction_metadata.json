@@ -1,0 +1,3532 @@
+{
+  "model": "gemma4_31b",
+  "model_path": "/home/ubuntu/models/Gemma-4-31B-it",
+  "n_blocks": 60,
+  "layer_idxs": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "use_chat_template": true,
+  "dtype": "fp16",
+  "task": "cyber_2",
+  "selection_file": "/lambda/nfs/georgia/mechhack/experiments/06_cyber2_extract_omar/selection.json",
+  "out_dir": "/home/ubuntu/extracts/cyber_all_omar",
+  "samples": [
+    {
+      "sample_id": "cyber_3364",
+      "n_tokens": 2270,
+      "fwd_seconds": 1.1278409957885742,
+      "peak_vram_gb": 60.52,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3957",
+      "n_tokens": 5742,
+      "fwd_seconds": 2.5084176063537598,
+      "peak_vram_gb": 63.95,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_189",
+      "n_tokens": 1700,
+      "fwd_seconds": 0.4627413749694824,
+      "peak_vram_gb": 59.96,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_419",
+      "n_tokens": 403,
+      "fwd_seconds": 0.11199259757995605,
+      "peak_vram_gb": 58.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3370",
+      "n_tokens": 2363,
+      "fwd_seconds": 0.7761650085449219,
+      "peak_vram_gb": 60.61,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2823",
+      "n_tokens": 1675,
+      "fwd_seconds": 0.4129331111907959,
+      "peak_vram_gb": 59.94,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3029",
+      "n_tokens": 371,
+      "fwd_seconds": 0.10524439811706543,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4079",
+      "n_tokens": 1626,
+      "fwd_seconds": 0.37691688537597656,
+      "peak_vram_gb": 59.89,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_232",
+      "n_tokens": 1466,
+      "fwd_seconds": 0.3966665267944336,
+      "peak_vram_gb": 59.73,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3136",
+      "n_tokens": 1895,
+      "fwd_seconds": 0.4409184455871582,
+      "peak_vram_gb": 60.15,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_744",
+      "n_tokens": 1279,
+      "fwd_seconds": 0.28602051734924316,
+      "peak_vram_gb": 59.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3441",
+      "n_tokens": 1524,
+      "fwd_seconds": 0.3377540111541748,
+      "peak_vram_gb": 59.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3899",
+      "n_tokens": 8235,
+      "fwd_seconds": 4.367034673690796,
+      "peak_vram_gb": 66.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_133",
+      "n_tokens": 3188,
+      "fwd_seconds": 1.2184104919433594,
+      "peak_vram_gb": 61.43,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2590",
+      "n_tokens": 1629,
+      "fwd_seconds": 0.37993621826171875,
+      "peak_vram_gb": 59.89,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4196",
+      "n_tokens": 6427,
+      "fwd_seconds": 3.0709869861602783,
+      "peak_vram_gb": 64.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4198",
+      "n_tokens": 8087,
+      "fwd_seconds": 4.289202451705933,
+      "peak_vram_gb": 66.26,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5060",
+      "n_tokens": 888,
+      "fwd_seconds": 0.19021987915039062,
+      "peak_vram_gb": 59.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_593",
+      "n_tokens": 511,
+      "fwd_seconds": 0.13321638107299805,
+      "peak_vram_gb": 58.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4042",
+      "n_tokens": 6809,
+      "fwd_seconds": 3.2504966259002686,
+      "peak_vram_gb": 65.0,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_605",
+      "n_tokens": 372,
+      "fwd_seconds": 0.10492300987243652,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1218",
+      "n_tokens": 1692,
+      "fwd_seconds": 0.41385674476623535,
+      "peak_vram_gb": 59.95,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2063",
+      "n_tokens": 2675,
+      "fwd_seconds": 0.9932045936584473,
+      "peak_vram_gb": 60.92,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4096",
+      "n_tokens": 4675,
+      "fwd_seconds": 1.9373853206634521,
+      "peak_vram_gb": 62.9,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2981",
+      "n_tokens": 2476,
+      "fwd_seconds": 0.7983028888702393,
+      "peak_vram_gb": 60.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_138",
+      "n_tokens": 1240,
+      "fwd_seconds": 0.28501224517822266,
+      "peak_vram_gb": 59.51,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3375",
+      "n_tokens": 3558,
+      "fwd_seconds": 1.3041536808013916,
+      "peak_vram_gb": 61.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2313",
+      "n_tokens": 937,
+      "fwd_seconds": 0.19031143188476562,
+      "peak_vram_gb": 59.21,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_288",
+      "n_tokens": 1150,
+      "fwd_seconds": 0.25174999237060547,
+      "peak_vram_gb": 59.42,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2289",
+      "n_tokens": 1723,
+      "fwd_seconds": 0.4949836730957031,
+      "peak_vram_gb": 59.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3138",
+      "n_tokens": 3452,
+      "fwd_seconds": 1.2460756301879883,
+      "peak_vram_gb": 61.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2357",
+      "n_tokens": 3072,
+      "fwd_seconds": 1.0848240852355957,
+      "peak_vram_gb": 61.31,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2480",
+      "n_tokens": 2281,
+      "fwd_seconds": 0.6992039680480957,
+      "peak_vram_gb": 60.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3367",
+      "n_tokens": 2541,
+      "fwd_seconds": 0.8110527992248535,
+      "peak_vram_gb": 60.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4116",
+      "n_tokens": 3481,
+      "fwd_seconds": 1.1483209133148193,
+      "peak_vram_gb": 61.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3973",
+      "n_tokens": 1710,
+      "fwd_seconds": 0.444469690322876,
+      "peak_vram_gb": 59.97,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_855",
+      "n_tokens": 1082,
+      "fwd_seconds": 0.3305060863494873,
+      "peak_vram_gb": 59.35,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2627",
+      "n_tokens": 2317,
+      "fwd_seconds": 0.7302522659301758,
+      "peak_vram_gb": 60.57,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2846",
+      "n_tokens": 2041,
+      "fwd_seconds": 0.4843282699584961,
+      "peak_vram_gb": 60.3,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_128",
+      "n_tokens": 1440,
+      "fwd_seconds": 0.3719305992126465,
+      "peak_vram_gb": 59.7,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_187",
+      "n_tokens": 2273,
+      "fwd_seconds": 0.7135536670684814,
+      "peak_vram_gb": 60.52,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_396",
+      "n_tokens": 576,
+      "fwd_seconds": 0.1273195743560791,
+      "peak_vram_gb": 58.85,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_896",
+      "n_tokens": 2110,
+      "fwd_seconds": 0.5697522163391113,
+      "peak_vram_gb": 60.37,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3984",
+      "n_tokens": 7216,
+      "fwd_seconds": 3.670121431350708,
+      "peak_vram_gb": 65.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3665",
+      "n_tokens": 2875,
+      "fwd_seconds": 0.9763453006744385,
+      "peak_vram_gb": 61.12,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3910",
+      "n_tokens": 3820,
+      "fwd_seconds": 1.4262785911560059,
+      "peak_vram_gb": 62.05,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4076",
+      "n_tokens": 1637,
+      "fwd_seconds": 0.42741990089416504,
+      "peak_vram_gb": 59.9,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_328",
+      "n_tokens": 1892,
+      "fwd_seconds": 0.4396064281463623,
+      "peak_vram_gb": 60.15,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4204",
+      "n_tokens": 7073,
+      "fwd_seconds": 3.5082499980926514,
+      "peak_vram_gb": 65.26,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3983",
+      "n_tokens": 8053,
+      "fwd_seconds": 4.241214275360107,
+      "peak_vram_gb": 66.23,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2792",
+      "n_tokens": 2376,
+      "fwd_seconds": 0.8954763412475586,
+      "peak_vram_gb": 60.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3840",
+      "n_tokens": 6499,
+      "fwd_seconds": 3.0073962211608887,
+      "peak_vram_gb": 64.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2265",
+      "n_tokens": 940,
+      "fwd_seconds": 0.2054462432861328,
+      "peak_vram_gb": 59.21,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2614",
+      "n_tokens": 1307,
+      "fwd_seconds": 0.3020336627960205,
+      "peak_vram_gb": 59.57,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1146",
+      "n_tokens": 3483,
+      "fwd_seconds": 1.2841432094573975,
+      "peak_vram_gb": 61.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1510",
+      "n_tokens": 3296,
+      "fwd_seconds": 1.1984121799468994,
+      "peak_vram_gb": 61.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3189",
+      "n_tokens": 2193,
+      "fwd_seconds": 0.5860450267791748,
+      "peak_vram_gb": 60.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3468",
+      "n_tokens": 4364,
+      "fwd_seconds": 1.808868646621704,
+      "peak_vram_gb": 62.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4046",
+      "n_tokens": 7153,
+      "fwd_seconds": 3.456855535507202,
+      "peak_vram_gb": 65.34,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_33",
+      "n_tokens": 777,
+      "fwd_seconds": 0.17059588432312012,
+      "peak_vram_gb": 59.05,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1966",
+      "n_tokens": 1288,
+      "fwd_seconds": 0.3032188415527344,
+      "peak_vram_gb": 59.55,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_505",
+      "n_tokens": 1906,
+      "fwd_seconds": 0.4579911231994629,
+      "peak_vram_gb": 60.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_842",
+      "n_tokens": 922,
+      "fwd_seconds": 0.1846780776977539,
+      "peak_vram_gb": 59.19,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1158",
+      "n_tokens": 985,
+      "fwd_seconds": 0.1937260627746582,
+      "peak_vram_gb": 59.25,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_409",
+      "n_tokens": 518,
+      "fwd_seconds": 0.2196214199066162,
+      "peak_vram_gb": 58.8,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_116",
+      "n_tokens": 1454,
+      "fwd_seconds": 0.3234255313873291,
+      "peak_vram_gb": 59.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2675",
+      "n_tokens": 1613,
+      "fwd_seconds": 0.37386059761047363,
+      "peak_vram_gb": 59.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_450",
+      "n_tokens": 320,
+      "fwd_seconds": 0.11637115478515625,
+      "peak_vram_gb": 58.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1320",
+      "n_tokens": 2166,
+      "fwd_seconds": 0.5912854671478271,
+      "peak_vram_gb": 60.42,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5224",
+      "n_tokens": 265,
+      "fwd_seconds": 0.09389281272888184,
+      "peak_vram_gb": 58.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3218",
+      "n_tokens": 3207,
+      "fwd_seconds": 1.152395486831665,
+      "peak_vram_gb": 61.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_752",
+      "n_tokens": 438,
+      "fwd_seconds": 0.14622783660888672,
+      "peak_vram_gb": 58.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2814",
+      "n_tokens": 1089,
+      "fwd_seconds": 0.24547481536865234,
+      "peak_vram_gb": 59.36,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_540",
+      "n_tokens": 668,
+      "fwd_seconds": 0.16292142868041992,
+      "peak_vram_gb": 58.94,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1557",
+      "n_tokens": 988,
+      "fwd_seconds": 0.19578838348388672,
+      "peak_vram_gb": 59.26,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_821",
+      "n_tokens": 341,
+      "fwd_seconds": 0.11365246772766113,
+      "peak_vram_gb": 58.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1993",
+      "n_tokens": 417,
+      "fwd_seconds": 0.10482573509216309,
+      "peak_vram_gb": 58.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1325",
+      "n_tokens": 2308,
+      "fwd_seconds": 0.7422137260437012,
+      "peak_vram_gb": 60.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1322",
+      "n_tokens": 550,
+      "fwd_seconds": 0.14742279052734375,
+      "peak_vram_gb": 58.83,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3537",
+      "n_tokens": 1691,
+      "fwd_seconds": 0.42456650733947754,
+      "peak_vram_gb": 59.95,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2684",
+      "n_tokens": 1568,
+      "fwd_seconds": 0.396439790725708,
+      "peak_vram_gb": 59.83,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3170",
+      "n_tokens": 2626,
+      "fwd_seconds": 0.8633205890655518,
+      "peak_vram_gb": 60.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1363",
+      "n_tokens": 1753,
+      "fwd_seconds": 0.4492936134338379,
+      "peak_vram_gb": 60.01,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4106",
+      "n_tokens": 2774,
+      "fwd_seconds": 0.8973920345306396,
+      "peak_vram_gb": 61.02,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2641",
+      "n_tokens": 803,
+      "fwd_seconds": 0.18186426162719727,
+      "peak_vram_gb": 59.08,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2162",
+      "n_tokens": 1174,
+      "fwd_seconds": 0.3604450225830078,
+      "peak_vram_gb": 59.44,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2111",
+      "n_tokens": 1619,
+      "fwd_seconds": 0.38237547874450684,
+      "peak_vram_gb": 59.88,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4813",
+      "n_tokens": 2853,
+      "fwd_seconds": 0.925116777420044,
+      "peak_vram_gb": 61.1,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5341",
+      "n_tokens": 186,
+      "fwd_seconds": 0.12243151664733887,
+      "peak_vram_gb": 58.47,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1141",
+      "n_tokens": 2713,
+      "fwd_seconds": 0.8964109420776367,
+      "peak_vram_gb": 60.96,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1054",
+      "n_tokens": 1691,
+      "fwd_seconds": 0.4440743923187256,
+      "peak_vram_gb": 59.95,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_48",
+      "n_tokens": 595,
+      "fwd_seconds": 0.12968945503234863,
+      "peak_vram_gb": 58.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2937",
+      "n_tokens": 2408,
+      "fwd_seconds": 0.8164477348327637,
+      "peak_vram_gb": 60.66,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2078",
+      "n_tokens": 2014,
+      "fwd_seconds": 0.5229072570800781,
+      "peak_vram_gb": 60.27,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_844",
+      "n_tokens": 1475,
+      "fwd_seconds": 0.3593573570251465,
+      "peak_vram_gb": 59.74,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2941",
+      "n_tokens": 422,
+      "fwd_seconds": 0.10218262672424316,
+      "peak_vram_gb": 58.7,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_790",
+      "n_tokens": 1643,
+      "fwd_seconds": 0.40560245513916016,
+      "peak_vram_gb": 59.9,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4125",
+      "n_tokens": 6793,
+      "fwd_seconds": 3.2723047733306885,
+      "peak_vram_gb": 64.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5028",
+      "n_tokens": 3639,
+      "fwd_seconds": 1.343963623046875,
+      "peak_vram_gb": 61.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3052",
+      "n_tokens": 505,
+      "fwd_seconds": 0.19079208374023438,
+      "peak_vram_gb": 58.78,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1712",
+      "n_tokens": 1296,
+      "fwd_seconds": 0.28928494453430176,
+      "peak_vram_gb": 59.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1245",
+      "n_tokens": 1179,
+      "fwd_seconds": 0.27354860305786133,
+      "peak_vram_gb": 59.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4054",
+      "n_tokens": 1003,
+      "fwd_seconds": 0.19827890396118164,
+      "peak_vram_gb": 59.27,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5122",
+      "n_tokens": 132,
+      "fwd_seconds": 0.12246370315551758,
+      "peak_vram_gb": 58.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2544",
+      "n_tokens": 1971,
+      "fwd_seconds": 0.5012333393096924,
+      "peak_vram_gb": 60.23,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4276",
+      "n_tokens": 6212,
+      "fwd_seconds": 2.871004104614258,
+      "peak_vram_gb": 64.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_691",
+      "n_tokens": 2299,
+      "fwd_seconds": 0.7904620170593262,
+      "peak_vram_gb": 60.55,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2366",
+      "n_tokens": 1501,
+      "fwd_seconds": 0.381195068359375,
+      "peak_vram_gb": 59.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_348",
+      "n_tokens": 1601,
+      "fwd_seconds": 0.37874865531921387,
+      "peak_vram_gb": 59.86,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1571",
+      "n_tokens": 1360,
+      "fwd_seconds": 0.3045670986175537,
+      "peak_vram_gb": 59.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_969",
+      "n_tokens": 283,
+      "fwd_seconds": 0.09059834480285645,
+      "peak_vram_gb": 58.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1619",
+      "n_tokens": 3311,
+      "fwd_seconds": 1.2034707069396973,
+      "peak_vram_gb": 61.55,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4231",
+      "n_tokens": 136,
+      "fwd_seconds": 0.08205556869506836,
+      "peak_vram_gb": 58.42,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1839",
+      "n_tokens": 1261,
+      "fwd_seconds": 0.3669610023498535,
+      "peak_vram_gb": 59.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3655",
+      "n_tokens": 2884,
+      "fwd_seconds": 0.9718320369720459,
+      "peak_vram_gb": 61.13,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3055",
+      "n_tokens": 369,
+      "fwd_seconds": 0.11017560958862305,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1582",
+      "n_tokens": 1293,
+      "fwd_seconds": 0.3169856071472168,
+      "peak_vram_gb": 59.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2169",
+      "n_tokens": 1555,
+      "fwd_seconds": 0.36090970039367676,
+      "peak_vram_gb": 59.82,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2633",
+      "n_tokens": 745,
+      "fwd_seconds": 0.15056681632995605,
+      "peak_vram_gb": 59.02,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3848",
+      "n_tokens": 5543,
+      "fwd_seconds": 2.406280755996704,
+      "peak_vram_gb": 63.75,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_940",
+      "n_tokens": 1339,
+      "fwd_seconds": 0.3868379592895508,
+      "peak_vram_gb": 59.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4251",
+      "n_tokens": 1046,
+      "fwd_seconds": 0.2343587875366211,
+      "peak_vram_gb": 59.32,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3064",
+      "n_tokens": 4284,
+      "fwd_seconds": 1.6610162258148193,
+      "peak_vram_gb": 62.51,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1517",
+      "n_tokens": 1524,
+      "fwd_seconds": 0.3455655574798584,
+      "peak_vram_gb": 59.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2144",
+      "n_tokens": 1649,
+      "fwd_seconds": 0.3847520351409912,
+      "peak_vram_gb": 59.91,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1808",
+      "n_tokens": 1073,
+      "fwd_seconds": 0.23684406280517578,
+      "peak_vram_gb": 59.34,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1059",
+      "n_tokens": 1783,
+      "fwd_seconds": 0.44888806343078613,
+      "peak_vram_gb": 60.04,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1434",
+      "n_tokens": 1002,
+      "fwd_seconds": 0.24541759490966797,
+      "peak_vram_gb": 59.27,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3961",
+      "n_tokens": 7545,
+      "fwd_seconds": 3.7759435176849365,
+      "peak_vram_gb": 65.73,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4098",
+      "n_tokens": 7060,
+      "fwd_seconds": 3.3655900955200195,
+      "peak_vram_gb": 65.25,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3716",
+      "n_tokens": 3025,
+      "fwd_seconds": 1.0302999019622803,
+      "peak_vram_gb": 61.27,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2120",
+      "n_tokens": 1522,
+      "fwd_seconds": 0.367678165435791,
+      "peak_vram_gb": 59.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4118",
+      "n_tokens": 7402,
+      "fwd_seconds": 3.595418930053711,
+      "peak_vram_gb": 65.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1995",
+      "n_tokens": 441,
+      "fwd_seconds": 0.11494278907775879,
+      "peak_vram_gb": 58.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1169",
+      "n_tokens": 1822,
+      "fwd_seconds": 0.6685361862182617,
+      "peak_vram_gb": 60.08,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3674",
+      "n_tokens": 2720,
+      "fwd_seconds": 0.8872725963592529,
+      "peak_vram_gb": 60.97,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_131",
+      "n_tokens": 2448,
+      "fwd_seconds": 0.7806439399719238,
+      "peak_vram_gb": 60.7,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_676",
+      "n_tokens": 1290,
+      "fwd_seconds": 0.329010009765625,
+      "peak_vram_gb": 59.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1086",
+      "n_tokens": 1505,
+      "fwd_seconds": 0.33819103240966797,
+      "peak_vram_gb": 59.77,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2056",
+      "n_tokens": 2063,
+      "fwd_seconds": 0.5542709827423096,
+      "peak_vram_gb": 60.32,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_989",
+      "n_tokens": 1961,
+      "fwd_seconds": 0.5216822624206543,
+      "peak_vram_gb": 60.22,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4953",
+      "n_tokens": 1723,
+      "fwd_seconds": 0.5224690437316895,
+      "peak_vram_gb": 59.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3402",
+      "n_tokens": 3149,
+      "fwd_seconds": 1.1528851985931396,
+      "peak_vram_gb": 61.39,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3981",
+      "n_tokens": 7494,
+      "fwd_seconds": 3.737795352935791,
+      "peak_vram_gb": 65.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3548",
+      "n_tokens": 2023,
+      "fwd_seconds": 0.5511198043823242,
+      "peak_vram_gb": 60.28,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_170",
+      "n_tokens": 499,
+      "fwd_seconds": 0.12698054313659668,
+      "peak_vram_gb": 58.78,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2352",
+      "n_tokens": 1922,
+      "fwd_seconds": 0.5243890285491943,
+      "peak_vram_gb": 60.18,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2574",
+      "n_tokens": 1272,
+      "fwd_seconds": 0.3102753162384033,
+      "peak_vram_gb": 59.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_313",
+      "n_tokens": 2636,
+      "fwd_seconds": 0.9550092220306396,
+      "peak_vram_gb": 60.88,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2390",
+      "n_tokens": 1285,
+      "fwd_seconds": 0.2955756187438965,
+      "peak_vram_gb": 59.55,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_227",
+      "n_tokens": 4024,
+      "fwd_seconds": 1.5144329071044922,
+      "peak_vram_gb": 62.25,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_908",
+      "n_tokens": 2180,
+      "fwd_seconds": 0.6083357334136963,
+      "peak_vram_gb": 60.43,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2766",
+      "n_tokens": 1294,
+      "fwd_seconds": 0.30440306663513184,
+      "peak_vram_gb": 59.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1595",
+      "n_tokens": 3517,
+      "fwd_seconds": 1.3032658100128174,
+      "peak_vram_gb": 61.75,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4889",
+      "n_tokens": 1230,
+      "fwd_seconds": 0.2719583511352539,
+      "peak_vram_gb": 59.5,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3024",
+      "n_tokens": 373,
+      "fwd_seconds": 0.20007944107055664,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4165",
+      "n_tokens": 3965,
+      "fwd_seconds": 1.4860799312591553,
+      "peak_vram_gb": 62.19,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3628",
+      "n_tokens": 2529,
+      "fwd_seconds": 0.8177573680877686,
+      "peak_vram_gb": 60.78,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_53",
+      "n_tokens": 582,
+      "fwd_seconds": 0.13213086128234863,
+      "peak_vram_gb": 58.86,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3802",
+      "n_tokens": 1482,
+      "fwd_seconds": 0.3650188446044922,
+      "peak_vram_gb": 59.75,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4103",
+      "n_tokens": 5818,
+      "fwd_seconds": 2.5312249660491943,
+      "peak_vram_gb": 64.02,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1025",
+      "n_tokens": 2316,
+      "fwd_seconds": 0.7182869911193848,
+      "peak_vram_gb": 60.57,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_923",
+      "n_tokens": 343,
+      "fwd_seconds": 0.18375706672668457,
+      "peak_vram_gb": 58.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4287",
+      "n_tokens": 7985,
+      "fwd_seconds": 4.019869327545166,
+      "peak_vram_gb": 66.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_277",
+      "n_tokens": 896,
+      "fwd_seconds": 0.19843411445617676,
+      "peak_vram_gb": 59.17,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1400",
+      "n_tokens": 3062,
+      "fwd_seconds": 1.0217924118041992,
+      "peak_vram_gb": 61.3,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2487",
+      "n_tokens": 2159,
+      "fwd_seconds": 0.6166810989379883,
+      "peak_vram_gb": 60.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2705",
+      "n_tokens": 3445,
+      "fwd_seconds": 1.2399752140045166,
+      "peak_vram_gb": 61.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3882",
+      "n_tokens": 3356,
+      "fwd_seconds": 1.290496826171875,
+      "peak_vram_gb": 61.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_543",
+      "n_tokens": 590,
+      "fwd_seconds": 0.25260066986083984,
+      "peak_vram_gb": 58.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_947",
+      "n_tokens": 1369,
+      "fwd_seconds": 0.3289773464202881,
+      "peak_vram_gb": 59.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4187",
+      "n_tokens": 5970,
+      "fwd_seconds": 2.6423134803771973,
+      "peak_vram_gb": 64.17,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3214",
+      "n_tokens": 2388,
+      "fwd_seconds": 0.7511119842529297,
+      "peak_vram_gb": 60.64,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2010",
+      "n_tokens": 1434,
+      "fwd_seconds": 0.3351881504058838,
+      "peak_vram_gb": 59.7,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1063",
+      "n_tokens": 736,
+      "fwd_seconds": 0.15541553497314453,
+      "peak_vram_gb": 59.01,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_468",
+      "n_tokens": 1181,
+      "fwd_seconds": 0.26135754585266113,
+      "peak_vram_gb": 59.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4040",
+      "n_tokens": 6404,
+      "fwd_seconds": 3.0517444610595703,
+      "peak_vram_gb": 64.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2335",
+      "n_tokens": 1131,
+      "fwd_seconds": 0.2706148624420166,
+      "peak_vram_gb": 59.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1210",
+      "n_tokens": 530,
+      "fwd_seconds": 0.1140739917755127,
+      "peak_vram_gb": 58.81,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2619",
+      "n_tokens": 2037,
+      "fwd_seconds": 0.5518395900726318,
+      "peak_vram_gb": 60.29,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3038",
+      "n_tokens": 448,
+      "fwd_seconds": 0.1349325180053711,
+      "peak_vram_gb": 58.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1052",
+      "n_tokens": 921,
+      "fwd_seconds": 0.19585204124450684,
+      "peak_vram_gb": 59.19,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3588",
+      "n_tokens": 523,
+      "fwd_seconds": 0.11847352981567383,
+      "peak_vram_gb": 58.8,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_59",
+      "n_tokens": 632,
+      "fwd_seconds": 0.1903703212738037,
+      "peak_vram_gb": 58.91,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3757",
+      "n_tokens": 6468,
+      "fwd_seconds": 2.985948324203491,
+      "peak_vram_gb": 64.66,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_86",
+      "n_tokens": 612,
+      "fwd_seconds": 0.14554214477539062,
+      "peak_vram_gb": 58.89,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_94",
+      "n_tokens": 1113,
+      "fwd_seconds": 0.2425060272216797,
+      "peak_vram_gb": 59.38,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_231",
+      "n_tokens": 1097,
+      "fwd_seconds": 0.24011826515197754,
+      "peak_vram_gb": 59.36,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3430",
+      "n_tokens": 354,
+      "fwd_seconds": 0.11825084686279297,
+      "peak_vram_gb": 58.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3058",
+      "n_tokens": 793,
+      "fwd_seconds": 0.1592864990234375,
+      "peak_vram_gb": 59.06,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_41",
+      "n_tokens": 1182,
+      "fwd_seconds": 0.3130149841308594,
+      "peak_vram_gb": 59.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4021",
+      "n_tokens": 6420,
+      "fwd_seconds": 2.944930076599121,
+      "peak_vram_gb": 64.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3976",
+      "n_tokens": 1724,
+      "fwd_seconds": 0.42717432975769043,
+      "peak_vram_gb": 59.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4860",
+      "n_tokens": 2885,
+      "fwd_seconds": 0.9639511108398438,
+      "peak_vram_gb": 61.13,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4806",
+      "n_tokens": 1567,
+      "fwd_seconds": 0.4045388698577881,
+      "peak_vram_gb": 59.83,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4247",
+      "n_tokens": 5013,
+      "fwd_seconds": 2.0593647956848145,
+      "peak_vram_gb": 63.23,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3287",
+      "n_tokens": 3040,
+      "fwd_seconds": 1.0420496463775635,
+      "peak_vram_gb": 61.28,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1975",
+      "n_tokens": 1261,
+      "fwd_seconds": 0.39357495307922363,
+      "peak_vram_gb": 59.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3030",
+      "n_tokens": 344,
+      "fwd_seconds": 0.10219383239746094,
+      "peak_vram_gb": 58.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_598",
+      "n_tokens": 489,
+      "fwd_seconds": 0.11874938011169434,
+      "peak_vram_gb": 58.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4069",
+      "n_tokens": 510,
+      "fwd_seconds": 0.14968204498291016,
+      "peak_vram_gb": 58.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1511",
+      "n_tokens": 523,
+      "fwd_seconds": 0.11168217658996582,
+      "peak_vram_gb": 58.8,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1719",
+      "n_tokens": 2321,
+      "fwd_seconds": 0.7488787174224854,
+      "peak_vram_gb": 60.57,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1549",
+      "n_tokens": 2452,
+      "fwd_seconds": 0.7527725696563721,
+      "peak_vram_gb": 60.7,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1465",
+      "n_tokens": 1389,
+      "fwd_seconds": 0.33163881301879883,
+      "peak_vram_gb": 59.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5050",
+      "n_tokens": 1524,
+      "fwd_seconds": 0.3331162929534912,
+      "peak_vram_gb": 59.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2492",
+      "n_tokens": 1869,
+      "fwd_seconds": 0.461838960647583,
+      "peak_vram_gb": 60.13,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_125",
+      "n_tokens": 488,
+      "fwd_seconds": 0.12198495864868164,
+      "peak_vram_gb": 58.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2836",
+      "n_tokens": 2198,
+      "fwd_seconds": 0.5641875267028809,
+      "peak_vram_gb": 60.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2331",
+      "n_tokens": 2582,
+      "fwd_seconds": 0.7993733882904053,
+      "peak_vram_gb": 60.83,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2116",
+      "n_tokens": 961,
+      "fwd_seconds": 0.21589016914367676,
+      "peak_vram_gb": 59.23,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3673",
+      "n_tokens": 2304,
+      "fwd_seconds": 0.6333520412445068,
+      "peak_vram_gb": 60.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3301",
+      "n_tokens": 2155,
+      "fwd_seconds": 0.5216519832611084,
+      "peak_vram_gb": 60.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2562",
+      "n_tokens": 3969,
+      "fwd_seconds": 1.3890612125396729,
+      "peak_vram_gb": 62.2,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1675",
+      "n_tokens": 1147,
+      "fwd_seconds": 0.2550804615020752,
+      "peak_vram_gb": 59.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_363",
+      "n_tokens": 339,
+      "fwd_seconds": 0.09339523315429688,
+      "peak_vram_gb": 58.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1799",
+      "n_tokens": 1459,
+      "fwd_seconds": 0.3409743309020996,
+      "peak_vram_gb": 59.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_927",
+      "n_tokens": 769,
+      "fwd_seconds": 0.16404056549072266,
+      "peak_vram_gb": 59.04,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_764",
+      "n_tokens": 1038,
+      "fwd_seconds": 0.2921783924102783,
+      "peak_vram_gb": 59.31,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2872",
+      "n_tokens": 2920,
+      "fwd_seconds": 0.9570221900939941,
+      "peak_vram_gb": 61.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5156",
+      "n_tokens": 117,
+      "fwd_seconds": 0.10233187675476074,
+      "peak_vram_gb": 58.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2493",
+      "n_tokens": 1846,
+      "fwd_seconds": 0.43290162086486816,
+      "peak_vram_gb": 60.11,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2222",
+      "n_tokens": 1841,
+      "fwd_seconds": 0.4323582649230957,
+      "peak_vram_gb": 60.1,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4246",
+      "n_tokens": 6087,
+      "fwd_seconds": 2.7328779697418213,
+      "peak_vram_gb": 64.29,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1431",
+      "n_tokens": 1978,
+      "fwd_seconds": 0.4692683219909668,
+      "peak_vram_gb": 60.24,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3589",
+      "n_tokens": 1860,
+      "fwd_seconds": 0.5203406810760498,
+      "peak_vram_gb": 60.12,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4053",
+      "n_tokens": 1397,
+      "fwd_seconds": 0.3110337257385254,
+      "peak_vram_gb": 59.66,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4936",
+      "n_tokens": 1223,
+      "fwd_seconds": 0.26729869842529297,
+      "peak_vram_gb": 59.49,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1822",
+      "n_tokens": 1345,
+      "fwd_seconds": 0.2961397171020508,
+      "peak_vram_gb": 59.61,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3379",
+      "n_tokens": 1424,
+      "fwd_seconds": 0.3207206726074219,
+      "peak_vram_gb": 59.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1152",
+      "n_tokens": 72,
+      "fwd_seconds": 0.09207439422607422,
+      "peak_vram_gb": 58.35,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1792",
+      "n_tokens": 1057,
+      "fwd_seconds": 0.24147510528564453,
+      "peak_vram_gb": 59.33,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_658",
+      "n_tokens": 269,
+      "fwd_seconds": 0.11780881881713867,
+      "peak_vram_gb": 58.55,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1616",
+      "n_tokens": 2738,
+      "fwd_seconds": 0.7831079959869385,
+      "peak_vram_gb": 60.99,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2198",
+      "n_tokens": 2297,
+      "fwd_seconds": 0.6275925636291504,
+      "peak_vram_gb": 60.55,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4286",
+      "n_tokens": 7435,
+      "fwd_seconds": 3.6010994911193848,
+      "peak_vram_gb": 65.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2850",
+      "n_tokens": 2716,
+      "fwd_seconds": 0.7759406566619873,
+      "peak_vram_gb": 60.96,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_797",
+      "n_tokens": 352,
+      "fwd_seconds": 0.09885668754577637,
+      "peak_vram_gb": 58.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3297",
+      "n_tokens": 2592,
+      "fwd_seconds": 0.7303183078765869,
+      "peak_vram_gb": 60.84,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2525",
+      "n_tokens": 2042,
+      "fwd_seconds": 0.5663142204284668,
+      "peak_vram_gb": 60.3,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1412",
+      "n_tokens": 499,
+      "fwd_seconds": 0.10784673690795898,
+      "peak_vram_gb": 58.78,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_670",
+      "n_tokens": 236,
+      "fwd_seconds": 0.092864990234375,
+      "peak_vram_gb": 58.52,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2468",
+      "n_tokens": 1338,
+      "fwd_seconds": 0.30313563346862793,
+      "peak_vram_gb": 59.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3351",
+      "n_tokens": 1775,
+      "fwd_seconds": 0.4087197780609131,
+      "peak_vram_gb": 60.03,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2476",
+      "n_tokens": 1775,
+      "fwd_seconds": 0.40636277198791504,
+      "peak_vram_gb": 60.03,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1382",
+      "n_tokens": 2687,
+      "fwd_seconds": 0.7369000911712646,
+      "peak_vram_gb": 60.93,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1843",
+      "n_tokens": 2333,
+      "fwd_seconds": 0.6190264225006104,
+      "peak_vram_gb": 60.58,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2133",
+      "n_tokens": 2353,
+      "fwd_seconds": 0.6126141548156738,
+      "peak_vram_gb": 60.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_234",
+      "n_tokens": 1997,
+      "fwd_seconds": 0.46915459632873535,
+      "peak_vram_gb": 60.25,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_301",
+      "n_tokens": 731,
+      "fwd_seconds": 0.16399788856506348,
+      "peak_vram_gb": 59.0,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1739",
+      "n_tokens": 1413,
+      "fwd_seconds": 0.3181877136230469,
+      "peak_vram_gb": 59.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_456",
+      "n_tokens": 790,
+      "fwd_seconds": 0.16071462631225586,
+      "peak_vram_gb": 59.06,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2029",
+      "n_tokens": 2048,
+      "fwd_seconds": 0.49091386795043945,
+      "peak_vram_gb": 60.3,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1472",
+      "n_tokens": 633,
+      "fwd_seconds": 0.18861913681030273,
+      "peak_vram_gb": 58.91,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_439",
+      "n_tokens": 351,
+      "fwd_seconds": 0.09447383880615234,
+      "peak_vram_gb": 58.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_652",
+      "n_tokens": 424,
+      "fwd_seconds": 0.1067655086517334,
+      "peak_vram_gb": 58.7,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4085",
+      "n_tokens": 2868,
+      "fwd_seconds": 0.9086003303527832,
+      "peak_vram_gb": 61.11,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3008",
+      "n_tokens": 3969,
+      "fwd_seconds": 1.48759126663208,
+      "peak_vram_gb": 62.2,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_77",
+      "n_tokens": 1161,
+      "fwd_seconds": 0.27161478996276855,
+      "peak_vram_gb": 59.43,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3853",
+      "n_tokens": 8388,
+      "fwd_seconds": 4.418356895446777,
+      "peak_vram_gb": 66.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_406",
+      "n_tokens": 369,
+      "fwd_seconds": 0.12855029106140137,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3410",
+      "n_tokens": 2286,
+      "fwd_seconds": 0.758995771408081,
+      "peak_vram_gb": 60.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_298",
+      "n_tokens": 2248,
+      "fwd_seconds": 0.6093292236328125,
+      "peak_vram_gb": 60.5,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3065",
+      "n_tokens": 2134,
+      "fwd_seconds": 0.5331289768218994,
+      "peak_vram_gb": 60.39,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1838",
+      "n_tokens": 1380,
+      "fwd_seconds": 0.3596022129058838,
+      "peak_vram_gb": 59.64,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_206",
+      "n_tokens": 1608,
+      "fwd_seconds": 0.40729331970214844,
+      "peak_vram_gb": 59.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3986",
+      "n_tokens": 5855,
+      "fwd_seconds": 2.521419048309326,
+      "peak_vram_gb": 64.06,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2969",
+      "n_tokens": 2774,
+      "fwd_seconds": 0.8031072616577148,
+      "peak_vram_gb": 61.02,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1797",
+      "n_tokens": 1354,
+      "fwd_seconds": 0.31537938117980957,
+      "peak_vram_gb": 59.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3309",
+      "n_tokens": 2421,
+      "fwd_seconds": 0.8067879676818848,
+      "peak_vram_gb": 60.67,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_253",
+      "n_tokens": 835,
+      "fwd_seconds": 0.22863197326660156,
+      "peak_vram_gb": 59.11,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_968",
+      "n_tokens": 1908,
+      "fwd_seconds": 0.4585392475128174,
+      "peak_vram_gb": 60.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4272",
+      "n_tokens": 6392,
+      "fwd_seconds": 3.2969164848327637,
+      "peak_vram_gb": 64.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_466",
+      "n_tokens": 1794,
+      "fwd_seconds": 0.49947261810302734,
+      "peak_vram_gb": 60.05,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2363",
+      "n_tokens": 3284,
+      "fwd_seconds": 1.1787538528442383,
+      "peak_vram_gb": 61.52,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4037",
+      "n_tokens": 6118,
+      "fwd_seconds": 2.8427231311798096,
+      "peak_vram_gb": 64.32,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3836",
+      "n_tokens": 3593,
+      "fwd_seconds": 1.377479076385498,
+      "peak_vram_gb": 61.83,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1144",
+      "n_tokens": 1718,
+      "fwd_seconds": 0.6613519191741943,
+      "peak_vram_gb": 59.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1180",
+      "n_tokens": 349,
+      "fwd_seconds": 0.10919332504272461,
+      "peak_vram_gb": 58.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1656",
+      "n_tokens": 712,
+      "fwd_seconds": 0.18733811378479004,
+      "peak_vram_gb": 58.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_862",
+      "n_tokens": 1489,
+      "fwd_seconds": 0.44792747497558594,
+      "peak_vram_gb": 59.75,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3914",
+      "n_tokens": 3754,
+      "fwd_seconds": 1.4217503070831299,
+      "peak_vram_gb": 61.99,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5017",
+      "n_tokens": 1625,
+      "fwd_seconds": 0.37165379524230957,
+      "peak_vram_gb": 59.89,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1994",
+      "n_tokens": 379,
+      "fwd_seconds": 0.15774965286254883,
+      "peak_vram_gb": 58.66,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1044",
+      "n_tokens": 1989,
+      "fwd_seconds": 0.5096774101257324,
+      "peak_vram_gb": 60.24,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2610",
+      "n_tokens": 1627,
+      "fwd_seconds": 0.4576420783996582,
+      "peak_vram_gb": 59.89,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1964",
+      "n_tokens": 1189,
+      "fwd_seconds": 0.28984856605529785,
+      "peak_vram_gb": 59.46,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3400",
+      "n_tokens": 1650,
+      "fwd_seconds": 0.4166872501373291,
+      "peak_vram_gb": 59.91,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2472",
+      "n_tokens": 1907,
+      "fwd_seconds": 0.5559141635894775,
+      "peak_vram_gb": 60.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_905",
+      "n_tokens": 1480,
+      "fwd_seconds": 0.38442540168762207,
+      "peak_vram_gb": 59.74,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4123",
+      "n_tokens": 8248,
+      "fwd_seconds": 4.203108310699463,
+      "peak_vram_gb": 66.42,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2488",
+      "n_tokens": 1130,
+      "fwd_seconds": 0.262681245803833,
+      "peak_vram_gb": 59.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4183",
+      "n_tokens": 7987,
+      "fwd_seconds": 3.9636518955230713,
+      "peak_vram_gb": 66.16,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_668",
+      "n_tokens": 654,
+      "fwd_seconds": 0.2096116542816162,
+      "peak_vram_gb": 58.93,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3474",
+      "n_tokens": 3552,
+      "fwd_seconds": 1.1799988746643066,
+      "peak_vram_gb": 61.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6",
+      "n_tokens": 384,
+      "fwd_seconds": 0.09476852416992188,
+      "peak_vram_gb": 58.66,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2723",
+      "n_tokens": 2944,
+      "fwd_seconds": 0.9282736778259277,
+      "peak_vram_gb": 61.19,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3503",
+      "n_tokens": 1494,
+      "fwd_seconds": 0.32932448387145996,
+      "peak_vram_gb": 59.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1939",
+      "n_tokens": 1557,
+      "fwd_seconds": 0.36840295791625977,
+      "peak_vram_gb": 59.82,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4270",
+      "n_tokens": 6530,
+      "fwd_seconds": 2.949004650115967,
+      "peak_vram_gb": 64.73,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2012",
+      "n_tokens": 1259,
+      "fwd_seconds": 0.2826535701751709,
+      "peak_vram_gb": 59.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1946",
+      "n_tokens": 925,
+      "fwd_seconds": 0.2526845932006836,
+      "peak_vram_gb": 59.19,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2830",
+      "n_tokens": 533,
+      "fwd_seconds": 0.1099998950958252,
+      "peak_vram_gb": 58.81,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2744",
+      "n_tokens": 586,
+      "fwd_seconds": 0.11775851249694824,
+      "peak_vram_gb": 58.86,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4859",
+      "n_tokens": 1442,
+      "fwd_seconds": 0.31412577629089355,
+      "peak_vram_gb": 59.71,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_902",
+      "n_tokens": 2427,
+      "fwd_seconds": 0.694265604019165,
+      "peak_vram_gb": 60.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2672",
+      "n_tokens": 1559,
+      "fwd_seconds": 0.35466694831848145,
+      "peak_vram_gb": 59.82,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_550",
+      "n_tokens": 326,
+      "fwd_seconds": 0.09421801567077637,
+      "peak_vram_gb": 58.61,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3176",
+      "n_tokens": 2143,
+      "fwd_seconds": 0.5355207920074463,
+      "peak_vram_gb": 60.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1267",
+      "n_tokens": 2736,
+      "fwd_seconds": 0.761650800704956,
+      "peak_vram_gb": 60.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4873",
+      "n_tokens": 441,
+      "fwd_seconds": 0.0954442024230957,
+      "peak_vram_gb": 58.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3119",
+      "n_tokens": 2513,
+      "fwd_seconds": 0.6896553039550781,
+      "peak_vram_gb": 60.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4223",
+      "n_tokens": 4631,
+      "fwd_seconds": 1.7084825038909912,
+      "peak_vram_gb": 62.85,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_295",
+      "n_tokens": 1143,
+      "fwd_seconds": 0.261030912399292,
+      "peak_vram_gb": 59.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5034",
+      "n_tokens": 1839,
+      "fwd_seconds": 0.44970154762268066,
+      "peak_vram_gb": 60.1,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3054",
+      "n_tokens": 392,
+      "fwd_seconds": 0.09426021575927734,
+      "peak_vram_gb": 58.67,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_910",
+      "n_tokens": 2621,
+      "fwd_seconds": 0.8189132213592529,
+      "peak_vram_gb": 60.87,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3444",
+      "n_tokens": 1977,
+      "fwd_seconds": 0.5151410102844238,
+      "peak_vram_gb": 60.23,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1375",
+      "n_tokens": 3996,
+      "fwd_seconds": 1.322281837463379,
+      "peak_vram_gb": 62.22,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3644",
+      "n_tokens": 1981,
+      "fwd_seconds": 0.46241164207458496,
+      "peak_vram_gb": 60.24,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4022",
+      "n_tokens": 7713,
+      "fwd_seconds": 3.76200270652771,
+      "peak_vram_gb": 65.89,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4921",
+      "n_tokens": 1093,
+      "fwd_seconds": 0.24530315399169922,
+      "peak_vram_gb": 59.36,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1206",
+      "n_tokens": 631,
+      "fwd_seconds": 0.12625789642333984,
+      "peak_vram_gb": 58.91,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_434",
+      "n_tokens": 1748,
+      "fwd_seconds": 0.3982505798339844,
+      "peak_vram_gb": 60.01,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_734",
+      "n_tokens": 358,
+      "fwd_seconds": 0.09607386589050293,
+      "peak_vram_gb": 58.64,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1143",
+      "n_tokens": 2841,
+      "fwd_seconds": 0.9069371223449707,
+      "peak_vram_gb": 61.08,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3956",
+      "n_tokens": 7658,
+      "fwd_seconds": 3.6728315353393555,
+      "peak_vram_gb": 65.84,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3852",
+      "n_tokens": 6257,
+      "fwd_seconds": 2.7187740802764893,
+      "peak_vram_gb": 64.46,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_626",
+      "n_tokens": 3022,
+      "fwd_seconds": 0.8724002838134766,
+      "peak_vram_gb": 61.27,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1212",
+      "n_tokens": 719,
+      "fwd_seconds": 0.1461036205291748,
+      "peak_vram_gb": 58.99,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_688",
+      "n_tokens": 1471,
+      "fwd_seconds": 0.32898879051208496,
+      "peak_vram_gb": 59.73,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_996",
+      "n_tokens": 782,
+      "fwd_seconds": 0.15525555610656738,
+      "peak_vram_gb": 59.06,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2495",
+      "n_tokens": 839,
+      "fwd_seconds": 0.1620628833770752,
+      "peak_vram_gb": 59.11,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2778",
+      "n_tokens": 1716,
+      "fwd_seconds": 0.48403453826904297,
+      "peak_vram_gb": 59.97,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1642",
+      "n_tokens": 1046,
+      "fwd_seconds": 0.2268054485321045,
+      "peak_vram_gb": 59.32,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1061",
+      "n_tokens": 1446,
+      "fwd_seconds": 0.31490135192871094,
+      "peak_vram_gb": 59.71,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2838",
+      "n_tokens": 1028,
+      "fwd_seconds": 0.2264089584350586,
+      "peak_vram_gb": 59.3,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2360",
+      "n_tokens": 2094,
+      "fwd_seconds": 0.4985923767089844,
+      "peak_vram_gb": 60.35,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_140",
+      "n_tokens": 2496,
+      "fwd_seconds": 0.7069919109344482,
+      "peak_vram_gb": 60.74,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1138",
+      "n_tokens": 1275,
+      "fwd_seconds": 0.2742197513580322,
+      "peak_vram_gb": 59.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_332",
+      "n_tokens": 834,
+      "fwd_seconds": 0.16185712814331055,
+      "peak_vram_gb": 59.11,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2465",
+      "n_tokens": 1326,
+      "fwd_seconds": 0.32851529121398926,
+      "peak_vram_gb": 59.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5035",
+      "n_tokens": 1987,
+      "fwd_seconds": 0.462695837020874,
+      "peak_vram_gb": 60.24,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_554",
+      "n_tokens": 402,
+      "fwd_seconds": 0.09280109405517578,
+      "peak_vram_gb": 58.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_380",
+      "n_tokens": 396,
+      "fwd_seconds": 0.09019780158996582,
+      "peak_vram_gb": 58.67,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3640",
+      "n_tokens": 1958,
+      "fwd_seconds": 0.45150089263916016,
+      "peak_vram_gb": 60.22,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1283",
+      "n_tokens": 2480,
+      "fwd_seconds": 0.6743135452270508,
+      "peak_vram_gb": 60.73,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1665",
+      "n_tokens": 1544,
+      "fwd_seconds": 0.3455040454864502,
+      "peak_vram_gb": 59.81,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4900",
+      "n_tokens": 2433,
+      "fwd_seconds": 0.6874337196350098,
+      "peak_vram_gb": 60.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3912",
+      "n_tokens": 3890,
+      "fwd_seconds": 1.3601775169372559,
+      "peak_vram_gb": 62.12,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4002",
+      "n_tokens": 6783,
+      "fwd_seconds": 3.043710708618164,
+      "peak_vram_gb": 64.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1394",
+      "n_tokens": 2366,
+      "fwd_seconds": 0.5846133232116699,
+      "peak_vram_gb": 60.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2048",
+      "n_tokens": 1537,
+      "fwd_seconds": 0.3504784107208252,
+      "peak_vram_gb": 59.8,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2877",
+      "n_tokens": 212,
+      "fwd_seconds": 0.07866311073303223,
+      "peak_vram_gb": 58.49,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4071",
+      "n_tokens": 1272,
+      "fwd_seconds": 0.2708861827850342,
+      "peak_vram_gb": 59.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_449",
+      "n_tokens": 1383,
+      "fwd_seconds": 0.3004016876220703,
+      "peak_vram_gb": 59.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1585",
+      "n_tokens": 2526,
+      "fwd_seconds": 0.7440273761749268,
+      "peak_vram_gb": 60.78,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1566",
+      "n_tokens": 1480,
+      "fwd_seconds": 0.40242934226989746,
+      "peak_vram_gb": 59.74,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4976",
+      "n_tokens": 708,
+      "fwd_seconds": 0.14390969276428223,
+      "peak_vram_gb": 58.98,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5312",
+      "n_tokens": 127,
+      "fwd_seconds": 0.07344889640808105,
+      "peak_vram_gb": 58.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1597",
+      "n_tokens": 1520,
+      "fwd_seconds": 0.3304567337036133,
+      "peak_vram_gb": 59.78,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_802",
+      "n_tokens": 1343,
+      "fwd_seconds": 0.2885918617248535,
+      "peak_vram_gb": 59.61,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_324",
+      "n_tokens": 1766,
+      "fwd_seconds": 0.4020421504974365,
+      "peak_vram_gb": 60.03,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_912",
+      "n_tokens": 296,
+      "fwd_seconds": 0.084625244140625,
+      "peak_vram_gb": 58.57,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_446",
+      "n_tokens": 1135,
+      "fwd_seconds": 0.2490391731262207,
+      "peak_vram_gb": 59.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_526",
+      "n_tokens": 812,
+      "fwd_seconds": 0.1821272373199463,
+      "peak_vram_gb": 59.08,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4210",
+      "n_tokens": 6760,
+      "fwd_seconds": 3.0638444423675537,
+      "peak_vram_gb": 64.95,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3812",
+      "n_tokens": 1232,
+      "fwd_seconds": 0.26964783668518066,
+      "peak_vram_gb": 59.5,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1478",
+      "n_tokens": 1120,
+      "fwd_seconds": 0.24213624000549316,
+      "peak_vram_gb": 59.39,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3179",
+      "n_tokens": 3025,
+      "fwd_seconds": 0.9382705688476562,
+      "peak_vram_gb": 61.27,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3647",
+      "n_tokens": 3513,
+      "fwd_seconds": 1.1603147983551025,
+      "peak_vram_gb": 61.75,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1730",
+      "n_tokens": 1112,
+      "fwd_seconds": 0.24236083030700684,
+      "peak_vram_gb": 59.38,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1711",
+      "n_tokens": 1252,
+      "fwd_seconds": 0.27023911476135254,
+      "peak_vram_gb": 59.52,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_402",
+      "n_tokens": 1073,
+      "fwd_seconds": 0.3016834259033203,
+      "peak_vram_gb": 59.34,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3281",
+      "n_tokens": 2989,
+      "fwd_seconds": 0.9544336795806885,
+      "peak_vram_gb": 61.23,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_693",
+      "n_tokens": 1402,
+      "fwd_seconds": 0.31056761741638184,
+      "peak_vram_gb": 59.67,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2406",
+      "n_tokens": 260,
+      "fwd_seconds": 0.08289837837219238,
+      "peak_vram_gb": 58.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_421",
+      "n_tokens": 370,
+      "fwd_seconds": 0.08975577354431152,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1336",
+      "n_tokens": 810,
+      "fwd_seconds": 0.1551206111907959,
+      "peak_vram_gb": 59.08,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1019",
+      "n_tokens": 740,
+      "fwd_seconds": 0.1430952548980713,
+      "peak_vram_gb": 59.01,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4004",
+      "n_tokens": 6499,
+      "fwd_seconds": 2.929358959197998,
+      "peak_vram_gb": 64.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2584",
+      "n_tokens": 2175,
+      "fwd_seconds": 0.5521042346954346,
+      "peak_vram_gb": 60.43,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4264",
+      "n_tokens": 7281,
+      "fwd_seconds": 3.404381036758423,
+      "peak_vram_gb": 65.47,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3004",
+      "n_tokens": 3407,
+      "fwd_seconds": 1.0896868705749512,
+      "peak_vram_gb": 61.64,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3897",
+      "n_tokens": 6958,
+      "fwd_seconds": 3.2150919437408447,
+      "peak_vram_gb": 65.15,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_22",
+      "n_tokens": 482,
+      "fwd_seconds": 0.11292910575866699,
+      "peak_vram_gb": 58.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3226",
+      "n_tokens": 3583,
+      "fwd_seconds": 1.1700623035430908,
+      "peak_vram_gb": 61.82,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3806",
+      "n_tokens": 1949,
+      "fwd_seconds": 0.4537813663482666,
+      "peak_vram_gb": 60.2,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3950",
+      "n_tokens": 8332,
+      "fwd_seconds": 4.265934228897095,
+      "peak_vram_gb": 66.5,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1987",
+      "n_tokens": 1656,
+      "fwd_seconds": 0.49008750915527344,
+      "peak_vram_gb": 59.92,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_423",
+      "n_tokens": 432,
+      "fwd_seconds": 0.09675765037536621,
+      "peak_vram_gb": 58.71,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3783",
+      "n_tokens": 1968,
+      "fwd_seconds": 0.4535250663757324,
+      "peak_vram_gb": 60.22,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1345",
+      "n_tokens": 866,
+      "fwd_seconds": 0.1675424575805664,
+      "peak_vram_gb": 59.14,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3074",
+      "n_tokens": 3342,
+      "fwd_seconds": 1.121131181716919,
+      "peak_vram_gb": 61.58,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2460",
+      "n_tokens": 1113,
+      "fwd_seconds": 0.24256610870361328,
+      "peak_vram_gb": 59.38,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3829",
+      "n_tokens": 3472,
+      "fwd_seconds": 1.1916859149932861,
+      "peak_vram_gb": 61.71,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3595",
+      "n_tokens": 2212,
+      "fwd_seconds": 0.5638670921325684,
+      "peak_vram_gb": 60.46,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_265",
+      "n_tokens": 2796,
+      "fwd_seconds": 0.8322060108184814,
+      "peak_vram_gb": 61.04,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3794",
+      "n_tokens": 1214,
+      "fwd_seconds": 0.26431918144226074,
+      "peak_vram_gb": 59.48,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_414",
+      "n_tokens": 465,
+      "fwd_seconds": 0.09927821159362793,
+      "peak_vram_gb": 58.74,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4166",
+      "n_tokens": 2539,
+      "fwd_seconds": 0.7709090709686279,
+      "peak_vram_gb": 60.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1795",
+      "n_tokens": 1948,
+      "fwd_seconds": 0.455364465713501,
+      "peak_vram_gb": 60.2,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_866",
+      "n_tokens": 1711,
+      "fwd_seconds": 0.40358781814575195,
+      "peak_vram_gb": 59.97,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1276",
+      "n_tokens": 3005,
+      "fwd_seconds": 0.9428994655609131,
+      "peak_vram_gb": 61.25,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_677",
+      "n_tokens": 1068,
+      "fwd_seconds": 0.24342131614685059,
+      "peak_vram_gb": 59.34,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3970",
+      "n_tokens": 1171,
+      "fwd_seconds": 0.30818915367126465,
+      "peak_vram_gb": 59.44,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_144",
+      "n_tokens": 3205,
+      "fwd_seconds": 1.0638093948364258,
+      "peak_vram_gb": 61.44,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3563",
+      "n_tokens": 3537,
+      "fwd_seconds": 1.2161264419555664,
+      "peak_vram_gb": 61.77,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3906",
+      "n_tokens": 4235,
+      "fwd_seconds": 1.5628001689910889,
+      "peak_vram_gb": 62.46,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4958",
+      "n_tokens": 817,
+      "fwd_seconds": 0.166015625,
+      "peak_vram_gb": 59.09,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3516",
+      "n_tokens": 3146,
+      "fwd_seconds": 1.0321271419525146,
+      "peak_vram_gb": 61.39,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_292",
+      "n_tokens": 411,
+      "fwd_seconds": 0.0979914665222168,
+      "peak_vram_gb": 58.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2241",
+      "n_tokens": 2376,
+      "fwd_seconds": 0.6509864330291748,
+      "peak_vram_gb": 60.63,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_511",
+      "n_tokens": 581,
+      "fwd_seconds": 0.18681907653808594,
+      "peak_vram_gb": 58.86,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3254",
+      "n_tokens": 5376,
+      "fwd_seconds": 2.0751359462738037,
+      "peak_vram_gb": 63.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1932",
+      "n_tokens": 1661,
+      "fwd_seconds": 0.37493324279785156,
+      "peak_vram_gb": 59.92,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_12",
+      "n_tokens": 823,
+      "fwd_seconds": 0.16109013557434082,
+      "peak_vram_gb": 59.09,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4233",
+      "n_tokens": 150,
+      "fwd_seconds": 0.0752403736114502,
+      "peak_vram_gb": 58.43,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1931",
+      "n_tokens": 1333,
+      "fwd_seconds": 0.28472089767456055,
+      "peak_vram_gb": 59.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_254",
+      "n_tokens": 722,
+      "fwd_seconds": 0.14414429664611816,
+      "peak_vram_gb": 59.0,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_660",
+      "n_tokens": 249,
+      "fwd_seconds": 0.0778195858001709,
+      "peak_vram_gb": 58.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1794",
+      "n_tokens": 1427,
+      "fwd_seconds": 0.35560011863708496,
+      "peak_vram_gb": 59.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4000",
+      "n_tokens": 6764,
+      "fwd_seconds": 3.064846992492676,
+      "peak_vram_gb": 64.96,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1703",
+      "n_tokens": 1080,
+      "fwd_seconds": 0.2413468360900879,
+      "peak_vram_gb": 59.35,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5302",
+      "n_tokens": 172,
+      "fwd_seconds": 0.0744020938873291,
+      "peak_vram_gb": 58.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1018",
+      "n_tokens": 1965,
+      "fwd_seconds": 0.4845387935638428,
+      "peak_vram_gb": 60.22,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_754",
+      "n_tokens": 538,
+      "fwd_seconds": 0.1121358871459961,
+      "peak_vram_gb": 58.81,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2593",
+      "n_tokens": 1772,
+      "fwd_seconds": 0.4000389575958252,
+      "peak_vram_gb": 60.03,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3626",
+      "n_tokens": 5790,
+      "fwd_seconds": 2.422577381134033,
+      "peak_vram_gb": 64.0,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4200",
+      "n_tokens": 7208,
+      "fwd_seconds": 3.4337410926818848,
+      "peak_vram_gb": 65.39,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3592",
+      "n_tokens": 2160,
+      "fwd_seconds": 0.5205388069152832,
+      "peak_vram_gb": 60.41,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2769",
+      "n_tokens": 4378,
+      "fwd_seconds": 1.5329549312591553,
+      "peak_vram_gb": 62.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_751",
+      "n_tokens": 375,
+      "fwd_seconds": 0.0954747200012207,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4141",
+      "n_tokens": 5389,
+      "fwd_seconds": 2.09561824798584,
+      "peak_vram_gb": 63.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5016",
+      "n_tokens": 1763,
+      "fwd_seconds": 0.4071207046508789,
+      "peak_vram_gb": 60.02,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3550",
+      "n_tokens": 2772,
+      "fwd_seconds": 0.7422316074371338,
+      "peak_vram_gb": 61.02,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3125",
+      "n_tokens": 1278,
+      "fwd_seconds": 0.27577877044677734,
+      "peak_vram_gb": 59.54,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3584",
+      "n_tokens": 2002,
+      "fwd_seconds": 0.5702252388000488,
+      "peak_vram_gb": 60.26,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_70",
+      "n_tokens": 741,
+      "fwd_seconds": 0.14476585388183594,
+      "peak_vram_gb": 59.01,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1395",
+      "n_tokens": 986,
+      "fwd_seconds": 0.18776607513427734,
+      "peak_vram_gb": 59.26,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2997",
+      "n_tokens": 2857,
+      "fwd_seconds": 0.8759722709655762,
+      "peak_vram_gb": 61.1,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1048",
+      "n_tokens": 755,
+      "fwd_seconds": 0.1489546298980713,
+      "peak_vram_gb": 59.03,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_202",
+      "n_tokens": 1358,
+      "fwd_seconds": 0.2959897518157959,
+      "peak_vram_gb": 59.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3987",
+      "n_tokens": 7881,
+      "fwd_seconds": 3.8796675205230713,
+      "peak_vram_gb": 66.06,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2037",
+      "n_tokens": 2076,
+      "fwd_seconds": 0.506152868270874,
+      "peak_vram_gb": 60.33,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1356",
+      "n_tokens": 3353,
+      "fwd_seconds": 1.1449484825134277,
+      "peak_vram_gb": 61.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_933",
+      "n_tokens": 1450,
+      "fwd_seconds": 0.3191542625427246,
+      "peak_vram_gb": 59.71,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2934",
+      "n_tokens": 2718,
+      "fwd_seconds": 0.7733776569366455,
+      "peak_vram_gb": 60.97,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3932",
+      "n_tokens": 3681,
+      "fwd_seconds": 1.2149693965911865,
+      "peak_vram_gb": 61.91,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3446",
+      "n_tokens": 1499,
+      "fwd_seconds": 0.33287549018859863,
+      "peak_vram_gb": 59.76,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3175",
+      "n_tokens": 5029,
+      "fwd_seconds": 1.8932178020477295,
+      "peak_vram_gb": 63.24,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5251",
+      "n_tokens": 204,
+      "fwd_seconds": 0.07853960990905762,
+      "peak_vram_gb": 58.48,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2871",
+      "n_tokens": 978,
+      "fwd_seconds": 0.1875622272491455,
+      "peak_vram_gb": 59.25,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3954",
+      "n_tokens": 7959,
+      "fwd_seconds": 4.044495105743408,
+      "peak_vram_gb": 66.14,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2102",
+      "n_tokens": 2910,
+      "fwd_seconds": 0.8567383289337158,
+      "peak_vram_gb": 61.15,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1919",
+      "n_tokens": 2049,
+      "fwd_seconds": 0.49550747871398926,
+      "peak_vram_gb": 60.3,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_623",
+      "n_tokens": 2303,
+      "fwd_seconds": 0.6178433895111084,
+      "peak_vram_gb": 60.56,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3121",
+      "n_tokens": 3214,
+      "fwd_seconds": 1.0037987232208252,
+      "peak_vram_gb": 61.45,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1770",
+      "n_tokens": 1150,
+      "fwd_seconds": 0.24837803840637207,
+      "peak_vram_gb": 59.42,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2261",
+      "n_tokens": 1231,
+      "fwd_seconds": 0.26363110542297363,
+      "peak_vram_gb": 59.5,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_928",
+      "n_tokens": 1354,
+      "fwd_seconds": 0.29411840438842773,
+      "peak_vram_gb": 59.62,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1989",
+      "n_tokens": 940,
+      "fwd_seconds": 0.2677619457244873,
+      "peak_vram_gb": 59.21,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4129",
+      "n_tokens": 8796,
+      "fwd_seconds": 4.625868320465088,
+      "peak_vram_gb": 66.96,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2728",
+      "n_tokens": 438,
+      "fwd_seconds": 0.10458660125732422,
+      "peak_vram_gb": 58.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_564",
+      "n_tokens": 377,
+      "fwd_seconds": 0.08931612968444824,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_290",
+      "n_tokens": 800,
+      "fwd_seconds": 0.15839910507202148,
+      "peak_vram_gb": 59.07,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3216",
+      "n_tokens": 2349,
+      "fwd_seconds": 0.6914095878601074,
+      "peak_vram_gb": 60.6,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3585",
+      "n_tokens": 2334,
+      "fwd_seconds": 0.5859758853912354,
+      "peak_vram_gb": 60.59,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2560",
+      "n_tokens": 2963,
+      "fwd_seconds": 0.8692305088043213,
+      "peak_vram_gb": 61.21,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3044",
+      "n_tokens": 405,
+      "fwd_seconds": 0.1723031997680664,
+      "peak_vram_gb": 58.68,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3985",
+      "n_tokens": 8035,
+      "fwd_seconds": 3.9675991535186768,
+      "peak_vram_gb": 66.21,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3597",
+      "n_tokens": 608,
+      "fwd_seconds": 0.13810181617736816,
+      "peak_vram_gb": 58.88,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5240",
+      "n_tokens": 183,
+      "fwd_seconds": 0.07099413871765137,
+      "peak_vram_gb": 58.46,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2938",
+      "n_tokens": 552,
+      "fwd_seconds": 0.1099853515625,
+      "peak_vram_gb": 58.83,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_37",
+      "n_tokens": 580,
+      "fwd_seconds": 0.11671566963195801,
+      "peak_vram_gb": 58.85,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4018",
+      "n_tokens": 7427,
+      "fwd_seconds": 3.586992025375366,
+      "peak_vram_gb": 65.61,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_553",
+      "n_tokens": 1456,
+      "fwd_seconds": 0.3295023441314697,
+      "peak_vram_gb": 59.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2522",
+      "n_tokens": 2091,
+      "fwd_seconds": 0.5857663154602051,
+      "peak_vram_gb": 60.35,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2572",
+      "n_tokens": 1259,
+      "fwd_seconds": 0.27358055114746094,
+      "peak_vram_gb": 59.53,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4825",
+      "n_tokens": 1743,
+      "fwd_seconds": 0.395458459854126,
+      "peak_vram_gb": 60.0,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4919",
+      "n_tokens": 2471,
+      "fwd_seconds": 0.673466682434082,
+      "peak_vram_gb": 60.72,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_967",
+      "n_tokens": 1037,
+      "fwd_seconds": 0.22705912590026855,
+      "peak_vram_gb": 59.31,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2643",
+      "n_tokens": 2546,
+      "fwd_seconds": 0.6551260948181152,
+      "peak_vram_gb": 60.8,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1062",
+      "n_tokens": 1982,
+      "fwd_seconds": 0.45844244956970215,
+      "peak_vram_gb": 60.24,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4981",
+      "n_tokens": 3159,
+      "fwd_seconds": 0.9165921211242676,
+      "peak_vram_gb": 61.4,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_535",
+      "n_tokens": 865,
+      "fwd_seconds": 0.23345184326171875,
+      "peak_vram_gb": 59.14,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_379",
+      "n_tokens": 360,
+      "fwd_seconds": 0.08714127540588379,
+      "peak_vram_gb": 58.64,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4105",
+      "n_tokens": 5262,
+      "fwd_seconds": 2.102663516998291,
+      "peak_vram_gb": 63.48,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3355",
+      "n_tokens": 1876,
+      "fwd_seconds": 0.4329056739807129,
+      "peak_vram_gb": 60.13,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_700",
+      "n_tokens": 1862,
+      "fwd_seconds": 0.43009305000305176,
+      "peak_vram_gb": 60.12,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_381",
+      "n_tokens": 417,
+      "fwd_seconds": 0.09205770492553711,
+      "peak_vram_gb": 58.69,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4254",
+      "n_tokens": 5006,
+      "fwd_seconds": 1.9963843822479248,
+      "peak_vram_gb": 63.22,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_590",
+      "n_tokens": 376,
+      "fwd_seconds": 0.09694290161132812,
+      "peak_vram_gb": 58.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_805",
+      "n_tokens": 1662,
+      "fwd_seconds": 0.43053460121154785,
+      "peak_vram_gb": 59.92,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_289",
+      "n_tokens": 2251,
+      "fwd_seconds": 0.5508551597595215,
+      "peak_vram_gb": 60.5,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4972",
+      "n_tokens": 510,
+      "fwd_seconds": 0.10460615158081055,
+      "peak_vram_gb": 58.79,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2565",
+      "n_tokens": 1707,
+      "fwd_seconds": 0.3896973133087158,
+      "peak_vram_gb": 59.97,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1240",
+      "n_tokens": 730,
+      "fwd_seconds": 0.14462733268737793,
+      "peak_vram_gb": 59.0,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4202",
+      "n_tokens": 5435,
+      "fwd_seconds": 2.1644818782806396,
+      "peak_vram_gb": 63.65,
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2022",
+      "n_tokens": 2128,
+      "fwd_seconds": 0.5292010307312012,
+      "peak_vram_gb": 60.38,
+      "label": "high_risk_dual_use"
+    }
+  ],
+  "n_ok": 500,
+  "n_skipped": 500,
+  "n_errors": 0,
+  "wall_minutes": 8.77,
+  "peak_vram_gb_overall": 66.96
+}

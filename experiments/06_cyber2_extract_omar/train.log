@@ -1,0 +1,47 @@
+Loading + pooling extracts from /home/ubuntu/extracts/cyber_all_omar...
+  pooled 100/1000
+  pooled 200/1000
+  pooled 300/1000
+  pooled 400/1000
+  pooled 500/1000
+  pooled 600/1000
+  pooled 700/1000
+  pooled 800/1000
+  pooled 900/1000
+  pooled 1000/1000
+X_mean shape: (1000, 13, 5376) (samples, layers, d_model)
+X_last shape: (1000, 13, 5376)
+layer_idxs: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+
+=== cyber_2: 1000 in scope (pos=500, neg=500) ===
+  -- pooling = mean (5-fold CV) --
+    layer  0: test AUC=0.881±0.030 (min 0.851, max 0.915) | acc=0.801±0.028 | train AUC=1.000
+    layer  5: test AUC=0.864±0.037 (min 0.818, max 0.902) | acc=0.783±0.037 | train AUC=0.975
+    layer 10: test AUC=0.895±0.026 (min 0.858, max 0.917) | acc=0.820±0.030 | train AUC=0.997
+    layer 15: test AUC=0.911±0.028 (min 0.879, max 0.932) | acc=0.834±0.035 | train AUC=0.997
+    layer 20: test AUC=0.923±0.018 (min 0.902, max 0.939) | acc=0.850±0.026 | train AUC=1.000
+    layer 25: test AUC=0.938±0.017 (min 0.920, max 0.957) | acc=0.876±0.020 | train AUC=1.000
+    layer 30: test AUC=0.941±0.022 (min 0.916, max 0.962) | acc=0.878±0.019 | train AUC=1.000
+    layer 35: test AUC=0.942±0.017 (min 0.922, max 0.960) | acc=0.879±0.010 | train AUC=1.000
+    layer 40: test AUC=0.946±0.012 (min 0.933, max 0.961) | acc=0.871±0.008 | train AUC=1.000
+    layer 45: test AUC=0.931±0.018 (min 0.906, max 0.949) | acc=0.857±0.018 | train AUC=1.000
+    layer 50: test AUC=0.933±0.017 (min 0.908, max 0.947) | acc=0.854±0.019 | train AUC=1.000
+    layer 55: test AUC=0.934±0.019 (min 0.910, max 0.951) | acc=0.857±0.028 | train AUC=1.000
+    layer 60: test AUC=0.936±0.019 (min 0.919, max 0.970) | acc=0.892±0.021 | train AUC=0.959
+  -- pooling = last_token (5-fold CV) --
+    layer  0: test AUC=0.500±0.000 (min 0.500, max 0.500) | acc=0.500±0.000 | train AUC=0.500
+    layer  5: test AUC=0.804±0.026 (min 0.757, max 0.821) | acc=0.723±0.016 | train AUC=0.924
+    layer 10: test AUC=0.846±0.038 (min 0.783, max 0.875) | acc=0.765±0.017 | train AUC=0.996
+    layer 15: test AUC=0.870±0.033 (min 0.820, max 0.901) | acc=0.777±0.038 | train AUC=0.994
+    layer 20: test AUC=0.872±0.033 (min 0.817, max 0.900) | acc=0.788±0.029 | train AUC=1.000
+    layer 25: test AUC=0.901±0.026 (min 0.855, max 0.916) | acc=0.818±0.034 | train AUC=1.000
+    layer 30: test AUC=0.893±0.022 (min 0.861, max 0.920) | acc=0.802±0.024 | train AUC=1.000
+    layer 35: test AUC=0.928±0.017 (min 0.907, max 0.952) | acc=0.844±0.019 | train AUC=1.000
+    layer 40: test AUC=0.934±0.016 (min 0.913, max 0.959) | acc=0.859±0.024 | train AUC=1.000
+    layer 45: test AUC=0.943±0.013 (min 0.929, max 0.960) | acc=0.864±0.023 | train AUC=1.000
+    layer 50: test AUC=0.935±0.015 (min 0.916, max 0.957) | acc=0.854±0.026 | train AUC=1.000
+    layer 55: test AUC=0.923±0.017 (min 0.911, max 0.952) | acc=0.833±0.024 | train AUC=1.000
+    layer 60: test AUC=0.955±0.017 (min 0.936, max 0.977) | acc=0.896±0.027 | train AUC=0.983
+
+Results written to /lambda/nfs/georgia/mechhack/experiments/06_cyber2_extract_omar/results.json
+Per-fold log: /lambda/nfs/georgia/mechhack/experiments/06_cyber2_extract_omar/metrics.jsonl

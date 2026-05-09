@@ -395,3 +395,87 @@ Phase 8 (presentation)
 | 8 | Slides | 1h | 6.5h |
 
 **Phases 2-5 run in parallel after Phase 1, so wall-clock is ~4-5h total.**
+
+---
+
+## Phase 9: Post-disconnect follow-ups (added 2026-05-09)
+
+> Items raised during exp 03→09 retros. Captured here so they aren't lost. Ordering reflects user-stated priority.
+
+### 9a. Length-stratified AUC + accuracy (exp 10)
+- [ ] Gated on exp 06 (cyber_2 retrain) finishing
+- [ ] Bucket prompt lengths into tertiles (or fixed quantiles) using `selection.json` for each task
+- [ ] Re-score existing 5-fold CV folds from exp 03 (cyber_1), exp 06 (cyber_2), exp 07 (cyber_3) per bucket at the best layer × pooling
+- [ ] Output: AUC + acc per length bucket per task per pooling, plus a plot
+- [ ] Goal: identify if "long prompt" is the dominant failure mode — directly motivates Phase 5 (MultiMax) and 9c (Kramar head)
+- [ ] Lives at `experiments/10_length_stratified_omar/`
+
+### 9b. Scale-up cyber_2 + cyber_3 selections
+- [ ] Current selections: 500/500 each. Extracts dir `/home/ubuntu/extracts/cyber_all_omar/` already has ~3500 cached extracts → most extraction is reuse.
+- [ ] Note (per user, 2026-05-09): cyber_2 / cyber_3 are progressively *broader* than cyber_1 — they include cyber_1 cases plus more. Selection logic should reflect this hierarchy.
+- [ ] Update `experiments/06_cyber2_extract_omar/select.py` and `07_cyber3_extract_omar/select.py` to draw a larger balanced selection (target: 1500/1500 or as data permits)
+- [ ] Re-run extract.py incrementally — only extract missing samples, do not re-extract the 1000 already done
+- [ ] Re-run train_probes.py + plot.py for each
+- [ ] Update notes.md with new sample sizes and headline AUCs
+
+### 9c. GDM Kramar-2026 MultiMax + Rolling Attention head
+- [ ] Reference: `papers/kramar2026_production_ready_probes_gemini.pdf`. Detailed sketch already in `experiments/extra_omar/notes.md` Tier 2 §4.
+- [ ] Already partially scoped as Phase 5 above — this entry is the *production* version with both MultiMax (hard-max per attention head) **and** Rolling Attention (sliding windows of width 10, max across windows)
+- [ ] Goal: long-prompt + OOD robustness. Kramar's headline: long-context FNR drops from 87.9% (EMA probe) to 3.0% (Selected = MultiMax + Rolling)
+- [ ] CPU-only. Probably extends `experiments/05_cc_plus_plus_omar/train_heads.py` or a new sibling experiment
+- [ ] Eval on length-stratified folds from 9a so we can directly cite the long-bucket FNR improvement
+- [ ] **Full implementation spec at `experiments/16_multimax_probe_omar/IMPLEMENTATION_SPEC.md`** (4 architectures, hyperparams from Appendix C, vectorised pseudocode, CLI examples). Tracks 9c at the implementation level.
+
+### 9c-impl. Implement Kramar 4-architecture probe family (exp 16)
+- [ ] Spec: `experiments/16_multimax_probe_omar/IMPLEMENTATION_SPEC.md`. Architectures:
+  1. `attention_kramar` — Eq. 7-8 baseline (softmax + 2-layer ReLU MLP transform)
+  2. `multimax` — Eq. 9 (hard argmax per head, all-tokens scope)
+  3. `rolling` — Eq. 10 (softmax within w=10 windows, max across windows) — the "Selected Probe"
+  4. `rolling_multimax` — combination (hard argmax within window + max across windows)
+- [ ] Hyperparameters from Kramar Appendix C: AdamW, lr=1e-4, wd=3e-3, 1000 steps, d_hidden=100, H=10, w=10.
+- [ ] Build files: `probes.py` (4 nn.Module classes + factory), `train.py` (CLI loader + 5-fold CV + held-out test), `notes.md` (results write-up).
+- [ ] **Level 1 use** — train all 4 architectures on cyber_1, cyber_2, cyber_3, and Gemma refusal. Compare to current LR mean-pool (cyber: 0.946-0.988; refusal: 0.927). Especially target the long-prompt regime where exp 15 showed AUC 0.927 → 0.910 on refusal.
+- [ ] **Level 2 use** — swap the trained `rolling` (or `rolling_multimax`) probe in as the scoring `f` in the PRE pipeline (exp 13). Keep Arditi for attribution; use Kramar probe for picking-best-of-7. The "two different `f`s" architecture from `experiments/extra_omar/notes.md`.
+- [ ] Output: per-task AUC table, per-architecture × per-length-bucket AUC (re-uses exp 10 / exp 15 length tertiles).
+
+### 9d. Quadratic / polynomial probe ablation (Pleshkov 2026)
+- [ ] From `experiments/extra_omar/notes.md` Tier 2 §5 — not yet in main TODO
+- [ ] PCA → degree-2 polynomial lift → ridge regression. d ≤ 32 for cyber to keep features < N
+- [ ] Goal: ablation. If quadratic AUC >> linear → evidence against the linear-representation hypothesis on cyber. If ≈ same → confirms linear is sufficient.
+- [ ] Cyber-only (refusal is single direction per Arditi)
+- [ ] Lives at a new experiment dir TBD
+
+### 9e. Level 2 pipeline (Arditi attribution + Xiong PRE + Boppana scorer)
+- [ ] From `experiments/extra_omar/notes.md` Tier 2 §6 + Recommended Pipeline section. Not yet in main TODO.
+- [ ] Per-token attribution: refusal-direction projection (Arditi)
+- [ ] Edit candidates: k=7 LLM rewrites targeting attributed tokens (Xiong PRE)
+- [ ] Candidate scoring: attention-pooling probe (Boppana, `starter_code/train_probe.py`)
+- [ ] Verification: re-roll Gemma on edited prompt; report Pr(f|edit), Pr(model|edit), Pr(model|f)
+- [ ] Distinct `f`s for attribution vs scoring is the design point — see "Two Different `f`s" section in extra_omar notes
+
+---
+
+## Phase 10: Deferred (paused 2026-05-09 to focus on Arditi / Level 2)
+
+> Items previously in flight or planned that we deliberately paused to free CPU/GPU and attention for the Level 2 pivot. Retain so they can be resumed without re-discovery.
+
+### 10a. exp 05 CC++ — finish seeds 2–4 of Heads B and C
+- [ ] Killed mid-run after 4 of 10 head×seed pairs completed. Heads D and A are deterministic single runs and are final (D=0.986, A=0.984). Heads B and C have only seeds 0-1 documented (≈0.971 and ≈0.980 respectively).
+- [ ] To finish: relaunch `train_heads.py` (it already supports resuming would need a small flag; otherwise re-run all seeds and discard 0-1 duplicates) → ~60 min CPU.
+- [ ] Lower priority: results are already enough to claim "all heads cluster at ~0.98 AUC on cyber_1, linear baseline is competitive" without additional seeds.
+
+### 10b. cyber_2 / cyber_3 scale-up (was Phase 9b)
+- [ ] Same as 9b. Marginal gain on top of current 1000-sample results is small now that TF-IDF / activation gap is established. Pick up after Level 2 wraps if there is time.
+
+### 10c. Length-stratified AUC (was 9a)
+- [ ] Cheap (~5 min CPU). Deferred until after Level 2. Sub-bucket the existing exp 03/06/07 CV folds by prompt length and report per-bucket AUC.
+
+### 10d. Qwen refusal extraction + probes
+- [ ] Qwen3.6-27B not downloaded locally (~55 GB pull). Refusal probes only; not strictly needed for Level 2 if we stick to Gemma.
+
+### 10e. exp 09 D2 last_token L35 sweep
+- [ ] Killed before completing. Mean-pool L30 sweep is the more useful one and is already saved. Skip unless we revisit C-sensitivity for the last-token pooling specifically.
+
+### 10f. exp 09 D3 OOD eval
+- [ ] In progress (PID 92721, currently at 600/999 features). Will finish naturally — *not* deferred, but listed here for visibility into the resource picture.
+

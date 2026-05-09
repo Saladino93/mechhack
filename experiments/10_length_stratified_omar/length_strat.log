@@ -1,0 +1,24 @@
+
+=== cyber_1 (mean L40) ===
+  loaded 999 samples (pos=500, neg=499)
+  prompt char-length: min=62, p33=4626, p67=9675, max=32476
+    short: AUC=0.9793 ± 0.0145  (n/fold ≈ 67)
+   medium: AUC=0.9797 ± 0.0095  (n/fold ≈ 67)
+     long: AUC=0.9914 ± 0.0112  (n/fold ≈ 67)
+
+=== cyber_2 (mean L40) ===
+  loaded 1000 samples (pos=500, neg=500)
+  prompt char-length: min=62, p33=4798, p67=8945, max=31495
+    short: AUC=0.9471 ± 0.0280  (n/fold ≈ 67)
+   medium: AUC=0.9499 ± 0.0093  (n/fold ≈ 67)
+     long: AUC=0.9443 ± 0.0370  (n/fold ≈ 67)
+
+=== cyber_3 (mean L35) ===
+  loaded 1000 samples (pos=500, neg=500)
+  prompt char-length: min=276, p33=4375, p67=8429, max=32382
+    short: AUC=0.9696 ± 0.0143  (n/fold ≈ 67)
+   medium: AUC=0.9631 ± 0.0234  (n/fold ≈ 67)
+     long: AUC=0.9297 ± 0.0368  (n/fold ≈ 67)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/10_length_stratified_omar/results.json
+wrote /lambda/nfs/georgia/mechhack/experiments/10_length_stratified_omar/auc_by_length.png

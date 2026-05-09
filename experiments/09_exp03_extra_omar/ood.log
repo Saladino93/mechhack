@@ -1,0 +1,55 @@
+[D3] OOD held-out evaluation for cyber_1
+
+Picking OOD test rows...
+  cyber_1-eligible test pool: dual_use=267, benign=656
+  picked 500 test sample_ids (250 du, 250 ben)
+  wrote /lambda/nfs/georgia/mechhack/experiments/09_exp03_extra_omar/ood_selection.json
+  wrote split manifest with 1499 entries (also copied to /home/ubuntu/extracts/cyber_all_omar/split_manifest.json)
+
+Verifying extracts...
+  train: 999/999 present
+  test : 500/500 present
+
+Loading + pooling train extracts...
+    pooled 100/999
+    pooled 200/999
+    pooled 300/999
+    pooled 400/999
+    pooled 500/999
+    pooled 600/999
+    pooled 700/999
+    pooled 800/999
+    pooled 900/999
+  loaded 999 train rows in 1598.6s (pos=500, neg=499)
+
+Loading + pooling test extracts...
+    pooled 100/500
+    pooled 200/500
+    pooled 300/500
+    pooled 400/500
+    pooled 500/500
+  loaded 500 test rows in 532.1s (pos=250, neg=250)
+
+Fitting probes (LR C=1.0) on 5 layers × 2 poolings
+/usr/lib/python3/dist-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+Traceback (most recent call last):
+  File "/lambda/nfs/georgia/mechhack/experiments/09_exp03_extra_omar/ood_eval.py", line 354, in <module>
+    main()
+  File "/lambda/nfs/georgia/mechhack/experiments/09_exp03_extra_omar/ood_eval.py", line 283, in main
+    clf.fit(X_tr_l, y_tr)
+  File "/usr/lib/python3/dist-packages/sklearn/linear_model/_logistic.py", line 1342, in fit
+    X, y = self._validate_data(X, y, accept_sparse='csr', dtype=_dtype,
+  File "/usr/lib/python3/dist-packages/sklearn/base.py", line 432, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 795, in check_X_y
+    X = check_array(X, accept_sparse=accept_sparse,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 644, in check_array
+    _assert_all_finite(array,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 96, in _assert_all_finite
+    raise ValueError(
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').

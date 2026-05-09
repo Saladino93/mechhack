@@ -1,0 +1,14 @@
+[D2] Regularisation sweep at best exp 03 layers
+
+  === mean_L30 ===
+  loaded 999 feats, d=5376 (layer_pos=6) in 395.6s
+    C= 0.0001: test AUC=0.9119±0.0301 acc=0.897 | train AUC=0.9135 | L1=3.0 | |w|>1e-3: 798/5376
+    C=  0.001: test AUC=0.9343±0.0293 acc=0.910 | train AUC=0.9402 | L1=10.6 | |w|>1e-3: 2443/5376
+    C=   0.01: test AUC=0.9725±0.0146 acc=0.913 | train AUC=0.9850 | L1=35.3 | |w|>1e-3: 4055/5376
+    C=    0.1: test AUC=0.9804±0.0111 acc=0.918 | train AUC=0.9988 | L1=109.9 | |w|>1e-3: 4938/5376
+    C=      1: test AUC=0.9809±0.0100 acc=0.922 | train AUC=1.0000 | L1=283.4 | |w|>1e-3: 5205/5376
+    C=     10: test AUC=0.9794±0.0109 acc=0.913 | train AUC=1.0000 | L1=550.4 | |w|>1e-3: 5293/5376
+  best AUC = 0.9809 at C=1
+  sparsest within 0.005: C=0.1 AUC=0.9804 L1=109.9
+
+  === last_token_L35 ===

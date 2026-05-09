@@ -1,0 +1,90 @@
+Loading + pooling extracts from /home/ubuntu/extracts/cyber_all_omar...
+  [warn] 1 selected extracts are missing on disk (first: cyber_6469). Continuing with the rest.
+  pooled 200/3189
+  pooled 400/3189
+  pooled 600/3189
+  pooled 800/3189
+  pooled 1000/3189
+  pooled 1200/3189
+  pooled 1400/3189
+  pooled 1600/3189
+  pooled 1800/3189
+  pooled 2000/3189
+  pooled 2200/3189
+  pooled 2400/3189
+  pooled 2600/3189
+  pooled 2800/3189
+  pooled 3000/3189
+X_mean shape: (3189, 13, 5376)
+X_last shape: (3189, 13, 5376)
+layer_idxs:   [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+split sizes:  train=2266, test=923
+
+=== cyber_1 ===
+  train: pos=685 neg=1581 (total=2266)
+  test:  pos=267 neg=656 (total=923)
+
+  -- pooling = mean --
+    layer  0: CV AUC=0.951±0.013 (min 0.935, max 0.968) | CV acc=0.880 | train AUC=0.999 | HELD-OUT AUC=0.967 [0.957, 0.976] acc=0.899
+    layer  5: CV AUC=0.956±0.015 (min 0.935, max 0.976) | CV acc=0.892 | train AUC=0.991 | HELD-OUT AUC=0.968 [0.959, 0.977] acc=0.908
+    layer 10: CV AUC=0.967±0.011 (min 0.954, max 0.981) | CV acc=0.900 | train AUC=0.999 | HELD-OUT AUC=0.976 [0.968, 0.983] acc=0.912
+    layer 15: CV AUC=0.971±0.010 (min 0.959, max 0.983) | CV acc=0.902 | train AUC=0.999 | HELD-OUT AUC=0.977 [0.970, 0.984] acc=0.914
+    layer 20: CV AUC=0.973±0.010 (min 0.961, max 0.985) | CV acc=0.911 | train AUC=1.000 | HELD-OUT AUC=0.979 [0.972, 0.986] acc=0.923
+    layer 25: CV AUC=0.980±0.008 (min 0.971, max 0.988) | CV acc=0.921 | train AUC=1.000 | HELD-OUT AUC=0.982 [0.976, 0.988] acc=0.928
+    layer 30: CV AUC=0.983±0.006 (min 0.976, max 0.990) | CV acc=0.929 | train AUC=1.000 | HELD-OUT AUC=0.984 [0.977, 0.990] acc=0.935
+    layer 35: CV AUC=0.984±0.007 (min 0.974, max 0.990) | CV acc=0.931 | train AUC=1.000 | HELD-OUT AUC=0.985 [0.978, 0.990] acc=0.938
+    layer 40: CV AUC=0.983±0.008 (min 0.972, max 0.991) | CV acc=0.935 | train AUC=1.000 | HELD-OUT AUC=0.988 [0.982, 0.992] acc=0.948
+    layer 45: CV AUC=0.977±0.010 (min 0.963, max 0.986) | CV acc=0.921 | train AUC=1.000 | HELD-OUT AUC=0.983 [0.977, 0.989] acc=0.931
+    layer 50: CV AUC=0.976±0.009 (min 0.964, max 0.987) | CV acc=0.918 | train AUC=1.000 | HELD-OUT AUC=0.982 [0.974, 0.988] acc=0.930
+    layer 55: CV AUC=0.977±0.009 (min 0.965, max 0.987) | CV acc=0.915 | train AUC=1.000 | HELD-OUT AUC=0.980 [0.973, 0.987] acc=0.931
+    layer 60: CV AUC=0.932±0.036 (min 0.885, max 0.964) | CV acc=0.905 | train AUC=0.997 | HELD-OUT AUC=0.961 [0.950, 0.972] acc=0.865
+
+  -- pooling = last_token --
+    layer  0: CV AUC=0.525±0.023 (min 0.500, max 0.546) | CV acc=0.698 | train AUC=0.502 | HELD-OUT AUC=0.515 [0.506, 0.523] acc=0.711
+    layer  5: CV AUC=0.945±0.017 (min 0.925, max 0.963) | CV acc=0.873 | train AUC=0.975 | HELD-OUT AUC=0.956 [0.944, 0.968] acc=0.882
+    layer 10: CV AUC=0.957±0.011 (min 0.945, max 0.973) | CV acc=0.883 | train AUC=0.999 | HELD-OUT AUC=0.965 [0.956, 0.975] acc=0.887
+    layer 15: CV AUC=0.965±0.009 (min 0.956, max 0.974) | CV acc=0.893 | train AUC=0.998 | HELD-OUT AUC=0.969 [0.960, 0.978] acc=0.895
+    layer 20: CV AUC=0.960±0.009 (min 0.951, max 0.970) | CV acc=0.894 | train AUC=1.000 | HELD-OUT AUC=0.970 [0.961, 0.978] acc=0.895
+    layer 25: CV AUC=0.967±0.010 (min 0.959, max 0.980) | CV acc=0.891 | train AUC=1.000 | HELD-OUT AUC=0.971 [0.962, 0.980] acc=0.900
+    layer 30: CV AUC=0.972±0.006 (min 0.965, max 0.980) | CV acc=0.915 | train AUC=1.000 | HELD-OUT AUC=0.977 [0.968, 0.984] acc=0.923
+    layer 35: CV AUC=0.978±0.006 (min 0.973, max 0.986) | CV acc=0.925 | train AUC=1.000 | HELD-OUT AUC=0.981 [0.974, 0.988] acc=0.926
+/usr/lib/python3/dist-packages/sklearn/linear_model/_logistic.py:762: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/usr/lib/python3/dist-packages/sklearn/linear_model/_logistic.py:762: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    layer 40: CV AUC=0.976±0.008 (min 0.968, max 0.984) | CV acc=0.917 | train AUC=1.000 | HELD-OUT AUC=0.982 [0.975, 0.988] acc=0.925
+    layer 45: CV AUC=0.973±0.007 (min 0.966, max 0.984) | CV acc=0.915 | train AUC=1.000 | HELD-OUT AUC=0.981 [0.975, 0.987] acc=0.923
+/usr/lib/python3/dist-packages/sklearn/linear_model/_logistic.py:762: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    layer 50: CV AUC=0.972±0.008 (min 0.963, max 0.984) | CV acc=0.912 | train AUC=1.000 | HELD-OUT AUC=0.980 [0.973, 0.986] acc=0.915
+    layer 55: CV AUC=0.971±0.008 (min 0.963, max 0.982) | CV acc=0.906 | train AUC=1.000 | HELD-OUT AUC=0.978 [0.971, 0.985] acc=0.914
+/usr/lib/python3/dist-packages/sklearn/linear_model/_logistic.py:762: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    layer 60: CV AUC=0.893±0.030 (min 0.843, max 0.922) | CV acc=0.906 | train AUC=0.999 | HELD-OUT AUC=0.972 [0.963, 0.980] acc=0.885
+
+Results written to /lambda/nfs/georgia/mechhack/experiments/08_layer_sweep_3000_omar/results.json
+Per-fold log: /lambda/nfs/georgia/mechhack/experiments/08_layer_sweep_3000_omar/metrics.jsonl

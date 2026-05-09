@@ -1,0 +1,36 @@
+Total queue: 211 rollouts (after skipping 0 already done)
+Loading Gemma...
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<06:51,  2.88it/s]Loading weights:   3%|▎         | 34/1188 [00:00<00:21, 54.47it/s]Loading weights:   4%|▍         | 49/1188 [00:01<00:18, 62.75it/s]Loading weights:   5%|▌         | 62/1188 [00:01<00:15, 73.84it/s]Loading weights:   6%|▋         | 75/1188 [00:01<00:13, 81.85it/s]Loading weights:   7%|▋         | 88/1188 [00:01<00:12, 84.62it/s]Loading weights:   9%|▊         | 102/1188 [00:01<00:12, 86.16it/s]Loading weights:  10%|▉         | 116/1188 [00:01<00:12, 86.76it/s]Loading weights:  11%|█         | 130/1188 [00:01<00:11, 93.99it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:11, 94.36it/s]Loading weights:  13%|█▎        | 158/1188 [00:02<00:12, 85.02it/s]Loading weights:  14%|█▍        | 172/1188 [00:02<00:11, 87.40it/s]Loading weights:  16%|█▌        | 185/1188 [00:02<00:10, 93.47it/s]Loading weights:  17%|█▋        | 199/1188 [00:02<00:10, 94.83it/s]Loading weights:  18%|█▊        | 213/1188 [00:02<00:09, 100.46it/s]Loading weights:  19%|█▉        | 224/1188 [00:02<00:10, 89.24it/s] Loading weights:  20%|█▉        | 234/1188 [00:03<00:16, 58.50it/s]Loading weights:  20%|██        | 242/1188 [00:03<00:22, 42.75it/s]Loading weights:  21%|██▏       | 255/1188 [00:03<00:17, 53.91it/s]Loading weights:  23%|██▎       | 268/1188 [00:03<00:14, 64.80it/s]Loading weights:  23%|██▎       | 278/1188 [00:03<00:12, 71.37it/s]Loading weights:  24%|██▍       | 287/1188 [00:04<00:12, 70.16it/s]Loading weights:  25%|██▍       | 296/1188 [00:04<00:13, 66.67it/s]Loading weights:  26%|██▌       | 311/1188 [00:04<00:10, 82.28it/s]Loading weights:  27%|██▋       | 324/1188 [00:04<00:09, 87.31it/s]Loading weights:  28%|██▊       | 337/1188 [00:04<00:09, 87.61it/s]Loading weights:  29%|██▉       | 347/1188 [00:04<00:09, 88.19it/s]Loading weights:  30%|███       | 358/1188 [00:04<00:09, 92.01it/s]Loading weights:  31%|███       | 368/1188 [00:05<00:12, 67.62it/s]Loading weights:  32%|███▏      | 379/1188 [00:05<00:11, 73.12it/s]Loading weights:  33%|███▎      | 393/1188 [00:05<00:10, 79.41it/s]Loading weights:  34%|███▍      | 407/1188 [00:05<00:10, 74.22it/s]Loading weights:  35%|███▌      | 420/1188 [00:05<00:09, 84.31it/s]Loading weights:  36%|███▌      | 430/1188 [00:05<00:09, 82.31it/s]Loading weights:  37%|███▋      | 439/1188 [00:05<00:09, 75.48it/s]Loading weights:  38%|███▊      | 449/1188 [00:06<00:09, 77.51it/s]Loading weights:  39%|███▉      | 462/1188 [00:06<00:08, 84.77it/s]Loading weights:  40%|███▉      | 473/1188 [00:06<00:08, 89.21it/s]Loading weights:  41%|████      | 483/1188 [00:06<00:08, 81.89it/s]Loading weights:  41%|████▏     | 492/1188 [00:06<00:09, 74.16it/s]Loading weights:  42%|████▏     | 504/1188 [00:06<00:08, 78.13it/s]Loading weights:  44%|████▎     | 518/1188 [00:06<00:07, 87.41it/s]Loading weights:  45%|████▍     | 531/1188 [00:07<00:08, 81.83it/s]Loading weights:  46%|████▌     | 545/1188 [00:07<00:08, 79.32it/s]Loading weights:  47%|████▋     | 560/1188 [00:07<00:07, 86.96it/s]Loading weights:  48%|████▊     | 573/1188 [00:07<00:06, 91.71it/s]Loading weights:  49%|████▉     | 583/1188 [00:07<00:06, 90.83it/s]Loading weights:  50%|████▉     | 593/1188 [00:07<00:06, 87.02it/s]Loading weights:  51%|█████     | 602/1188 [00:07<00:07, 78.94it/s]Loading weights:  52%|█████▏    | 614/1188 [00:08<00:07, 78.61it/s]Loading weights:  53%|█████▎    | 629/1188 [00:08<00:06, 91.93it/s]Loading weights:  54%|█████▍    | 642/1188 [00:08<00:06, 85.69it/s]Loading weights:  55%|█████▌    | 657/1188 [00:08<00:05, 89.80it/s]Loading weights:  56%|█████▋    | 669/1188 [00:08<00:05, 92.68it/s]Loading weights:  57%|█████▋    | 679/1188 [00:08<00:06, 82.82it/s]Loading weights:  58%|█████▊    | 688/1188 [00:08<00:05, 83.65it/s]Loading weights:  59%|█████▊    | 697/1188 [00:08<00:06, 80.66it/s]Loading weights:  60%|█████▉    | 711/1188 [00:09<00:05, 83.34it/s]Loading weights:  61%|██████    | 725/1188 [00:09<00:05, 86.28it/s]Loading weights:  62%|██████▏   | 739/1188 [00:09<00:05, 87.61it/s]Loading weights:  63%|██████▎   | 749/1188 [00:09<00:04, 90.38it/s]Loading weights:  64%|██████▍   | 759/1188 [00:09<00:04, 89.87it/s]Loading weights:  65%|██████▍   | 769/1188 [00:09<00:05, 77.00it/s]Loading weights:  66%|██████▌   | 781/1188 [00:09<00:04, 83.21it/s]Loading weights:  67%|██████▋   | 794/1188 [00:10<00:04, 89.07it/s]Loading weights:  68%|██████▊   | 808/1188 [00:10<00:04, 92.85it/s]Loading weights:  69%|██████▉   | 822/1188 [00:10<00:03, 93.58it/s]Loading weights:  73%|███████▎  | 862/1188 [00:10<00:01, 165.91it/s]Loading weights:  90%|████████▉ | 1066/1188 [00:10<00:00, 638.70it/s]Loading weights: 100%|██████████| 1188/1188 [00:10<00:00, 111.82it/s]
+  loaded in 13.4s
+  [10/211] rate=0.06/s, eta=60.2min
+  [20/211] rate=0.06/s, eta=56.0min
+  [30/211] rate=0.06/s, eta=52.5min
+  [40/211] rate=0.06/s, eta=48.7min
+  [50/211] rate=0.06/s, eta=46.2min
+  [60/211] rate=0.06/s, eta=42.2min
+  [70/211] rate=0.06/s, eta=39.7min
+  [80/211] rate=0.06/s, eta=36.4min
+  [90/211] rate=0.06/s, eta=33.2min
+  [100/211] rate=0.06/s, eta=30.1min
+  [110/211] rate=0.06/s, eta=27.3min
+  [120/211] rate=0.06/s, eta=24.0min
+  [130/211] rate=0.06/s, eta=21.4min
+  [140/211] rate=0.06/s, eta=18.5min
+  [150/211] rate=0.06/s, eta=16.0min
+  [160/211] rate=0.06/s, eta=13.2min
+  [170/211] rate=0.06/s, eta=10.5min
+  [180/211] rate=0.07/s, eta=7.9min
+  [190/211] rate=0.07/s, eta=5.3min
+  [200/211] rate=0.07/s, eta=2.8min
+  [210/211] rate=0.07/s, eta=0.3min
+  [211/211] rate=0.07/s, eta=0.0min
+
+Done in 3186.4s. Outputs:
+  /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/rollouts.jsonl
+  /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/heuristic_refusal_check.jsonl
+
+=== Heuristic preview (NOT authoritative) ===
+       original: heuristic refusal rate = 71/81 = 0.877
+        lr_best: heuristic refusal rate = 48/81 = 0.593
+    arditi_best: heuristic refusal rate = 34/49 = 0.694

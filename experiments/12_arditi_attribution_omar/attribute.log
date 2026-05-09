@@ -1,0 +1,20 @@
+[Arditi attribution] computing per-token contributions for 81 attribution_eval prompts
+  arditi direction shape: (5376,), norm: 1.0000
+  loading tokenizer...
+  tokenizer ok: GemmaTokenizer
+  loaded 81 attribution_eval samples
+  wrote /lambda/nfs/georgia/mechhack/experiments/12_arditi_attribution_omar/attributions.jsonl (81 rows, 0 skipped)
+  wrote /lambda/nfs/georgia/mechhack/experiments/12_arditi_attribution_omar/top_tokens.tsv
+
+  === SUMMARY ===
+  n_processed: 81
+  n_skipped: 0
+  n_refusal: 81
+  n_complied: 0
+  top_k_per_prompt: 8
+  attribution_max_overall_mean: 142.29458090699748
+  attribution_max_overall_max: 149.23829650878906
+  attribution_min_overall_mean: -4.801292337017295
+  attribution_min_overall_min: -4.802512168884277
+  mean_abs_attribution_across_prompts: 106.35576186945408
+  arditi_direction_path: /lambda/nfs/georgia/mechhack/experiments/11_refusal_probe_omar/arditi_direction.npy

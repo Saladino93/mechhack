@@ -1,0 +1,30 @@
+
+[D1] TF-IDF baseline on cyber_2 (06_cyber2_extract_omar's selection)
+  selection: 1000 sample_ids
+  loaded 1000 prompts (pos=500, neg=500)
+  fold 0: test AUC=0.8613 acc=0.8000 | train AUC=0.9819 | n_feat=20000 | 5.7s
+  fold 1: test AUC=0.8489 acc=0.7750 | train AUC=0.9788 | n_feat=20000 | 5.8s
+  fold 2: test AUC=0.9245 acc=0.8400 | train AUC=0.9775 | n_feat=20000 | 6.1s
+  fold 3: test AUC=0.9011 acc=0.8200 | train AUC=0.9765 | n_feat=20000 | 6.1s
+  fold 4: test AUC=0.9006 acc=0.8350 | train AUC=0.9795 | n_feat=20000 | 6.3s
+
+  === cyber_2 D1 SUMMARY ===
+  TF-IDF AUC: 0.8873 ± 0.0312 (range 0.8489-0.9245)
+  TF-IDF acc: 0.8140 ± 0.0268
+  activation best (so far): AUC=0.9462 @ layer 40, pooling=mean  →  delta = +0.0589
+  written to /lambda/nfs/georgia/mechhack/experiments/09_exp03_extra_omar/results.json (key=D1_tfidf_cyber2)
+
+[D1] TF-IDF baseline on cyber_3 (07_cyber3_extract_omar's selection)
+  selection: 1000 sample_ids
+  loaded 1000 prompts (pos=500, neg=500)
+  fold 0: test AUC=0.9012 acc=0.8250 | train AUC=0.9872 | n_feat=20000 | 6.4s
+  fold 1: test AUC=0.8760 acc=0.8050 | train AUC=0.9875 | n_feat=20000 | 4.8s
+  fold 2: test AUC=0.8860 acc=0.7950 | train AUC=0.9867 | n_feat=20000 | 3.2s
+  fold 3: test AUC=0.8782 acc=0.8000 | train AUC=0.9864 | n_feat=20000 | 3.3s
+  fold 4: test AUC=0.9102 acc=0.8350 | train AUC=0.9873 | n_feat=20000 | 3.0s
+
+  === cyber_3 D1 SUMMARY ===
+  TF-IDF AUC: 0.8903 ± 0.0149 (range 0.8760-0.9102)
+  TF-IDF acc: 0.8120 ± 0.0172
+  activation best (so far): AUC=0.9549 @ layer 35, pooling=mean  →  delta = +0.0645
+  written to /lambda/nfs/georgia/mechhack/experiments/09_exp03_extra_omar/results.json (key=D1_tfidf_cyber3)

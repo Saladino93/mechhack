@@ -1,0 +1,37 @@
+[1/4] Fitting full-data LR probe on 832 refusal extracts...
+  loaded 832 ok, 0 bad. pos=419 neg=413
+  saved /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/lr_probe.npz (train acc = 0.9940, |coef|_2 = 8.97)
+[2/4] Arditi direction loaded: shape=(5376,), norm=1.0000
+[3/4] Loading Gemma 4-31B-it from /home/ubuntu/models/Gemma-4-31B-it...
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<04:13,  4.68it/s]Loading weights:   3%|▎         | 33/1188 [00:00<00:16, 71.08it/s]Loading weights:   4%|▍         | 47/1188 [00:00<00:13, 86.97it/s]Loading weights:   5%|▌         | 61/1188 [00:00<00:12, 93.48it/s]Loading weights:   6%|▋         | 75/1188 [00:00<00:11, 97.35it/s]Loading weights:   7%|▋         | 88/1188 [00:01<00:11, 98.07it/s]Loading weights:   9%|▊         | 102/1188 [00:01<00:11, 94.26it/s]Loading weights:  10%|▉         | 116/1188 [00:01<00:10, 97.74it/s]Loading weights:  11%|█         | 130/1188 [00:01<00:09, 107.22it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:09, 108.05it/s]Loading weights:  13%|█▎        | 158/1188 [00:01<00:09, 107.31it/s]Loading weights:  14%|█▍        | 171/1188 [00:01<00:09, 107.61it/s]Loading weights:  15%|█▌        | 182/1188 [00:01<00:09, 106.73it/s]Loading weights:  16%|█▌        | 193/1188 [00:02<00:09, 107.29it/s]Loading weights:  17%|█▋        | 204/1188 [00:02<00:09, 101.21it/s]Loading weights:  18%|█▊        | 215/1188 [00:02<00:10, 95.97it/s] Loading weights:  19%|█▉        | 228/1188 [00:02<00:09, 102.39it/s]Loading weights:  20%|██        | 241/1188 [00:02<00:08, 109.25it/s]Loading weights:  21%|██▏       | 254/1188 [00:02<00:08, 107.35it/s]Loading weights:  23%|██▎       | 268/1188 [00:02<00:08, 106.43it/s]Loading weights:  24%|██▎       | 282/1188 [00:02<00:09, 99.94it/s] Loading weights:  25%|██▍       | 296/1188 [00:03<00:08, 109.42it/s]Loading weights:  26%|██▌       | 310/1188 [00:03<00:08, 109.48it/s]Loading weights:  27%|██▋       | 324/1188 [00:03<00:07, 109.52it/s]Loading weights:  28%|██▊       | 337/1188 [00:03<00:07, 108.41it/s]Loading weights:  30%|██▉       | 351/1188 [00:03<00:07, 109.76it/s]Loading weights:  31%|███       | 365/1188 [00:03<00:07, 107.96it/s]Loading weights:  32%|███▏      | 379/1188 [00:03<00:07, 110.60it/s]Loading weights:  33%|███▎      | 393/1188 [00:03<00:07, 105.92it/s]Loading weights:  34%|███▍      | 407/1188 [00:04<00:07, 107.88it/s]Loading weights:  35%|███▌      | 420/1188 [00:04<00:07, 109.42it/s]Loading weights:  37%|███▋      | 434/1188 [00:04<00:06, 110.44it/s]Loading weights:  38%|███▊      | 448/1188 [00:04<00:06, 110.44it/s]Loading weights:  39%|███▉      | 462/1188 [00:04<00:06, 106.94it/s]Loading weights:  40%|████      | 476/1188 [00:04<00:06, 110.30it/s]Loading weights:  41%|████      | 490/1188 [00:04<00:06, 104.80it/s]Loading weights:  42%|████▏     | 504/1188 [00:04<00:06, 106.31it/s]Loading weights:  44%|████▎     | 518/1188 [00:05<00:06, 109.54it/s]Loading weights:  45%|████▍     | 531/1188 [00:05<00:06, 108.20it/s]Loading weights:  46%|████▌     | 545/1188 [00:05<00:05, 110.24it/s]Loading weights:  47%|████▋     | 559/1188 [00:05<00:06, 103.43it/s]Loading weights:  48%|████▊     | 573/1188 [00:05<00:05, 110.71it/s]Loading weights:  49%|████▉     | 586/1188 [00:05<00:05, 108.70it/s]Loading weights:  51%|█████     | 600/1188 [00:05<00:05, 110.34it/s]Loading weights:  52%|█████▏    | 614/1188 [00:05<00:05, 103.06it/s]Loading weights:  53%|█████▎    | 628/1188 [00:06<00:05, 104.88it/s]Loading weights:  54%|█████▍    | 642/1188 [00:06<00:04, 112.48it/s]Loading weights:  55%|█████▌    | 656/1188 [00:06<00:04, 107.55it/s]Loading weights:  56%|█████▋    | 669/1188 [00:06<00:04, 106.50it/s]Loading weights:  57%|█████▋    | 683/1188 [00:06<00:04, 102.41it/s]Loading weights:  59%|█████▊    | 697/1188 [00:06<00:04, 106.19it/s]Loading weights:  60%|█████▉    | 711/1188 [00:06<00:04, 100.98it/s]Loading weights:  61%|██████    | 725/1188 [00:07<00:04, 108.37it/s]Loading weights:  62%|██████▏   | 739/1188 [00:07<00:04, 108.91it/s]Loading weights:  63%|██████▎   | 752/1188 [00:07<00:04, 105.88it/s]Loading weights:  64%|██████▍   | 766/1188 [00:07<00:04, 99.32it/s] Loading weights:  66%|██████▌   | 780/1188 [00:07<00:04, 100.40it/s]Loading weights:  67%|██████▋   | 795/1188 [00:07<00:03, 99.68it/s] Loading weights:  68%|██████▊   | 809/1188 [00:07<00:03, 102.13it/s]Loading weights:  69%|██████▉   | 824/1188 [00:07<00:03, 108.01it/s]Loading weights:  86%|████████▌ | 1019/1188 [00:08<00:00, 554.83it/s]Loading weights: 100%|██████████| 1188/1188 [00:08<00:00, 145.51it/s]
+  loaded in 10.5s, dtype=fp16
+[4/4] Scoring rewrites + originals...
+  81 samples × 7 rewrites = 567 rewrites
+  [5/81] EVO_0082: total elapsed 5s
+  [10/81] EVO_0158: total elapsed 9s
+  [15/81] EVO_0183: total elapsed 14s
+  [20/81] EVO_0220: total elapsed 18s
+  [25/81] EVO_0288: total elapsed 22s
+  [30/81] EVO_0363: total elapsed 25s
+  [35/81] EVO_0437: total elapsed 29s
+  [40/81] EVO_0508: total elapsed 33s
+  [45/81] EVO_0567: total elapsed 36s
+  [50/81] EVO_0663: total elapsed 40s
+  [55/81] EVO_0718: total elapsed 45s
+  [60/81] EVO_0749: total elapsed 50s
+  [65/81] EVO_0831: total elapsed 53s
+  [70/81] EVO_0861: total elapsed 56s
+  [75/81] EVO_0898: total elapsed 60s
+  [80/81] EVO_0993: total elapsed 64s
+  [81/81] EVO_0994: total elapsed 65s
+
+=== SUMMARY ===
+  n_samples: 81
+  n_with_original_baseline: 81
+  arditi_flips_vs_original: 27
+  lr_prob_below_0.5: 29
+  best_rewrite_agreement_arditi_lr: 32
+  elapsed_total_s: 64.7
+
+wrote /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/scores.jsonl, /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/best_rewrites.json, /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/summary.json

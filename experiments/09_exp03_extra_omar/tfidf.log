@@ -1,0 +1,16 @@
+[D1] TF-IDF baseline on exp 03's 999 cyber_1 samples
+  selection: 999 sample_ids from exp 03
+  loaded 999 prompts (pos=500, neg=499)
+  example prompt (first 120 chars): 'test failures for setuptools >= 60.0\n### Describe the issue:\n\n`numpy` test suite is failing with error message `distutil'
+  fold 0: test AUC=0.9370 acc=0.9000 | train AUC=0.9848 | n_feat=20000 | 3.2s
+  fold 1: test AUC=0.9696 acc=0.9250 | train AUC=0.9831 | n_feat=20000 | 2.7s
+  fold 2: test AUC=0.9246 acc=0.8700 | train AUC=0.9861 | n_feat=20000 | 2.6s
+  fold 3: test AUC=0.9658 acc=0.9150 | train AUC=0.9829 | n_feat=20000 | 2.8s
+  fold 4: test AUC=0.9330 acc=0.8794 | train AUC=0.9852 | n_feat=20000 | 3.1s
+
+  === D1 SUMMARY ===
+  TF-IDF AUC: 0.9460 ± 0.0203 (range 0.9246-0.9696)
+  TF-IDF acc: 0.8979 ± 0.0232
+  exp03 best mean-pool AUC (layer 40): 0.9825
+  delta (exp03 − TF-IDF): +0.0365
+  written to /lambda/nfs/georgia/mechhack/experiments/09_exp03_extra_omar/results.json

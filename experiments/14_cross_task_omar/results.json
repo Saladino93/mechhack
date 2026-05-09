@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    "cyber_1",
+    "cyber_2",
+    "cyber_3"
+  ],
+  "best_layers": {
+    "cyber_1": 40,
+    "cyber_2": 40,
+    "cyber_3": 35
+  },
+  "matrix_test_auc": {
+    "cyber_1": {
+      "cyber_1": 1.0,
+      "cyber_2": 0.886396,
+      "cyber_3": 0.713328
+    },
+    "cyber_2": {
+      "cyber_1": 0.9126092184368738,
+      "cyber_2": 1.0,
+      "cyber_3": 0.7944840000000001
+    },
+    "cyber_3": {
+      "cyber_1": 0.8029819639278557,
+      "cyber_2": 0.733088,
+      "cyber_3": 1.0
+    }
+  },
+  "n_samples": {
+    "cyber_1": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000
+    },
+    "cyber_2": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000
+    },
+    "cyber_3": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000
+    }
+  }
+}

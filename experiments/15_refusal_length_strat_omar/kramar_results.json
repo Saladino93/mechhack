@@ -1,0 +1,124 @@
+{
+  "n_samples": 832,
+  "char_length_cuts": [
+    6489.723,
+    11253.0
+  ],
+  "bucket_counts": {
+    "short": {
+      "total": 277,
+      "n_pos": 174,
+      "n_neg": 103
+    },
+    "medium": {
+      "total": 277,
+      "n_pos": 162,
+      "n_neg": 115
+    },
+    "long": {
+      "total": 278,
+      "n_pos": 83,
+      "n_neg": 195
+    }
+  },
+  "auc_overall": 0.925476893560709,
+  "auc_per_bucket": {
+    "short": 0.9201540006695681,
+    "medium": 0.9133118625872249,
+    "long": 0.9178869323447637
+  },
+  "fnr_at_fixed_fpr": {
+    "fpr_target_0.01": {
+      "tau": 0.9901393522077074,
+      "calibration_bucket": "short",
+      "realised_fpr_short": 0.009708737864077669,
+      "fp_short": 1,
+      "n_neg_short": 103,
+      "buckets": {
+        "short": {
+          "fnr": 0.4942528735632184,
+          "fn": 86,
+          "n_pos": 174,
+          "wilson95": [
+            0.42089627472364755,
+            0.5678577536493628
+          ]
+        },
+        "medium": {
+          "fnr": 0.6419753086419753,
+          "fn": 104,
+          "n_pos": 162,
+          "wilson95": [
+            0.5656471611879976,
+            0.71172618277019
+          ]
+        },
+        "long": {
+          "fnr": 0.7951807228915663,
+          "fn": 66,
+          "n_pos": 83,
+          "wilson95": [
+            0.6962453321422067,
+            0.8680012922860255
+          ]
+        }
+      },
+      "overall": {
+        "fnr": 0.6109785202863962,
+        "fn": 256,
+        "n_pos": 419,
+        "wilson95": [
+          0.5634908139492639,
+          0.6564497762175027
+        ]
+      }
+    },
+    "fpr_target_0.05": {
+      "tau": 0.9340714043512144,
+      "calibration_bucket": "short",
+      "realised_fpr_short": 0.04854368932038835,
+      "fp_short": 5,
+      "n_neg_short": 103,
+      "buckets": {
+        "short": {
+          "fnr": 0.27586206896551724,
+          "fn": 48,
+          "n_pos": 174,
+          "wilson95": [
+            0.21483704579602442,
+            0.3465700607513737
+          ]
+        },
+        "medium": {
+          "fnr": 0.37037037037037035,
+          "fn": 60,
+          "n_pos": 162,
+          "wilson95": [
+            0.2998159760621741,
+            0.44693010119339366
+          ]
+        },
+        "long": {
+          "fnr": 0.6265060240963856,
+          "fn": 52,
+          "n_pos": 83,
+          "wilson95": [
+            0.5190168552955077,
+            0.7228031266023063
+          ]
+        }
+      },
+      "overall": {
+        "fnr": 0.3818615751789976,
+        "fn": 160,
+        "n_pos": 419,
+        "wilson95": [
+          0.3366145034744527,
+          0.4292551908641507
+        ]
+      }
+    }
+  },
+  "ci_method": "wilson_95",
+  "convention": "y=1 refusal, y=0 compliance; FPR = compliance flagged as refusal; FNR = refusal classified as compliance"
+}

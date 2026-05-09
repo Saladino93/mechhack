@@ -1,0 +1,60 @@
+Selected 1000 samples: {'high_risk_dual_use': 138, 'benign': 186, 'prohibited': 500, 'dual_use': 176}
+Already-extracted: 500; need to extract: 500
+Loading /home/ubuntu/models/Gemma-4-31B-it...
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<02:39,  7.41it/s]Loading weights:   1%|          | 11/1188 [00:00<00:34, 34.16it/s]Loading weights:   2%|▏         | 21/1188 [00:00<00:22, 52.93it/s]Loading weights:   3%|▎         | 34/1188 [00:00<00:15, 76.17it/s]Loading weights:   4%|▍         | 47/1188 [00:00<00:12, 92.08it/s]Loading weights:   5%|▍         | 58/1188 [00:00<00:11, 97.18it/s]Loading weights:   6%|▌         | 69/1188 [00:00<00:11, 96.92it/s]Loading weights:   7%|▋         | 80/1188 [00:01<00:11, 96.51it/s]Loading weights:   8%|▊         | 91/1188 [00:01<00:12, 88.32it/s]Loading weights:   9%|▊         | 103/1188 [00:01<00:12, 89.13it/s]Loading weights:  10%|▉         | 117/1188 [00:01<00:11, 94.51it/s]Loading weights:  11%|█         | 131/1188 [00:01<00:09, 105.92it/s]Loading weights:  12%|█▏        | 144/1188 [00:01<00:09, 112.02it/s]Loading weights:  13%|█▎        | 156/1188 [00:01<00:09, 114.16it/s]Loading weights:  14%|█▍        | 168/1188 [00:01<00:10, 101.40it/s]Loading weights:  15%|█▌        | 179/1188 [00:02<00:10, 99.62it/s] Loading weights:  16%|█▌        | 190/1188 [00:02<00:10, 98.57it/s]Loading weights:  17%|█▋        | 201/1188 [00:02<00:10, 93.34it/s]Loading weights:  18%|█▊        | 214/1188 [00:02<00:10, 93.32it/s]Loading weights:  19%|█▉        | 228/1188 [00:02<00:09, 102.03it/s]Loading weights:  20%|██        | 241/1188 [00:02<00:09, 103.19it/s]Loading weights:  21%|██        | 252/1188 [00:02<00:09, 99.90it/s] Loading weights:  22%|██▏       | 263/1188 [00:02<00:09, 98.17it/s]Loading weights:  23%|██▎       | 273/1188 [00:02<00:09, 94.62it/s]Loading weights:  24%|██▍       | 283/1188 [00:03<00:09, 95.98it/s]Loading weights:  25%|██▍       | 296/1188 [00:03<00:09, 96.17it/s]Loading weights:  26%|██▌       | 309/1188 [00:03<00:08, 105.04it/s]Loading weights:  27%|██▋       | 321/1188 [00:03<00:08, 108.14it/s]Loading weights:  28%|██▊       | 332/1188 [00:03<00:08, 101.46it/s]Loading weights:  29%|██▉       | 343/1188 [00:03<00:09, 93.75it/s] Loading weights:  30%|██▉       | 353/1188 [00:03<00:09, 91.71it/s]Loading weights:  31%|███       | 366/1188 [00:03<00:08, 100.80it/s]Loading weights:  32%|███▏      | 379/1188 [00:04<00:07, 107.19it/s]Loading weights:  33%|███▎      | 390/1188 [00:04<00:07, 106.61it/s]Loading weights:  34%|███▍      | 401/1188 [00:04<00:07, 101.78it/s]Loading weights:  35%|███▍      | 412/1188 [00:04<00:07, 97.71it/s] Loading weights:  36%|███▌      | 422/1188 [00:04<00:08, 85.13it/s]Loading weights:  37%|███▋      | 435/1188 [00:04<00:07, 95.60it/s]Loading weights:  38%|███▊      | 448/1188 [00:04<00:07, 104.05it/s]Loading weights:  39%|███▊      | 459/1188 [00:04<00:06, 104.91it/s]Loading weights:  40%|███▉      | 470/1188 [00:04<00:07, 102.08it/s]Loading weights:  40%|████      | 481/1188 [00:05<00:07, 99.84it/s] Loading weights:  41%|████▏     | 492/1188 [00:05<00:07, 92.53it/s]Loading weights:  42%|████▏     | 504/1188 [00:05<00:07, 88.09it/s]Loading weights:  44%|████▎     | 518/1188 [00:05<00:06, 100.91it/s]Loading weights:  45%|████▍     | 531/1188 [00:05<00:06, 108.48it/s]Loading weights:  46%|████▌     | 543/1188 [00:05<00:05, 111.03it/s]Loading weights:  47%|████▋     | 555/1188 [00:05<00:05, 105.86it/s]Loading weights:  48%|████▊     | 566/1188 [00:05<00:05, 104.46it/s]Loading weights:  49%|████▊     | 577/1188 [00:06<00:06, 98.70it/s] Loading weights:  49%|████▉     | 588/1188 [00:06<00:06, 90.41it/s]Loading weights:  51%|█████     | 601/1188 [00:06<00:05, 100.32it/s]Loading weights:  52%|█████▏    | 615/1188 [00:06<00:05, 102.38it/s]Loading weights:  53%|█████▎    | 628/1188 [00:06<00:05, 109.26it/s]Loading weights:  54%|█████▍    | 640/1188 [00:06<00:04, 111.31it/s]Loading weights:  55%|█████▍    | 652/1188 [00:06<00:05, 104.30it/s]Loading weights:  56%|█████▌    | 664/1188 [00:06<00:05, 102.40it/s]Loading weights:  57%|█████▋    | 675/1188 [00:06<00:05, 98.86it/s] Loading weights:  58%|█████▊    | 685/1188 [00:07<00:05, 90.90it/s]Loading weights:  59%|█████▉    | 698/1188 [00:07<00:04, 100.92it/s]Loading weights:  60%|█████▉    | 711/1188 [00:07<00:04, 108.41it/s]Loading weights:  61%|██████    | 723/1188 [00:07<00:04, 110.81it/s]Loading weights:  62%|██████▏   | 735/1188 [00:07<00:04, 104.77it/s]Loading weights:  63%|██████▎   | 746/1188 [00:07<00:04, 104.48it/s]Loading weights:  64%|██████▎   | 757/1188 [00:07<00:04, 94.66it/s] Loading weights:  65%|██████▍   | 767/1188 [00:07<00:04, 95.73it/s]Loading weights:  66%|██████▌   | 780/1188 [00:07<00:03, 104.59it/s]Loading weights:  67%|██████▋   | 791/1188 [00:08<00:03, 103.65it/s]Loading weights:  68%|██████▊   | 802/1188 [00:08<00:04, 95.20it/s] Loading weights:  68%|██████▊   | 812/1188 [00:08<00:04, 87.54it/s]Loading weights:  69%|██████▉   | 823/1188 [00:08<00:04, 86.62it/s]Loading weights:  79%|███████▉  | 937/1188 [00:08<00:00, 353.29it/s]Loading weights:  97%|█████████▋| 1155/1188 [00:08<00:00, 838.35it/s]Loading weights: 100%|██████████| 1188/1188 [00:08<00:00, 136.16it/s]
+Decoder layers: model.model.language_model.layers (n_blocks=60)
+Extracting 13 layer(s): [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+  [20/1000] cyber_1084: N=2256 fwd=0.69s peak=60.5GB sz=301MB | 5.83/s eta=2.8min
+  [30/1000] cyber_3432: N=1490 fwd=0.34s peak=59.8GB sz=199MB | 4.19/s eta=3.9min
+  [60/1000] cyber_742: N=1224 fwd=0.29s peak=59.5GB sz=163MB | 4.73/s eta=3.3min
+  [70/1000] cyber_2533: N=2792 fwd=0.87s peak=61.0GB sz=372MB | 4.28/s eta=3.6min
+  [100/1000] cyber_3070: N=1936 fwd=0.60s peak=60.2GB sz=258MB | 3.50/s eta=4.3min
+  [110/1000] cyber_3677: N=2001 fwd=0.58s peak=60.3GB sz=267MB | 3.51/s eta=4.2min
+  [120/1000] cyber_56: N=457 fwd=0.11s peak=58.7GB sz=61MB | 3.02/s eta=4.9min
+  [140/1000] cyber_151: N=275 fwd=0.09s peak=58.6GB sz=37MB | 2.86/s eta=5.0min
+  [170/1000] cyber_3740: N=3042 fwd=0.99s peak=61.3GB sz=406MB | 2.99/s eta=4.6min
+  [180/1000] cyber_3383: N=3808 fwd=1.36s peak=62.0GB sz=508MB | 2.95/s eta=4.6min
+  [190/1000] cyber_1805: N=1509 fwd=0.36s peak=59.8GB sz=201MB | 2.98/s eta=4.5min
+  [210/1000] cyber_5308: N=202 fwd=0.08s peak=58.5GB sz=27MB | 2.74/s eta=4.8min
+  [220/1000] cyber_683: N=237 fwd=0.08s peak=58.5GB sz=32MB | 2.82/s eta=4.6min
+  [230/1000] cyber_2695: N=1260 fwd=0.31s peak=59.5GB sz=168MB | 2.82/s eta=4.6min
+  [250/1000] cyber_1954: N=1106 fwd=0.25s peak=59.4GB sz=147MB | 2.88/s eta=4.3min
+  [260/1000] cyber_997: N=1269 fwd=0.32s peak=59.5GB sz=169MB | 2.85/s eta=4.3min
+  [270/1000] cyber_34: N=532 fwd=0.12s peak=58.8GB sz=71MB | 2.87/s eta=4.2min
+  [300/1000] cyber_2844: N=2421 fwd=0.82s peak=60.7GB sz=323MB | 2.87/s eta=4.1min
+  [340/1000] cyber_1879: N=2162 fwd=0.68s peak=60.4GB sz=288MB | 2.77/s eta=4.0min
+  [360/1000] cyber_3733: N=3826 fwd=1.46s peak=62.1GB sz=510MB | 2.82/s eta=3.8min
+  [380/1000] cyber_3120: N=4632 fwd=1.85s peak=62.9GB sz=617MB | 2.82/s eta=3.7min
+  [400/1000] cyber_2158: N=1704 fwd=0.50s peak=60.0GB sz=227MB | 2.81/s eta=3.6min
+  [420/1000] cyber_2964: N=1935 fwd=0.59s peak=60.2GB sz=258MB | 2.81/s eta=3.4min
+  [430/1000] cyber_5299: N=145 fwd=0.09s peak=58.4GB sz=19MB | 2.77/s eta=3.4min
+  [440/1000] cyber_597: N=519 fwd=0.12s peak=58.8GB sz=69MB | 2.80/s eta=3.3min
+  [470/1000] cyber_717: N=891 fwd=0.20s peak=59.2GB sz=119MB | 2.91/s eta=3.0min
+  [480/1000] cyber_1089: N=2378 fwd=0.74s peak=60.6GB sz=317MB | 2.87/s eta=3.0min
+  [490/1000] cyber_1155: N=1158 fwd=0.29s peak=59.4GB sz=154MB | 2.85/s eta=3.0min
+  [500/1000] cyber_377: N=1596 fwd=0.40s peak=59.9GB sz=213MB | 2.85/s eta=2.9min
+  [510/1000] cyber_735: N=1873 fwd=0.55s peak=60.1GB sz=250MB | 2.86/s eta=2.9min
+  [550/1000] cyber_585: N=761 fwd=0.15s peak=59.0GB sz=101MB | 2.84/s eta=2.6min
+  [570/1000] cyber_2825: N=1866 fwd=0.63s peak=60.1GB sz=249MB | 2.80/s eta=2.6min
+  [600/1000] cyber_3823: N=4308 fwd=1.68s peak=62.5GB sz=574MB | 2.76/s eta=2.4min
+  [640/1000] cyber_3544: N=2392 fwd=0.71s peak=60.6GB sz=319MB | 2.81/s eta=2.1min
+  [670/1000] cyber_5175: N=124 fwd=0.09s peak=58.4GB sz=17MB | 2.83/s eta=1.9min
+  [680/1000] cyber_2543: N=2512 fwd=0.76s peak=60.8GB sz=335MB | 2.79/s eta=1.9min
+  [700/1000] cyber_2314: N=888 fwd=0.18s peak=59.2GB sz=118MB | 2.80/s eta=1.8min
+  [720/1000] cyber_1321: N=2485 fwd=0.74s peak=60.7GB sz=331MB | 2.74/s eta=1.7min
+  [790/1000] cyber_1197: N=198 fwd=0.17s peak=58.5GB sz=26MB | 2.78/s eta=1.3min
+  [800/1000] cyber_2168: N=2095 fwd=0.66s peak=60.3GB sz=279MB | 2.76/s eta=1.2min
+  [810/1000] cyber_8: N=405 fwd=0.11s peak=58.7GB sz=54MB | 2.74/s eta=1.2min
+  [840/1000] cyber_582: N=318 fwd=0.10s peak=58.6GB sz=42MB | 2.74/s eta=1.0min
+  [850/1000] cyber_216: N=1476 fwd=0.35s peak=59.7GB sz=197MB | 2.75/s eta=0.9min
+  [860/1000] cyber_2151: N=1154 fwd=0.30s peak=59.4GB sz=154MB | 2.75/s eta=0.8min
+  [870/1000] cyber_5321: N=212 fwd=0.08s peak=58.5GB sz=28MB | 2.75/s eta=0.8min
+  [910/1000] cyber_5324: N=147 fwd=0.09s peak=58.4GB sz=20MB | 2.72/s eta=0.6min
+  [920/1000] cyber_2564: N=2440 fwd=0.77s peak=60.7GB sz=325MB | 2.73/s eta=0.5min
+  [930/1000] cyber_274: N=591 fwd=0.13s peak=58.9GB sz=79MB | 2.72/s eta=0.4min
+  [940/1000] cyber_2252: N=1067 fwd=0.27s peak=59.3GB sz=142MB | 2.72/s eta=0.4min
+  [950/1000] cyber_692: N=348 fwd=0.21s peak=58.6GB sz=46MB | 2.68/s eta=0.3min
+  [960/1000] cyber_5123: N=118 fwd=0.16s peak=58.4GB sz=16MB | 2.67/s eta=0.2min
+  [990/1000] cyber_441: N=2838 fwd=0.96s peak=61.1GB sz=378MB | 2.68/s eta=0.1min
+
+=== DONE ok=500 skipped=500 errors=0 | 6.2 min | peak VRAM 66.8 GB ===

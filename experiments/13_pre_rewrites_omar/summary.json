@@ -1,0 +1,8 @@
+{
+  "n_samples": 81,
+  "n_with_original_baseline": 81,
+  "arditi_flips_vs_original": 27,
+  "lr_prob_below_0.5": 29,
+  "best_rewrite_agreement_arditi_lr": 32,
+  "elapsed_total_s": 64.7
+}

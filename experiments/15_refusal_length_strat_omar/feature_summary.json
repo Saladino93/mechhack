@@ -1,0 +1,37 @@
+{
+  "buckets": {
+    "short": {
+      "n_samples": 277,
+      "n_pos": 174,
+      "n_neg": 103,
+      "char_min": 978,
+      "char_max": 6480,
+      "char_median": 4292,
+      "ntok_min": 200,
+      "ntok_max": 1866,
+      "ntok_median": 1002
+    },
+    "medium": {
+      "n_samples": 277,
+      "n_pos": 162,
+      "n_neg": 115,
+      "char_min": 6490,
+      "char_max": 11249,
+      "char_median": 8673,
+      "ntok_min": 1272,
+      "ntok_max": 3776,
+      "ntok_median": 2124
+    },
+    "long": {
+      "n_samples": 278,
+      "n_pos": 83,
+      "n_neg": 195,
+      "char_min": 11253,
+      "char_max": 30536,
+      "char_median": 16927,
+      "ntok_min": 2350,
+      "ntok_max": 7594,
+      "ntok_median": 4272
+    }
+  }
+}

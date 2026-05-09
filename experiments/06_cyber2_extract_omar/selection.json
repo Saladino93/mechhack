@@ -1,0 +1,4016 @@
+{
+  "n_per_class": 500,
+  "seed": 42,
+  "task": "cyber_2",
+  "positive_label": "high_risk_dual_use",
+  "negative_labels": [
+    "dual_use",
+    "benign"
+  ],
+  "negative_label_counts": {
+    "dual_use": 243,
+    "benign": 257
+  },
+  "samples": [
+    {
+      "sample_id": "cyber_4571",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3364",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2582",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3957",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4669",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_189",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4522",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_419",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3370",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_800",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2823",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3029",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4079",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5844",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_232",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3136",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4367",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_744",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3441",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1386",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3899",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_133",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4610",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4312",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2590",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4196",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4198",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4207",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4412",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5060",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_593",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4042",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_605",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4537",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1218",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2063",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4096",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2981",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_138",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4759",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4584",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4462",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3375",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2313",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4432",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5815",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6731",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_288",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2289",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3138",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4476",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2357",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2480",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3367",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6811",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4533",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4116",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5423",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3973",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_855",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5010",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4496",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3587",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2627",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2846",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4603",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_128",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2983",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3391",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4003",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4391",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_187",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4968",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5911",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_396",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_896",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7065",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3984",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3665",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6960",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4184",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4970",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3910",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4076",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_328",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4204",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3983",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2792",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3840",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4438",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2265",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2668",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2614",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3524",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4667",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1146",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1510",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6317",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3189",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7050",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4006",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3468",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1586",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4569",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4046",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5976",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_33",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1966",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4475",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_505",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1615",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_726",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4399",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3509",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_842",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1158",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4567",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_409",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_116",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2675",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_450",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6880",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5381",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1320",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5224",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1156",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4517",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3218",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4154",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_752",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6991",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3916",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4447",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2814",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_540",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4428",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1557",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4737",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_821",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3803",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_230",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4721",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_7217",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6692",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6012",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1993",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5833",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1405",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1230",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4724",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1325",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6713",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1322",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2787",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3537",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3666",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4745",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4173",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4654",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2684",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3163",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5426",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3170",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1363",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4106",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2641",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4371",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5530",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2162",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2111",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3286",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4813",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6421",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5341",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1544",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1141",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1054",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_48",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3938",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2937",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4555",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2078",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_134",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4644",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_844",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2941",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_790",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4125",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5028",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3052",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2031",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1712",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1245",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4054",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6256",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5122",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2544",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5009",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1319",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4276",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4803",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_691",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4717",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2366",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3784",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_348",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3504",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4452",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1571",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6724",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6005",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_969",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2025",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1619",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3036",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4231",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1839",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3655",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6091",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6461",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3055",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_43",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1582",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4340",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2169",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2633",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4982",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6520",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4057",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4545",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3848",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7057",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_940",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3735",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4251",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6015",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4959",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4373",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3064",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1227",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1517",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2144",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1808",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1059",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1434",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3961",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6393",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4098",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3716",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2120",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4118",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1995",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1169",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3674",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_131",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4800",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_620",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4562",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_676",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4131",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1086",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5004",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2056",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_989",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4945",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4953",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3402",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3981",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4300",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4411",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_792",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3548",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_170",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2352",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2574",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4316",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_313",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_680",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2390",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_462",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5413",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4696",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4608",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3456",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4478",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_895",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_519",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_227",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_908",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2766",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1595",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4889",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6417",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5547",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1243",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4102",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_516",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3024",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3259",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4165",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3753",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4514",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3628",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_53",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4471",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4358",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3802",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4513",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5405",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4435",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_129",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4718",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5534",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3180",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4103",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1025",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5838",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_923",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4287",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_277",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4445",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4351",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4631",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1400",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2965",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5376",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2487",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2705",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3882",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_543",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6993",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6765",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4216",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_947",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5773",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2928",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3997",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4187",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3214",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4753",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_7046",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2010",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4005",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4797",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1063",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_468",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4040",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2335",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1210",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4393",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2619",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3038",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1052",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5638",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3588",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1516",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6660",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_59",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7016",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3757",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4908",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6315",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6554",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4573",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_86",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1209",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6989",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6705",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_94",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_231",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4705",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6628",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3430",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6886",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3058",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7076",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_41",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4021",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5398",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4421",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6651",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2927",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5819",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3976",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4860",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4806",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4247",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3287",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1975",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2998",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4011",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3030",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6213",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_598",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4069",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1511",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1719",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1549",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1465",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5535",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5050",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2492",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_125",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2836",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3876",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3877",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2331",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_273",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5037",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4712",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6282",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2116",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4895",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4943",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3673",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3269",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5460",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3301",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6172",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4442",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2562",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1675",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_363",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1799",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4327",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_927",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_764",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2872",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5156",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2493",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2222",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4246",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_361",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4470",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_451",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5465",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1431",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3589",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4053",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4366",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4936",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1822",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3379",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1152",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5703",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4785",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4444",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1792",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_715",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4725",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4322",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_658",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1616",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2198",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4286",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2850",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_797",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3297",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4557",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2525",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1412",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_670",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2510",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2468",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4770",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3351",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4634",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2476",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3953",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1382",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1843",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2133",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_234",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5998",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_301",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2090",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4734",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1739",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_456",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2029",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3508",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1472",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_439",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4512",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4473",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1502",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3469",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_652",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4085",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1242",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6973",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3008",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6853",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_77",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3853",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_406",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3410",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_298",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4375",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6905",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4911",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3065",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4205",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1838",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4685",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_206",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3986",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2969",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_152",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4492",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1797",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3309",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5445",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_253",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_968",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6726",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4377",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4272",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6808",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_466",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2363",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4037",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3836",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5731",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4528",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1144",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1180",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3185",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1656",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6333",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4923",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4967",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4320",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_862",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7018",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4652",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3914",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3762",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5698",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4493",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4498",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5017",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4757",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1994",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1044",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2610",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1964",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3400",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2472",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_905",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4123",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2488",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4153",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4616",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4183",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5884",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4401",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4549",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6602",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_7204",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_668",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3474",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6730",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4928",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_156",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2723",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4605",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3503",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1939",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5424",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3325",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3713",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4270",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1149",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2012",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1946",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3578",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2830",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2841",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6507",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2575",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2744",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4159",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4346",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4859",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5985",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_902",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2672",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_550",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3176",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1267",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6857",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5839",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3844",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4873",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3119",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4223",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5410",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6676",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3083",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5682",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4299",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6902",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4510",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_295",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4394",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3220",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5034",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5697",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3054",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_910",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3892",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4326",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3132",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6305",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3444",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1375",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3644",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4022",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4446",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3178",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6939",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4921",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1206",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_434",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_734",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1143",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3956",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3852",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4672",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_626",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3289",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1212",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_688",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5921",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_996",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2495",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6205",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3732",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4796",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2778",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2613",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6737",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1642",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1061",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1551",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6591",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2838",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4720",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4758",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2360",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_140",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1138",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1266",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_332",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2465",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4596",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5035",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_554",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5759",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_380",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3640",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6998",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4861",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4469",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6237",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1283",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1665",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4900",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3912",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5485",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4002",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1394",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5723",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4408",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4851",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2048",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4364",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4330",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2877",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4677",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5005",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5894",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4071",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_449",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1585",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1566",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7252",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2436",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4976",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5798",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5312",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4952",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1597",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3689",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4292",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_7061",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_802",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4273",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_324",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_912",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_446",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6220",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5720",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6453",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_526",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4653",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4210",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2805",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3812",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5443",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1478",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3620",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3179",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3647",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2774",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4822",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6339",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1730",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4914",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5515",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4309",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_118",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1711",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_402",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4199",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2986",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3281",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1507",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3861",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_693",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4181",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2406",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4178",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_421",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1336",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6677",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2878",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4044",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1019",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4004",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2584",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4180",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5967",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4264",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5707",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4390",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4722",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3004",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3897",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_22",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3226",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5900",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4774",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3930",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4823",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3806",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6259",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6935",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6858",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5634",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3950",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1987",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_423",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5021",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4560",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_71",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4658",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3783",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7124",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1345",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6617",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4691",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3072",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4450",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3074",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2460",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3829",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7002",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3595",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_265",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3794",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4837",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_414",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4166",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3234",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1795",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7144",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_866",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4244",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1276",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6975",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_677",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3970",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3478",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_144",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6443",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4197",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5420",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4989",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3873",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5909",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5074",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3563",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3906",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4601",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4958",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3516",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5753",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4236",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3267",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3505",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3521",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_241",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_292",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2241",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4613",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4531",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3396",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4635",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_511",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5622",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3254",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1932",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_12",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4233",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1931",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_254",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_660",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6924",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_7129",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6308",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_159",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3958",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1794",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4000",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4487",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6656",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5382",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1703",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6849",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5302",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6866",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4920",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1018",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4323",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_754",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4769",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6151",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2593",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_904",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6955",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5782",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3626",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4200",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3592",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2769",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4405",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5036",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_751",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4141",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5016",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3026",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3550",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_111",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3125",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3584",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_70",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7196",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4174",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5804",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6953",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4243",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4651",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5427",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_1395",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3450",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2997",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1048",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_202",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3987",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2037",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1356",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_933",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3368",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_961",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5971",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4580",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4269",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6327",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4925",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2934",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3932",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5786",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3446",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4930",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1915",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4836",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3175",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5251",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2871",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3954",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4891",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6209",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3874",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2102",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1919",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2459",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_623",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3121",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4611",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1770",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2261",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_928",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1989",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4129",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2728",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5448",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4503",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_564",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4310",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_290",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3216",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5681",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3585",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4228",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5046",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6429",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2560",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6560",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3044",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3985",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4348",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5858",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3597",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5240",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2967",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2938",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_37",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4018",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5078",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4564",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_5378",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4298",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_553",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3546",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_6605",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_2522",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2572",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5013",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4507",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4825",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4625",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4349",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4919",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6622",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_5565",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3599",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_3384",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_1397",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_967",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2643",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1062",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4981",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_535",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6487",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6039",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_379",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4650",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4105",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_3355",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_700",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5996",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4781",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4924",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4043",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4871",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_381",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_5069",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4451",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6699",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6318",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_6584",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4254",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_210",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_590",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_805",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_6242",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_3857",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_4657",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_289",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_7203",
+      "label": "benign"
+    },
+    {
+      "sample_id": "cyber_4972",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_2565",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_1240",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4202",
+      "label": "high_risk_dual_use"
+    },
+    {
+      "sample_id": "cyber_4234",
+      "label": "dual_use"
+    },
+    {
+      "sample_id": "cyber_2022",
+      "label": "high_risk_dual_use"
+    }
+  ]
+}

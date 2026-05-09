@@ -1,0 +1,5 @@
+wrote /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/similarity.jsonl, /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/similarity_summary.json
+
+TF-IDF cosine: mean=0.302 (range 0.062-0.936)
+Jaccard word:  mean=0.259 (range 0.074-0.944)
+len ratio:     mean=0.337 (range 0.090-1.060)
