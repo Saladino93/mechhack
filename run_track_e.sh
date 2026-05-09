@@ -1,0 +1,52 @@
+#!/bin/bash
+# Track E: Re-score all 403 edits against every probe variant (robustness).
+#
+# Phase E1a (CPU): fit_probes.py — fits every (layer, pooling) probe on full 832
+#                  refusal samples. Uses Track A's cached features. ~5 min.
+# Phase E1b (GPU): score_edits_multi_probe.py — runs Gemma forward on each of
+#                  403 edits, mean+last-pools every layer, scores under every
+#                  fitted probe. ~10 min on H100.
+# Phase E1c (CPU): compute_robustness.py — joins edit-scores with judge results
+#                  to compute Pr metrics per probe. ~10 sec.
+#
+# Pre-condition: refusal cache (Track A) AND GPU free (after master pipeline + Track B).
+
+set -u
+cd /home/ubuntu/georgia/mechhack
+
+mkdir -p logs
+
+ts() { date +"[%Y-%m-%d %H:%M:%S]"; }
+
+commit_push() {
+    local msg="$1"
+    git add -A 2>&1 | tail -1
+    git diff --cached --quiet && { echo "$(ts) nothing to commit for: $msg"; return; }
+    git commit -m "$(printf 'Track E: %s\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>' "$msg")" 2>&1 | tail -3
+    git push 2>&1 | tail -3 || { git pull --rebase 2>&1 | tail -3; git push 2>&1 | tail -3; }
+}
+
+# --- E1a: wait for refusal cache, then fit probes (CPU) ---
+echo "$(ts) waiting for refusal cache..."
+while [ ! -f experiments/17_quadratic_probe_omar/cache/refusal_13layer_mean.npz ]; do
+    sleep 60
+done
+echo "$(ts) refusal cache ready; fitting probes"
+python3 experiments/24_robustness_omar/fit_probes.py > logs/fit_probes.log 2>&1
+commit_push "E1a: probes fitted (every layer, mean+last-tok, multi-concat, agg)"
+
+# --- E1b: wait for GPU free, then score edits ---
+echo "$(ts) waiting for GPU to free..."
+while pgrep -f "run_pipeline_while_away.sh\|run_track_b.sh\|run_track_g.sh\|score_rollouts\|extract.py\|train.py --task refusal_gemma" > /dev/null 2>&1; do
+    sleep 120
+    echo "$(ts) GPU still busy..."
+done
+echo "$(ts) GPU free; scoring edits under each probe"
+python3 experiments/24_robustness_omar/score_edits_multi_probe.py > logs/score_edits_multi.log 2>&1
+commit_push "E1b: edits scored under every probe variant"
+
+# --- E1c: compute robustness metrics ---
+python3 experiments/24_robustness_omar/compute_robustness.py > logs/compute_robustness.log 2>&1
+commit_push "E1c: per-probe robustness Pr-metrics"
+
+echo "$(ts) ===== TRACK E complete ====="

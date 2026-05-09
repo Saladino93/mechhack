@@ -20,3 +20,8 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Track A caches (large npz)
+experiments/17_quadratic_probe_omar/cache/
+experiments/24_robustness_omar/refusal_13layer_last_tok.npz
+experiments/24_robustness_omar/fitted_probes.npz

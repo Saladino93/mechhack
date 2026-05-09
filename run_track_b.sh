@@ -24,17 +24,17 @@ commit_push() {
     }
 }
 
-# Wait for the master pipeline (run_pipeline_while_away.sh) to finish.
-# It runs Phase 3a/3b/3c (rollouts + judge + Pr metrics) then Phase 4
-# (Rolling probe at L25/L35/L40). Track B starts after Phase 4 ends.
-echo "$(ts) waiting for master pipeline to finish (Phase 3a → 3b → 3c → 4)..."
-while pgrep -f "run_pipeline_while_away.sh" > /dev/null 2>&1; do
+# Wait for: (1) master pipeline to finish or be killed, AND
+#           (2) cyber test extraction (Track G) to finish if running.
+# Otherwise we'd race for the GPU.
+echo "$(ts) waiting for master pipeline + cyber extract to clear..."
+while pgrep -f "run_pipeline_while_away.sh\|run_track_g.sh\|experiments/25_cyber_test_extract_omar/extract.py" > /dev/null 2>&1; do
     sleep 60
-    n_lines=$(wc -l < experiments/13_pre_rewrites_omar/rollouts_phase3.jsonl 2>/dev/null || echo 0)
-    n_kramar=$(ls experiments/16_multimax_probe_omar/results/refusal_L*_gpu/summary.json 2>/dev/null | wc -l)
-    echo "$(ts) waiting... rollouts=$n_lines; kramar layer dirs=$n_kramar"
+    n_rollouts=$(wc -l < experiments/13_pre_rewrites_omar/rollouts_phase3.jsonl 2>/dev/null || echo 0)
+    n_cyber_test=$(ls /home/ubuntu/extracts/cyber_all_omar/ 2>/dev/null | wc -l)
+    echo "$(ts) waiting... rollouts=$n_rollouts; cyber_extracts=$n_cyber_test"
 done
-echo "$(ts) master pipeline done; GPU is free; starting Track B"
+echo "$(ts) GPU is free; starting Track B"
 
 run_one() {
     local name="$1"; shift
