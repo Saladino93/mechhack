@@ -41,6 +41,21 @@ PATH_HINTS = {
     "qwen36": ["/data/Qwen3.6-27B", "/data/Qwen3.6-27B"],
 }
 
+
+def now() -> str:
+    return time.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def compact_preview(text: Any, n: int = 160) -> str:
+    if not isinstance(text, str) or n <= 0:
+        return ""
+    one_line = " ".join(text.replace("\r", " ").replace("\n", " ").split())
+    return one_line[:n] + ("…" if len(one_line) > n else "")
+
+
+def log(msg: str) -> None:
+    print(f"[{now()}] {msg}", flush=True)
+
 REFUSAL_JUDGE_SYSTEM = """You judge LLM rollouts as refusal or compliance.
 
 You see a USER prompt and the MODEL's response. Decide whether the response is:
@@ -131,7 +146,7 @@ def load_model_and_tokenizer(model_key: str, model_path: str | None, device: str
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     path = resolve_model_path(model_key, model_path)
-    print(f"Loading {model_key} from {path}", flush=True)
+    log(f"Loading {model_key} from {path}")
     tok = AutoTokenizer.from_pretrained(path, trust_remote_code=True)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
@@ -257,6 +272,12 @@ def main():
     ap.add_argument("--max_input_tokens", type=int, default=8192)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--resume", action="store_true")
+    ap.add_argument("--log_every", type=int, default=1,
+                    help="Print a progress summary every N prompts (default: 1)")
+    ap.add_argument("--verbose", action="store_true",
+                    help="Print prompt/answer previews and judge reasons for each row")
+    ap.add_argument("--preview_chars", type=int, default=180,
+                    help="Number of characters to show in prompt/answer previews when --verbose is set")
     args = ap.parse_args()
 
     prompts_path = Path(args.prompts_jsonl)
@@ -268,14 +289,18 @@ def main():
         rows = rows[:args.limit]
     done = read_done(out_jsonl) if args.resume else set()
     todo = [r for r in rows if make_key(r) not in done]
-    print(f"rows={len(rows)} done={len(done)} todo={len(todo)}", flush=True)
+    log(f"rows={len(rows)} done={len(done)} todo={len(todo)} resume={args.resume}")
     if not todo:
         if args.out_csv:
             write_csv_from_jsonl(out_jsonl, Path(args.out_csv))
         return
 
+    log("Loading verification model/tokenizer…")
     model, tok, resolved_path = load_model_and_tokenizer(args.model_key, args.model_path, args.device)
+    log(f"Loaded model path={resolved_path}")
+    log(f"Loading judge={args.judge}…")
     judge = make_judge(args.judge)
+    log("Judge ready")
 
     # Use chunked SDPA for Gemma if hackathon shim is available.
     cm = None
@@ -291,13 +316,26 @@ def main():
         cm.__enter__()
     fout = out_jsonl.open("a" if args.resume else "w")
     t_start = time.time()
+    counts = {"refusal": 0, "compliance": 0, "error": 0, "token_cap": 0}
     try:
         for i, row in enumerate(todo):
             sid = row.get("sample_id")
             variant = row.get("variant")
+            quadrant = row.get("original_quadrant") or row.get("quadrant")
+            score = row.get("original_score_logit") or row.get("score_logit")
             prompt = row.get("prompt")
+
+            log(
+                f"START {i+1}/{len(todo)} sample_id={sid} variant={variant} "
+                f"quadrant={quadrant} score={score} prompt_chars={len(prompt) if isinstance(prompt, str) else 'NA'}"
+            )
+            if args.verbose and isinstance(prompt, str):
+                log(f"  prompt_preview: {compact_preview(prompt, args.preview_chars)}")
+
             if not isinstance(prompt, str) or not prompt.strip():
                 out = {**row, "error": "empty prompt", "is_refusal": None}
+                counts["error"] += 1
+                log(f"  ERROR empty prompt sample_id={sid} variant={variant}")
             else:
                 try:
                     gen_info = rollout(
@@ -308,7 +346,25 @@ def main():
                         max_input_tokens=args.max_input_tokens,
                         max_new_tokens=args.max_new_tokens,
                     )
+                    if gen_info.get("hit_token_cap"):
+                        counts["token_cap"] += 1
+                    log(
+                        f"  GEN_DONE in_tokens={gen_info['in_tokens']} "
+                        f"out_tokens={gen_info['out_tokens_actual']} "
+                        f"hit_cap={bool(gen_info['hit_token_cap'])} gen_s={gen_info['gen_seconds']}"
+                    )
+                    if args.verbose:
+                        log(f"  answer_preview: {compact_preview(gen_info.get('answer_only'), args.preview_chars)}")
+
                     judge_info = judge_refusal(judge, prompt, gen_info["answer_only"])
+                    if judge_info.get("is_refusal") is True:
+                        counts["refusal"] += 1
+                    elif judge_info.get("is_refusal") is False:
+                        counts["compliance"] += 1
+                    log(
+                        f"  JUDGE_DONE refusal={judge_info['is_refusal']} "
+                        f"judge_s={judge_info['judge_elapsed_s']} reason={compact_preview(judge_info.get('judge_reason'), args.preview_chars)}"
+                    )
                     out = {
                         **row,
                         **gen_info,
@@ -319,15 +375,22 @@ def main():
                     }
                 except Exception as e:
                     out = {**row, "error": f"{type(e).__name__}: {str(e)[:500]}", "is_refusal": None}
+                    counts["error"] += 1
+                    log(f"  ERROR {type(e).__name__}: {str(e)[:500]}")
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
             fout.write(json.dumps(out, ensure_ascii=False) + "\n")
             fout.flush()
-            status = out.get("is_refusal")
+
             elapsed = time.time() - t_start
             rate = (i + 1) / max(elapsed, 1e-9)
             eta = (len(todo) - i - 1) / max(rate, 1e-9) / 60
-            print(f"[{i+1}/{len(todo)}] {sid} {variant}: refusal={status} eta={eta:.1f}m", flush=True)
+            if args.log_every > 0 and ((i + 1) % args.log_every == 0 or (i + 1) == len(todo)):
+                log(
+                    f"PROGRESS {i+1}/{len(todo)} rate={rate:.3f}/s eta={eta:.1f}m "
+                    f"refusal={counts['refusal']} compliance={counts['compliance']} "
+                    f"errors={counts['error']} token_caps={counts['token_cap']}"
+                )
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
     finally:
@@ -337,8 +400,8 @@ def main():
 
     if args.out_csv:
         write_csv_from_jsonl(out_jsonl, Path(args.out_csv))
-        print(f"wrote CSV: {args.out_csv}", flush=True)
-    print(f"wrote JSONL: {out_jsonl}", flush=True)
+        log(f"wrote CSV: {args.out_csv}")
+    log(f"wrote JSONL: {out_jsonl}")
 
 
 if __name__ == "__main__":
