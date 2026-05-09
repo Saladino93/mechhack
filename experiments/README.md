@@ -12,7 +12,7 @@ Every experiment folder should contain:
 | # | Name | Goal | Status |
 |---|------|------|--------|
 | 01 | `01_data_exploration` | Understand dataset distributions, token lengths, class balance | **Done** |
-| 02 | `02_extract_residuals` | Extract residual activations from Gemma/Qwen | Pending |
+| 02 | `02_extract_activations` | Extract residual activations from Gemma/Qwen | **Code ready** (needs GPU) |
 | 03 | `03_refusal_direction` | Find refusal direction via difference-in-means (Arditi method) | Pending |
 | 04 | `04_linear_probe` | Train linear probes on residuals for all 5 tasks | Pending |
 | 05 | `05_advanced_probes` | SWiM smoothing, attention-pooling, multi-layer concat | Pending |
