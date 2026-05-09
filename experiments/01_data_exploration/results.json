@@ -1,0 +1,27 @@
+{
+  "cyber": {
+    "total": 7259,
+    "categories": {
+      "prohibited": 2574,
+      "dual_use": 952,
+      "high_risk_dual_use": 1495,
+      "benign": 2238
+    },
+    "token_length_mean": 1972.4298112687698,
+    "token_length_median": 1607
+  },
+  "refusal_gemma": {
+    "total": 878,
+    "refusal_count": 421,
+    "compliance_count": 457,
+    "refusal_rate": 0.479498861047836,
+    "token_length_mean": 2859.0774487471526
+  },
+  "refusal_qwen": {
+    "total": 878,
+    "refusal_count": 275,
+    "compliance_count": 603,
+    "refusal_rate": 0.3132118451025057,
+    "token_length_mean": 2859.0774487471526
+  }
+}

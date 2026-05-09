@@ -1,0 +1,25 @@
+# Large binary files
+papers/*.pdf
+
+# Extraction outputs (generated on cluster)
+extracts/
+*.pt
+
+# Probe weights
+probes/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code local config
+.claude/
+
+# OS
+.DS_Store
