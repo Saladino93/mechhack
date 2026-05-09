@@ -204,3 +204,25 @@ loading cyber cyber_3 13-layer extracts...
     fold 0: test_AUC=0.9542 train_AUC=1.0000 acc=0.8900 | 205.6s
     fold 1: test_AUC=0.9246 train_AUC=1.0000 acc=0.8300 | 183.8s
     fold 2: test_AUC=0.9546 train_AUC=1.0000 acc=0.8700 | 189.4s
+    fold 3: test_AUC=0.9448 train_AUC=1.0000 acc=0.8800 | 211.2s
+    fold 4: test_AUC=0.9567 train_AUC=1.0000 acc=0.8900 | 245.7s
+    linear:  AUC=0.9470 ± 0.0133
+    lin-PCs: AUC=0.8932 ± 0.0185
+    fold 0: alpha=0.1 test_AUC=0.9161 train_AUC=0.9479 acc=0.8600 | 29.6s
+    fold 1: alpha=100.0 test_AUC=0.8656 train_AUC=0.9599 acc=0.7950 | 25.5s
+    fold 2: alpha=100.0 test_AUC=0.9000 train_AUC=0.9516 acc=0.7900 | 22.8s
+    fold 3: alpha=100.0 test_AUC=0.8958 train_AUC=0.9514 acc=0.8100 | 36.4s
+    fold 4: alpha=100.0 test_AUC=0.8974 train_AUC=0.9490 acc=0.8000 | 25.4s
+    quad:    AUC=0.8950 ± 0.0183
+
+  === L35 ===
+    fold 0: test_AUC=0.9617 train_AUC=1.0000 acc=0.9050 | 228.1s
+    fold 1: test_AUC=0.9296 train_AUC=1.0000 acc=0.8500 | 165.5s
+    fold 2: test_AUC=0.9593 train_AUC=1.0000 acc=0.8750 | 206.3s
+    fold 3: test_AUC=0.9505 train_AUC=1.0000 acc=0.9000 | 214.1s
+    fold 4: test_AUC=0.9730 train_AUC=1.0000 acc=0.9000 | 188.8s
+    linear:  AUC=0.9548 ± 0.0162
+    lin-PCs: AUC=0.9008 ± 0.0137
+    fold 0: alpha=1.0 test_AUC=0.9126 train_AUC=0.9573 acc=0.8350 | 26.8s
+    fold 1: alpha=0.1 test_AUC=0.8746 train_AUC=0.9675 acc=0.7950 | 26.3s
+    fold 2: alpha=0.1 test_AUC=0.9108 train_AUC=0.9578 acc=0.8100 | 28.7s

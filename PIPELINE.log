@@ -80,3 +80,29 @@ loading Gemma...
   [240] elapsed 3161s
   [260] elapsed 3456s
   [280] elapsed 3743s
+To github.com:Saladino93/mechhack.git
+   1b7cff8..d52dcc0  main -> main
+
+[Sat May  9 23:07:18 UTC 2026] === Phase 3b: judge rollouts via DeepSeek (existing judge infra adapted) ===
+judging 403 of 403
+  [20/403] errors=0 (63s)
+  [40/403] errors=0 (144s)
+  [60/403] errors=0 (288s)
+  [80/403] errors=0 (363s)
+  [100/403] errors=0 (447s)
+  [120/403] errors=0 (552s)
+  [140/403] errors=0 (688s)
+  [160/403] errors=0 (771s)
+  [180/403] errors=0 (866s)
+  [200/403] errors=0 (983s)
+  [220/403] errors=0 (1057s)
+  [240/403] errors=0 (1122s)
+  [260/403] errors=0 (1208s)
+  [280/403] errors=0 (1273s)
+  [300/403] errors=0 (1338s)
+  [320/403] errors=0 (1422s)
+  [340/403] errors=0 (1489s)
+  [360/403] errors=0 (1540s)
+  [380/403] errors=0 (1649s)
+  [400/403] errors=0 (1765s)
+done; 403 judged, 0 errors
