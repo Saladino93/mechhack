@@ -4,10 +4,10 @@
 > numbers from each, and where to look for plots / scripts. Use this as the
 > reading guide for the slides.
 
-Status as of **2026-05-09 16:00 UTC** (Saturday). Submission deadline Sunday
-14:00 UTC. Some long-running jobs (cyber length-strat, cross-task, MultiMax
-implementation) were still in flight when this file was last updated — see the
-"in flight" markers below.
+Status as of **2026-05-09 21:40 UTC** (Saturday evening). Submission deadline
+Sunday 14:00 UTC. Multiple new probe-zoo + robustness sweeps were launched
+this evening; see the "in flight" markers and `git log` for incremental
+landings.
 
 ---
 
@@ -20,8 +20,36 @@ implementation) were still in flight when this file was last updated — see the
 | Cyber Probe-1 | dual_use vs benign | **0.983** (1k CV) → **0.988** (3k held-out) | 0.97 | mean L40 | exp 03 / exp 08 |
 | Cyber Probe-2 | high_risk_dual_use vs (du ∪ ben) | 0.946 | **0.955** | mean L40 / last L60 | exp 06 |
 | Cyber Probe-3 | prohibited vs (hrdu ∪ du ∪ ben) | **0.955** | 0.92 | mean L35 | exp 07 |
-| Refusal-Gemma | refusal vs compliance | **0.927** | 0.917 | L32 (only one extracted) | exp 11 |
+| Refusal-Gemma | refusal vs compliance | 0.945 (mean L40) | **0.953** (last L45) | mean L40 / **last L45** | exp 18 (was 0.927 @ L32) |
 | Refusal-Qwen | — | — | — | — | **skipped** (model not downloaded) |
+
+> **Refusal-Gemma update (exp 18, 2026-05-09):** the original 0.927 number used
+> mean-pool at L32 because it was the only extracted layer. After re-extracting
+> 13 layers (0,5,…,60), the actual best is **last-token L45 AUC=0.953 ± 0.004**
+> (5-fold CV), with mean L40 close behind at 0.945. **Multi-layer concat
+> (13×5376=69,888d) is WORSE at 0.929** — overfits with train AUC≈1.0 and
+> test 0.93. **Lesson: capacity ≠ generalization on this task; one good layer
+> beats stacking them.**
+
+### Refusal probe zoo summary (exp 18 + 21, 2026-05-09)
+
+| Method | AUC | Notes |
+|---|---:|---|
+| **last-token L45 (LR)** | **0.953 ± 0.004** | new winner |
+| last-token L40 (LR) | 0.949 ± 0.009 | |
+| mean-pool L40 (LR) | 0.945 ± 0.019 | |
+| mean-pool L32 (LR) | 0.932 ± 0.013 | original "baseline" |
+| 13-layer mean-concat (LR, 69,888d) | 0.929 (overfits) | lower than single-best layer |
+| Rolling probe @ L30 (Kramar arch B, exp 16) | 0.877 | length-robust on long bucket (0.889) |
+| **TF-IDF word 1-2gram (exp 21)** | 0.877 ± 0.025 | naive baseline |
+| TF-IDF char 3-5gram | 0.870 ± 0.038 | naive baseline |
+| Random predictor | 0.50 (sanity) | |
+| Pleshkov quadratic d=16 @ L32 (exp 17) | 0.860 | PCA bottleneck dominates |
+| Pleshkov 13-layer sweep | _IN FLIGHT_ | exp 17 sweep_layers.py |
+
+**Activation lift over TF-IDF: +0.075 on refusal** — same direction as cyber
+(+0.037 / +0.059 / +0.065 from cyber_1/2/3) but smaller, suggesting refusal is
+"less linearly recoverable" past TF-IDF than the cyber tasks.
 
 ### Level 2 — Behaviour-flip results, n=81 attribution_eval prompts, Wilson 95% CIs
 
