@@ -10,3 +10,40 @@ done.
 done.
 
 [Sat May  9 20:14:57 UTC 2026] === waiting for any CC++ process to clear GPU (briefly) ===
+To github.com:Saladino93/mechhack.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:Saladino93/mechhack.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+push failed (non-fatal)
+
+[Sat May  9 20:15:07 UTC 2026] === Phase 2: scoring DeepSeek edits + surgical candidates on GPU ===
+loaded LR probe (|coef|_2=8.97, bias=-0.0077)
+loaded Arditi direction (norm=1.0000)
+queue: 403 edits to score (skipped 0 already done)
+loading Gemma...
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:01<14:55,  1.32it/s]Loading weights:   4%|▍         | 47/1188 [00:01<00:33, 34.06it/s]Loading weights:   5%|▌         | 61/1188 [00:02<00:30, 37.34it/s]Loading weights:   6%|▋         | 75/1188 [00:02<00:27, 40.32it/s]Loading weights:   7%|▋         | 85/1188 [00:02<00:23, 46.55it/s]Loading weights:   8%|▊         | 93/1188 [00:02<00:25, 42.21it/s]Loading weights:   9%|▊         | 102/1188 [00:03<00:28, 38.67it/s]Loading weights:  10%|▉         | 116/1188 [00:03<00:23, 44.79it/s]Loading weights:  11%|█         | 130/1188 [00:03<00:22, 46.58it/s]Loading weights:  12%|█▏        | 144/1188 [00:03<00:20, 49.83it/s]Loading weights:  13%|█▎        | 158/1188 [00:04<00:21, 47.42it/s]Loading weights:  14%|█▍        | 171/1188 [00:04<00:21, 46.92it/s]Loading weights:  16%|█▌        | 185/1188 [00:04<00:22, 44.22it/s]Loading weights:  17%|█▋        | 199/1188 [00:04<00:20, 47.92it/s]Loading weights:  18%|█▊        | 213/1188 [00:05<00:20, 47.89it/s]Loading weights:  19%|█▉        | 227/1188 [00:05<00:18, 50.64it/s]Loading weights:  20%|██        | 241/1188 [00:05<00:18, 50.44it/s]Loading weights:  21%|██        | 251/1188 [00:05<00:16, 56.81it/s]Loading weights:  22%|██▏       | 258/1188 [00:06<00:19, 46.98it/s]Loading weights:  23%|██▎       | 268/1188 [00:06<00:19, 46.36it/s]Loading weights:  24%|██▎       | 282/1188 [00:06<00:19, 46.86it/s]Loading weights:  25%|██▍       | 296/1188 [00:06<00:18, 47.78it/s]Loading weights:  26%|██▌       | 310/1188 [00:07<00:17, 50.58it/s]Loading weights:  27%|██▋       | 324/1188 [00:07<00:17, 50.60it/s]Loading weights:  28%|██▊       | 334/1188 [00:07<00:14, 57.19it/s]Loading weights:  29%|██▊       | 341/1188 [00:07<00:18, 47.02it/s]Loading weights:  30%|██▉       | 351/1188 [00:08<00:18, 46.11it/s]Loading weights:  31%|███       | 365/1188 [00:08<00:17, 47.58it/s]Loading weights:  32%|███▏      | 379/1188 [00:08<00:16, 48.68it/s]Loading weights:  33%|███▎      | 393/1188 [00:08<00:15, 51.70it/s]Loading weights:  34%|███▍      | 407/1188 [00:09<00:15, 51.21it/s]Loading weights:  35%|███▌      | 417/1188 [00:09<00:13, 57.80it/s]Loading weights:  36%|███▌      | 424/1188 [00:09<00:15, 48.39it/s]Loading weights:  37%|███▋      | 434/1188 [00:09<00:16, 46.78it/s]Loading weights:  38%|███▊      | 448/1188 [00:10<00:15, 46.43it/s]Loading weights:  39%|███▉      | 462/1188 [00:10<00:15, 46.90it/s]Loading weights:  40%|████      | 476/1188 [00:10<00:14, 49.27it/s]Loading weights:  41%|████      | 490/1188 [00:10<00:14, 48.98it/s]Loading weights:  42%|████▏     | 500/1188 [00:10<00:12, 55.97it/s]Loading weights:  43%|████▎     | 507/1188 [00:11<00:14, 47.11it/s]Loading weights:  44%|████▎     | 517/1188 [00:11<00:15, 42.20it/s]Loading weights:  45%|████▍     | 531/1188 [00:11<00:14, 45.95it/s]Loading weights:  46%|████▌     | 545/1188 [00:12<00:13, 47.08it/s]Loading weights:  47%|████▋     | 559/1188 [00:12<00:12, 48.49it/s]Loading weights:  48%|████▊     | 573/1188 [00:12<00:12, 48.85it/s]Loading weights:  49%|████▊     | 579/1188 [00:12<00:12, 46.91it/s]Loading weights:  49%|████▉     | 584/1188 [00:12<00:14, 41.98it/s]Loading weights:  50%|█████     | 594/1188 [00:13<00:11, 50.54it/s]Loading weights:  51%|█████     | 600/1188 [00:13<00:14, 41.22it/s]Loading weights:  51%|█████▏    | 610/1188 [00:13<00:11, 49.93it/s]Loading weights:  52%|█████▏    | 616/1188 [00:13<00:14, 39.29it/s]Loading weights:  53%|█████▎    | 628/1188 [00:13<00:12, 43.25it/s]Loading weights:  54%|█████▍    | 642/1188 [00:14<00:11, 45.74it/s]Loading weights:  55%|█████▌    | 656/1188 [00:14<00:12, 43.53it/s]Loading weights:  56%|█████▋    | 669/1188 [00:14<00:11, 46.09it/s]Loading weights:  57%|█████▋    | 683/1188 [00:15<00:11, 45.41it/s]Loading weights:  59%|█████▊    | 697/1188 [00:15<00:11, 44.43it/s]Loading weights:  60%|█████▉    | 711/1188 [00:15<00:10, 46.35it/s]Loading weights:  61%|██████    | 725/1188 [00:15<00:09, 48.75it/s]Loading weights:  62%|██████▏   | 739/1188 [00:16<00:09, 48.04it/s]Loading weights:  63%|██████▎   | 749/1188 [00:16<00:08, 54.77it/s]Loading weights:  64%|██████▎   | 756/1188 [00:16<00:09, 44.27it/s]Loading weights:  64%|██████▍   | 766/1188 [00:16<00:09, 43.51it/s]Loading weights:  66%|██████▌   | 780/1188 [00:17<00:09, 43.38it/s]Loading weights:  67%|██████▋   | 794/1188 [00:17<00:08, 45.55it/s]Loading weights:  68%|██████▊   | 808/1188 [00:17<00:07, 47.81it/s]Loading weights:  69%|██████▉   | 822/1188 [00:18<00:08, 45.16it/s]Loading weights:  74%|███████▍  | 884/1188 [00:18<00:02, 118.62it/s]Loading weights:  82%|████████▏ | 973/1188 [00:18<00:00, 237.60it/s]Loading weights:  89%|████████▉ | 1057/1188 [00:18<00:00, 345.64it/s]Loading weights:  97%|█████████▋| 1148/1188 [00:18<00:00, 461.18it/s]Loading weights: 100%|██████████| 1188/1188 [00:18<00:00, 64.05it/s] 
+  loaded in 21.0s
+  [25/403]  9s elapsed
+  [50/403]  17s elapsed
+  [75/403]  27s elapsed
+  [100/403]  37s elapsed
+  [125/403]  46s elapsed
+  [150/403]  53s elapsed
+  [175/403]  62s elapsed
+  [200/403]  71s elapsed
+  [225/403]  81s elapsed
+  [250/403]  90s elapsed
+  [275/403]  99s elapsed
+  [300/403]  106s elapsed
+  [325/403]  115s elapsed
+  [350/403]  124s elapsed
+  [375/403]  133s elapsed
+  [400/403]  141s elapsed
+  [403/403]  142s elapsed
+
+finished. wrote 403 new rows to /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/edits_scored.jsonl
