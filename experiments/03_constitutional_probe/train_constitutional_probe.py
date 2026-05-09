@@ -1,25 +1,25 @@
 """Train a Constitutional Classifier++ style streaming linear probe.
 
-This is an additive alternative to `train_probe.py` that implements the paper's
-linear-probe recipe: multi-layer token logits + SWiM smoothing + softmax-weighted
-loss. It consumes `.pt` residual extracts written by `extract_residuals.py`.
+Patched version for activation extracts produced by experiments/02_extract_activations.
 
-Recommended quick run:
+Key behavior:
+  - Reads activations from .pt files, not from extraction_metadata.json.
+  - Uses the raw label saved in each .pt file.
+  - Uses experiments/02_extract_activations/data.py to recover official train/test
+    membership and cyber task mappings.
+  - Supports --task cyber_1, cyber_2, cyber_3, or cyber/all/cyber_all.
 
-    # Use all/every-k layers for the paper-style probe. `every4` is a good cheap
-    # first pass; `all` is closest to the paper and uses more disk/VRAM.
-    python starter_code/extract_residuals.py --model_key gemma4_31b --layers 0:65:4 \
-        --out_dir ./extracts
-
-    python starter_code/train_constitutional_probe.py \
-        --extracts_dir ./extracts/gemma4_31b \
-        --manifest ./extracts/gemma4_31b/extraction_metadata.json \
-        --task refusal_gemma4_31b \
-        --layer_mode all \
-        --out_dir ./probes/constitutional
-
-For hackathon scoring, copy the saved `constitutional_probe.pt` next to
-`predict.py`, or set PROBE_PATH=/path/to/constitutional_probe.pt.
+Example:
+    python experiments/03_constitutional_probe/train_constitutional_probe.py \
+      --extracts_dir ./extracts/gemma4_31b_cyber_4layers_combined \
+      --dataset cyber \
+      --task cyber_3 \
+      --layer_mode all \
+      --window_size 16 \
+      --tau 1.0 \
+      --batch_size 1 \
+      --eval_batch_size 1 \
+      --out_dir ./probes/constitutional
 """
 from __future__ import annotations
 
@@ -27,6 +27,7 @@ import argparse
 import json
 import math
 import random
+import sys
 import time
 from pathlib import Path
 from typing import Callable
@@ -35,6 +36,7 @@ import numpy as np
 import torch
 from torch import nn
 
+# Local probe implementation from the same experiment/starter directory.
 from constitutional_probe import (
     ProbeConfig,
     StreamingLinearProbe,
@@ -46,8 +48,41 @@ from constitutional_probe import (
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
+def _repo_root() -> Path:
+    """Best-effort repo-root discovery from this script location."""
+    here = Path(__file__).resolve()
+    for parent in [here.parent, *here.parents]:
+        if (parent / "experiments" / "02_extract_activations" / "data.py").exists():
+            return parent
+        if (parent / "datasets").exists() and (parent / "experiments").exists():
+            return parent
+    # Fallback for starter_code layout.
+    return here.parent.parent
+
+
+def import_extraction_data_module():
+    root = _repo_root()
+    candidates = [
+        root / "experiments" / "02_extract_activations",
+        Path.cwd() / "experiments" / "02_extract_activations",
+    ]
+    for c in candidates:
+        if (c / "data.py").exists():
+            sys.path.insert(0, str(c))
+            from data import load_dataset, get_label_for_task, get_tasks_for_dataset  # type: ignore
+            return load_dataset, get_label_for_task, get_tasks_for_dataset
+    raise ImportError(
+        "Could not find experiments/02_extract_activations/data.py. "
+        "Run from repo root or add that directory to PYTHONPATH."
+    )
+
+
+def load_extract_from_path(path: Path) -> dict:
+    return torch.load(str(path), weights_only=False, map_location="cpu")
+
+
 def load_extract(extracts_dir: Path, sample_id: str) -> dict:
-    return torch.load(str(extracts_dir / f"{sample_id}.pt"), weights_only=False, map_location="cpu")
+    return load_extract_from_path(extracts_dir / f"{sample_id}.pt")
 
 
 def residual_tensor(ex: dict) -> torch.Tensor:
@@ -62,7 +97,111 @@ def residual_tensor(ex: dict) -> torch.Tensor:
     return r.float()
 
 
-def task_specs(manifest: dict):
+def iter_pt_files(extracts_dirs: list[Path]):
+    seen: set[str] = set()
+    for d in extracts_dirs:
+        for p in sorted(d.glob("*.pt")):
+            if p.name in seen:
+                continue
+            seen.add(p.name)
+            yield p
+
+
+def parse_extracts_dirs(arg: str) -> list[Path]:
+    return [Path(x).expanduser() for x in arg.split(",") if x.strip()]
+
+
+def expand_tasks(dataset_name: str | None, task: str | None, legacy_manifest: dict | None = None):
+    """Return task names to run."""
+    if dataset_name == "cyber":
+        all_tasks = ["cyber_1", "cyber_2", "cyber_3"]
+        if task is None or task in {"cyber", "all", "cyber_all"}:
+            return all_tasks
+        aliases = {
+            "cyber1": "cyber_1",
+            "cyber2": "cyber_2",
+            "cyber3": "cyber_3",
+            "cyber_1": "cyber_1",
+            "cyber_2": "cyber_2",
+            "cyber_3": "cyber_3",
+        }
+        if task not in aliases:
+            raise ValueError(f"Unknown cyber task {task!r}. Use cyber_1, cyber_2, cyber_3, or cyber.")
+        return [aliases[task]]
+
+    if dataset_name and dataset_name.startswith("refusal"):
+        return [task or dataset_name]
+
+    # Legacy manifest mode keeps old exact task names.
+    if task:
+        return [task]
+    return []
+
+
+def build_dataset_rows_from_extracts(
+    extracts_dirs: list[Path],
+    dataset_name: str,
+    task_name: str,
+) -> tuple[list[dict], list[int], list[int]]:
+    """Build rows from .pt extracts and official train/test membership from data.py."""
+    load_dataset, get_label_for_task, _ = import_extraction_data_module()
+
+    train_samples = load_dataset(dataset_name, split="train")
+    test_samples = load_dataset(dataset_name, split="test")
+    train_ids = {s["sample_id"] for s in train_samples}
+    test_ids = {s["sample_id"] for s in test_samples}
+
+    rows: list[dict] = []
+    train_idx: list[int] = []
+    test_idx: list[int] = []
+    skipped_scope = 0
+    skipped_split = 0
+    skipped_bad = 0
+
+    for pt in iter_pt_files(extracts_dirs):
+        try:
+            ex = load_extract_from_path(pt)
+            sid = ex.get("sample_id", pt.stem)
+            raw_label = ex.get("label")
+            if raw_label is None:
+                skipped_bad += 1
+                continue
+            # Reuse get_label_for_task by constructing the uniform sample dict it expects.
+            y = get_label_for_task({"sample_id": sid, "label": raw_label}, task_name)
+            if y is None:
+                skipped_scope += 1
+                continue
+            row = {
+                "sample_id": sid,
+                "label": float(y),
+                "path": str(pt),
+                "source": {"sample_id": sid, "label": raw_label},
+            }
+            idx = len(rows)
+            rows.append(row)
+            if sid in train_ids:
+                train_idx.append(idx)
+            elif sid in test_ids:
+                test_idx.append(idx)
+            else:
+                skipped_split += 1
+        except Exception as e:
+            skipped_bad += 1
+            print(f"  [warn] skipping {pt}: {type(e).__name__}: {str(e)[:160]}", flush=True)
+
+    if skipped_scope:
+        print(f"  [info] skipped {skipped_scope} extracts outside task scope", flush=True)
+    if skipped_split:
+        print(f"  [warn] {skipped_split} rows had sample_id not present in official train/test", flush=True)
+    if skipped_bad:
+        print(f"  [warn] skipped {skipped_bad} unreadable/unlabeled extracts", flush=True)
+
+    return rows, train_idx, test_idx
+
+
+# ---- Legacy manifest mode, retained for old starter_code extracts ----
+
+def legacy_task_specs(manifest: dict):
     cyber = manifest.get("cyber_samples", [])
     for model_key in ["gemma4_31b", "qwen36"]:
         ref = manifest.get("refusal_samples", {}).get(model_key, [])
@@ -95,15 +234,49 @@ def build_rows(samples: list[dict], label_fn: Callable[[dict], float], extracts_
         if not path.exists():
             skipped += 1
             continue
-        rows.append({"sample_id": sid, "label": float(label_fn(s)), "source": s})
+        rows.append({"sample_id": sid, "label": float(label_fn(s)), "path": str(path), "source": s})
     if skipped:
         print(f"  [warn] skipped {skipped} samples without extracts")
     return rows
 
 
-def infer_shapes(extracts_dir: Path, rows: list[dict], layer_mode: str):
+def make_split(rows: list[dict], seed: int, test_frac: float = 0.3):
+    y = np.array([int(r["label"]) for r in rows])
+    pos = np.where(y == 1)[0]
+    neg = np.where(y == 0)[0]
+    rng = np.random.default_rng(seed)
+    rng.shuffle(pos)
+    rng.shuffle(neg)
+    n_pos_test = max(1, int(len(pos) * test_frac)) if len(pos) else 0
+    n_neg_test = max(1, int(len(neg) * test_frac)) if len(neg) else 0
+    test = np.concatenate([pos[:n_pos_test], neg[:n_neg_test]])
+    train = np.concatenate([pos[n_pos_test:], neg[n_neg_test:]])
+    rng.shuffle(train)
+    rng.shuffle(test)
+    return train.tolist(), test.tolist()
+
+
+def make_val_split(train_idx: list[int], rows: list[dict], seed: int, val_frac: float):
+    if val_frac <= 0 or len(train_idx) < 4:
+        return train_idx, []
+    y = np.array([int(rows[i]["label"]) for i in train_idx])
+    pos = np.array([i for i in train_idx if int(rows[i]["label"]) == 1])
+    neg = np.array([i for i in train_idx if int(rows[i]["label"]) == 0])
+    rng = np.random.default_rng(seed)
+    rng.shuffle(pos)
+    rng.shuffle(neg)
+    n_pos_val = max(1, int(len(pos) * val_frac)) if len(pos) > 1 else 0
+    n_neg_val = max(1, int(len(neg) * val_frac)) if len(neg) > 1 else 0
+    val = np.concatenate([pos[:n_pos_val], neg[:n_neg_val]])
+    new_train = np.concatenate([pos[n_pos_val:], neg[n_neg_val:]])
+    rng.shuffle(new_train)
+    rng.shuffle(val)
+    return new_train.tolist(), val.tolist()
+
+
+def infer_shapes(rows: list[dict], layer_mode: str):
     for r in rows:
-        ex = load_extract(extracts_dir, r["sample_id"])
+        ex = load_extract_from_path(Path(r["path"]))
         residuals = residual_tensor(ex)
         layer_positions = resolve_layer_positions(residuals.shape[0], layer_mode)
         if not layer_positions:
@@ -117,25 +290,11 @@ def infer_shapes(extracts_dir: Path, rows: list[dict], layer_mode: str):
     raise ValueError("no rows with extracts")
 
 
-def make_split(rows: list[dict], seed: int, test_frac: float = 0.3):
-    y = np.array([int(r["label"]) for r in rows])
-    pos = np.where(y == 1)[0]
-    neg = np.where(y == 0)[0]
-    rng = np.random.default_rng(seed)
-    rng.shuffle(pos); rng.shuffle(neg)
-    n_pos_test = max(1, int(len(pos) * test_frac)) if len(pos) else 0
-    n_neg_test = max(1, int(len(neg) * test_frac)) if len(neg) else 0
-    test = np.concatenate([pos[:n_pos_test], neg[:n_neg_test]])
-    train = np.concatenate([pos[n_pos_test:], neg[n_neg_test:]])
-    rng.shuffle(train); rng.shuffle(test)
-    return train.tolist(), test.tolist()
-
-
-def load_batch(rows, indices, extracts_dir: Path, layer_positions):
+def load_batch(rows, indices, layer_positions):
     examples = []
     labels = []
     for i in indices:
-        ex = load_extract(extracts_dir, rows[i]["sample_id"])
+        ex = load_extract_from_path(Path(rows[i]["path"]))
         residuals = residual_tensor(ex)
         mask = ex.get("attention_mask")
         if mask is None:
@@ -146,7 +305,7 @@ def load_batch(rows, indices, extracts_dir: Path, layer_positions):
     return x.to(DEVICE), mask.to(DEVICE), torch.tensor(labels, dtype=torch.float32, device=DEVICE)
 
 
-def evaluate(model: StreamingLinearProbe, rows, indices, extracts_dir: Path, layer_positions, batch_size: int):
+def evaluate(model: StreamingLinearProbe, rows, indices, layer_positions, batch_size: int):
     model.eval()
     ys, ps = [], []
     total_loss = 0.0
@@ -154,7 +313,9 @@ def evaluate(model: StreamingLinearProbe, rows, indices, extracts_dir: Path, lay
     with torch.no_grad():
         for st in range(0, len(indices), batch_size):
             bi = indices[st:st + batch_size]
-            x, mask, y = load_batch(rows, bi, extracts_dir, layer_positions)
+            if not bi:
+                continue
+            x, mask, y = load_batch(rows, bi, layer_positions)
             token_logits = model.forward_token_logits(x)
             loss = softmax_weighted_bce_loss(
                 token_logits, y, mask,
@@ -162,7 +323,8 @@ def evaluate(model: StreamingLinearProbe, rows, indices, extracts_dir: Path, lay
                 tau=model.config.tau,
             )
             seq_logits = model.sequence_logits(x, mask)
-            total_loss += float(loss.item()); n_batches += 1
+            total_loss += float(loss.item())
+            n_batches += 1
             ys.extend(y.detach().cpu().numpy().astype(int).tolist())
             ps.extend(torch.sigmoid(seq_logits).detach().cpu().numpy().tolist())
     y_np = np.asarray(ys)
@@ -178,8 +340,10 @@ def evaluate(model: StreamingLinearProbe, rows, indices, extracts_dir: Path, lay
     return {"loss": total_loss / max(n_batches, 1), "acc": acc, "f1": f1, "auc": auc}
 
 
-def train_one(args, rows, train_idx, test_idx, d_model, layer_positions, seed: int):
-    torch.manual_seed(seed); np.random.seed(seed); random.seed(seed)
+def train_one(args, rows, train_idx, val_idx, test_idx, d_model, layer_positions, seed: int):
+    torch.manual_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
     cfg = ProbeConfig(
         n_layers=len(layer_positions),
         d_model=d_model,
@@ -197,6 +361,12 @@ def train_one(args, rows, train_idx, test_idx, d_model, layer_positions, seed: i
     rng = np.random.default_rng(seed)
     train_idx = list(train_idx)
 
+    # Use validation for early stopping when available. Otherwise fall back to test, but warn.
+    monitor_idx = val_idx if val_idx else test_idx
+    monitor_name = "val" if val_idx else "test"
+    if not val_idx:
+        print("  [warn] no validation split; early stopping will monitor test metrics", flush=True)
+
     for epoch in range(args.epochs):
         rng.shuffle(train_idx)
         model.train()
@@ -204,19 +374,20 @@ def train_one(args, rows, train_idx, test_idx, d_model, layer_positions, seed: i
         n_batches = 0
         for st in range(0, len(train_idx), args.batch_size):
             bi = train_idx[st:st + args.batch_size]
-            x, mask, y = load_batch(rows, bi, Path(args.extracts_dir), layer_positions)
+            x, mask, y = load_batch(rows, bi, layer_positions)
             token_logits = model.forward_token_logits(x)
             loss = softmax_weighted_bce_loss(token_logits, y, mask, args.window_size, args.tau)
             opt.zero_grad(set_to_none=True)
             loss.backward()
             nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
             opt.step()
-            train_loss += float(loss.item()); n_batches += 1
-        ev = evaluate(model, rows, test_idx, Path(args.extracts_dir), layer_positions, args.eval_batch_size)
+            train_loss += float(loss.item())
+            n_batches += 1
+        ev = evaluate(model, rows, monitor_idx, layer_positions, args.eval_batch_size)
         metric = ev["auc"] if not math.isnan(ev["auc"]) else -ev["loss"]
         print(
             f"    seed={seed} epoch={epoch:02d} train_loss={train_loss/max(n_batches,1):.4f} "
-            f"test_loss={ev['loss']:.4f} auc={ev['auc']:.4f} acc={ev['acc']:.4f}",
+            f"{monitor_name}_loss={ev['loss']:.4f} auc={ev['auc']:.4f} acc={ev['acc']:.4f}",
             flush=True,
         )
         if metric > best_metric + args.min_delta:
@@ -229,15 +400,18 @@ def train_one(args, rows, train_idx, test_idx, d_model, layer_positions, seed: i
                 break
     if best_state:
         model.load_state_dict({k: v.to(DEVICE) for k, v in best_state.items()})
-    return evaluate(model, rows, test_idx, Path(args.extracts_dir), layer_positions, args.eval_batch_size), model
+    final = evaluate(model, rows, test_idx, layer_positions, args.eval_batch_size)
+    return final, model
 
 
 def parse_args():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--extracts_dir", required=True)
-    ap.add_argument("--manifest", required=True)
+    ap.add_argument("--extracts_dir", required=True, help="Directory of .pt extracts, or comma-separated directories")
+    ap.add_argument("--manifest", default=None, help="Legacy labeled JSON manifest. Not needed with --dataset.")
+    ap.add_argument("--dataset", default=None, choices=["cyber", "refusal_gemma4_31b", "refusal_qwen36"],
+                    help="Dataset name. Preferred mode for experiments/02_extract_activations outputs.")
     ap.add_argument("--out_dir", default="./probes/constitutional")
-    ap.add_argument("--task", default=None)
+    ap.add_argument("--task", default=None, help="cyber_1, cyber_2, cyber_3, cyber/all, or refusal task")
     ap.add_argument("--layer_mode", default="all", help="all, middle, early, late, every2, every4, 0:65:4, or comma list")
     ap.add_argument("--window_size", type=int, default=16)
     ap.add_argument("--tau", type=float, default=1.0)
@@ -252,45 +426,88 @@ def parse_args():
     ap.add_argument("--patience", type=int, default=5)
     ap.add_argument("--min_delta", type=float, default=1e-4)
     ap.add_argument("--seeds", default="0", help="comma-separated seeds; e.g. 0,1,2")
+    ap.add_argument("--val_frac", type=float, default=0.2, help="Fraction of official train split used for validation")
     return ap.parse_args()
 
 
 def main():
     args = parse_args()
-    extracts_dir = Path(args.extracts_dir)
+    extracts_dirs = parse_extracts_dirs(args.extracts_dir)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     metrics_path = out_dir / "metrics.jsonl"
-    manifest = json.load(open(args.manifest))
     seeds = [int(s.strip()) for s in args.seeds.split(",") if s.strip()]
     best_overall = None
 
-    with metrics_path.open("w") as log_f:
-        for task_name, model_key, samples, label_fn in task_specs(manifest):
+    task_jobs = []
+    if args.dataset:
+        for task_name in expand_tasks(args.dataset, args.task):
+            rows, train_idx, test_idx = build_dataset_rows_from_extracts(extracts_dirs, args.dataset, task_name)
+            model_key = "unknown"
+            # Try to infer model_key from first extract metadata.
+            if rows:
+                ex0 = load_extract_from_path(Path(rows[0]["path"]))
+                model_key = ex0.get("model_key") or "unknown"
+            task_jobs.append((task_name, model_key, rows, train_idx, test_idx))
+    else:
+        if not args.manifest:
+            raise ValueError("Pass --dataset cyber/refusal_* for extracted .pt mode, or --manifest for legacy mode.")
+        manifest = json.load(open(args.manifest))
+        if "samples" in manifest and "cyber_samples" not in manifest and "refusal_samples" not in manifest:
+            raise ValueError(
+                "You passed extraction_metadata.json. That file has extraction run metadata only. "
+                "Use --dataset cyber/refusal_* so the trainer reads labels from .pt files and splits from data.py."
+            )
+        for task_name, model_key, samples, label_fn in legacy_task_specs(manifest):
             if args.task and task_name != args.task:
                 continue
-            print(f"\n=== {task_name} ({model_key}, n={len(samples)}) ===", flush=True)
-            rows = build_rows(samples, label_fn, extracts_dir)
+            rows = build_rows(samples, label_fn, extracts_dirs[0])
+            train_idx, test_idx = make_split(rows, seed=0)
+            task_jobs.append((task_name, model_key, rows, train_idx, test_idx))
+
+    if not task_jobs:
+        raise ValueError("No tasks matched. For cyber use --dataset cyber --task cyber_1/cyber_2/cyber_3/cyber.")
+
+    with metrics_path.open("w") as log_f:
+        for task_name, model_key, rows, train_idx, test_idx in task_jobs:
+            print(f"\n=== {task_name} ({model_key}, rows={len(rows)}) ===", flush=True)
             if not rows:
                 print("  no rows with extracts")
                 continue
-            n_input_layers, d_model, layer_positions, selected_source_layer_idxs = infer_shapes(extracts_dir, rows, args.layer_mode)
+            if not train_idx or not test_idx:
+                raise ValueError(
+                    f"Task {task_name} has train={len(train_idx)} test={len(test_idx)} rows. "
+                    "Extract both train and test splits, or check sample_id matching."
+                )
+
             y = np.array([int(r["label"]) for r in rows])
+            train_y = np.array([int(rows[i]["label"]) for i in train_idx])
+            test_y = np.array([int(rows[i]["label"]) for i in test_idx])
             print(
-                f"  rows={len(rows)} pos={int(y.sum())} neg={int((1-y).sum())} "
-                f"extract_layers={n_input_layers} selected={layer_positions} source_layers={selected_source_layer_idxs} d={d_model}",
+                f"  total={len(rows)} pos={int(y.sum())} neg={int((1-y).sum())} | "
+                f"train={len(train_idx)} pos={int(train_y.sum())} neg={int((1-train_y).sum())} | "
+                f"test={len(test_idx)} pos={int(test_y.sum())} neg={int((1-test_y).sum())}",
                 flush=True,
             )
-            train_idx, test_idx = make_split(rows, seed=0)
+
+            train_idx2, val_idx = make_val_split(train_idx, rows, seed=0, val_frac=args.val_frac)
+            n_input_layers, d_model, layer_positions, selected_source_layer_idxs = infer_shapes(rows, args.layer_mode)
+            print(
+                f"  extract_layers={n_input_layers} selected={layer_positions} "
+                f"source_layers={selected_source_layer_idxs} d={d_model} val={len(val_idx)}",
+                flush=True,
+            )
+
             for seed in seeds:
                 t0 = time.time()
-                metrics, model = train_one(args, rows, train_idx, test_idx, d_model, layer_positions, seed)
+                metrics, model = train_one(args, rows, train_idx2, val_idx, test_idx, d_model, layer_positions, seed)
                 rec = {
                     "task": task_name,
                     "model_key": model_key,
                     "seed": seed,
                     "elapsed_s": round(time.time() - t0, 2),
-                    "N_train": len(train_idx),
+                    "N_train": len(train_idx2),
+                    "N_val": len(val_idx),
                     "N_test": len(test_idx),
                     "layer_mode": args.layer_mode,
                     "layer_positions": layer_positions,
@@ -300,8 +517,9 @@ def main():
                     "score_mode": args.score_mode,
                     **metrics,
                 }
-                print(f"  RESULT seed={seed}: auc={metrics['auc']:.4f} acc={metrics['acc']:.4f} f1={metrics['f1']:.4f}", flush=True)
-                log_f.write(json.dumps(rec) + "\n"); log_f.flush()
+                print(f"  RESULT seed={seed}: test_auc={metrics['auc']:.4f} test_acc={metrics['acc']:.4f} test_f1={metrics['f1']:.4f}", flush=True)
+                log_f.write(json.dumps(rec) + "\n")
+                log_f.flush()
                 rank_metric = metrics["auc"] if not math.isnan(metrics["auc"]) else -metrics["loss"]
                 if best_overall is None or rank_metric > best_overall[0]:
                     best_overall = (rank_metric, task_name, model_key, seed, metrics, model, layer_positions, selected_source_layer_idxs, d_model)
