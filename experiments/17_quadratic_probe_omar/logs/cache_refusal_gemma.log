@@ -1,0 +1,4 @@
+[load] refusal_gemma L32 ...
+  loaded refusal L32: n=832 pos=419 neg=413 (skipped=0)
+  cached -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/cache/refusal_gemma_L32.npz
+  -> done in 318.8s

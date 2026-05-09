@@ -1,0 +1,30 @@
+[quadratic probe] task=refusal_gemma layer=32 d_pca=16
+  n_quadratic_features = 152
+  output -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/refusal_gemma_d16_L32.json
+  loaded refusal L32 from cache: n=832 pos=419 neg=413
+  X shape: (832, 5376) (0.1s)
+
+  -- Linear LR baseline (raw activations) --
+    fold 0: test_AUC=0.9270 train_AUC=0.9999 acc=0.8263 | 34.4s
+    fold 1: test_AUC=0.9269 train_AUC=0.9999 acc=0.8383 | 52.3s
+    fold 2: test_AUC=0.9175 train_AUC=0.9998 acc=0.8313 | 53.9s
+    fold 3: test_AUC=0.9482 train_AUC=0.9999 acc=0.8554 | 48.5s
+    fold 4: test_AUC=0.9136 train_AUC=0.9998 acc=0.7952 | 47.5s
+  LINEAR: AUC = 0.9266 ± 0.0134 [0.9004, 0.9464]
+
+  -- Linear LR on d_pca=16 PCs (apples-to-apples) --
+  LINEAR-ON-16-PCs: AUC = 0.8696 ± 0.0240 [0.8372, 0.8963]
+
+  -- Quadratic probe (d_pca=16) --
+    fold 0: alpha=100.0 test_AUC=0.8741 train_AUC=0.9504 acc=0.7964 | 7.5s
+    fold 1: alpha=10.0 test_AUC=0.8728 train_AUC=0.9496 acc=0.8024 | 9.7s
+    fold 2: alpha=100.0 test_AUC=0.8458 train_AUC=0.9561 acc=0.7470 | 9.5s
+    fold 3: alpha=10.0 test_AUC=0.8688 train_AUC=0.9521 acc=0.7410 | 10.8s
+    fold 4: alpha=100.0 test_AUC=0.8374 train_AUC=0.9550 acc=0.7831 | 9.6s
+  QUADRATIC: AUC = 0.8598 ± 0.0169 [0.8266, 0.8875]
+
+  delta (quad - linear-on-raw)  = -0.0669
+  delta (quad - linear-on-16-PCs) = -0.0098
+  → QUADRATIC < LINEAR : PCA bottleneck dominates / overfit
+
+written to /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/refusal_gemma_d16_L32.json  (301.1s wall)

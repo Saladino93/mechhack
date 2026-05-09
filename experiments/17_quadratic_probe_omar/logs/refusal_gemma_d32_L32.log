@@ -1,0 +1,58 @@
+[quadratic probe] task=refusal_gemma layer=32 d_pca=32
+  n_quadratic_features = 560
+  output -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/refusal_gemma_d32_L32.json
+  loaded refusal L32 from cache: n=832 pos=419 neg=413
+  X shape: (832, 5376) (0.1s)
+
+  -- Linear LR baseline (raw activations) --
+    fold 0: test_AUC=0.9270 train_AUC=0.9999 acc=0.8263 | 48.0s
+    fold 1: test_AUC=0.9269 train_AUC=0.9999 acc=0.8383 | 42.9s
+    fold 2: test_AUC=0.9175 train_AUC=0.9998 acc=0.8313 | 51.3s
+    fold 3: test_AUC=0.9482 train_AUC=0.9999 acc=0.8554 | 43.9s
+    fold 4: test_AUC=0.9136 train_AUC=0.9998 acc=0.7952 | 37.2s
+  LINEAR: AUC = 0.9266 ± 0.0134 [0.9004, 0.9464]
+
+  -- Linear LR on d_pca=32 PCs (apples-to-apples) --
+  LINEAR-ON-32-PCs: AUC = 0.8891 ± 0.0155 [0.8586, 0.9138]
+
+  -- Quadratic probe (d_pca=32) --
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=1.96461e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.37493e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=1.25011e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 0: alpha=100.0 test_AUC=0.6466 train_AUC=1.0000 acc=0.6587 | 25.5s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.51877e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=8.068e-09): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 1: alpha=100.0 test_AUC=0.7718 train_AUC=0.9999 acc=0.7545 | 21.4s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=1.34402e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.60495e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=8.85339e-09): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 2: alpha=100.0 test_AUC=0.6616 train_AUC=0.9999 acc=0.6627 | 12.8s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.02188e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.08294e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=8.71486e-09): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 3: alpha=100.0 test_AUC=0.6193 train_AUC=0.9999 acc=0.6386 | 12.6s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.9242e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.67744e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=3.19318e-09): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 4: alpha=10.0 test_AUC=0.6799 train_AUC=0.9999 acc=0.6988 | 16.3s
+  QUADRATIC: AUC = 0.6758 ± 0.0580 [0.6336, 0.7154]
+
+  delta (quad - linear-on-raw)  = -0.2508
+  delta (quad - linear-on-32-PCs) = -0.2133
+  → QUADRATIC < LINEAR : PCA bottleneck dominates / overfit
+
+written to /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/refusal_gemma_d32_L32.json  (343.9s wall)

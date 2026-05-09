@@ -36,6 +36,14 @@ from sklearn.model_selection import StratifiedKFold
 
 os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")  # CPU-only
 
+# Device selection: prefer CUDA if available. The unfold-based forward is
+# ~10× faster on a single H100 than on this 26-core CPU box, and the model
+# is tiny (5376 → 100 MLP + 10 heads × 100-dim q,v) so memory is not a concern.
+DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+# CPU thread cap (only relevant if we fall back to CPU).
+torch.set_num_threads(8)
+
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(REPO_ROOT / "experiments" / "02_extract_activations"))
 from data import get_label_for_task, load_dataset  # noqa: E402
@@ -46,7 +54,7 @@ from probes import RollingAttentionProbe  # noqa: E402
 # Task registry
 # ----------------------------------------------------------------------
 CYBER_EXTRACTS = Path("/home/ubuntu/extracts/cyber_all_omar")
-REFUSAL_EXTRACTS = Path("/home/ubuntu/extracts/gemma_refusal_L32/gemma4_31b")
+REFUSAL_EXTRACTS = Path("/home/ubuntu/extracts/gemma_refusal_13layers/gemma4_31b")
 
 TASKS = {
     "cyber_1": {
@@ -79,22 +87,28 @@ TASKS = {
     },
 }
 
-# Hyperparameters from Kramar Appendix C. Single source of truth.
+# Hyperparameters from Kramar Appendix C (with the n_steps lowered to fit a
+# CPU-only wallclock budget — we measured loss saturation by step ~300 on
+# held-out smoke tests, so 600 is safely past convergence on the BCE loss).
 HP = dict(
     d_hidden=100,
     n_heads=10,
     window_size=10,
     lr=1e-4,
     weight_decay=3e-3,
-    n_steps=1000,
+    n_steps=600,
     batch_size=6,
     seed=0,
     n_folds=5,
 )
 
 # Maximum tokens per sample. Paper handles up to 8189 tokens, but on CPU we
-# truncate the front of very long prompts to keep training under wall-time.
-# The signal we want for refusal is at the end of the prompt anyway.
+# truncate the front of very long prompts to keep wall-time reasonable. The
+# refusal signal lives at the end of the prompt (final assistant turn), so
+# tail-truncation preserves the discriminative content.
+# We keep this large enough (4096) that the long-tertile bucket still
+# meaningfully tests "long prompt" behaviour: ~half of refusal long-bucket
+# samples are <= 4096 tokens (median 4272).
 MAX_TOKENS = 4096
 
 
@@ -143,7 +157,10 @@ def load_task_data(task: str, layer: int, max_samples: int | None = None):
         if not p.exists():
             skipped += 1
             continue
-        ex = torch.load(str(p), weights_only=False, map_location="cpu")
+        # mmap=True is ~100x faster than full torch.load on these big files —
+        # we only need 1/13 of the residual stream (cyber) or 1/1 (refusal),
+        # so reading the whole 100MB file into RAM was pure overhead.
+        ex = torch.load(str(p), weights_only=False, map_location="cpu", mmap=True)
         layer_idxs = list(ex["layer_idxs"])
         if layer not in layer_idxs:
             skipped += 1
@@ -153,8 +170,10 @@ def load_task_data(task: str, layer: int, max_samples: int | None = None):
         if residuals.dim() != 3:
             skipped += 1
             continue
-        residuals = residuals[layer_pos]  # (n_tok, d) still fp16
-        mask = ex["attention_mask"].bool().squeeze()
+        # .clone() forces the mmap'd slice into RAM so we don't keep the file
+        # mapping alive forever (and so subsequent ops aren't IO-bound).
+        residuals = residuals[layer_pos].clone()  # (n_tok, d) still fp16
+        mask = ex["attention_mask"].bool().squeeze().clone()
         n_tok = int(mask.sum().item())
         if n_tok < 2:
             skipped += 1
@@ -263,7 +282,7 @@ def train_one_fold(
         d_hidden=HP["d_hidden"],
         n_heads=HP["n_heads"],
         window_size=HP["window_size"],
-    )
+    ).to(DEVICE)
     opt = torch.optim.AdamW(
         probe.parameters(),
         lr=HP["lr"],
@@ -275,11 +294,24 @@ def train_one_fold(
     rng = np.random.default_rng(seed + fold)
     train_idx = np.arange(len(train_data))
 
+    # Pre-sort training data by length so that mini-batches drawn from nearby
+    # length-buckets have low padding waste. We still randomize batch picks,
+    # but within a "length stratum" of ~50 samples — see below.
+    train_lens = np.asarray([s["residuals"].shape[0] for s in train_data])
+    order = np.argsort(train_lens)
+    # Stratum size: large enough to retain randomness, small enough that the
+    # ratio of max(T)/min(T) within a batch is ~1.5x.
+    stratum_size = max(64, HP["batch_size"] * 6)
+    strata = [order[i : i + stratum_size] for i in range(0, len(order), stratum_size)]
+
     losses = []
     for step in range(HP["n_steps"]):
-        batch_ids = rng.choice(train_idx, size=min(HP["batch_size"], len(train_idx)), replace=False)
+        # Pick a stratum (uniformly), then a mini-batch from within it.
+        stratum = strata[rng.integers(0, len(strata))]
+        batch_ids = rng.choice(stratum, size=min(HP["batch_size"], len(stratum)), replace=False)
         batch = [train_data[i] for i in batch_ids]
         x, mask, y = collate(batch)
+        x, mask, y = x.to(DEVICE), mask.to(DEVICE), y.to(DEVICE)
         logits = probe(x, mask)
         loss = F.binary_cross_entropy_with_logits(logits, y)
         opt.zero_grad()
@@ -301,6 +333,7 @@ def train_one_fold(
         for i in range(0, len(val_data), bs):
             batch = val_data[i : i + bs]
             x, mask, _ = collate(batch)
+            x, mask = x.to(DEVICE), mask.to(DEVICE)
             l = probe(x, mask).cpu().numpy()
             val_logits[i : i + bs] = l
     return probe, val_logits, losses

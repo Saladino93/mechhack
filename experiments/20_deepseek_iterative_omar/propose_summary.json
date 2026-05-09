@@ -1,0 +1,8 @@
+{
+  "n_prompts": 81,
+  "n_errors": 0,
+  "median_n_edits": 3,
+  "median_word_edit_ops": 7,
+  "median_char_match_ratio": 0.9894854899761671,
+  "deepseek_edits_path": "/lambda/nfs/georgia/mechhack/experiments/20_deepseek_iterative_omar/deepseek_edits.jsonl"
+}

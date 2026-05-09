@@ -1,0 +1,27 @@
+loaded 81 attribution_eval prompts; 81 have attribution; 878 have originals
+resuming, 0 already done
+queue: 81 prompts to edit
+  [5/81] errors=0  (6s)
+  [10/81] errors=0  (10s)
+  [15/81] errors=0  (18s)
+  [20/81] errors=0  (23s)
+  [25/81] errors=0  (30s)
+  [30/81] errors=0  (32s)
+  [35/81] errors=0  (35s)
+  [40/81] errors=0  (39s)
+  [45/81] errors=0  (42s)
+  [50/81] errors=0  (46s)
+  [55/81] errors=0  (51s)
+  [60/81] errors=0  (55s)
+  [65/81] errors=0  (58s)
+  [70/81] errors=0  (62s)
+  [75/81] errors=0  (66s)
+  [80/81] errors=0  (68s)
+  [81/81] errors=0  (72s)
+
+finished. ok=81, errors=0, total elapsed=72s
+
+wrote /lambda/nfs/georgia/mechhack/experiments/20_deepseek_iterative_omar/propose_summary.json
+  median edits/prompt: 3
+  median word edit ops: 7
+  median char match ratio: 0.989

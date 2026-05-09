@@ -1,0 +1,13 @@
+[load] cyber_1 L40 ...
+  loaded cyber cyber_1 L40: n=999 pos=500 neg=499 (skipped=0)
+  cached -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/cache/cyber_cyber_1_L40.npz
+  -> done in 1256.5s
+[load] cyber_2 L40 ...
+  loaded cyber cyber_2 L40: n=1000 pos=500 neg=500 (skipped=0)
+  cached -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/cache/cyber_cyber_2_L40.npz
+  -> done in 1169.7s
+[load] cyber_3 L35 ...
+  loaded cyber cyber_3 L35: n=1000 pos=500 neg=500 (skipped=0)
+  cached -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/cache/cyber_cyber_3_L35.npz
+  -> done in 1146.3s
+[skip] refusal_gemma_L32.npz already cached

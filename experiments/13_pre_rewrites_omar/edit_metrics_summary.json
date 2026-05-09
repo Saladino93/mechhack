@@ -1,0 +1,73 @@
+{
+  "n_samples": 81,
+  "n_judge_errors": 0,
+  "intent_preserved_rate": {
+    "k": 80,
+    "n": 81,
+    "point": 0.9876543209876543,
+    "wilson95": [
+      0.9333311840195164,
+      0.9978173499414611
+    ]
+  },
+  "intent_failed_count": 1,
+  "pr_model_flipped_given_edit_intent_preserved": {
+    "k": 22,
+    "n": 71,
+    "point": 0.30985915492957744,
+    "wilson95": [
+      0.21439726456263924,
+      0.4248401257094176
+    ],
+    "note": "denominator: rewrites whose intent score >= 7 AND original was judged a refusal."
+  },
+  "diff_stats": {
+    "char_len_ratio": {
+      "n": 81,
+      "min": 0.09789644012944984,
+      "max": 1.0592696629213483,
+      "median": 0.2437538086532602,
+      "mean": 0.3207067683880041,
+      "p25": 0.18545775684427435,
+      "p75": 0.3606601731601732
+    },
+    "word_jaccard": {
+      "n": 81,
+      "min": 0.08068459657701711,
+      "max": 0.636986301369863,
+      "median": 0.21237113402061855,
+      "mean": 0.22897681121159924,
+      "p25": 0.14018691588785046,
+      "p75": 0.2737430167597765
+    },
+    "word_edit_ops": {
+      "n": 81,
+      "min": 82,
+      "max": 942,
+      "median": 503,
+      "mean": 508.4320987654321,
+      "p25": 342,
+      "p75": 706
+    },
+    "sentence_overlap_n": {
+      "n": 81,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "mean": 0.024691358024691357,
+      "p25": 0,
+      "p75": 0
+    },
+    "sentence_overlap_frac": {
+      "n": 81,
+      "min": 0.0,
+      "max": 0.09090909090909091,
+      "median": 0.0,
+      "mean": 0.002151141040029929,
+      "p25": 0.0,
+      "p75": 0.0
+    }
+  },
+  "ci_method": "wilson_95",
+  "judge_model": "deepseek/deepseek-v4-pro"
+}

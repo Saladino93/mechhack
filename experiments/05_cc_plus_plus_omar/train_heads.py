@@ -53,8 +53,9 @@ C_GRID = [0.01, 0.1, 1.0, 10.0]
 TORCH_EPOCHS = 50
 TORCH_BATCH = 32
 TORCH_LR = 1e-3
-DEVICE = torch.device("cpu")
+DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 torch.set_num_threads(min(16, torch.get_num_threads()))
+print(f"[cc_plus_plus] device = {DEVICE}", flush=True)
 
 
 # ── extract polling ──────────────────────────────────────────

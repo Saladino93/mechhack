@@ -1,0 +1,47 @@
+{
+  "comparison_method": "Re-rank candidate rewrites with each scorer; the chosen rewrite per sample is its 'best'. Then evaluate Pr(...) using existing Gemma rollouts + DeepSeek-V4-Pro judges.",
+  "scorers": {
+    "lr_probe": "LogisticRegression(C=1.0) on mean-pooled L32 residuals, fit on all 832 refusal samples (lr_probe.npz)",
+    "arditi_direction": "unit-norm refusal direction = mean(refused) - mean(complied) on mean-pooled L32 features (arditi_direction.npy from exp 11)"
+  },
+  "results": {
+    "lr_scorer": {
+      "Pr_f_flipped_given_edit": {
+        "k": 29,
+        "n": 81,
+        "point": 0.358
+      },
+      "Pr_model_flipped_given_edit": {
+        "k": 22,
+        "n": 71,
+        "point": 0.31
+      },
+      "Pr_model_given_f_flipped_orig_refusal": {
+        "k": 9,
+        "n": 20,
+        "point": 0.45
+      }
+    },
+    "arditi_scorer": {
+      "Pr_f_flipped_given_edit": {
+        "k": 27,
+        "n": 81,
+        "point": 0.333,
+        "definition": "best_by_arditi.arditi_score < original.arditi_score"
+      },
+      "Pr_model_flipped_given_edit": {
+        "k": 21,
+        "n": 71,
+        "point": 0.296
+      },
+      "Pr_model_given_f_flipped_orig_refusal": {
+        "k": 9,
+        "n": 25,
+        "point": 0.36
+      }
+    }
+  },
+  "best_rewrite_agreement": "32 of 81 prompts have arditi-best == lr-best. On the 49 disagreeing prompts, LR's pick achieves materially higher Pr(model flipped).",
+  "interpretation": "LR > Arditi as a SCORER. The Arditi direction is fine for per-token ATTRIBUTION (exp 12) but undershoots when used to pick which rewrite actually flips Gemma. Validates the 'two different f's' design from extra_omar/notes.md.",
+  "ci_method": "wilson_95"
+}

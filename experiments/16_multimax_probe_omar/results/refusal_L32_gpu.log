@@ -1,0 +1,9 @@
+
+=== task=refusal_gemma4_31b layer=32 ===
+  found 832 refusal extracts
+  loaded 0 samples (skipped 832, truncated 0 to 4096 tokens)
+  pos=0, neg=0
+[ERROR] task refusal_gemma4_31b failed: RuntimeError: no data loaded for refusal_gemma4_31b
+
+=== final summary written to experiments/16_multimax_probe_omar/results/refusal_L32_gpu/summary.json ===
+  refusal_gemma4_31b: ERROR — no data loaded for refusal_gemma4_31b

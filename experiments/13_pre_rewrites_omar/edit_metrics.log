@@ -1,0 +1,21 @@
+
+81 samples; judging 81 remaining
+  done 10/81 (errors=0, elapsed=61s)
+  done 20/81 (errors=0, elapsed=97s)
+  done 30/81 (errors=0, elapsed=132s)
+  done 40/81 (errors=0, elapsed=173s)
+  done 50/81 (errors=0, elapsed=212s)
+  done 60/81 (errors=0, elapsed=260s)
+  done 70/81 (errors=0, elapsed=304s)
+  done 80/81 (errors=0, elapsed=339s)
+
+Aggregating across 81 samples (with 0 judge errors)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/13_pre_rewrites_omar/edit_metrics_summary.json
+
+=== Headline ===
+  Intent preserved (>=7/10): 80/81 = 0.988 [0.933, 0.998]
+  Pr(model flip | edit, intent preserved): 22/71 = 0.310
+  word edit ops: median=503, range [82, 942]
+  sentence overlap: median=0 of 0
+  length ratio: median=0.244

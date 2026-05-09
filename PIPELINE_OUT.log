@@ -1,0 +1,9 @@
+[Sat May  9 18:35:55 UTC 2026] pipeline starting
+
+[Sat May  9 18:35:55 UTC 2026] === waiting for DeepSeek editor (exp 20) ===
+
+[Sat May  9 18:35:55 UTC 2026] === waiting for refusal LR layer sweep (exp 18) ===
+
+[Sat May  9 20:14:57 UTC 2026] === waiting for Rolling probe L30 GPU (exp 16) ===
+
+[Sat May  9 20:14:57 UTC 2026] === waiting for any CC++ process to clear GPU (briefly) ===

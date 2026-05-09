@@ -1,0 +1,6 @@
+loading tokenizer...
+
+wrote /lambda/nfs/georgia/mechhack/experiments/19_surgical_edit_omar/surgical_candidates.jsonl: 241 candidates over 81 prompts
+        delete_top1_word: n=80, median chars deleted=9, median words deleted=1
+       delete_top3_words: n=81, median chars deleted=26, median words deleted=3
+    delete_top1_sentence: n=80, median chars deleted=103, median words deleted=13

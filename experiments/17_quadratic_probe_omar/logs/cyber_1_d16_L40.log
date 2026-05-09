@@ -1,0 +1,30 @@
+[quadratic probe] task=cyber_1 layer=40 d_pca=16
+  n_quadratic_features = 152
+  output -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/cyber_1_d16_L40.json
+  loaded cyber cyber_1 L40 from cache: n=999 pos=500 neg=499
+  X shape: (999, 5376) (0.2s)
+
+  -- Linear LR baseline (raw activations) --
+    fold 0: test_AUC=0.9768 train_AUC=1.0000 acc=0.9250 | 11.3s
+    fold 1: test_AUC=0.9887 train_AUC=1.0000 acc=0.9350 | 16.0s
+    fold 2: test_AUC=0.9766 train_AUC=1.0000 acc=0.9150 | 14.7s
+    fold 3: test_AUC=0.9891 train_AUC=1.0000 acc=0.9500 | 19.0s
+    fold 4: test_AUC=0.9823 train_AUC=1.0000 acc=0.9146 | 18.1s
+  LINEAR: AUC = 0.9827 ± 0.0061 [0.9671, 0.9910]
+
+  -- Linear LR on d_pca=16 PCs (apples-to-apples) --
+  LINEAR-ON-16-PCs: AUC = 0.9590 ± 0.0192 [0.9378, 0.9732]
+
+  -- Quadratic probe (d_pca=16) --
+    fold 0: alpha=0.1 test_AUC=0.9406 train_AUC=0.9845 acc=0.9100 | 9.4s
+    fold 1: alpha=0.1 test_AUC=0.9683 train_AUC=0.9812 acc=0.9400 | 9.2s
+    fold 2: alpha=0.1 test_AUC=0.9299 train_AUC=0.9842 acc=0.9050 | 10.5s
+    fold 3: alpha=0.1 test_AUC=0.9621 train_AUC=0.9807 acc=0.9100 | 9.7s
+    fold 4: alpha=100.0 test_AUC=0.9600 train_AUC=0.9815 acc=0.8945 | 14.0s
+  QUADRATIC: AUC = 0.9522 ± 0.0162 [0.9298, 0.9677]
+
+  delta (quad - linear-on-raw)  = -0.0305
+  delta (quad - linear-on-16-PCs) = -0.0068
+  → QUADRATIC < LINEAR : PCA bottleneck dominates / overfit
+
+written to /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/cyber_1_d16_L40.json  (153.2s wall)

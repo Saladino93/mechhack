@@ -1,0 +1,57 @@
+
+=== task=refusal_gemma4_31b layer=30 ===
+  found 832 refusal extracts
+  ... loaded 100/832 (6.1s, trunc=12, skip=0)
+  ... loaded 200/832 (20.7s, trunc=31, skip=0)
+  ... loaded 300/832 (41.4s, trunc=51, skip=0)
+  ... loaded 400/832 (60.8s, trunc=68, skip=0)
+  ... loaded 500/832 (80.4s, trunc=86, skip=0)
+  ... loaded 600/832 (101.7s, trunc=104, skip=0)
+  ... loaded 700/832 (121.5s, trunc=123, skip=0)
+  ... loaded 800/832 (141.6s, trunc=144, skip=0)
+  loaded 832 samples (skipped 0, truncated 153 to 4096 tokens)
+  pos=419, neg=413
+  d_model=5376, char-length cuts: [6489.723, 11253.0]
+
+  --- fold 1/5 ---
+    fold 0 step 200/600: loss(last50)=0.4952
+    fold 0 step 400/600: loss(last50)=0.4986
+    fold 0 step 600/600: loss(last50)=0.5002
+  fold 1: AUC=0.9124  (val n=167, 767.8s)
+
+  --- fold 2/5 ---
+    fold 1 step 200/600: loss(last50)=0.5256
+    fold 1 step 400/600: loss(last50)=0.5107
+    fold 1 step 600/600: loss(last50)=0.4294
+  fold 2: AUC=0.8665  (val n=167, 838.6s)
+
+  --- fold 3/5 ---
+    fold 2 step 200/600: loss(last50)=0.4797
+    fold 2 step 400/600: loss(last50)=0.4351
+    fold 2 step 600/600: loss(last50)=0.3252
+  fold 3: AUC=0.9077  (val n=166, 995.7s)
+
+  --- fold 4/5 ---
+    fold 3 step 200/600: loss(last50)=0.5200
+    fold 3 step 400/600: loss(last50)=0.3906
+    fold 3 step 600/600: loss(last50)=0.3079
+  fold 4: AUC=0.8734  (val n=166, 1120.4s)
+
+  --- fold 5/5 ---
+    fold 4 step 200/600: loss(last50)=0.4403
+    fold 4 step 400/600: loss(last50)=0.3487
+    fold 4 step 600/600: loss(last50)=0.4583
+  fold 5: AUC=0.8256  (val n=166, 1124.8s)
+
+=== summary ===
+  overall AUC (5-fold mean ± 1σ): 0.8771 ± 0.0352
+  overall AUC (pooled CV preds):  0.8690  CI95=[0.8464, 0.8936]
+   short: AUC_pooled=0.8469 CI95=[0.7948, 0.8938]  (n=277)
+  medium: AUC_pooled=0.8289 CI95=[0.7753, 0.8770]  (n=277)
+    long: AUC_pooled=0.8890 CI95=[0.8396, 0.9287]  (n=278)
+  total wall-time: 4847.3s
+  saved weights -> experiments/16_multimax_probe_omar/results/refusal_L30_gpu/refusal_gemma4_31b_rolling.pt
+  saved metrics -> experiments/16_multimax_probe_omar/results/refusal_L30_gpu/refusal_gemma4_31b_rolling.json
+
+=== final summary written to experiments/16_multimax_probe_omar/results/refusal_L30_gpu/summary.json ===
+  refusal_gemma4_31b: overall AUC pooled=0.8690 CI95=[0.8464, 0.8936]  (4847s)

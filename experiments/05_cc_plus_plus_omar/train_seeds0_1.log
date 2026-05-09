@@ -1,0 +1,37 @@
+All 999 extracts present.
+Loading + featurising 1000 extracts (CPU)...
+  loaded 100/999
+  loaded 200/999
+  loaded 300/999
+  loaded 400/999
+  loaded 500/999
+  loaded 600/999
+  loaded 700/999
+  loaded 800/999
+  loaded 900/999
+N_samples=999 d_model=5376 n_layers=13 X_concat shape=(999, 69888)
+In-scope: n=999, pos=500, neg=499
+Train: 799  Test: 200
+
+=== HEAD D: linear + mean-pool @ layer 40 (baseline) ===
+  AUC=0.986 CI=[0.974,0.995] acc=0.930 f1=0.931 bce=0.150
+
+=== HEAD A: multi-layer concat (sklearn LR + C sweep) ===
+  C_chosen=10.0  AUC=0.984 CI=[0.966,0.996] acc=0.945 f1=0.945 bce=0.267
+  val AUC by C: {'0.01': 0.96625, '0.1': 0.9684375, '1.0': 0.9692187499999999, '10.0': 0.969375}
+
+=== seed 0: HEAD B (SWiM, mean BCE) ===
+  best_val_auc=0.968  test AUC=0.975 CI=[0.956,0.990] acc=0.570 f1=0.699 bce=0.607
+
+=== seed 0: HEAD C (softmax-weighted BCE) ===
+  swim_max  AUC=0.983 acc=0.920 f1=0.923
+  max_only  AUC=0.985 acc=0.890 f1=0.901
+
+=== seed 1: HEAD B (SWiM, mean BCE) ===
+  best_val_auc=0.958  test AUC=0.967 CI=[0.944,0.986] acc=0.920 f1=0.926 bce=0.415
+
+=== seed 1: HEAD C (softmax-weighted BCE) ===
+  swim_max  AUC=0.977 acc=0.915 f1=0.919
+  max_only  AUC=0.973 acc=0.910 f1=0.917
+
+=== seed 2: HEAD B (SWiM, mean BCE) ===
