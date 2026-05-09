@@ -92,6 +92,17 @@ class AIaaSClient(_BaseClient):
             raise RuntimeError("set AIAAS_KEY")
 
 
+class MiniMaxClient(_BaseClient):
+    """Direct MiniMax API (api.minimaxi.chat) — set MINIMAX_KEY env var."""
+    base_url = "https://api.minimaxi.chat"
+
+    def __init__(self, model: str = "MiniMax-M1", **kwargs):
+        super().__init__(model=model, **kwargs)
+        self.api_key = os.environ.get("MINIMAX_KEY")
+        if not self.api_key:
+            raise RuntimeError("set MINIMAX_KEY")
+
+
 # Schema for the standard edit format
 EDITS_SCHEMA = {
     "name": "edits_response", "strict": True,
@@ -138,7 +149,7 @@ def reasoning_off_for(model: str) -> dict | None:
 
 
 # --- Convenience constructors ---
-def make_editor(name: str = "minimax-m2.7") -> _BaseClient:
+def make_editor(name: str = "minimax-direct") -> _BaseClient:
     """Pick a sensible editor.
 
     Default is MiniMax-M2.7 (AIaaS, ~8-10 s/call) — same model the
@@ -150,6 +161,8 @@ def make_editor(name: str = "minimax-m2.7") -> _BaseClient:
           OpenRouter), 'qwen3-30b' (fast/cheap), 'qwen3-235b' (smarter),
           'deepseek-v4-pro' (slow but best multi-token rewrites).
     """
+    if name == "minimax-direct":
+        return MiniMaxClient("MiniMax-M1")
     if name == "minimax-m2.7":
         return AIaaSClient("MiniMaxAI/MiniMax-M2.7")
     if name == "kimi-k2.6":

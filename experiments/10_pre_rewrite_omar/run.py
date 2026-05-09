@@ -211,9 +211,9 @@ def main():
                    help="Output JSONL path")
     p.add_argument("--k", type=int, default=7,
                    help="Rewrites per prompt (default: 7)")
-    p.add_argument("--editor", default="minimax-m2.7",
-                   choices=["minimax-m2.7", "qwen3-30b", "qwen3-235b", "kimi-k2.6", "deepseek-v4-pro"],
-                   help="AIaaS rewriter model (default: minimax-m2.7)")
+    p.add_argument("--editor", default="minimax-direct",
+                   choices=["minimax-direct", "minimax-m2.7", "qwen3-30b", "qwen3-235b", "kimi-k2.6", "deepseek-v4-pro"],
+                   help="Rewriter model (default: minimax-direct — set MINIMAX_KEY)")
     p.add_argument("--probe_path", default=None,
                    help="Path to trained probe .pt (optional). Enables candidate scoring.")
     p.add_argument("--model_key", default="gemma4_31b",
