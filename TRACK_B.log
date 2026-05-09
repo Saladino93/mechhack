@@ -1,0 +1,4 @@
+[2026-05-09 21:34:24] waiting for master pipeline to finish (Phase 3a → 3b → 3c → 4)...
+[2026-05-09 21:35:24] waiting... rollouts=333; kramar layer dirs=2
+[2026-05-09 21:36:24] waiting... rollouts=336; kramar layer dirs=2
+[2026-05-09 21:37:24] waiting... rollouts=338; kramar layer dirs=2

@@ -48,7 +48,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(REPO_ROOT / "experiments" / "02_extract_activations"))
 from data import get_label_for_task, load_dataset  # noqa: E402
 
-from probes import RollingAttentionProbe  # noqa: E402
+from probes import RollingAttentionProbe, build_probe  # noqa: E402
 
 # ----------------------------------------------------------------------
 # Task registry
@@ -266,6 +266,7 @@ def train_one_fold(
     d_model: int,
     fold: int,
     seed: int = 0,
+    variant: str = "rolling",
 ):
     """Train the Selected Probe on a single fold; return (probe, val_logits).
 
@@ -277,11 +278,13 @@ def train_one_fold(
     torch.manual_seed(seed + fold)
     np.random.seed(seed + fold)
 
-    probe = RollingAttentionProbe(
+    probe = build_probe(
+        variant=variant,
         d_model=d_model,
         d_hidden=HP["d_hidden"],
         n_heads=HP["n_heads"],
         window_size=HP["window_size"],
+        tau=HP.get("tau", 0.1),
     ).to(DEVICE)
     opt = torch.optim.AdamW(
         probe.parameters(),
@@ -364,7 +367,8 @@ def bootstrap_auc_ci(y_true, y_score, n_boot=1000, seed=0):
 # ----------------------------------------------------------------------
 # Main
 # ----------------------------------------------------------------------
-def run(task: str, layer: int, out_dir: Path, max_samples: int = None):
+def run(task: str, layer: int, out_dir: Path, max_samples: int = None,
+        variant: str = "rolling"):
     spec = TASKS[task]
     log(f"\n=== task={task} layer={layer} ===")
     data = load_task_data(task, layer, max_samples=max_samples)
@@ -399,7 +403,8 @@ def run(task: str, layer: int, out_dir: Path, max_samples: int = None):
         val_data = [data[i] for i in te_idx]
 
         probe, val_logits, losses = train_one_fold(
-            train_data, val_data, d_model=d_model, fold=fold, seed=HP["seed"]
+            train_data, val_data, d_model=d_model, fold=fold, seed=HP["seed"],
+            variant=variant,
         )
 
         y_te = y_all[te_idx]
@@ -488,7 +493,7 @@ def run(task: str, layer: int, out_dir: Path, max_samples: int = None):
     log(f"  total wall-time: {total_elapsed:.1f}s")
 
     # ----- save weights -----
-    weights_path = out_dir / f"{task}_rolling.pt"
+    weights_path = out_dir / f"{task}_{variant}.pt"
     torch.save(
         {
             "state_dict": best_state,
@@ -520,7 +525,7 @@ def run(task: str, layer: int, out_dir: Path, max_samples: int = None):
         },
         "by_length_tertile": per_bucket_summary,
     }
-    metrics_path = out_dir / f"{task}_rolling.json"
+    metrics_path = out_dir / f"{task}_{variant}.json"
     metrics_path.write_text(json.dumps(out, indent=2))
     log(f"  saved metrics -> {metrics_path}")
 
@@ -536,6 +541,12 @@ def cli():
         help="Task to train on. 'all' runs all 4 tasks sequentially.",
     )
     parser.add_argument("--layer", type=int, default=None, help="Override default layer.")
+    parser.add_argument(
+        "--variant",
+        choices=["attention_kramar", "multimax", "rolling", "rolling_multimax"],
+        default="rolling",
+        help="Kramar architecture A/C/B/D (default: rolling = arch B = Selected Probe)",
+    )
     parser.add_argument("--out_dir", type=Path, default=Path(__file__).parent / "results")
     parser.add_argument("--max_samples", type=int, default=None, help="(debug) cap to first N samples")
     args = parser.parse_args()
@@ -547,7 +558,8 @@ def cli():
     for t in tasks:
         layer = args.layer if args.layer is not None else TASKS[t]["default_layer"]
         try:
-            r = run(t, layer, args.out_dir, max_samples=args.max_samples)
+            r = run(t, layer, args.out_dir, max_samples=args.max_samples,
+                    variant=args.variant)
             summary[t] = {
                 "auc_fold_mean": r["overall"]["auc_fold_mean"],
                 "auc_pooled": r["overall"]["auc_pooled"],

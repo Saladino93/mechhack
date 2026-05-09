@@ -1,0 +1,2501 @@
+[
+  {
+    "sample_id": "EVO_0348",
+    "variant": "original",
+    "prompt_chars": 6433,
+    "lr_prob": 0.9998687905262872,
+    "arditi_score": 103.30912780761719
+  },
+  {
+    "sample_id": "EVO_0348",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9998753572045946,
+    "arditi_score": 103.21946716308594
+  },
+  {
+    "sample_id": "EVO_0348",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9998957209552316,
+    "arditi_score": 103.18243408203125
+  },
+  {
+    "sample_id": "EVO_0348",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9998838984520901,
+    "arditi_score": 103.14631652832031
+  },
+  {
+    "sample_id": "EVO_0348",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.999886974355434,
+    "arditi_score": 103.2864990234375
+  },
+  {
+    "sample_id": "EVO_0908",
+    "variant": "original",
+    "prompt_chars": 5586,
+    "lr_prob": 0.9983110645913547,
+    "arditi_score": 108.60697174072266
+  },
+  {
+    "sample_id": "EVO_0908",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9983303047070227,
+    "arditi_score": 108.53787231445312
+  },
+  {
+    "sample_id": "EVO_0908",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9988422599517596,
+    "arditi_score": 108.62446594238281
+  },
+  {
+    "sample_id": "EVO_0908",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.996324610705316,
+    "arditi_score": 108.25106811523438
+  },
+  {
+    "sample_id": "EVO_0908",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9981006026855924,
+    "arditi_score": 108.65670776367188
+  },
+  {
+    "sample_id": "EVO_0202",
+    "variant": "original",
+    "prompt_chars": 2984,
+    "lr_prob": 0.9718660519796715,
+    "arditi_score": 113.80382537841797
+  },
+  {
+    "sample_id": "EVO_0202",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9676103549592849,
+    "arditi_score": 113.73272705078125
+  },
+  {
+    "sample_id": "EVO_0202",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9747206592513421,
+    "arditi_score": 113.49130249023438
+  },
+  {
+    "sample_id": "EVO_0202",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9704285275338304,
+    "arditi_score": 113.50245666503906
+  },
+  {
+    "sample_id": "EVO_0202",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9786130544713044,
+    "arditi_score": 113.75084686279297
+  },
+  {
+    "sample_id": "EVO_0341",
+    "variant": "original",
+    "prompt_chars": 2336,
+    "lr_prob": 0.9999005847277201,
+    "arditi_score": 117.20918273925781
+  },
+  {
+    "sample_id": "EVO_0341",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9999021667382082,
+    "arditi_score": 117.15254211425781
+  },
+  {
+    "sample_id": "EVO_0341",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9999045055217688,
+    "arditi_score": 117.31399536132812
+  },
+  {
+    "sample_id": "EVO_0341",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.999887865805858,
+    "arditi_score": 115.99707794189453
+  },
+  {
+    "sample_id": "EVO_0341",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9999315039439814,
+    "arditi_score": 117.10980987548828
+  },
+  {
+    "sample_id": "EVO_0209",
+    "variant": "original",
+    "prompt_chars": 1710,
+    "lr_prob": 0.9709773924174548,
+    "arditi_score": 109.46131896972656
+  },
+  {
+    "sample_id": "EVO_0209",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9697478591700422,
+    "arditi_score": 109.43275451660156
+  },
+  {
+    "sample_id": "EVO_0209",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9765368494849912,
+    "arditi_score": 108.76509857177734
+  },
+  {
+    "sample_id": "EVO_0209",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9586880479133866,
+    "arditi_score": 109.26303100585938
+  },
+  {
+    "sample_id": "EVO_0209",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9655645592454168,
+    "arditi_score": 109.40232849121094
+  },
+  {
+    "sample_id": "EVO_0383",
+    "variant": "original",
+    "prompt_chars": 6180,
+    "lr_prob": 0.9979333922319007,
+    "arditi_score": 106.58477020263672
+  },
+  {
+    "sample_id": "EVO_0383",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9979643673839282,
+    "arditi_score": 106.54014587402344
+  },
+  {
+    "sample_id": "EVO_0383",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9971925311989756,
+    "arditi_score": 106.25364685058594
+  },
+  {
+    "sample_id": "EVO_0383",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9963916252606043,
+    "arditi_score": 106.36520385742188
+  },
+  {
+    "sample_id": "EVO_0383",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9985045916679587,
+    "arditi_score": 106.71623229980469
+  },
+  {
+    "sample_id": "EVO_0857",
+    "variant": "original",
+    "prompt_chars": 3334,
+    "lr_prob": 0.8098542224872547,
+    "arditi_score": 95.92294311523438
+  },
+  {
+    "sample_id": "EVO_0857",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.6755378266404481,
+    "arditi_score": 95.51538848876953
+  },
+  {
+    "sample_id": "EVO_0857",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.6572752940208257,
+    "arditi_score": 95.468994140625
+  },
+  {
+    "sample_id": "EVO_0857",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.4596419292868241,
+    "arditi_score": 93.90653228759766
+  },
+  {
+    "sample_id": "EVO_0857",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.8206220803569944,
+    "arditi_score": 95.96337890625
+  },
+  {
+    "sample_id": "EVO_0076",
+    "variant": "original",
+    "prompt_chars": 4612,
+    "lr_prob": 0.9709174553507213,
+    "arditi_score": 111.73892211914062
+  },
+  {
+    "sample_id": "EVO_0076",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.967524824144809,
+    "arditi_score": 111.49722290039062
+  },
+  {
+    "sample_id": "EVO_0076",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.96544799619178,
+    "arditi_score": 111.64961242675781
+  },
+  {
+    "sample_id": "EVO_0076",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.958914603267117,
+    "arditi_score": 111.40066528320312
+  },
+  {
+    "sample_id": "EVO_0076",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9524505357656847,
+    "arditi_score": 111.61091613769531
+  },
+  {
+    "sample_id": "EVO_0437",
+    "variant": "original",
+    "prompt_chars": 3498,
+    "lr_prob": 0.8930037065254028,
+    "arditi_score": 106.69913482666016
+  },
+  {
+    "sample_id": "EVO_0437",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9006703883715506,
+    "arditi_score": 106.75888061523438
+  },
+  {
+    "sample_id": "EVO_0437",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8855391850404799,
+    "arditi_score": 106.89876556396484
+  },
+  {
+    "sample_id": "EVO_0437",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8671198364701576,
+    "arditi_score": 106.37712097167969
+  },
+  {
+    "sample_id": "EVO_0437",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9600136923397105,
+    "arditi_score": 108.4544677734375
+  },
+  {
+    "sample_id": "EVO_0773",
+    "variant": "original",
+    "prompt_chars": 6789,
+    "lr_prob": 0.9980254120092257,
+    "arditi_score": 105.81907653808594
+  },
+  {
+    "sample_id": "EVO_0773",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9978001662169074,
+    "arditi_score": 105.78465270996094
+  },
+  {
+    "sample_id": "EVO_0773",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.997687966490997,
+    "arditi_score": 105.84383392333984
+  },
+  {
+    "sample_id": "EVO_0773",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9978737097031859,
+    "arditi_score": 105.63714599609375
+  },
+  {
+    "sample_id": "EVO_0773",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.997875348089179,
+    "arditi_score": 105.68103790283203
+  },
+  {
+    "sample_id": "EVO_0733",
+    "variant": "original",
+    "prompt_chars": 1053,
+    "lr_prob": 0.9996597695188267,
+    "arditi_score": 104.64993286132812
+  },
+  {
+    "sample_id": "EVO_0733",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9997054719478834,
+    "arditi_score": 104.41340637207031
+  },
+  {
+    "sample_id": "EVO_0733",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9993372766345611,
+    "arditi_score": 103.13688659667969
+  },
+  {
+    "sample_id": "EVO_0733",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9996415879389957,
+    "arditi_score": 104.3133773803711
+  },
+  {
+    "sample_id": "EVO_0733",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9996597695188267,
+    "arditi_score": 104.64993286132812
+  },
+  {
+    "sample_id": "EVO_0288",
+    "variant": "original",
+    "prompt_chars": 5118,
+    "lr_prob": 0.9771009633854697,
+    "arditi_score": 105.32669830322266
+  },
+  {
+    "sample_id": "EVO_0288",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9714878535901496,
+    "arditi_score": 105.26896667480469
+  },
+  {
+    "sample_id": "EVO_0288",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9709411970262538,
+    "arditi_score": 105.06995391845703
+  },
+  {
+    "sample_id": "EVO_0288",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9887987330363652,
+    "arditi_score": 104.73896789550781
+  },
+  {
+    "sample_id": "EVO_0288",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9742838000625871,
+    "arditi_score": 105.22599792480469
+  },
+  {
+    "sample_id": "EVO_0216",
+    "variant": "original",
+    "prompt_chars": 1030,
+    "lr_prob": 0.8800664991357935,
+    "arditi_score": 106.67574310302734
+  },
+  {
+    "sample_id": "EVO_0216",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8838726772320706,
+    "arditi_score": 106.86891174316406
+  },
+  {
+    "sample_id": "EVO_0216",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.7715445769425329,
+    "arditi_score": 105.79083251953125
+  },
+  {
+    "sample_id": "EVO_0216",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9153380794312097,
+    "arditi_score": 105.760498046875
+  },
+  {
+    "sample_id": "EVO_0216",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.8509517546949241,
+    "arditi_score": 106.71554565429688
+  },
+  {
+    "sample_id": "EVO_0871",
+    "variant": "original",
+    "prompt_chars": 4421,
+    "lr_prob": 0.9995669100677402,
+    "arditi_score": 105.79869079589844
+  },
+  {
+    "sample_id": "EVO_0871",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9992104052439035,
+    "arditi_score": 105.39752197265625
+  },
+  {
+    "sample_id": "EVO_0871",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.999149720321757,
+    "arditi_score": 105.21312713623047
+  },
+  {
+    "sample_id": "EVO_0871",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9983302093230958,
+    "arditi_score": 105.15684509277344
+  },
+  {
+    "sample_id": "EVO_0871",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9991645905385012,
+    "arditi_score": 105.2835693359375
+  },
+  {
+    "sample_id": "EVO_0669",
+    "variant": "original",
+    "prompt_chars": 7674,
+    "lr_prob": 0.47347104965537024,
+    "arditi_score": 105.87446594238281
+  },
+  {
+    "sample_id": "EVO_0669",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.43746226277393646,
+    "arditi_score": 105.76081848144531
+  },
+  {
+    "sample_id": "EVO_0669",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.3739407739045398,
+    "arditi_score": 105.27194213867188
+  },
+  {
+    "sample_id": "EVO_0669",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.2760635943831277,
+    "arditi_score": 104.85293579101562
+  },
+  {
+    "sample_id": "EVO_0669",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.47347104965537024,
+    "arditi_score": 105.87446594238281
+  },
+  {
+    "sample_id": "EVO_0082",
+    "variant": "original",
+    "prompt_chars": 2612,
+    "lr_prob": 0.9933483657014618,
+    "arditi_score": 101.334716796875
+  },
+  {
+    "sample_id": "EVO_0082",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9935737634507648,
+    "arditi_score": 101.30252075195312
+  },
+  {
+    "sample_id": "EVO_0082",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9934916766618295,
+    "arditi_score": 101.04867553710938
+  },
+  {
+    "sample_id": "EVO_0082",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9937545452152414,
+    "arditi_score": 100.9229736328125
+  },
+  {
+    "sample_id": "EVO_0082",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9933483657014618,
+    "arditi_score": 101.334716796875
+  },
+  {
+    "sample_id": "EVO_0708",
+    "variant": "original",
+    "prompt_chars": 3408,
+    "lr_prob": 0.9379848596816414,
+    "arditi_score": 100.99710083007812
+  },
+  {
+    "sample_id": "EVO_0708",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9353953383808028,
+    "arditi_score": 101.10687255859375
+  },
+  {
+    "sample_id": "EVO_0708",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9525496029482388,
+    "arditi_score": 100.84959411621094
+  },
+  {
+    "sample_id": "EVO_0708",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8711841361501734,
+    "arditi_score": 100.81974792480469
+  },
+  {
+    "sample_id": "EVO_0708",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9935595113315081,
+    "arditi_score": 101.7037124633789
+  },
+  {
+    "sample_id": "EVO_0607",
+    "variant": "original",
+    "prompt_chars": 4292,
+    "lr_prob": 0.9964295331115048,
+    "arditi_score": 106.953125
+  },
+  {
+    "sample_id": "EVO_0607",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9966635875660034,
+    "arditi_score": 106.90354919433594
+  },
+  {
+    "sample_id": "EVO_0607",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9963754671170749,
+    "arditi_score": 106.96326446533203
+  },
+  {
+    "sample_id": "EVO_0607",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9946965705518268,
+    "arditi_score": 106.82675170898438
+  },
+  {
+    "sample_id": "EVO_0607",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9973063751228629,
+    "arditi_score": 106.86016845703125
+  },
+  {
+    "sample_id": "EVO_0671",
+    "variant": "original",
+    "prompt_chars": 7643,
+    "lr_prob": 0.8950610907510412,
+    "arditi_score": 97.65260314941406
+  },
+  {
+    "sample_id": "EVO_0671",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9003131857553944,
+    "arditi_score": 97.46815490722656
+  },
+  {
+    "sample_id": "EVO_0671",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8942631751755118,
+    "arditi_score": 97.50357818603516
+  },
+  {
+    "sample_id": "EVO_0671",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8999478001147775,
+    "arditi_score": 97.55298614501953
+  },
+  {
+    "sample_id": "EVO_0671",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9813632462964705,
+    "arditi_score": 98.1732177734375
+  },
+  {
+    "sample_id": "EVO_0753",
+    "variant": "original",
+    "prompt_chars": 5489,
+    "lr_prob": 0.9809920921549155,
+    "arditi_score": 99.9271240234375
+  },
+  {
+    "sample_id": "EVO_0753",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9790285729140539,
+    "arditi_score": 99.79719543457031
+  },
+  {
+    "sample_id": "EVO_0753",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9664673763101541,
+    "arditi_score": 99.48880004882812
+  },
+  {
+    "sample_id": "EVO_0753",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9572361646304747,
+    "arditi_score": 99.60801696777344
+  },
+  {
+    "sample_id": "EVO_0753",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9994350485287316,
+    "arditi_score": 101.94833374023438
+  },
+  {
+    "sample_id": "EVO_0023",
+    "variant": "original",
+    "prompt_chars": 8083,
+    "lr_prob": 0.9950296156415541,
+    "arditi_score": 104.72537994384766
+  },
+  {
+    "sample_id": "EVO_0023",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9946513835971554,
+    "arditi_score": 104.62501525878906
+  },
+  {
+    "sample_id": "EVO_0023",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9938079191211002,
+    "arditi_score": 104.50340270996094
+  },
+  {
+    "sample_id": "EVO_0023",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9934036381559624,
+    "arditi_score": 104.03123474121094
+  },
+  {
+    "sample_id": "EVO_0023",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9936949209772558,
+    "arditi_score": 104.90269470214844
+  },
+  {
+    "sample_id": "EVO_0220",
+    "variant": "original",
+    "prompt_chars": 4068,
+    "lr_prob": 0.9408941536274136,
+    "arditi_score": 111.97561645507812
+  },
+  {
+    "sample_id": "EVO_0220",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9422515722451774,
+    "arditi_score": 111.96125793457031
+  },
+  {
+    "sample_id": "EVO_0220",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.957946667380518,
+    "arditi_score": 111.94020080566406
+  },
+  {
+    "sample_id": "EVO_0220",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9442816660383228,
+    "arditi_score": 111.73141479492188
+  },
+  {
+    "sample_id": "EVO_0220",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9712522871200291,
+    "arditi_score": 111.95449829101562
+  },
+  {
+    "sample_id": "EVO_0490",
+    "variant": "original",
+    "prompt_chars": 5998,
+    "lr_prob": 0.9996841170736079,
+    "arditi_score": 108.73456573486328
+  },
+  {
+    "sample_id": "EVO_0490",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9996747635794148,
+    "arditi_score": 108.57579040527344
+  },
+  {
+    "sample_id": "EVO_0490",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9997102485416365,
+    "arditi_score": 108.32211303710938
+  },
+  {
+    "sample_id": "EVO_0490",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9996252836720372,
+    "arditi_score": 108.464599609375
+  },
+  {
+    "sample_id": "EVO_0490",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9996793723530235,
+    "arditi_score": 108.73583984375
+  },
+  {
+    "sample_id": "EVO_0851",
+    "variant": "original",
+    "prompt_chars": 1896,
+    "lr_prob": 0.999688436548164,
+    "arditi_score": 103.20648193359375
+  },
+  {
+    "sample_id": "EVO_0851",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.999719747057204,
+    "arditi_score": 103.51185607910156
+  },
+  {
+    "sample_id": "EVO_0851",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9996206521117994,
+    "arditi_score": 102.83340454101562
+  },
+  {
+    "sample_id": "EVO_0851",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9995578032133458,
+    "arditi_score": 103.3812026977539
+  },
+  {
+    "sample_id": "EVO_0851",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.999688436548164,
+    "arditi_score": 103.20648193359375
+  },
+  {
+    "sample_id": "EVO_0544",
+    "variant": "original",
+    "prompt_chars": 3408,
+    "lr_prob": 0.9379848596816414,
+    "arditi_score": 100.99710083007812
+  },
+  {
+    "sample_id": "EVO_0544",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9353953383808028,
+    "arditi_score": 101.10687255859375
+  },
+  {
+    "sample_id": "EVO_0544",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9525496029482388,
+    "arditi_score": 100.84959411621094
+  },
+  {
+    "sample_id": "EVO_0544",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8711841361501734,
+    "arditi_score": 100.81974792480469
+  },
+  {
+    "sample_id": "EVO_0544",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9379848596816414,
+    "arditi_score": 100.99710083007812
+  },
+  {
+    "sample_id": "EVO_0755",
+    "variant": "original",
+    "prompt_chars": 5096,
+    "lr_prob": 0.9992517652341686,
+    "arditi_score": 107.39958953857422
+  },
+  {
+    "sample_id": "EVO_0755",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.999241111519412,
+    "arditi_score": 107.31330871582031
+  },
+  {
+    "sample_id": "EVO_0755",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9992980051913493,
+    "arditi_score": 107.30026245117188
+  },
+  {
+    "sample_id": "EVO_0755",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9994919236105236,
+    "arditi_score": 107.3533935546875
+  },
+  {
+    "sample_id": "EVO_0755",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9995330628854254,
+    "arditi_score": 107.2757797241211
+  },
+  {
+    "sample_id": "EVO_0540",
+    "variant": "original",
+    "prompt_chars": 7635,
+    "lr_prob": 0.9074290021063686,
+    "arditi_score": 94.72126770019531
+  },
+  {
+    "sample_id": "EVO_0540",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.896739580143159,
+    "arditi_score": 94.69610595703125
+  },
+  {
+    "sample_id": "EVO_0540",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8870102270944361,
+    "arditi_score": 94.41769409179688
+  },
+  {
+    "sample_id": "EVO_0540",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8806787667474071,
+    "arditi_score": 94.48066711425781
+  },
+  {
+    "sample_id": "EVO_0540",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.916027997587677,
+    "arditi_score": 94.6959457397461
+  },
+  {
+    "sample_id": "EVO_0933",
+    "variant": "original",
+    "prompt_chars": 6261,
+    "lr_prob": 0.9958530983716,
+    "arditi_score": 97.95982360839844
+  },
+  {
+    "sample_id": "EVO_0933",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9953177193925756,
+    "arditi_score": 97.81219482421875
+  },
+  {
+    "sample_id": "EVO_0933",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9951058420576314,
+    "arditi_score": 97.86328125
+  },
+  {
+    "sample_id": "EVO_0933",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9948077455635583,
+    "arditi_score": 97.76924133300781
+  },
+  {
+    "sample_id": "EVO_0933",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9958530983716,
+    "arditi_score": 97.95982360839844
+  },
+  {
+    "sample_id": "EVO_0224",
+    "variant": "original",
+    "prompt_chars": 978,
+    "lr_prob": 0.8896860885819409,
+    "arditi_score": 107.67335510253906
+  },
+  {
+    "sample_id": "EVO_0224",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8942830122879467,
+    "arditi_score": 107.40127563476562
+  },
+  {
+    "sample_id": "EVO_0224",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8542413806493994,
+    "arditi_score": 106.94392395019531
+  },
+  {
+    "sample_id": "EVO_0224",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.6259975705109192,
+    "arditi_score": 106.57201385498047
+  },
+  {
+    "sample_id": "EVO_0224",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9881846130170014,
+    "arditi_score": 108.57157135009766
+  },
+  {
+    "sample_id": "EVO_0663",
+    "variant": "original",
+    "prompt_chars": 5489,
+    "lr_prob": 0.9970629793610911,
+    "arditi_score": 101.44723510742188
+  },
+  {
+    "sample_id": "EVO_0663",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9933164430941976,
+    "arditi_score": 100.84870910644531
+  },
+  {
+    "sample_id": "EVO_0663",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9915634321638208,
+    "arditi_score": 100.61543273925781
+  },
+  {
+    "sample_id": "EVO_0663",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9831895125836948,
+    "arditi_score": 100.168212890625
+  },
+  {
+    "sample_id": "EVO_0663",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9912995201405752,
+    "arditi_score": 100.5263671875
+  },
+  {
+    "sample_id": "EVO_0749",
+    "variant": "original",
+    "prompt_chars": 2852,
+    "lr_prob": 0.999893679257246,
+    "arditi_score": 106.12094116210938
+  },
+  {
+    "sample_id": "EVO_0749",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9998827820315208,
+    "arditi_score": 105.89398193359375
+  },
+  {
+    "sample_id": "EVO_0749",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9999099229777585,
+    "arditi_score": 105.94355773925781
+  },
+  {
+    "sample_id": "EVO_0749",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9999877109109262,
+    "arditi_score": 108.07867431640625
+  },
+  {
+    "sample_id": "EVO_0749",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9999010055068354,
+    "arditi_score": 105.06468200683594
+  },
+  {
+    "sample_id": "EVO_0724",
+    "variant": "original",
+    "prompt_chars": 2770,
+    "lr_prob": 0.9997967333524391,
+    "arditi_score": 107.78309631347656
+  },
+  {
+    "sample_id": "EVO_0724",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9995939178269053,
+    "arditi_score": 107.12765502929688
+  },
+  {
+    "sample_id": "EVO_0724",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9994773834982906,
+    "arditi_score": 107.18434143066406
+  },
+  {
+    "sample_id": "EVO_0724",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9991600375577652,
+    "arditi_score": 107.41436767578125
+  },
+  {
+    "sample_id": "EVO_0724",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9991981994545273,
+    "arditi_score": 107.35884094238281
+  },
+  {
+    "sample_id": "EVO_0012",
+    "variant": "original",
+    "prompt_chars": 5266,
+    "lr_prob": 0.9931638374318877,
+    "arditi_score": 106.02935791015625
+  },
+  {
+    "sample_id": "EVO_0012",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9917577998527242,
+    "arditi_score": 105.8937759399414
+  },
+  {
+    "sample_id": "EVO_0012",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9890889733137812,
+    "arditi_score": 105.83430480957031
+  },
+  {
+    "sample_id": "EVO_0012",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9940839579842464,
+    "arditi_score": 105.87150573730469
+  },
+  {
+    "sample_id": "EVO_0012",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9927996016755154,
+    "arditi_score": 105.40602111816406
+  },
+  {
+    "sample_id": "EVO_0867",
+    "variant": "original",
+    "prompt_chars": 3696,
+    "lr_prob": 0.9968957273102583,
+    "arditi_score": 104.93203735351562
+  },
+  {
+    "sample_id": "EVO_0867",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9971370124436021,
+    "arditi_score": 104.8875961303711
+  },
+  {
+    "sample_id": "EVO_0867",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9959186629614857,
+    "arditi_score": 104.51210021972656
+  },
+  {
+    "sample_id": "EVO_0867",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9917125719705668,
+    "arditi_score": 103.708984375
+  },
+  {
+    "sample_id": "EVO_0867",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9900341626973063,
+    "arditi_score": 104.05913543701172
+  },
+  {
+    "sample_id": "EVO_0968",
+    "variant": "original",
+    "prompt_chars": 5038,
+    "lr_prob": 0.9999957006041783,
+    "arditi_score": 113.26039123535156
+  },
+  {
+    "sample_id": "EVO_0968",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9999959685097766,
+    "arditi_score": 113.50123596191406
+  },
+  {
+    "sample_id": "EVO_0968",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9999968520664347,
+    "arditi_score": 113.12095642089844
+  },
+  {
+    "sample_id": "EVO_0968",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9999954172561032,
+    "arditi_score": 112.79823303222656
+  },
+  {
+    "sample_id": "EVO_0968",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9999956690403021,
+    "arditi_score": 113.28732299804688
+  },
+  {
+    "sample_id": "EVO_0837",
+    "variant": "original",
+    "prompt_chars": 3490,
+    "lr_prob": 0.959270432177683,
+    "arditi_score": 111.798095703125
+  },
+  {
+    "sample_id": "EVO_0837",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9593397550369063,
+    "arditi_score": 111.75080871582031
+  },
+  {
+    "sample_id": "EVO_0837",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.962956128832428,
+    "arditi_score": 111.67230224609375
+  },
+  {
+    "sample_id": "EVO_0837",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9555501382241881,
+    "arditi_score": 111.5960464477539
+  },
+  {
+    "sample_id": "EVO_0837",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9641550138802374,
+    "arditi_score": 111.41951751708984
+  },
+  {
+    "sample_id": "EVO_0994",
+    "variant": "original",
+    "prompt_chars": 4035,
+    "lr_prob": 0.9965683971783912,
+    "arditi_score": 110.59866333007812
+  },
+  {
+    "sample_id": "EVO_0994",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9965857041924822,
+    "arditi_score": 110.47883605957031
+  },
+  {
+    "sample_id": "EVO_0994",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9976401752599503,
+    "arditi_score": 110.73768615722656
+  },
+  {
+    "sample_id": "EVO_0994",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9966750667370619,
+    "arditi_score": 110.2711181640625
+  },
+  {
+    "sample_id": "EVO_0994",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9962101195825115,
+    "arditi_score": 110.57134246826172
+  },
+  {
+    "sample_id": "EVO_0137",
+    "variant": "original",
+    "prompt_chars": 3275,
+    "lr_prob": 0.8680600413503738,
+    "arditi_score": 104.44939422607422
+  },
+  {
+    "sample_id": "EVO_0137",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8559176005435686,
+    "arditi_score": 104.22846984863281
+  },
+  {
+    "sample_id": "EVO_0137",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8244211966426128,
+    "arditi_score": 104.29693603515625
+  },
+  {
+    "sample_id": "EVO_0137",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9275513518645997,
+    "arditi_score": 103.89286041259766
+  },
+  {
+    "sample_id": "EVO_0137",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.886164846476371,
+    "arditi_score": 104.72181701660156
+  },
+  {
+    "sample_id": "EVO_0168",
+    "variant": "original",
+    "prompt_chars": 3560,
+    "lr_prob": 0.9988389378914826,
+    "arditi_score": 99.48983764648438
+  },
+  {
+    "sample_id": "EVO_0168",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9989394808097155,
+    "arditi_score": 99.48312377929688
+  },
+  {
+    "sample_id": "EVO_0168",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9986225126553318,
+    "arditi_score": 99.34294891357422
+  },
+  {
+    "sample_id": "EVO_0168",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9992566917382615,
+    "arditi_score": 99.49676513671875
+  },
+  {
+    "sample_id": "EVO_0168",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9976805102999543,
+    "arditi_score": 99.45025634765625
+  },
+  {
+    "sample_id": "EVO_0363",
+    "variant": "original",
+    "prompt_chars": 6115,
+    "lr_prob": 0.9672596121277055,
+    "arditi_score": 99.66735076904297
+  },
+  {
+    "sample_id": "EVO_0363",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9634958010943754,
+    "arditi_score": 99.67608642578125
+  },
+  {
+    "sample_id": "EVO_0363",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9628537315571672,
+    "arditi_score": 99.59088897705078
+  },
+  {
+    "sample_id": "EVO_0363",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9612227300131122,
+    "arditi_score": 99.52174377441406
+  },
+  {
+    "sample_id": "EVO_0363",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9672596121277055,
+    "arditi_score": 99.66735076904297
+  },
+  {
+    "sample_id": "EVO_0508",
+    "variant": "original",
+    "prompt_chars": 6135,
+    "lr_prob": 0.9992305643679015,
+    "arditi_score": 104.10366821289062
+  },
+  {
+    "sample_id": "EVO_0508",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.99924770563745,
+    "arditi_score": 103.99343872070312
+  },
+  {
+    "sample_id": "EVO_0508",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9992388358751888,
+    "arditi_score": 103.87545776367188
+  },
+  {
+    "sample_id": "EVO_0508",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9993598584037832,
+    "arditi_score": 103.93902587890625
+  },
+  {
+    "sample_id": "EVO_0508",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9988478158780104,
+    "arditi_score": 103.44475555419922
+  },
+  {
+    "sample_id": "EVO_0156",
+    "variant": "original",
+    "prompt_chars": 7341,
+    "lr_prob": 0.98994321668985,
+    "arditi_score": 103.82438659667969
+  },
+  {
+    "sample_id": "EVO_0156",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9823461272499837,
+    "arditi_score": 102.97972106933594
+  },
+  {
+    "sample_id": "EVO_0156",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9739674737285774,
+    "arditi_score": 103.00325012207031
+  },
+  {
+    "sample_id": "EVO_0156",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9967925426514743,
+    "arditi_score": 103.48432922363281
+  },
+  {
+    "sample_id": "EVO_0156",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9957262961812119,
+    "arditi_score": 104.43157958984375
+  },
+  {
+    "sample_id": "EVO_0284",
+    "variant": "original",
+    "prompt_chars": 5247,
+    "lr_prob": 0.9829439246442886,
+    "arditi_score": 111.12672424316406
+  },
+  {
+    "sample_id": "EVO_0284",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9788511482821773,
+    "arditi_score": 110.92179870605469
+  },
+  {
+    "sample_id": "EVO_0284",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.979899819397803,
+    "arditi_score": 110.73871612548828
+  },
+  {
+    "sample_id": "EVO_0284",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.979177335743998,
+    "arditi_score": 111.08436584472656
+  },
+  {
+    "sample_id": "EVO_0284",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9794576131335373,
+    "arditi_score": 111.14668273925781
+  },
+  {
+    "sample_id": "EVO_0937",
+    "variant": "original",
+    "prompt_chars": 3649,
+    "lr_prob": 0.9975148854522449,
+    "arditi_score": 112.67724609375
+  },
+  {
+    "sample_id": "EVO_0937",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9975116871375352,
+    "arditi_score": 112.563720703125
+  },
+  {
+    "sample_id": "EVO_0937",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.997571819007623,
+    "arditi_score": 112.409912109375
+  },
+  {
+    "sample_id": "EVO_0937",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9967264587499021,
+    "arditi_score": 112.56332397460938
+  },
+  {
+    "sample_id": "EVO_0937",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9988590566556845,
+    "arditi_score": 113.17683410644531
+  },
+  {
+    "sample_id": "EVO_0241",
+    "variant": "original",
+    "prompt_chars": 5079,
+    "lr_prob": 0.9930224963004908,
+    "arditi_score": 111.41835021972656
+  },
+  {
+    "sample_id": "EVO_0241",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9922086330594209,
+    "arditi_score": 111.28776550292969
+  },
+  {
+    "sample_id": "EVO_0241",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.989529727666517,
+    "arditi_score": 110.95338439941406
+  },
+  {
+    "sample_id": "EVO_0241",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9806584223906192,
+    "arditi_score": 110.25664520263672
+  },
+  {
+    "sample_id": "EVO_0241",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9909027153244475,
+    "arditi_score": 111.36016845703125
+  },
+  {
+    "sample_id": "EVO_0109",
+    "variant": "original",
+    "prompt_chars": 4753,
+    "lr_prob": 0.8082152168165871,
+    "arditi_score": 104.06967163085938
+  },
+  {
+    "sample_id": "EVO_0109",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8093382209208588,
+    "arditi_score": 104.04550170898438
+  },
+  {
+    "sample_id": "EVO_0109",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8181210146694909,
+    "arditi_score": 104.01578521728516
+  },
+  {
+    "sample_id": "EVO_0109",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.7569908985895457,
+    "arditi_score": 103.94219207763672
+  },
+  {
+    "sample_id": "EVO_0109",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.6313410597306878,
+    "arditi_score": 103.20420837402344
+  },
+  {
+    "sample_id": "EVO_0653",
+    "variant": "original",
+    "prompt_chars": 6794,
+    "lr_prob": 0.9740244782942323,
+    "arditi_score": 107.11795043945312
+  },
+  {
+    "sample_id": "EVO_0653",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9649599398015813,
+    "arditi_score": 106.90509796142578
+  },
+  {
+    "sample_id": "EVO_0653",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9619879627600688,
+    "arditi_score": 106.85933685302734
+  },
+  {
+    "sample_id": "EVO_0653",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9747855756504652,
+    "arditi_score": 106.3738021850586
+  },
+  {
+    "sample_id": "EVO_0653",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9743259158053059,
+    "arditi_score": 107.06048583984375
+  },
+  {
+    "sample_id": "EVO_0567",
+    "variant": "original",
+    "prompt_chars": 4583,
+    "lr_prob": 0.9999714025614916,
+    "arditi_score": 112.21328735351562
+  },
+  {
+    "sample_id": "EVO_0567",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9999698340527123,
+    "arditi_score": 112.255859375
+  },
+  {
+    "sample_id": "EVO_0567",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9999772640111513,
+    "arditi_score": 112.2930679321289
+  },
+  {
+    "sample_id": "EVO_0567",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9999720371757737,
+    "arditi_score": 112.00259399414062
+  },
+  {
+    "sample_id": "EVO_0567",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9999721474113159,
+    "arditi_score": 112.398681640625
+  },
+  {
+    "sample_id": "EVO_0556",
+    "variant": "original",
+    "prompt_chars": 7071,
+    "lr_prob": 0.9810680178336122,
+    "arditi_score": 109.68196868896484
+  },
+  {
+    "sample_id": "EVO_0556",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9751446933445628,
+    "arditi_score": 109.62630462646484
+  },
+  {
+    "sample_id": "EVO_0556",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9731573112120606,
+    "arditi_score": 109.50336456298828
+  },
+  {
+    "sample_id": "EVO_0556",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9700450714386104,
+    "arditi_score": 109.55194091796875
+  },
+  {
+    "sample_id": "EVO_0556",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9782433395652063,
+    "arditi_score": 109.27764892578125
+  },
+  {
+    "sample_id": "EVO_0707",
+    "variant": "original",
+    "prompt_chars": 4583,
+    "lr_prob": 0.9999714025614916,
+    "arditi_score": 112.21328735351562
+  },
+  {
+    "sample_id": "EVO_0707",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9999698340527123,
+    "arditi_score": 112.255859375
+  },
+  {
+    "sample_id": "EVO_0707",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9999772640111513,
+    "arditi_score": 112.2930679321289
+  },
+  {
+    "sample_id": "EVO_0707",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9999720371757737,
+    "arditi_score": 112.00259399414062
+  },
+  {
+    "sample_id": "EVO_0707",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9999695869680857,
+    "arditi_score": 112.41064453125
+  },
+  {
+    "sample_id": "EVO_0084",
+    "variant": "original",
+    "prompt_chars": 7909,
+    "lr_prob": 0.9925964597940597,
+    "arditi_score": 106.17952728271484
+  },
+  {
+    "sample_id": "EVO_0084",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9931286408246225,
+    "arditi_score": 106.19361114501953
+  },
+  {
+    "sample_id": "EVO_0084",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9936450973837244,
+    "arditi_score": 106.21926879882812
+  },
+  {
+    "sample_id": "EVO_0084",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9942125225700463,
+    "arditi_score": 106.02882385253906
+  },
+  {
+    "sample_id": "EVO_0084",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9927295096327889,
+    "arditi_score": 106.19577026367188
+  },
+  {
+    "sample_id": "EVO_0628",
+    "variant": "original",
+    "prompt_chars": 7977,
+    "lr_prob": 0.9658710071855503,
+    "arditi_score": 105.45235443115234
+  },
+  {
+    "sample_id": "EVO_0628",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9667556469106442,
+    "arditi_score": 105.39254760742188
+  },
+  {
+    "sample_id": "EVO_0628",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9526705811779386,
+    "arditi_score": 105.06761169433594
+  },
+  {
+    "sample_id": "EVO_0628",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.956782200655224,
+    "arditi_score": 105.10535430908203
+  },
+  {
+    "sample_id": "EVO_0628",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.7943349420865287,
+    "arditi_score": 102.69871520996094
+  },
+  {
+    "sample_id": "EVO_0626",
+    "variant": "original",
+    "prompt_chars": 2085,
+    "lr_prob": 0.8967962601437721,
+    "arditi_score": 118.57471466064453
+  },
+  {
+    "sample_id": "EVO_0626",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9036525762993434,
+    "arditi_score": 118.48348999023438
+  },
+  {
+    "sample_id": "EVO_0626",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8618974171088255,
+    "arditi_score": 118.2926254272461
+  },
+  {
+    "sample_id": "EVO_0626",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.913765008330525,
+    "arditi_score": 117.9638671875
+  },
+  {
+    "sample_id": "EVO_0626",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.908275792025808,
+    "arditi_score": 118.64198303222656
+  },
+  {
+    "sample_id": "EVO_0719",
+    "variant": "original",
+    "prompt_chars": 6751,
+    "lr_prob": 0.9990924895887894,
+    "arditi_score": 108.17340850830078
+  },
+  {
+    "sample_id": "EVO_0719",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9989544342878838,
+    "arditi_score": 108.31886291503906
+  },
+  {
+    "sample_id": "EVO_0719",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9991563638238441,
+    "arditi_score": 108.17447662353516
+  },
+  {
+    "sample_id": "EVO_0719",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.998848724285218,
+    "arditi_score": 108.17647552490234
+  },
+  {
+    "sample_id": "EVO_0719",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9990855491953357,
+    "arditi_score": 108.27418518066406
+  },
+  {
+    "sample_id": "EVO_0388",
+    "variant": "original",
+    "prompt_chars": 4810,
+    "lr_prob": 0.9769482418926615,
+    "arditi_score": 97.95032501220703
+  },
+  {
+    "sample_id": "EVO_0388",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9567911119642829,
+    "arditi_score": 97.12901306152344
+  },
+  {
+    "sample_id": "EVO_0388",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9901720738672363,
+    "arditi_score": 98.31754302978516
+  },
+  {
+    "sample_id": "EVO_0024",
+    "variant": "original",
+    "prompt_chars": 7953,
+    "lr_prob": 0.9943626529826006,
+    "arditi_score": 107.39405059814453
+  },
+  {
+    "sample_id": "EVO_0024",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9949994995544351,
+    "arditi_score": 107.36384582519531
+  },
+  {
+    "sample_id": "EVO_0024",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9947255300950323,
+    "arditi_score": 107.29995727539062
+  },
+  {
+    "sample_id": "EVO_0024",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9936121205338532,
+    "arditi_score": 106.86282348632812
+  },
+  {
+    "sample_id": "EVO_0024",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9946076349078318,
+    "arditi_score": 106.94757080078125
+  },
+  {
+    "sample_id": "EVO_0831",
+    "variant": "original",
+    "prompt_chars": 1801,
+    "lr_prob": 0.9996956795653246,
+    "arditi_score": 112.90935516357422
+  },
+  {
+    "sample_id": "EVO_0831",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9997943472146118,
+    "arditi_score": 112.72943115234375
+  },
+  {
+    "sample_id": "EVO_0831",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.999703891305394,
+    "arditi_score": 112.41796112060547
+  },
+  {
+    "sample_id": "EVO_0831",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9987657647005781,
+    "arditi_score": 111.60128784179688
+  },
+  {
+    "sample_id": "EVO_0831",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9996704186654003,
+    "arditi_score": 112.52713012695312
+  },
+  {
+    "sample_id": "EVO_0389",
+    "variant": "original",
+    "prompt_chars": 6169,
+    "lr_prob": 0.8394440688207676,
+    "arditi_score": 103.69794464111328
+  },
+  {
+    "sample_id": "EVO_0389",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8428857453080166,
+    "arditi_score": 103.70843505859375
+  },
+  {
+    "sample_id": "EVO_0389",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8491021252243217,
+    "arditi_score": 103.69577026367188
+  },
+  {
+    "sample_id": "EVO_0389",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8250117986671401,
+    "arditi_score": 104.26105499267578
+  },
+  {
+    "sample_id": "EVO_0389",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.7752837946865442,
+    "arditi_score": 103.32284545898438
+  },
+  {
+    "sample_id": "EVO_0440",
+    "variant": "original",
+    "prompt_chars": 4137,
+    "lr_prob": 0.9887478547823406,
+    "arditi_score": 99.86543273925781
+  },
+  {
+    "sample_id": "EVO_0440",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9856005857502859,
+    "arditi_score": 99.7872085571289
+  },
+  {
+    "sample_id": "EVO_0440",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9834711089324348,
+    "arditi_score": 99.57874298095703
+  },
+  {
+    "sample_id": "EVO_0440",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.963363010143887,
+    "arditi_score": 99.06282806396484
+  },
+  {
+    "sample_id": "EVO_0440",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9932286549080916,
+    "arditi_score": 100.06735229492188
+  },
+  {
+    "sample_id": "EVO_0898",
+    "variant": "original",
+    "prompt_chars": 3600,
+    "lr_prob": 0.9259105196537355,
+    "arditi_score": 110.86866760253906
+  },
+  {
+    "sample_id": "EVO_0898",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9247532134549212,
+    "arditi_score": 110.86913299560547
+  },
+  {
+    "sample_id": "EVO_0898",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9167662345891779,
+    "arditi_score": 110.62458038330078
+  },
+  {
+    "sample_id": "EVO_0898",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9445316176341199,
+    "arditi_score": 110.36500549316406
+  },
+  {
+    "sample_id": "EVO_0898",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9388523094604366,
+    "arditi_score": 110.75907897949219
+  },
+  {
+    "sample_id": "EVO_0300",
+    "variant": "original",
+    "prompt_chars": 6251,
+    "lr_prob": 0.9731489893392308,
+    "arditi_score": 105.08758544921875
+  },
+  {
+    "sample_id": "EVO_0300",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9734037304970216,
+    "arditi_score": 105.06434631347656
+  },
+  {
+    "sample_id": "EVO_0300",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9697894625372561,
+    "arditi_score": 104.8735122680664
+  },
+  {
+    "sample_id": "EVO_0300",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9708924551333815,
+    "arditi_score": 104.8282470703125
+  },
+  {
+    "sample_id": "EVO_0300",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9763396907641149,
+    "arditi_score": 105.12242126464844
+  },
+  {
+    "sample_id": "EVO_0843",
+    "variant": "original",
+    "prompt_chars": 4923,
+    "lr_prob": 0.999174700751591,
+    "arditi_score": 108.06348419189453
+  },
+  {
+    "sample_id": "EVO_0843",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9991595587955913,
+    "arditi_score": 108.0968246459961
+  },
+  {
+    "sample_id": "EVO_0843",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9991300350847918,
+    "arditi_score": 108.05363464355469
+  },
+  {
+    "sample_id": "EVO_0843",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9992581806085206,
+    "arditi_score": 107.87588500976562
+  },
+  {
+    "sample_id": "EVO_0843",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9992617814283816,
+    "arditi_score": 107.98715209960938
+  },
+  {
+    "sample_id": "EVO_0792",
+    "variant": "original",
+    "prompt_chars": 3924,
+    "lr_prob": 0.9581294664279002,
+    "arditi_score": 100.50839233398438
+  },
+  {
+    "sample_id": "EVO_0792",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9561441140184349,
+    "arditi_score": 100.45298767089844
+  },
+  {
+    "sample_id": "EVO_0792",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9428475086508542,
+    "arditi_score": 100.01215362548828
+  },
+  {
+    "sample_id": "EVO_0792",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9647211848915657,
+    "arditi_score": 100.00364685058594
+  },
+  {
+    "sample_id": "EVO_0792",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9116849458593317,
+    "arditi_score": 99.6707763671875
+  },
+  {
+    "sample_id": "EVO_0465",
+    "variant": "original",
+    "prompt_chars": 5511,
+    "lr_prob": 0.8901403410933327,
+    "arditi_score": 101.228271484375
+  },
+  {
+    "sample_id": "EVO_0465",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8785906990783845,
+    "arditi_score": 101.20230102539062
+  },
+  {
+    "sample_id": "EVO_0465",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9015301433149624,
+    "arditi_score": 101.25545501708984
+  },
+  {
+    "sample_id": "EVO_0465",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.89821619470048,
+    "arditi_score": 101.06614685058594
+  },
+  {
+    "sample_id": "EVO_0465",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.8901403410933327,
+    "arditi_score": 101.228271484375
+  },
+  {
+    "sample_id": "EVO_0879",
+    "variant": "original",
+    "prompt_chars": 2608,
+    "lr_prob": 0.968866841506598,
+    "arditi_score": 102.71458435058594
+  },
+  {
+    "sample_id": "EVO_0879",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9195417572303409,
+    "arditi_score": 101.79835510253906
+  },
+  {
+    "sample_id": "EVO_0879",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.877122917698408,
+    "arditi_score": 101.63666534423828
+  },
+  {
+    "sample_id": "EVO_0879",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.725546647492593,
+    "arditi_score": 99.60401916503906
+  },
+  {
+    "sample_id": "EVO_0879",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9981327094186841,
+    "arditi_score": 103.34812927246094
+  },
+  {
+    "sample_id": "EVO_0170",
+    "variant": "original",
+    "prompt_chars": 2015,
+    "lr_prob": 0.9967047362119683,
+    "arditi_score": 119.15266418457031
+  },
+  {
+    "sample_id": "EVO_0170",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9967904381131969,
+    "arditi_score": 119.11581420898438
+  },
+  {
+    "sample_id": "EVO_0170",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9968969960999721,
+    "arditi_score": 118.98200988769531
+  },
+  {
+    "sample_id": "EVO_0170",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9961068602047966,
+    "arditi_score": 119.0833511352539
+  },
+  {
+    "sample_id": "EVO_0170",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.994151358928114,
+    "arditi_score": 118.09708404541016
+  },
+  {
+    "sample_id": "EVO_0183",
+    "variant": "original",
+    "prompt_chars": 6909,
+    "lr_prob": 0.9379581155734065,
+    "arditi_score": 110.34121704101562
+  },
+  {
+    "sample_id": "EVO_0183",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9441563937024204,
+    "arditi_score": 110.22096252441406
+  },
+  {
+    "sample_id": "EVO_0183",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9447324319703397,
+    "arditi_score": 109.87431335449219
+  },
+  {
+    "sample_id": "EVO_0183",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9292315336856319,
+    "arditi_score": 110.19950866699219
+  },
+  {
+    "sample_id": "EVO_0183",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9580153062697835,
+    "arditi_score": 110.45379638671875
+  },
+  {
+    "sample_id": "EVO_0436",
+    "variant": "original",
+    "prompt_chars": 7299,
+    "lr_prob": 0.993005414138863,
+    "arditi_score": 103.13008880615234
+  },
+  {
+    "sample_id": "EVO_0436",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9917935978300574,
+    "arditi_score": 103.06947326660156
+  },
+  {
+    "sample_id": "EVO_0436",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9921997072253299,
+    "arditi_score": 103.06059265136719
+  },
+  {
+    "sample_id": "EVO_0436",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9883679651224274,
+    "arditi_score": 102.62225341796875
+  },
+  {
+    "sample_id": "EVO_0436",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9931558557256244,
+    "arditi_score": 103.13575744628906
+  },
+  {
+    "sample_id": "EVO_0208",
+    "variant": "original",
+    "prompt_chars": 7082,
+    "lr_prob": 0.9998724647733851,
+    "arditi_score": 103.42478942871094
+  },
+  {
+    "sample_id": "EVO_0208",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9998484223461923,
+    "arditi_score": 103.14334106445312
+  },
+  {
+    "sample_id": "EVO_0208",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.999778453095693,
+    "arditi_score": 103.09243774414062
+  },
+  {
+    "sample_id": "EVO_0208",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9998832652407599,
+    "arditi_score": 103.2216796875
+  },
+  {
+    "sample_id": "EVO_0208",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9998724647733851,
+    "arditi_score": 103.42478942871094
+  },
+  {
+    "sample_id": "EVO_0158",
+    "variant": "original",
+    "prompt_chars": 4257,
+    "lr_prob": 0.9392192995714136,
+    "arditi_score": 99.37275695800781
+  },
+  {
+    "sample_id": "EVO_0158",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9397264496427626,
+    "arditi_score": 99.26869201660156
+  },
+  {
+    "sample_id": "EVO_0158",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9160211017442099,
+    "arditi_score": 98.96781921386719
+  },
+  {
+    "sample_id": "EVO_0158",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9573746935097348,
+    "arditi_score": 98.86399841308594
+  },
+  {
+    "sample_id": "EVO_0158",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9527750487891786,
+    "arditi_score": 99.21481323242188
+  },
+  {
+    "sample_id": "EVO_0726",
+    "variant": "original",
+    "prompt_chars": 8182,
+    "lr_prob": 0.9705741029877003,
+    "arditi_score": 102.64170837402344
+  },
+  {
+    "sample_id": "EVO_0726",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9715050717863748,
+    "arditi_score": 102.62977600097656
+  },
+  {
+    "sample_id": "EVO_0726",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9672791769796351,
+    "arditi_score": 102.59907531738281
+  },
+  {
+    "sample_id": "EVO_0726",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9628751463982378,
+    "arditi_score": 102.50062561035156
+  },
+  {
+    "sample_id": "EVO_0726",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9481926303263685,
+    "arditi_score": 103.79430389404297
+  },
+  {
+    "sample_id": "EVO_0718",
+    "variant": "original",
+    "prompt_chars": 7977,
+    "lr_prob": 0.9658710071855503,
+    "arditi_score": 105.45235443115234
+  },
+  {
+    "sample_id": "EVO_0718",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9667556469106442,
+    "arditi_score": 105.39254760742188
+  },
+  {
+    "sample_id": "EVO_0718",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9526705811779386,
+    "arditi_score": 105.06761169433594
+  },
+  {
+    "sample_id": "EVO_0718",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.956782200655224,
+    "arditi_score": 105.10535430908203
+  },
+  {
+    "sample_id": "EVO_0718",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9690314809813191,
+    "arditi_score": 105.51138305664062
+  },
+  {
+    "sample_id": "EVO_0226",
+    "variant": "original",
+    "prompt_chars": 7422,
+    "lr_prob": 0.9999335851177014,
+    "arditi_score": 109.11935424804688
+  },
+  {
+    "sample_id": "EVO_0226",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9999362489023057,
+    "arditi_score": 109.05331420898438
+  },
+  {
+    "sample_id": "EVO_0226",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9999265006688761,
+    "arditi_score": 108.94144439697266
+  },
+  {
+    "sample_id": "EVO_0226",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9999257212378557,
+    "arditi_score": 108.94779968261719
+  },
+  {
+    "sample_id": "EVO_0226",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9999335851177014,
+    "arditi_score": 109.11935424804688
+  },
+  {
+    "sample_id": "EVO_0161",
+    "variant": "original",
+    "prompt_chars": 7293,
+    "lr_prob": 0.9997635875313331,
+    "arditi_score": 107.39877319335938
+  },
+  {
+    "sample_id": "EVO_0161",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9997690446994194,
+    "arditi_score": 107.4604263305664
+  },
+  {
+    "sample_id": "EVO_0161",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9997040177522181,
+    "arditi_score": 107.53041076660156
+  },
+  {
+    "sample_id": "EVO_0161",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9997267307162756,
+    "arditi_score": 106.96342468261719
+  },
+  {
+    "sample_id": "EVO_0161",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9993481349700015,
+    "arditi_score": 106.34375
+  },
+  {
+    "sample_id": "EVO_0993",
+    "variant": "original",
+    "prompt_chars": 7803,
+    "lr_prob": 0.7306359092542191,
+    "arditi_score": 106.15016174316406
+  },
+  {
+    "sample_id": "EVO_0993",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.785829867276577,
+    "arditi_score": 106.04617309570312
+  },
+  {
+    "sample_id": "EVO_0993",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8017962682497548,
+    "arditi_score": 106.0122299194336
+  },
+  {
+    "sample_id": "EVO_0993",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8759494606259947,
+    "arditi_score": 105.97512817382812
+  },
+  {
+    "sample_id": "EVO_0993",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.8114886156528469,
+    "arditi_score": 106.19781494140625
+  },
+  {
+    "sample_id": "EVO_0442",
+    "variant": "original",
+    "prompt_chars": 991,
+    "lr_prob": 0.996835386838581,
+    "arditi_score": 115.6112060546875
+  },
+  {
+    "sample_id": "EVO_0442",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9970707217995469,
+    "arditi_score": 115.582275390625
+  },
+  {
+    "sample_id": "EVO_0442",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9971526623615699,
+    "arditi_score": 114.91352844238281
+  },
+  {
+    "sample_id": "EVO_0442",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9936494678570548,
+    "arditi_score": 113.66676330566406
+  },
+  {
+    "sample_id": "EVO_0442",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9968226959257481,
+    "arditi_score": 115.64515686035156
+  },
+  {
+    "sample_id": "EVO_0178",
+    "variant": "original",
+    "prompt_chars": 5831,
+    "lr_prob": 0.9920292919585364,
+    "arditi_score": 107.21826171875
+  },
+  {
+    "sample_id": "EVO_0178",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9913450680403804,
+    "arditi_score": 107.33990478515625
+  },
+  {
+    "sample_id": "EVO_0178",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.9901601690985541,
+    "arditi_score": 107.22286224365234
+  },
+  {
+    "sample_id": "EVO_0178",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9922950030018189,
+    "arditi_score": 106.97567749023438
+  },
+  {
+    "sample_id": "EVO_0178",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.992724331585212,
+    "arditi_score": 106.93155670166016
+  },
+  {
+    "sample_id": "EVO_0896",
+    "variant": "original",
+    "prompt_chars": 6789,
+    "lr_prob": 0.9980254120092257,
+    "arditi_score": 105.81907653808594
+  },
+  {
+    "sample_id": "EVO_0896",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9978001662169074,
+    "arditi_score": 105.78465270996094
+  },
+  {
+    "sample_id": "EVO_0896",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.997687966490997,
+    "arditi_score": 105.84383392333984
+  },
+  {
+    "sample_id": "EVO_0896",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9978737097031859,
+    "arditi_score": 105.63714599609375
+  },
+  {
+    "sample_id": "EVO_0896",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9983275108861536,
+    "arditi_score": 105.75865173339844
+  },
+  {
+    "sample_id": "EVO_0344",
+    "variant": "original",
+    "prompt_chars": 4068,
+    "lr_prob": 0.9408941536274136,
+    "arditi_score": 111.97561645507812
+  },
+  {
+    "sample_id": "EVO_0344",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.9422515722451774,
+    "arditi_score": 111.96125793457031
+  },
+  {
+    "sample_id": "EVO_0344",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.957946667380518,
+    "arditi_score": 111.94020080566406
+  },
+  {
+    "sample_id": "EVO_0344",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.9442816660383228,
+    "arditi_score": 111.73141479492188
+  },
+  {
+    "sample_id": "EVO_0344",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9408941536274136,
+    "arditi_score": 111.97561645507812
+  },
+  {
+    "sample_id": "EVO_0861",
+    "variant": "original",
+    "prompt_chars": 7280,
+    "lr_prob": 0.8693918834484496,
+    "arditi_score": 105.05520629882812
+  },
+  {
+    "sample_id": "EVO_0861",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.8397394770790129,
+    "arditi_score": 105.04792785644531
+  },
+  {
+    "sample_id": "EVO_0861",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.8407982847554585,
+    "arditi_score": 104.95989990234375
+  },
+  {
+    "sample_id": "EVO_0861",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.8204026985089498,
+    "arditi_score": 104.33209228515625
+  },
+  {
+    "sample_id": "EVO_0861",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.9389023310506773,
+    "arditi_score": 104.83438110351562
+  },
+  {
+    "sample_id": "EVO_0546",
+    "variant": "original",
+    "prompt_chars": 7181,
+    "lr_prob": 0.793934874261121,
+    "arditi_score": 106.48977661132812
+  },
+  {
+    "sample_id": "EVO_0546",
+    "variant": "delete_top1_word",
+    "lr_prob": 0.7328497474944511,
+    "arditi_score": 106.30998229980469
+  },
+  {
+    "sample_id": "EVO_0546",
+    "variant": "delete_top3_words",
+    "lr_prob": 0.7301209533917881,
+    "arditi_score": 106.19842529296875
+  },
+  {
+    "sample_id": "EVO_0546",
+    "variant": "delete_top1_sentence",
+    "lr_prob": 0.7776610122398374,
+    "arditi_score": 106.13313293457031
+  },
+  {
+    "sample_id": "EVO_0546",
+    "variant": "deepseek_single_round",
+    "lr_prob": 0.8304551777082906,
+    "arditi_score": 106.20539093017578
+  }
+]

@@ -1,0 +1,13 @@
+[refusal naive baselines] n=878 pos=421 neg=457
+  majority: acc=0.5205 ± 0.0024 (AUC=0.5 by construction)
+  random Gaussian: AUC=0.4829
+
+  TF-IDF (word 1-2 gram, max_features=5000)...
+    AUC=0.8770 ± 0.0254 train=0.982 (16s)
+
+  TF-IDF (char 3-5 gram, max_features=20000)...
+    AUC=0.8701 ± 0.0384 train=0.980 (93s)
+
+  Probe (Gemma L40 mean) reference: 0.9445  → activation lift over TF-IDF char = +0.074
+
+wrote /lambda/nfs/georgia/mechhack/experiments/21_probe_zoo_omar/results/refusal_baselines.json

@@ -148,3 +148,151 @@ class RollingAttentionProbe(nn.Module):
         head_maxes = pooled.max(dim=1).values  # (B, H)
         logits = head_maxes.sum(dim=-1) + self.bias  # (B,)
         return logits
+
+
+class AttentionProbe(nn.Module):
+    """Kramar 2026 Architecture A — full softmax attention over all tokens.
+
+    Same as `RollingAttentionProbe` without the windowing: per-head softmax
+    runs over the entire token sequence, value-weighted sum gives one vector
+    per head, sum over heads → logit. This is the baseline against which
+    rolling/multimax are compared.
+    """
+
+    def __init__(self, d_model: int, d_hidden: int = 100, n_heads: int = 10):
+        super().__init__()
+        self.d_model = d_model
+        self.d_hidden = d_hidden
+        self.n_heads = n_heads
+        self.mlp = TransformMLP(d_model, d_hidden)
+        self.q = nn.Parameter(torch.randn(n_heads, d_hidden) * 0.02)
+        self.v = nn.Parameter(torch.randn(n_heads, d_hidden) * 0.02)
+        self.bias = nn.Parameter(torch.zeros(()))
+
+    def forward(self, x_full: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
+        x_full = x_full.float()
+        y = self.mlp(x_full)  # (B, T, d_hidden)
+        attn = torch.einsum("btd,hd->bth", y, self.q)   # (B, T, H)
+        val = torch.einsum("btd,hd->bth", y, self.v)    # (B, T, H)
+        attn = attn.masked_fill(~mask.unsqueeze(-1), float("-inf"))
+        alpha = F.softmax(attn, dim=1)                  # (B, T, H)
+        # If a sample is all-padded (shouldn't happen) softmax gives NaN; clamp.
+        alpha = torch.nan_to_num(alpha, nan=0.0)
+        pooled = (alpha * val).sum(dim=1)               # (B, H)
+        return pooled.sum(dim=-1) + self.bias           # (B,)
+
+
+class MultiMaxProbe(nn.Module):
+    """Kramar 2026 Architecture C — hard argmax per head over all tokens
+    (paper §3.2.1 Eq. 9).
+
+    Replaces softmax with a hard max: each head picks ONE token in the
+    sequence (the argmax of its attention scores) and takes that token's
+    value as the head output. This solves the long-context dilution problem:
+    one critical token can win regardless of sequence length.
+
+    To keep argmax differentiable for backprop, we use the
+    Gumbel-Softmax / soft-attention-then-detach trick: forward computes hard
+    argmax for evaluation, but gradient flows through soft-attention with
+    a small temperature.
+    """
+
+    def __init__(self, d_model: int, d_hidden: int = 100, n_heads: int = 10,
+                 tau: float = 0.1):
+        super().__init__()
+        self.d_model = d_model
+        self.d_hidden = d_hidden
+        self.n_heads = n_heads
+        self.tau = float(tau)
+        self.mlp = TransformMLP(d_model, d_hidden)
+        self.q = nn.Parameter(torch.randn(n_heads, d_hidden) * 0.02)
+        self.v = nn.Parameter(torch.randn(n_heads, d_hidden) * 0.02)
+        self.bias = nn.Parameter(torch.zeros(()))
+
+    def forward(self, x_full: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
+        x_full = x_full.float()
+        y = self.mlp(x_full)
+        attn = torch.einsum("btd,hd->bth", y, self.q)
+        val = torch.einsum("btd,hd->bth", y, self.v)
+        attn = attn.masked_fill(~mask.unsqueeze(-1), float("-inf"))
+        # Sharp softmax (low temperature) — close to argmax but differentiable.
+        alpha = F.softmax(attn / self.tau, dim=1)
+        alpha = torch.nan_to_num(alpha, nan=0.0)
+        pooled = (alpha * val).sum(dim=1)               # (B, H)
+        return pooled.sum(dim=-1) + self.bias           # (B,)
+
+
+class RollingMultiMaxProbe(nn.Module):
+    """Kramar 2026 Architecture D — hard argmax within each rolling window,
+    then max across windows.
+
+    Combines (rolling) the local-context handling of Architecture B with the
+    long-prompt-robustness of Architecture C: within each window of width w,
+    pick the single token that wins (low-temp softmax → argmax-like), then
+    take the max over windows. This is the most aggressive long-prompt
+    architecture in the Kramár ablation.
+    """
+
+    def __init__(self, d_model: int, d_hidden: int = 100, n_heads: int = 10,
+                 window_size: int = 10, tau: float = 0.1):
+        super().__init__()
+        self.d_model = d_model
+        self.d_hidden = d_hidden
+        self.n_heads = n_heads
+        self.window_size = window_size
+        self.tau = float(tau)
+        self.mlp = TransformMLP(d_model, d_hidden)
+        self.q = nn.Parameter(torch.randn(n_heads, d_hidden) * 0.02)
+        self.v = nn.Parameter(torch.randn(n_heads, d_hidden) * 0.02)
+        self.bias = nn.Parameter(torch.zeros(()))
+
+    def forward(self, x_full: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
+        x_full = x_full.float()
+        y = self.mlp(x_full)
+        attn_scores = torch.einsum("btd,hd->bth", y, self.q)
+        val_scores = torch.einsum("btd,hd->bth", y, self.v)
+        B, T, H = attn_scores.shape
+        w = self.window_size
+        padded_attn = F.pad(attn_scores, (0, 0, w - 1, 0), value=float("-inf"))
+        padded_vals = F.pad(val_scores, (0, 0, w - 1, 0), value=0.0)
+        padded_mask = F.pad(mask, (w - 1, 0), value=False)
+        win_attn = padded_attn.unfold(1, w, 1).permute(0, 1, 3, 2).contiguous()
+        win_vals = padded_vals.unfold(1, w, 1).permute(0, 1, 3, 2).contiguous()
+        win_mask = padded_mask.unfold(1, w, 1).contiguous()
+        win_attn = win_attn.masked_fill(~win_mask.unsqueeze(-1), float("-inf"))
+        all_invalid = (~win_mask).all(dim=2, keepdim=True)
+        win_attn = torch.where(
+            all_invalid.unsqueeze(-1).expand_as(win_attn),
+            torch.zeros_like(win_attn), win_attn)
+        # Sharp softmax → argmax-like
+        alpha = F.softmax(win_attn / self.tau, dim=2)
+        alpha = alpha.masked_fill(~win_mask.unsqueeze(-1), 0.0)
+        pooled = (alpha * win_vals).sum(dim=2)              # (B, T, H)
+        pooled = pooled.masked_fill(~mask.unsqueeze(-1), float("-inf"))
+        head_maxes = pooled.max(dim=1).values
+        return head_maxes.sum(dim=-1) + self.bias
+
+
+def build_probe(variant: str, d_model: int, **kw):
+    """Factory: variant ∈ {attention_kramar, multimax, rolling, rolling_multimax}."""
+    if variant == "attention_kramar":
+        return AttentionProbe(d_model=d_model,
+                              d_hidden=kw.get("d_hidden", 100),
+                              n_heads=kw.get("n_heads", 10))
+    if variant == "multimax":
+        return MultiMaxProbe(d_model=d_model,
+                             d_hidden=kw.get("d_hidden", 100),
+                             n_heads=kw.get("n_heads", 10),
+                             tau=kw.get("tau", 0.1))
+    if variant == "rolling":
+        return RollingAttentionProbe(d_model=d_model,
+                                     d_hidden=kw.get("d_hidden", 100),
+                                     n_heads=kw.get("n_heads", 10),
+                                     window_size=kw.get("window_size", 10))
+    if variant == "rolling_multimax":
+        return RollingMultiMaxProbe(d_model=d_model,
+                                    d_hidden=kw.get("d_hidden", 100),
+                                    n_heads=kw.get("n_heads", 10),
+                                    window_size=kw.get("window_size", 10),
+                                    tau=kw.get("tau", 0.1))
+    raise ValueError(f"unknown variant: {variant}")
