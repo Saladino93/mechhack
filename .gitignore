@@ -1,6 +1,3 @@
-# Large binary files
-papers/*.pdf
-
 # Extraction outputs (generated on cluster)
 extracts/
 *.pt
