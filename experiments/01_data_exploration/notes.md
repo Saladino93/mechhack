@@ -3,6 +3,18 @@
 ## Goal
 Understand the datasets before building anything. Class distributions, token lengths, class balance per probe task, example prompts.
 
+## How to run
+```bash
+python3 experiments/01_data_exploration/explore.py
+```
+
+No GPU or special dependencies needed (matplotlib optional — skips plots if missing).
+
+### Outputs
+- `cyber_distributions.png` — category counts, token length histograms, probe class balance
+- `refusal_distributions.png` — refusal vs compliance counts, token lengths, judge scores
+- `results.json` — summary statistics as structured data
+
 ## Method
 Loaded all JSONL files, computed summary stats, produced distribution plots.
 
