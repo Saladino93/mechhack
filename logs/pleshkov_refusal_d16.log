@@ -1,3 +1,103 @@
 loading 832 refusal 13-layer extracts...
   loaded 200/832 in 151.7s
   loaded 400/832 in 301.0s
+  loaded 600/832 in 457.1s
+  loaded 800/832 in 678.2s
+  X_all shape: (832, 13, 5376)  layer_idxs=[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+  n_pos=419 n_neg=413
+  output -> /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/refusal_gemma_d16_sweep.json
+
+  === L0 ===
+    fold 0: test_AUC=0.8359 train_AUC=0.9972 acc=0.7665 | 21.8s
+    fold 1: test_AUC=0.8851 train_AUC=0.9967 acc=0.8204 | 41.0s
+    fold 2: test_AUC=0.8305 train_AUC=0.9972 acc=0.7651 | 27.6s
+    fold 3: test_AUC=0.8737 train_AUC=0.9973 acc=0.8072 | 22.4s
+    fold 4: test_AUC=0.8329 train_AUC=0.9949 acc=0.7711 | 27.1s
+    linear:  AUC=0.8516 ± 0.0258
+    lin-PCs: AUC=0.7638 ± 0.0369
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.52517e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.53163e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.59657e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.47125e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 0: alpha=100.0 test_AUC=0.7804 train_AUC=0.9070 acc=0.7246 | 21.1s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=3.75157e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=3.75765e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=3.81854e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=4.42869e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=4.73663e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 1: alpha=10.0 test_AUC=0.7988 train_AUC=0.8983 acc=0.7305 | 16.6s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.92924e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 2: alpha=100.0 test_AUC=0.7268 train_AUC=0.9124 acc=0.7048 | 24.1s
+    fold 3: alpha=100.0 test_AUC=0.7107 train_AUC=0.9190 acc=0.6747 | 21.1s
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=4.97733e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=4.98467e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.05832e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.79676e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+/home/ubuntu/.local/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:213: LinAlgWarning: Ill-conditioned matrix (rcond=5.16141e-08): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+    fold 4: alpha=0.1 test_AUC=0.7044 train_AUC=0.9159 acc=0.6205 | 26.6s
+    quad:    AUC=0.7442 ± 0.0427
+
+  === L5 ===
+    fold 0: test_AUC=0.8396 train_AUC=0.9656 acc=0.7725 | 111.2s
+    fold 1: test_AUC=0.8665 train_AUC=0.9615 acc=0.8024 | 135.9s
+    fold 2: test_AUC=0.8203 train_AUC=0.9670 acc=0.7470 | 117.2s
+    fold 3: test_AUC=0.8435 train_AUC=0.9658 acc=0.7651 | 137.4s
+    fold 4: test_AUC=0.7912 train_AUC=0.9675 acc=0.7410 | 98.8s
+    linear:  AUC=0.8322 ± 0.0282
+    lin-PCs: AUC=0.8272 ± 0.0364
+    fold 0: alpha=0.1 test_AUC=0.8239 train_AUC=0.9379 acc=0.7844 | 20.9s
+    fold 1: alpha=100.0 test_AUC=0.8236 train_AUC=0.9378 acc=0.7485 | 24.5s
+    fold 2: alpha=0.1 test_AUC=0.8180 train_AUC=0.9437 acc=0.7349 | 24.7s
+    fold 3: alpha=0.1 test_AUC=0.8100 train_AUC=0.9461 acc=0.7470 | 22.1s
+    fold 4: alpha=100.0 test_AUC=0.7753 train_AUC=0.9420 acc=0.7289 | 20.0s
+    quad:    AUC=0.8101 ± 0.0203
+
+  === L10 ===
+    fold 0: test_AUC=0.8619 train_AUC=0.9951 acc=0.7844 | 228.9s
+    fold 1: test_AUC=0.9006 train_AUC=0.9947 acc=0.8503 | 215.7s
+    fold 2: test_AUC=0.8471 train_AUC=0.9951 acc=0.7711 | 234.9s
+    fold 3: test_AUC=0.8886 train_AUC=0.9938 acc=0.8313 | 228.6s
+    fold 4: test_AUC=0.8529 train_AUC=0.9938 acc=0.7711 | 228.1s
+    linear:  AUC=0.8702 ± 0.0233
+    lin-PCs: AUC=0.8435 ± 0.0359
+    fold 0: alpha=100.0 test_AUC=0.8640 train_AUC=0.9330 acc=0.7784 | 28.2s
+    fold 1: alpha=100.0 test_AUC=0.8333 train_AUC=0.9417 acc=0.7545 | 24.1s
+    fold 2: alpha=10.0 test_AUC=0.8184 train_AUC=0.9438 acc=0.7771 | 24.6s
+    fold 3: alpha=1.0 test_AUC=0.8378 train_AUC=0.9446 acc=0.7711 | 33.9s
+    fold 4: alpha=0.1 test_AUC=0.8190 train_AUC=0.9403 acc=0.7530 | 28.6s
+    quad:    AUC=0.8345 ± 0.0186
+
+  === L15 ===
+    fold 0: test_AUC=0.8742 train_AUC=0.9935 acc=0.8144 | 254.5s
+    fold 1: test_AUC=0.9009 train_AUC=0.9929 acc=0.8323 | 295.2s
+    fold 2: test_AUC=0.8676 train_AUC=0.9935 acc=0.7590 | 239.8s
+    fold 3: test_AUC=0.8966 train_AUC=0.9928 acc=0.8313 | 308.8s
+    fold 4: test_AUC=0.8622 train_AUC=0.9929 acc=0.7771 | 283.9s
+    linear:  AUC=0.8803 ± 0.0174
+    lin-PCs: AUC=0.8481 ± 0.0382
+    fold 0: alpha=0.1 test_AUC=0.8411 train_AUC=0.9486 acc=0.7425 | 28.3s
+    fold 1: alpha=100.0 test_AUC=0.8467 train_AUC=0.9485 acc=0.7844 | 27.1s
+    fold 2: alpha=100.0 test_AUC=0.8408 train_AUC=0.9484 acc=0.7711 | 27.8s
+    fold 3: alpha=100.0 test_AUC=0.8341 train_AUC=0.9493 acc=0.7410 | 25.4s
+    fold 4: alpha=100.0 test_AUC=0.8314 train_AUC=0.9477 acc=0.8012 | 32.4s
+    quad:    AUC=0.8388 ± 0.0061
+
+  === L20 ===
+    fold 0: test_AUC=0.8789 train_AUC=0.9991 acc=0.8084 | 278.4s
+    fold 1: test_AUC=0.9111 train_AUC=0.9986 acc=0.8204 | 268.5s
+    fold 2: test_AUC=0.8673 train_AUC=0.9986 acc=0.8072 | 304.6s

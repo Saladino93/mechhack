@@ -1,0 +1,5 @@
+[refusal pair/triple concat]
+
+=== single layer (mean) ===
+  L  0: AUC=0.8371 ± 0.0311  train=0.977  med|w|_1=624
+  L  5: AUC=0.8274 ± 0.0316  train=0.938  med|w|_1=63

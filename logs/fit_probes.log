@@ -1,0 +1,11 @@
+[fit probes for robustness]
+  refusal mean-pool features: (832, 13, 5376)
+  loading 832 .pt files for last-token pool...
+    200/832 (319.1s)
+    400/832 (664.6s)
+    600/832 (1023.4s)
+    800/832 (1367.6s)
+  refusal last-tok features:  (832, 13, 5376)
+
+  fitting per-layer mean-pool LR...
+  fitting per-layer last-tok LR...
