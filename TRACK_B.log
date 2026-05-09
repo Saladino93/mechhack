@@ -121,3 +121,9 @@
 [2026-05-09 23:34:35] waiting... rollouts=403; kramar layer dirs=2
 [2026-05-09 23:35:35] waiting... rollouts=403; kramar layer dirs=2
 [2026-05-09 23:36:35] waiting... rollouts=403; kramar layer dirs=2
+[2026-05-09 23:37:35] waiting... rollouts=403; kramar layer dirs=2
+[2026-05-09 23:37:35] master pipeline done; GPU is free; starting Track B
+[2026-05-09 23:37:35] ===== Kramar architectures A/C/D on refusal (L30) =====
+[2026-05-09 23:37:35] START kramar_attention_kramar_refusal_L30
+Terminated
+[2026-05-09 23:37:48] DONE  kramar_attention_kramar_refusal_L30 (rc=143)

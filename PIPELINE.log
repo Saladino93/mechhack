@@ -120,3 +120,12 @@ delete_top1_sentence:  Pr(f|edit)=0.014 [0.003,0.077]  Pr(model|edit)=0.029  Pr(
 deepseek_single_round:  Pr(f|edit)=0.014 [0.002,0.076]  Pr(model|edit)=0.028  Pr(m|f)=0.000  (71 originals were refusals)
 
 wrote /home/ubuntu/georgia/mechhack/experiments/13_pre_rewrites_omar/phase3_summary.json
+To github.com:Saladino93/mechhack.git
+   48c7f19..eb6df51  main -> main
+
+[Sat May  9 23:37:22 UTC 2026] === Phase 4: Rolling probe at L25/L35/L40 for refusal ===
+
+[Sat May  9 23:37:22 UTC 2026] === Rolling probe L25 ===
+
+=== task=refusal_gemma4_31b layer=25 ===
+  found 832 refusal extracts
