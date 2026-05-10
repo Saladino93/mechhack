@@ -11,3 +11,10 @@
 To github.com:Saladino93/mechhack.git
    c82af20..6dcf14e  main -> main
 [2026-05-10 07:26:30] waiting for combined probe...
+ create mode 100644 experiments/29_pleshkov_causality_omar/edits_pleshkov_scored.jsonl
+ create mode 100644 experiments/29_pleshkov_causality_omar/score_pleshkov.py
+ create mode 100644 logs/pleshkov_score.log
+To github.com:Saladino93/mechhack.git
+   6dcf14e..3258e1c  main -> main
+[2026-05-10 07:41:03] launching P1 (gradient edit rollouts)
+Terminated
