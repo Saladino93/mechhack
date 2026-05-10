@@ -1,0 +1,24 @@
+=== loading pool caches ===
+  Caching gemma pool features...
+  gemma: (878, 13, 5376), skipped 0, 204.6s
+  Caching qwen pool features...
+  qwen: (862, 13, 5120), skipped 16, 174.1s
+  shared sample_ids: 862
+  re-indexed: gemma (862, 13, 5376), qwen (862, 13, 5120)
+  test n=281  train n=581
+  test with both labels: 281
+  L00: cos +0.973  pear +0.811  AUC G->G=0.675 G->Q=0.694  Q->G=0.721 Q->Q=0.721
+  L05: cos -0.566  pear +0.602  AUC G->G=0.744 G->Q=0.720  Q->G=0.732 Q->Q=0.748
+  L10: cos +1.000  pear +0.763  AUC G->G=0.757 G->Q=0.757  Q->G=0.725 Q->Q=0.744
+  L15: cos +1.000  pear +0.928  AUC G->G=0.745 G->Q=0.749  Q->G=0.757 Q->Q=0.761
+  L20: cos +0.994  pear +0.952  AUC G->G=0.758 G->Q=0.754  Q->G=0.777 Q->Q=0.774
+  L25: cos +0.993  pear +0.866  AUC G->G=0.765 G->Q=0.724  Q->G=0.799 Q->Q=0.790
+  L30: cos +0.997  pear +0.948  AUC G->G=0.790 G->Q=0.762  Q->G=0.783 Q->Q=0.772
+  L35: cos +0.998  pear +0.865  AUC G->G=0.814 G->Q=0.769  Q->G=0.781 Q->Q=0.762
+  L40: cos +0.877  pear +0.860  AUC G->G=0.797 G->Q=0.757  Q->G=0.808 Q->Q=0.808
+  L45: cos +0.989  pear +0.872  AUC G->G=0.806 G->Q=0.777  Q->G=0.802 Q->Q=0.788
+  L50: cos +0.990  pear +0.907  AUC G->G=0.797 G->Q=0.773  Q->G=0.798 Q->Q=0.776
+  L55: cos +0.993  pear +0.858  AUC G->G=0.826 G->Q=0.790  Q->G=0.791 Q->Q=0.769
+  L60: cos +0.290  pear +0.777  AUC G->G=0.687 G->Q=0.691  Q->G=0.829 Q->Q=0.827
+Saved /lambda/nfs/jsWnew/mechhack/experiments/31_qwen_level1_omar/cross_model_direction.json
+Saved /lambda/nfs/jsWnew/mechhack/experiments/31_qwen_level1_omar/cross_model_direction.png

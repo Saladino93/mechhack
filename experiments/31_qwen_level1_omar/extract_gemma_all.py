@@ -38,8 +38,8 @@ DATASETS = [
      "jsonl": REPO / "datasets/cyber_probes/test.jsonl",
      "out": Path("/home/ubuntu/extracts/gemma_cyber"),
      "prompt_key": "prompt", "label_key": "category"},
-    {"name": "cyber_train",
-     "jsonl": REPO / "datasets/cyber_probes/train.jsonl",
+    {"name": "cyber_train_1500",
+     "jsonl": REPO / "datasets/cyber_probes/train_1500_balanced.jsonl",
      "out": Path("/home/ubuntu/extracts/gemma_cyber"),
      "prompt_key": "prompt", "label_key": "category"},
 ]

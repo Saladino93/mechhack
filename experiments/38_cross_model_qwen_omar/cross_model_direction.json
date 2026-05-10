@@ -1,0 +1,125 @@
+{
+  "layers": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "n_shared": 862,
+  "n_test_both_labeled": 281,
+  "per_layer": {
+    "0": {
+      "cosine_score_vectors": 0.9731679807836693,
+      "pearson_score_vectors": 0.8110719444443195,
+      "auc_GdirOnGlabels": 0.6746884182794609,
+      "auc_GdirOnQlabels": 0.6937471985656656,
+      "auc_QdirOnGlabels": 0.7206910527915695,
+      "auc_QdirOnQlabels": 0.7209211116091438
+    },
+    "5": {
+      "cosine_score_vectors": -0.5656914607860835,
+      "pearson_score_vectors": 0.6024580974470498,
+      "auc_GdirOnGlabels": 0.744300334380383,
+      "auc_GdirOnQlabels": 0.7198565665620797,
+      "auc_QdirOnGlabels": 0.7322930388083899,
+      "auc_QdirOnQlabels": 0.7477588525324966
+    },
+    "10": {
+      "cosine_score_vectors": 0.9996861647841851,
+      "pearson_score_vectors": 0.7629634227204319,
+      "auc_GdirOnGlabels": 0.7571689127571183,
+      "auc_GdirOnQlabels": 0.7569475571492603,
+      "auc_QdirOnGlabels": 0.7253521126760564,
+      "auc_QdirOnQlabels": 0.7436687584043029
+    },
+    "15": {
+      "cosine_score_vectors": 0.9996865434176919,
+      "pearson_score_vectors": 0.9280381913816715,
+      "auc_GdirOnGlabels": 0.744806971324349,
+      "auc_GdirOnQlabels": 0.7485992828328103,
+      "auc_QdirOnGlabels": 0.7573209038403079,
+      "auc_QdirOnQlabels": 0.7608695652173912
+    },
+    "20": {
+      "cosine_score_vectors": 0.9940980512693026,
+      "pearson_score_vectors": 0.9518457022433547,
+      "auc_GdirOnGlabels": 0.7578782044786706,
+      "auc_GdirOnQlabels": 0.7540900941281937,
+      "auc_QdirOnGlabels": 0.7771304083493769,
+      "auc_QdirOnQlabels": 0.7735320484087853
+    },
+    "25": {
+      "cosine_score_vectors": 0.9925228498014208,
+      "pearson_score_vectors": 0.8657698741905206,
+      "auc_GdirOnGlabels": 0.7645151484446245,
+      "auc_GdirOnQlabels": 0.7236665172568354,
+      "auc_QdirOnGlabels": 0.7991691154118958,
+      "auc_QdirOnQlabels": 0.7896683101748094
+    },
+    "30": {
+      "cosine_score_vectors": 0.9974455453972054,
+      "pearson_score_vectors": 0.9480212705312567,
+      "auc_GdirOnGlabels": 0.7899989867261121,
+      "auc_GdirOnQlabels": 0.7616539668310175,
+      "auc_QdirOnGlabels": 0.7826527510386057,
+      "auc_QdirOnQlabels": 0.7721873599282832
+    },
+    "35": {
+      "cosine_score_vectors": 0.9980810251001798,
+      "pearson_score_vectors": 0.8650092510388818,
+      "auc_GdirOnGlabels": 0.8135069409261324,
+      "auc_GdirOnQlabels": 0.7687135813536531,
+      "auc_QdirOnGlabels": 0.7808288580403283,
+      "auc_QdirOnQlabels": 0.7622142536978932
+    },
+    "40": {
+      "cosine_score_vectors": 0.8770131912643546,
+      "pearson_score_vectors": 0.8597996218840249,
+      "auc_GdirOnGlabels": 0.7968385854696524,
+      "auc_GdirOnQlabels": 0.7574518153294486,
+      "auc_QdirOnGlabels": 0.8080352619312999,
+      "auc_QdirOnQlabels": 0.8081017480950247
+    },
+    "45": {
+      "cosine_score_vectors": 0.9886419926236014,
+      "pearson_score_vectors": 0.8716877602540765,
+      "auc_GdirOnGlabels": 0.8062620326274191,
+      "auc_GdirOnQlabels": 0.7765575974899148,
+      "auc_QdirOnGlabels": 0.8023609281588814,
+      "auc_QdirOnQlabels": 0.7882115643209323
+    },
+    "50": {
+      "cosine_score_vectors": 0.9900937308904858,
+      "pearson_score_vectors": 0.9074573064904656,
+      "auc_GdirOnGlabels": 0.7973452224136184,
+      "auc_GdirOnQlabels": 0.7730838189152845,
+      "auc_QdirOnGlabels": 0.7982065052183605,
+      "auc_QdirOnQlabels": 0.7762214253697893
+    },
+    "55": {
+      "cosine_score_vectors": 0.9933071653664663,
+      "pearson_score_vectors": 0.8582468149949424,
+      "auc_GdirOnGlabels": 0.8262741919140744,
+      "auc_GdirOnQlabels": 0.7902285970416854,
+      "auc_QdirOnGlabels": 0.7913162427804235,
+      "auc_QdirOnQlabels": 0.7688816674137157
+    },
+    "60": {
+      "cosine_score_vectors": 0.28971705073673365,
+      "pearson_score_vectors": 0.7771524538021531,
+      "auc_GdirOnGlabels": 0.6872023507954199,
+      "auc_GdirOnQlabels": 0.6914500224114747,
+      "auc_QdirOnGlabels": 0.8285033944675245,
+      "auc_QdirOnQlabels": 0.8265912147019274
+    }
+  }
+}
