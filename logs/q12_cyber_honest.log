@@ -1,3 +1,8 @@
 [cyber HONEST test-split eval — train on train, eval on test]
 
 === cyber_1 ===
+  train (2266, 5376) (pos=685) test (923, 5376) (pos=267)  (999s)
+  LR_mean_L40  test_AUC=0.9877  CI=[0.983,0.992]  acc=0.9480
+  LR_last_L45  test_AUC=0.9812  CI=[0.974,0.988]  acc=0.9231
+
+=== cyber_2 ===
