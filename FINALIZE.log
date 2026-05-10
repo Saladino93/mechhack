@@ -23,3 +23,9 @@ Terminated
  rewrite logs/p1_gradient_rollouts.log (86%)
 To github.com:Saladino93/mechhack.git
    993f0d8..8644ff5  main -> main
+ 3 files changed, 71 insertions(+)
+ create mode 100644 logs/compute_robustness_v2.log
+ create mode 100644 logs/p3_p4_v2.log
+To github.com:Saladino93/mechhack.git
+   8644ff5..929fe4c  main -> main
+[2026-05-10 08:59:53] ===== FINALIZE complete =====
