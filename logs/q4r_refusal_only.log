@@ -1,0 +1,60 @@
+[refusal-only honest eval]
+loading refusal train+test...
+  train=(555, 13, 5376) test=(277, 13, 5376) (919s)
+
+=== refusal_gemma: n_train=555, n_test=277 ===
+  train pos/neg = 279/276
+  test  pos/neg = 140/137
+  -- LR mean per layer --
+    LR_mean_L0              train=0.9972, test=0.8414
+    LR_mean_L5              train=0.9701, test=0.8474
+    LR_mean_L10             train=0.9953, test=0.8815
+    LR_mean_L15             train=0.9946, test=0.8812
+    LR_mean_L20             train=0.9990, test=0.8841
+    LR_mean_L25             train=0.9998, test=0.8862
+    LR_mean_L30             train=0.9996, test=0.9125
+    LR_mean_L35             train=0.9999, test=0.9126
+    LR_mean_L40             train=0.9999, test=0.9269
+    LR_mean_L45             train=0.9999, test=0.8916
+    LR_mean_L50             train=0.9998, test=0.8950
+    LR_mean_L55             train=0.9999, test=0.9051
+    LR_mean_L60             train=1.0000, test=0.9020
+  -- LR last-token per layer --
+    LR_last_L5              train=0.9170, test=0.7999
+    LR_last_L10             train=0.9948, test=0.8316
+    LR_last_L15             train=0.9922, test=0.8599
+    LR_last_L20             train=0.9982, test=0.8683
+    LR_last_L25             train=1.0000, test=0.8767
+    LR_last_L30             train=1.0000, test=0.8991
+    LR_last_L35             train=1.0000, test=0.9198
+    LR_last_L40             train=1.0000, test=0.9417
+    LR_last_L45             train=1.0000, test=0.9368
+    LR_last_L50             train=1.0000, test=0.9331
+    LR_last_L55             train=1.0000, test=0.9350
+    LR_last_L60             train=1.0000, test=0.9295
+  LR_multi_concat         train=0.9999, test=0.9137
+  LR_mean_of_layers       train=0.9982, test=0.9090
+  LR_max_of_layers        train=1.0000, test=0.9051
+  -- Pleshkov d=16 per layer --
+    Pleshkov_d16_L20       train=0.9616, test=0.8286  (1s)
+    Pleshkov_d16_L30       train=0.9630, test=0.8177  (1s)
+    Pleshkov_d16_L40       train=0.9619, test=0.8421  (1s)
+    Pleshkov_d16_L50       train=0.9549, test=0.8539  (1s)
+  -- MLP per layer (mean pool) --
+    MLP_L20                train=0.9996, test=0.8794  (184s)
+    MLP_L30                train=0.9996, test=0.9207  (178s)
+    MLP_L40                train=0.9998, test=0.9187  (192s)
+    MLP_L50                train=0.9990, test=0.8833  (164s)
+  Constitutional_concat   train=0.5000, test=0.5000  (231s)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/31_honest_eval_omar/refusal_only_results.json and refusal_only_table.md
+
+TOP 8 probes on refusal test set:
+             LR_last_L40  test_AUC=0.9417
+             LR_last_L45  test_AUC=0.9368
+             LR_last_L55  test_AUC=0.9350
+             LR_last_L50  test_AUC=0.9331
+             LR_last_L60  test_AUC=0.9295
+             LR_mean_L40  test_AUC=0.9269
+                 MLP_L30  test_AUC=0.9207
+             LR_last_L35  test_AUC=0.9198
