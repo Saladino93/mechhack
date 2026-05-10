@@ -141,3 +141,11 @@ To github.com:Saladino93/mechhack.git
    5bfa812..226d95b  main -> main
 [2026-05-10 02:17:06] START kramar_rolling_multimax_refusal_L30
 [2026-05-10 03:52:41] DONE  kramar_rolling_multimax_refusal_L30 (rc=0)
+ 7 files changed, 376 insertions(+), 9 deletions(-)
+ create mode 100644 experiments/16_multimax_probe_omar/results/refusal_gemma4_31b_rolling_multimax.json
+ create mode 100644 logs/kramar_rolling_multimax_refusal_L30.log
+To github.com:Saladino93/mechhack.git
+   226d95b..90dd021  main -> main
+[2026-05-10 03:52:42] ===== CC++ on cyber_1 (GPU) =====
+[2026-05-10 03:52:42] START cc_plus_plus_cyber_1
+[2026-05-10 06:17:14] DONE  cc_plus_plus_cyber_1 (rc=0)
