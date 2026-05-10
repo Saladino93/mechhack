@@ -1,4 +1,4 @@
-[probe-gradient edits] probe=lr_mean_L40
+[probe-gradient edits] probe=lr_multi_concat
 Traceback (most recent call last):
   File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 241, in <module>
     main()

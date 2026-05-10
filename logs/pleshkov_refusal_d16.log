@@ -145,3 +145,4 @@ loading 832 refusal 13-layer extracts...
   === L35 ===
     fold 0: test_AUC=0.9389 train_AUC=1.0000 acc=0.8563 | 198.6s
     fold 1: test_AUC=0.9376 train_AUC=1.0000 acc=0.8383 | 226.1s
+    fold 2: test_AUC=0.9289 train_AUC=0.9999 acc=0.8494 | 246.5s

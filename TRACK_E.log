@@ -12,3 +12,9 @@ To github.com:Saladino93/mechhack.git
  create mode 100644 logs/score_edits_multi.log
 To github.com:Saladino93/mechhack.git
    2f382c8..d6765e2  main -> main
+[main 7c1f78a] Track E: E1c: per-probe robustness Pr-metrics
+ 2 files changed, 13 insertions(+)
+ create mode 100644 logs/compute_robustness.log
+To github.com:Saladino93/mechhack.git
+   d6765e2..7c1f78a  main -> main
+[2026-05-10 00:14:41] ===== TRACK E complete =====
