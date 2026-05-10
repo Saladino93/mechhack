@@ -27,3 +27,5 @@
     →          cyber_2 AUC=0.7195  n=1000
     →          cyber_3 AUC=0.7719  n=1000
     →    refusal_gemma AUC=0.9386  n=832  (CV)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/22_cross_task_4x4_omar/results_4x4.json and /lambda/nfs/georgia/mechhack/experiments/22_cross_task_4x4_omar/matrix_4x4.png
