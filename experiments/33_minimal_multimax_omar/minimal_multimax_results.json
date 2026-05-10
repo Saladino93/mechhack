@@ -1,0 +1,18 @@
+{
+  "layer": 30,
+  "d_model": 5376,
+  "n_params": 5377,
+  "n_train": 555,
+  "n_test": 277,
+  "max_pool": {
+    "train_auc": 0.9949807802192095,
+    "test_auc": 0.833628779979145,
+    "final_loss": 0.20056981867229617
+  },
+  "mean_pool": {
+    "train_auc": 0.9846956002285595,
+    "test_auc": 0.9181438998957246,
+    "final_loss": 0.20656828093636143
+  },
+  "delta_max_minus_mean": -0.08451511991657967
+}

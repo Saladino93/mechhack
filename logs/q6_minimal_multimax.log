@@ -1,3 +1,19 @@
 [Minimal MultiMax] L30, train on train-split, eval on test-split
 
 loading refusal train+test...
+  train=555, test=277 (102s)
+  train pos/neg = 279/276
+  test  pos/neg = 140/137
+
+=== MAX-pool minimal probe ===
+  n_params = 5377
+  TRAIN AUC = 0.9950
+  TEST  AUC = 0.8336  (1327s)
+
+=== MEAN-pool minimal probe (ablation: same arch, mean instead of max) ===
+  TRAIN AUC = 0.9847
+  TEST  AUC = 0.9181  (1372s)
+
+  Δ (max − mean) = -0.0845
+
+wrote /lambda/nfs/georgia/mechhack/experiments/33_minimal_multimax_omar/minimal_multimax_results.json
