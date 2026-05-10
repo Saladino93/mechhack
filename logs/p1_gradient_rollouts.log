@@ -1,0 +1,18 @@
+found 3 gradient-edit files: ['gradient_edits_lr_last_L45.jsonl', 'gradient_edits_lr_mean_L40.jsonl', 'gradient_edits_lr_multi_concat.jsonl']
+queue: 472 edits to roll (skip 0 done)
+loading Gemma...
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/rollout_grad_edits.py", line 115, in <module>
+    main()
+  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/rollout_grad_edits.py", line 71, in main
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 405, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4245, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4326, in _load_pretrained_model
+    caching_allocator_warmup(model, expanded_device_map, load_config.hf_quantizer)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4980, in caching_allocator_warmup
+    _ = torch.empty(int(byte_count // 2), dtype=torch.float16, device=device, requires_grad=False)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 58.25 GiB. GPU 0 has a total capacity of 79.18 GiB of which 17.30 GiB is free. Process 284099 has 61.36 GiB memory in use. Including non-PyTorch memory, this process has 518.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

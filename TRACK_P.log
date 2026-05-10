@@ -830,3 +830,10 @@ To github.com:Saladino93/mechhack.git
 [2026-05-10 07:06:08] waiting... edits_scored_multi=0
 [2026-05-10 07:07:08] waiting... edits_scored_multi=36
 [2026-05-10 07:07:38] running P3+P4 consensus + best-of-N
+ create mode 100644 logs/plot_cyber_3.log
+ create mode 100644 logs/plot_refusal_gemma.log
+ create mode 100644 logs/score_edits_multi_v2.log
+To github.com:Saladino93/mechhack.git
+   18d0777..0f64943  main -> main
+[2026-05-10 07:07:41] waiting for GPU to clear (Track B + Track E + Track G)...
+[2026-05-10 07:07:41] GPU free; rolling Gemma on gradient edits
