@@ -150,3 +150,86 @@ loading 832 refusal 13-layer extracts...
     fold 4: test_AUC=0.9277 train_AUC=0.9999 acc=0.8494 | 200.2s
     linear:  AUC=0.9386 ± 0.0130
     lin-PCs: AUC=0.8832 ± 0.0186
+    fold 0: alpha=100.0 test_AUC=0.8906 train_AUC=0.9501 acc=0.8204 | 27.2s
+    fold 1: alpha=100.0 test_AUC=0.8685 train_AUC=0.9481 acc=0.7904 | 24.1s
+    fold 2: alpha=0.1 test_AUC=0.8442 train_AUC=0.9548 acc=0.7651 | 26.4s
+    fold 3: alpha=0.1 test_AUC=0.8780 train_AUC=0.9502 acc=0.7651 | 23.9s
+    fold 4: alpha=100.0 test_AUC=0.8118 train_AUC=0.9596 acc=0.7590 | 21.1s
+    quad:    AUC=0.8586 ± 0.0312
+
+  === L40 ===
+    fold 0: test_AUC=0.9445 train_AUC=1.0000 acc=0.8623 | 131.5s
+    fold 1: test_AUC=0.9455 train_AUC=1.0000 acc=0.8563 | 138.6s
+    fold 2: test_AUC=0.9309 train_AUC=0.9999 acc=0.8614 | 134.2s
+    fold 3: test_AUC=0.9747 train_AUC=1.0000 acc=0.9096 | 203.2s
+    fold 4: test_AUC=0.9268 train_AUC=0.9999 acc=0.8494 | 135.8s
+    linear:  AUC=0.9445 ± 0.0188
+    lin-PCs: AUC=0.8750 ± 0.0279
+    fold 0: alpha=0.1 test_AUC=0.8614 train_AUC=0.9529 acc=0.7784 | 24.6s
+    fold 1: alpha=100.0 test_AUC=0.8633 train_AUC=0.9522 acc=0.8263 | 20.6s
+    fold 2: alpha=0.1 test_AUC=0.8573 train_AUC=0.9543 acc=0.7952 | 16.3s
+    fold 3: alpha=100.0 test_AUC=0.8403 train_AUC=0.9522 acc=0.7651 | 19.4s
+    fold 4: alpha=0.1 test_AUC=0.8277 train_AUC=0.9580 acc=0.7169 | 26.2s
+    quad:    AUC=0.8500 ± 0.0154
+
+  === L45 ===
+    fold 0: test_AUC=0.9319 train_AUC=1.0000 acc=0.8323 | 90.8s
+    fold 1: test_AUC=0.9187 train_AUC=1.0000 acc=0.8323 | 78.2s
+    fold 2: test_AUC=0.9170 train_AUC=0.9999 acc=0.8373 | 50.5s
+    fold 3: test_AUC=0.9495 train_AUC=0.9999 acc=0.8675 | 82.7s
+    fold 4: test_AUC=0.8984 train_AUC=0.9999 acc=0.8133 | 61.6s
+    linear:  AUC=0.9231 ± 0.0190
+    lin-PCs: AUC=0.8461 ± 0.0242
+    fold 0: alpha=100.0 test_AUC=0.8665 train_AUC=0.9564 acc=0.8024 | 20.4s
+    fold 1: alpha=100.0 test_AUC=0.9048 train_AUC=0.9515 acc=0.8383 | 21.6s
+    fold 2: alpha=0.1 test_AUC=0.8550 train_AUC=0.9587 acc=0.8012 | 18.7s
+    fold 3: alpha=100.0 test_AUC=0.8795 train_AUC=0.9489 acc=0.8012 | 15.5s
+    fold 4: alpha=100.0 test_AUC=0.8448 train_AUC=0.9568 acc=0.7530 | 14.7s
+    quad:    AUC=0.8701 ± 0.0233
+
+  === L50 ===
+    fold 0: test_AUC=0.9286 train_AUC=0.9999 acc=0.8443 | 81.3s
+    fold 1: test_AUC=0.9220 train_AUC=0.9999 acc=0.8383 | 85.7s
+    fold 2: test_AUC=0.9160 train_AUC=0.9997 acc=0.8313 | 59.0s
+    fold 3: test_AUC=0.9501 train_AUC=0.9999 acc=0.8554 | 81.3s
+    fold 4: test_AUC=0.9071 train_AUC=0.9997 acc=0.8072 | 72.7s
+    linear:  AUC=0.9247 ± 0.0162
+    lin-PCs: AUC=0.8481 ± 0.0253
+    fold 0: alpha=100.0 test_AUC=0.8659 train_AUC=0.9512 acc=0.7784 | 16.2s
+    fold 1: alpha=100.0 test_AUC=0.8983 train_AUC=0.9472 acc=0.8383 | 22.5s
+    fold 2: alpha=10.0 test_AUC=0.8595 train_AUC=0.9538 acc=0.7831 | 13.6s
+    fold 3: alpha=100.0 test_AUC=0.8782 train_AUC=0.9492 acc=0.7831 | 15.3s
+    fold 4: alpha=0.1 test_AUC=0.8222 train_AUC=0.9563 acc=0.7470 | 16.0s
+    quad:    AUC=0.8648 ± 0.0281
+
+  === L55 ===
+    fold 0: test_AUC=0.9231 train_AUC=1.0000 acc=0.8623 | 28.0s
+    fold 1: test_AUC=0.9244 train_AUC=1.0000 acc=0.8563 | 13.8s
+    fold 2: test_AUC=0.9113 train_AUC=0.9997 acc=0.8373 | 18.7s
+    fold 3: test_AUC=0.9498 train_AUC=0.9999 acc=0.8494 | 17.1s
+    fold 4: test_AUC=0.9110 train_AUC=0.9997 acc=0.8133 | 24.5s
+    linear:  AUC=0.9239 ± 0.0158
+    lin-PCs: AUC=0.8604 ± 0.0414
+    fold 0: alpha=100.0 test_AUC=0.8791 train_AUC=0.9478 acc=0.7844 | 21.4s
+    fold 1: alpha=0.1 test_AUC=0.8762 train_AUC=0.9452 acc=0.8024 | 18.6s
+    fold 2: alpha=10.0 test_AUC=0.8489 train_AUC=0.9544 acc=0.7530 | 15.0s
+    fold 3: alpha=100.0 test_AUC=0.8720 train_AUC=0.9517 acc=0.8072 | 17.9s
+    fold 4: alpha=100.0 test_AUC=0.8181 train_AUC=0.9589 acc=0.7349 | 20.4s
+    quad:    AUC=0.8588 ± 0.0257
+
+  === L60 ===
+    fold 0: test_AUC=0.9043 train_AUC=1.0000 acc=0.8263 | 91.3s
+    fold 1: test_AUC=0.9046 train_AUC=1.0000 acc=0.8144 | 73.1s
+    fold 2: test_AUC=0.8868 train_AUC=1.0000 acc=0.8193 | 97.2s
+    fold 3: test_AUC=0.9374 train_AUC=1.0000 acc=0.8133 | 113.0s
+    fold 4: test_AUC=0.9116 train_AUC=1.0000 acc=0.8253 | 120.4s
+    linear:  AUC=0.9089 ± 0.0184
+    lin-PCs: AUC=0.8502 ± 0.0299
+    fold 0: alpha=0.1 test_AUC=0.8540 train_AUC=0.9277 acc=0.7964 | 14.6s
+    fold 1: alpha=100.0 test_AUC=0.8398 train_AUC=0.9393 acc=0.7904 | 15.3s
+    fold 2: alpha=100.0 test_AUC=0.8225 train_AUC=0.9367 acc=0.7771 | 20.0s
+    fold 3: alpha=100.0 test_AUC=0.8389 train_AUC=0.9368 acc=0.7651 | 15.5s
+    fold 4: alpha=0.1 test_AUC=0.7879 train_AUC=0.9442 acc=0.7289 | 20.8s
+    quad:    AUC=0.8286 ± 0.0253
+
+finished. wall=12437.4s. wrote /lambda/nfs/georgia/mechhack/experiments/17_quadratic_probe_omar/results/refusal_gemma_d16_sweep.json

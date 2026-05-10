@@ -453,3 +453,9 @@ pid, used_gpu_memory [MiB]
 [2026-05-10 00:22:46] GPU still has 60504 MiB allocated, waiting...
 [2026-05-10 00:22:56] GPU still has 60504 MiB allocated, waiting...
 [2026-05-10 00:23:06] GPU is free. Starting cyber test extraction.
+[main 6534eb0] Track G: G1: cyber test split extracted to 100% (~1257 new .pt files)
+ 11 files changed, 276 insertions(+), 28 deletions(-)
+ rewrite logs/cyber_test_extract.log (99%)
+To github.com:Saladino93/mechhack.git
+   fa47b93..6534eb0  main -> main
+[2026-05-10 00:23:16] ===== TRACK G complete =====

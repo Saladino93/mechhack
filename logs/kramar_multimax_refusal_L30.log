@@ -15,3 +15,8 @@
 
   --- fold 1/5 ---
     fold 0 step 200/600: loss(last50)=0.3761
+    fold 0 step 400/600: loss(last50)=0.3887
+    fold 0 step 600/600: loss(last50)=0.3745
+  fold 1: AUC=0.9264  (val n=167, 4476.8s)
+
+  --- fold 2/5 ---

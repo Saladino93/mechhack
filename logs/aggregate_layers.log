@@ -1,3 +1,4 @@
 [refusal aggregate-layers]
           mean_of_layers: AUC=0.9253 ± 0.0143  train=0.993  (3571s)
            max_of_layers: AUC=0.9180 ± 0.0193  train=1.000  (5308s)
+           min_of_layers: AUC=0.9215 ± 0.0165  train=1.000  (2741s)
