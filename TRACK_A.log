@@ -41,3 +41,12 @@
 [2026-05-10 00:38:31] DONE  pleshkov_cyber_1_d16 (rc=0)
 [2026-05-10 01:10:24] DONE  pleshkov_refusal_d16 (rc=0)
 [2026-05-10 01:10:24] pleshkov refusal d=16 done
+[main 5bfa812] Track A: pleshkov refusal d=16 13-layer sweep + tfidf baselines kickoff
+ 16 files changed, 985 insertions(+), 3 deletions(-)
+To github.com:Saladino93/mechhack.git
+   6534eb0..5bfa812  main -> main
+[2026-05-10 01:10:26] tfidf baselines done
+[2026-05-10 01:10:26] START pleshkov_refusal_d32
+[2026-05-10 01:11:10] DONE  pleshkov_cyber_2_d16 (rc=0)
+[2026-05-10 01:15:54] DONE  pleshkov_refusal_d32 (rc=0)
+[2026-05-10 01:39:43] DONE  aggregate_layers (rc=0)

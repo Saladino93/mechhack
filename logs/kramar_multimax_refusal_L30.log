@@ -20,3 +20,38 @@
   fold 1: AUC=0.9264  (val n=167, 4476.8s)
 
   --- fold 2/5 ---
+    fold 1 step 200/600: loss(last50)=0.4402
+    fold 1 step 400/600: loss(last50)=0.3615
+    fold 1 step 600/600: loss(last50)=0.2331
+  fold 2: AUC=0.9363  (val n=167, 1921.7s)
+
+  --- fold 3/5 ---
+    fold 2 step 200/600: loss(last50)=0.4179
+    fold 2 step 400/600: loss(last50)=0.4588
+    fold 2 step 600/600: loss(last50)=0.2806
+  fold 3: AUC=0.9286  (val n=166, 1072.8s)
+
+  --- fold 4/5 ---
+    fold 3 step 200/600: loss(last50)=0.5324
+    fold 3 step 400/600: loss(last50)=0.3647
+    fold 3 step 600/600: loss(last50)=0.2379
+  fold 4: AUC=0.9405  (val n=166, 803.8s)
+
+  --- fold 5/5 ---
+    fold 4 step 200/600: loss(last50)=0.3760
+    fold 4 step 400/600: loss(last50)=0.3179
+    fold 4 step 600/600: loss(last50)=0.3303
+  fold 5: AUC=0.8934  (val n=166, 1008.9s)
+
+=== summary ===
+  overall AUC (5-fold mean ± 1σ): 0.9250 ± 0.0186
+  overall AUC (pooled CV preds):  0.9095  CI95=[0.8882, 0.9283]
+   short: AUC_pooled=0.9165 CI95=[0.8814, 0.9459]  (n=277)
+  medium: AUC_pooled=0.8838 CI95=[0.8410, 0.9221]  (n=277)
+    long: AUC_pooled=0.8858 CI95=[0.8373, 0.9324]  (n=278)
+  total wall-time: 9284.0s
+  saved weights -> /lambda/nfs/georgia/mechhack/experiments/16_multimax_probe_omar/results/refusal_gemma4_31b_multimax.pt
+  saved metrics -> /lambda/nfs/georgia/mechhack/experiments/16_multimax_probe_omar/results/refusal_gemma4_31b_multimax.json
+
+=== final summary written to /lambda/nfs/georgia/mechhack/experiments/16_multimax_probe_omar/results/summary.json ===
+  refusal_gemma4_31b: overall AUC pooled=0.9095 CI95=[0.8882, 0.9283]  (9284s)

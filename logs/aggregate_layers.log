@@ -2,3 +2,9 @@
           mean_of_layers: AUC=0.9253 ± 0.0143  train=0.993  (3571s)
            max_of_layers: AUC=0.9180 ± 0.0193  train=1.000  (5308s)
            min_of_layers: AUC=0.9215 ± 0.0165  train=1.000  (2741s)
+          last_layer_L60: AUC=0.9082 ± 0.0176  train=1.000  (1261s)
+          first_layer_L0: AUC=0.8371 ± 0.0311  train=0.977  (176s)
+        mean_mid_L25_L45: AUC=0.9356 ± 0.0101  train=0.992  (546s)
+         max_mid_L25_L45: AUC=0.9361 ± 0.0129  train=0.999  (576s)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/21_probe_zoo_omar/results/refusal_aggregate_layers.json
