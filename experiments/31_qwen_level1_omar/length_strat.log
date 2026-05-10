@@ -1,0 +1,14 @@
+Length tertiles: short ≤6655, medium ≤11419, long >11419
+  short : n=95, n_pos=49 (51.6%), len p50=4421
+  medium: n=92, n_pos=36 (39.1%), len p50=8423
+  long  : n=94, n_pos=12 (12.8%), len p50=19082
+
+Top 6 (arch, L, mean-bucket AUC):
+  linear_sklearn_last_L60: 0.8580
+  linear_sklearn_last_L55: 0.8422
+  linear_sklearn_last_L40: 0.8301
+  linear_sklearn_last_L50: 0.8281
+  linear_sklearn_last_L45: 0.8257
+  linear_sklearn_mean_L35: 0.8231
+Saved /lambda/nfs/jsWnew/mechhack/experiments/30_qwen_level1_omar/length_strat_auc.png
+Saved /lambda/nfs/jsWnew/mechhack/experiments/30_qwen_level1_omar/length_strat_fnr.png

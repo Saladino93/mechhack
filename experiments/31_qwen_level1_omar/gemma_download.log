@@ -1,0 +1,10 @@
+/home/ubuntu/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `snapshot_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+
+=== google/gemma-4-31B-it -> /home/ubuntu/models/Gemma-4-31B-it ===
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:00<00:00, 28.86it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:19<00:00, 28.86it/s]Fetching 11 files:  55%|█████▍    | 6/11 [00:37<00:37,  7.42s/it]Fetching 11 files: 100%|██████████| 11/11 [00:37<00:00,  3.44s/it]
+  done. 58.3 GB on disk
+
+All downloaded under /home/ubuntu/models.
+Pass this path to the extraction / attribution scripts via --model_path (or MODEL_PATH env var):
+  gemma: /home/ubuntu/models/Gemma-4-31B-it

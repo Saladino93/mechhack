@@ -30,3 +30,6 @@ experiments/24_robustness_omar/fitted_probes.npz
 experiments/30_rewrites_causality_omar/features_rewrites.npz
 experiments/30_rewrites_causality_omar/L30_pertoken/
 experiments/29_pleshkov_causality_omar/edits_pleshkov_scored.jsonl
+
+# Exp 31 (Qwen Level 1) — pool feature cache is 322 MB, not a result
+experiments/31_qwen_level1_omar/pool_cache.npz

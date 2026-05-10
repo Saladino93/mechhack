@@ -1,0 +1,10 @@
+/home/ubuntu/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `snapshot_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+
+=== Qwen/Qwen3.6-27B -> /home/ubuntu/models/Qwen3.6-27B ===
+Fetching 29 files:   0%|          | 0/29 [00:00<?, ?it/s]Fetching 29 files:   7%|▋         | 2/29 [00:00<00:01, 16.80it/s]Fetching 29 files:  28%|██▊       | 8/29 [00:00<00:00, 22.18it/s]Fetching 29 files:  38%|███▊      | 11/29 [00:14<00:32,  1.81s/it]Fetching 29 files:  59%|█████▊    | 17/29 [00:23<00:19,  1.60s/it]Fetching 29 files:  66%|██████▌   | 19/29 [00:26<00:16,  1.63s/it]Fetching 29 files: 100%|██████████| 29/29 [00:26<00:00,  1.08it/s]
+  done. 51.8 GB on disk
+
+All downloaded under /home/ubuntu/models.
+Pass this path to the extraction / attribution scripts via --model_path (or MODEL_PATH env var):
+  qwen : /home/ubuntu/models/Qwen3.6-27B

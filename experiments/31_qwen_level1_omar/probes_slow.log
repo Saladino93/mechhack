@@ -1,0 +1,6 @@
+Loaded 862 labeled samples (excluded is_refusal=None)
+After cache: N=862  train=581  test=281 pos_rate=0.319  pos_train=0.306 pos_test=0.345
+  inner_train=523  inner_val=58
+  Merging into existing results.json (archs already present: ['linear_mean', 'linear_last', 'mlp_mean', 'arditi', 'cc_concat'])
+    multimax L30 seed0: AUC 0.8421  246s
+    multimax L30 seed1: AUC 0.8265  255s

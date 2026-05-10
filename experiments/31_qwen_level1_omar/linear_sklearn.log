@@ -1,0 +1,29 @@
+Loaded cache: (862, 13, 5120)
+  linear_sklearn_mean    L00: AUC 0.7911 [0.7350,0.8409] C=100.0
+  linear_sklearn_mean    L05: AUC 0.8188 [0.7665,0.8630] C=10.0
+  linear_sklearn_mean    L10: AUC 0.8174 [0.7620,0.8622] C=1.0
+  linear_sklearn_mean    L15: AUC 0.8131 [0.7596,0.8597] C=1.0
+  linear_sklearn_mean    L20: AUC 0.8170 [0.7650,0.8624] C=0.1
+  linear_sklearn_mean    L25: AUC 0.8170 [0.7637,0.8628] C=0.1
+  linear_sklearn_mean    L30: AUC 0.8322 [0.7851,0.8752] C=0.1
+  linear_sklearn_mean    L35: AUC 0.8441 [0.7973,0.8854] C=0.1
+  linear_sklearn_mean    L40: AUC 0.8402 [0.7901,0.8828] C=0.01
+  linear_sklearn_mean    L45: AUC 0.8411 [0.7925,0.8834] C=0.01
+  linear_sklearn_mean    L50: AUC 0.8413 [0.7936,0.8831] C=0.01
+  linear_sklearn_mean    L55: AUC 0.8331 [0.7829,0.8772] C=0.01
+  linear_sklearn_mean    L60: AUC 0.8406 [0.7906,0.8844] C=0.001
+  linear_sklearn_last    L00: AUC 0.5000 [0.5000,0.5000] C=0.001
+  linear_sklearn_last    L05: AUC 0.7933 [0.7409,0.8427] C=0.1
+  linear_sklearn_last    L10: AUC 0.8071 [0.7529,0.8538] C=0.1
+  linear_sklearn_last    L15: AUC 0.8119 [0.7604,0.8595] C=0.1
+  linear_sklearn_last    L20: AUC 0.8078 [0.7522,0.8575] C=0.001
+  linear_sklearn_last    L25: AUC 0.8144 [0.7607,0.8627] C=0.001
+  linear_sklearn_last    L30: AUC 0.8259 [0.7755,0.8717] C=0.001
+  linear_sklearn_last    L35: AUC 0.8467 [0.7981,0.8894] C=0.001
+  linear_sklearn_last    L40: AUC 0.8574 [0.8111,0.8982] C=0.001
+  linear_sklearn_last    L45: AUC 0.8554 [0.8096,0.8965] C=0.001
+  linear_sklearn_last    L50: AUC 0.8594 [0.8141,0.9008] C=0.001
+  linear_sklearn_last    L55: AUC 0.8651 [0.8222,0.9048] C=0.001
+  linear_sklearn_last    L60: AUC 0.8775 [0.8382,0.9150] C=0.001
+Saved per-arch AUC to /lambda/nfs/jsWnew/mechhack/experiments/30_qwen_level1_omar/results.json
+Saved test predictions for length-stratification.

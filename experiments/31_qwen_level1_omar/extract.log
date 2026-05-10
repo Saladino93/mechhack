@@ -1,0 +1,111 @@
+=== extract_residuals model=qwen36 use_ct=True layers='0:65:5' dtype=fp16 ===
+samples_file=/lambda/nfs/jsWnew/mechhack/datasets/refusal_probes/qwen36/attacks_full.jsonl (n=878)
+GPU: NVIDIA GH200 480GB
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   3%|▎         | 28/851 [00:00<00:03, 236.30it/s]Loading weights:   6%|▌         | 52/851 [00:00<00:04, 197.06it/s]Loading weights:   9%|▉         | 80/851 [00:00<00:03, 221.11it/s]Loading weights:  12%|█▏        | 103/851 [00:00<00:03, 187.19it/s]Loading weights:  15%|█▌        | 130/851 [00:00<00:03, 202.51it/s]Loading weights:  18%|█▊        | 151/851 [00:00<00:03, 191.39it/s]Loading weights:  20%|██        | 173/851 [00:00<00:03, 196.02it/s]Loading weights:  23%|██▎       | 195/851 [00:00<00:03, 202.24it/s]Loading weights:  25%|██▌       | 216/851 [00:01<00:03, 192.47it/s]Loading weights:  28%|██▊       | 239/851 [00:01<00:03, 198.82it/s]Loading weights:  31%|███       | 260/851 [00:01<00:03, 175.13it/s]Loading weights:  34%|███▍      | 288/851 [00:01<00:02, 201.34it/s]Loading weights:  36%|███▋      | 309/851 [00:01<00:02, 184.25it/s]Loading weights:  39%|███▉      | 332/851 [00:01<00:02, 185.06it/s]Loading weights:  42%|████▏     | 359/851 [00:01<00:02, 202.30it/s]Loading weights:  45%|████▍     | 380/851 [00:01<00:02, 193.15it/s]Loading weights:  47%|████▋     | 400/851 [00:02<00:02, 185.69it/s]Loading weights:  49%|████▉     | 419/851 [00:02<00:02, 178.36it/s]Loading weights:  53%|█████▎    | 447/851 [00:02<00:01, 202.21it/s]Loading weights:  55%|█████▍    | 468/851 [00:02<00:02, 184.70it/s]Loading weights:  58%|█████▊    | 490/851 [00:02<00:01, 190.90it/s]Loading weights:  60%|██████    | 514/851 [00:02<00:01, 202.77it/s]Loading weights:  63%|██████▎   | 535/851 [00:02<00:01, 194.15it/s]Loading weights:  65%|██████▌   | 555/851 [00:02<00:01, 192.66it/s]Loading weights:  68%|██████▊   | 575/851 [00:02<00:01, 185.90it/s]Loading weights:  70%|███████   | 597/851 [00:03<00:01, 192.51it/s]Loading weights:  73%|███████▎  | 620/851 [00:03<00:01, 201.54it/s]Loading weights:  75%|███████▌  | 641/851 [00:03<00:01, 191.70it/s]Loading weights:  78%|███████▊  | 663/851 [00:03<00:00, 195.44it/s]Loading weights:  80%|████████  | 683/851 [00:03<00:00, 172.53it/s]Loading weights:  84%|████████▎ | 712/851 [00:03<00:00, 199.90it/s]Loading weights:  86%|████████▌ | 733/851 [00:03<00:00, 183.48it/s]Loading weights:  89%|████████▉ | 756/851 [00:03<00:00, 184.35it/s]Loading weights:  92%|█████████▏| 783/851 [00:04<00:00, 201.71it/s]Loading weights:  94%|█████████▍| 804/851 [00:04<00:00, 192.31it/s]Loading weights:  97%|█████████▋| 824/851 [00:04<00:00, 185.10it/s]Loading weights:  99%|█████████▉| 843/851 [00:04<00:00, 177.14it/s]Loading weights: 100%|██████████| 851/851 [00:04<00:00, 192.24it/s]
+qwen36 loaded | n_layers=64 | extracting 13 layer(s): [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+  [10/878] EVO_0010: N=2320 fwd=1.11s peak=52.9GB sz=295MB | 1.20/s eta=12.0min
+  [20/878] EVO_0020: N=288 fwd=0.50s peak=50.6GB sz=37MB | 0.96/s eta=15.0min
+  [28/878] EVO_0028: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [30/878] EVO_0030: N=526 fwd=0.58s peak=50.8GB sz=67MB | 0.93/s eta=15.1min
+  [40/878] EVO_0041: N=1699 fwd=0.91s peak=52.2GB sz=216MB | 0.94/s eta=14.9min
+  [49/878] EVO_0052: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [50/878] EVO_0053: N=2400 fwd=1.11s peak=60.2GB sz=305MB | 0.87/s eta=15.8min
+  [57/878] EVO_0061: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [60/878] EVO_0065: N=2012 fwd=1.02s peak=52.5GB sz=255MB | 0.84/s eta=16.2min
+  [70/878] EVO_0080: N=812 fwd=0.66s peak=51.1GB sz=103MB | 0.85/s eta=15.8min
+  [78/878] EVO_0088: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [80/878] EVO_0091: N=1435 fwd=0.81s peak=51.9GB sz=182MB | 0.86/s eta=15.4min
+  [90/878] EVO_0101: N=1277 fwd=0.76s peak=51.7GB sz=162MB | 0.85/s eta=15.4min
+  [100/878] EVO_0112: N=5453 fwd=2.06s peak=56.4GB sz=692MB | 0.83/s eta=15.6min
+  [107/878] EVO_0121: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [110/878] EVO_0124: N=1484 fwd=0.87s peak=51.9GB sz=188MB | 0.81/s eta=15.9min
+  [120/878] EVO_0135: N=825 fwd=0.66s peak=51.2GB sz=105MB | 0.81/s eta=15.7min
+  [130/878] EVO_0148: N=2638 fwd=1.20s peak=53.2GB sz=335MB | 0.79/s eta=15.8min
+  [140/878] EVO_0159: N=309 fwd=0.49s peak=50.6GB sz=39MB | 0.79/s eta=15.5min
+  [150/878] EVO_0173: N=4044 fwd=1.63s peak=54.8GB sz=513MB | 0.79/s eta=15.4min
+  [160/878] EVO_0184: N=2097 fwd=1.03s peak=52.6GB sz=266MB | 0.80/s eta=15.0min
+  [170/878] EVO_0195: N=1160 fwd=0.76s peak=51.6GB sz=147MB | 0.81/s eta=14.6min
+  [180/878] EVO_0206: N=6502 fwd=2.36s peak=57.6GB sz=825MB | 0.81/s eta=14.4min
+  [190/878] EVO_0216: N=225 fwd=0.48s peak=50.5GB sz=29MB | 0.80/s eta=14.3min
+  [200/878] EVO_0230: N=1171 fwd=0.78s peak=51.6GB sz=149MB | 0.79/s eta=14.2min
+  [210/878] EVO_0243: N=3593 fwd=1.50s peak=54.3GB sz=456MB | 0.80/s eta=13.9min
+  [220/878] EVO_0254: N=3930 fwd=1.60s peak=54.7GB sz=499MB | 0.80/s eta=13.8min
+  [230/878] EVO_0264: N=4723 fwd=1.84s peak=55.6GB sz=600MB | 0.78/s eta=13.9min
+  [240/878] EVO_0277: N=4848 fwd=1.87s peak=55.8GB sz=615MB | 0.78/s eta=13.7min
+  [246/878] EVO_0284: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [247/878] EVO_0285: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [250/878] EVO_0288: N=1199 fwd=0.77s peak=51.6GB sz=152MB | 0.77/s eta=13.7min
+  [260/878] EVO_0298: N=6611 fwd=2.44s peak=57.8GB sz=839MB | 0.75/s eta=13.7min
+  [270/878] EVO_0308: N=2154 fwd=1.06s peak=52.7GB sz=273MB | 0.75/s eta=13.4min
+  [280/878] EVO_0324: N=2780 fwd=1.25s peak=53.4GB sz=353MB | 0.75/s eta=13.3min
+  [290/878] EVO_0334: N=3259 fwd=1.39s peak=53.9GB sz=414MB | 0.75/s eta=13.0min
+  [296/878] EVO_0340: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [300/878] EVO_0344: N=845 fwd=0.63s peak=51.2GB sz=107MB | 0.75/s eta=12.8min
+  [309/878] EVO_0353: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [310/878] EVO_0354: N=376 fwd=0.47s peak=54.6GB sz=48MB | 0.76/s eta=12.5min
+  [320/878] EVO_0364: N=3628 fwd=1.55s peak=54.4GB sz=461MB | 0.76/s eta=12.3min
+  [330/878] EVO_0377: N=789 fwd=0.65s peak=51.1GB sz=100MB | 0.75/s eta=12.1min
+  [340/878] EVO_0389: N=1412 fwd=0.84s peak=51.8GB sz=179MB | 0.75/s eta=11.9min
+  [350/878] EVO_0400: N=3683 fwd=1.50s peak=54.4GB sz=468MB | 0.75/s eta=11.7min
+  [360/878] EVO_0413: N=1589 fwd=0.88s peak=52.0GB sz=202MB | 0.75/s eta=11.6min
+  [370/878] EVO_0423: N=1530 fwd=0.87s peak=52.0GB sz=194MB | 0.74/s eta=11.4min
+  [380/878] EVO_0435: N=1148 fwd=0.74s peak=51.5GB sz=146MB | 0.74/s eta=11.2min
+  [390/878] EVO_0445: N=4550 fwd=1.79s peak=55.4GB sz=578MB | 0.74/s eta=11.0min
+  [400/878] EVO_0456: N=2294 fwd=1.09s peak=52.8GB sz=291MB | 0.74/s eta=10.8min
+  [410/878] EVO_0466: N=308 fwd=0.50s peak=50.6GB sz=39MB | 0.74/s eta=10.6min
+  [420/878] EVO_0481: N=952 fwd=0.69s peak=51.3GB sz=121MB | 0.73/s eta=10.4min
+  [424/878] EVO_0485: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [430/878] EVO_0494: N=6007 fwd=2.15s peak=57.1GB sz=763MB | 0.73/s eta=10.2min
+  [440/878] EVO_0505: N=1866 fwd=0.98s peak=52.4GB sz=237MB | 0.74/s eta=9.9min
+  [450/878] EVO_0517: N=1116 fwd=0.74s peak=51.5GB sz=142MB | 0.73/s eta=9.8min
+  [460/878] EVO_0529: N=443 fwd=0.52s peak=50.7GB sz=56MB | 0.73/s eta=9.5min
+  [470/878] EVO_0541: N=574 fwd=0.57s peak=50.9GB sz=73MB | 0.74/s eta=9.2min
+  [480/878] EVO_0552: N=2750 fwd=1.21s peak=53.4GB sz=349MB | 0.73/s eta=9.1min
+  [490/878] EVO_0563: N=7767 fwd=2.81s peak=59.1GB sz=986MB | 0.73/s eta=8.9min
+  [500/878] EVO_0574: N=5159 fwd=1.93s peak=56.1GB sz=655MB | 0.73/s eta=8.6min
+  [510/878] EVO_0585: N=6856 fwd=2.50s peak=58.0GB sz=870MB | 0.72/s eta=8.5min
+  [520/878] EVO_0596: N=1227 fwd=0.79s peak=51.6GB sz=156MB | 0.72/s eta=8.2min
+  [530/878] EVO_0608: N=2047 fwd=1.00s peak=52.6GB sz=260MB | 0.73/s eta=8.0min
+  [540/878] EVO_0618: N=7773 fwd=2.83s peak=59.1GB sz=987MB | 0.72/s eta=7.8min
+  [550/878] EVO_0629: N=2145 fwd=1.07s peak=52.7GB sz=272MB | 0.73/s eta=7.5min
+  [560/878] EVO_0639: N=1069 fwd=0.73s peak=51.4GB sz=136MB | 0.73/s eta=7.3min
+  [570/878] EVO_0649: N=1237 fwd=0.80s peak=51.6GB sz=157MB | 0.73/s eta=7.1min
+  [577/878] EVO_0659: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [580/878] EVO_0663: N=1296 fwd=0.80s peak=51.7GB sz=165MB | 0.73/s eta=6.8min
+  [590/878] EVO_0676: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [600/878] EVO_0689: N=6292 fwd=2.32s peak=57.4GB sz=799MB | 0.73/s eta=6.4min
+  [610/878] EVO_0700: N=7572 fwd=2.75s peak=58.9GB sz=961MB | 0.72/s eta=6.2min
+  [620/878] EVO_0710: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [630/878] EVO_0721: N=6408 fwd=2.37s peak=57.6GB sz=814MB | 0.72/s eta=5.7min
+  [640/878] EVO_0733: N=290 fwd=0.51s peak=50.6GB sz=37MB | 0.72/s eta=5.5min
+  [650/878] EVO_0748: N=1802 fwd=0.96s peak=52.3GB sz=229MB | 0.72/s eta=5.3min
+  [660/878] EVO_0758: N=2073 fwd=1.03s peak=52.6GB sz=263MB | 0.73/s eta=5.0min
+  [670/878] EVO_0768: N=7016 fwd=2.55s peak=58.2GB sz=891MB | 0.72/s eta=4.8min
+  [680/878] EVO_0782: N=1872 fwd=0.98s peak=52.4GB sz=238MB | 0.72/s eta=4.6min
+  [682/878] EVO_0784: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [690/878] EVO_0792: N=859 fwd=0.65s peak=51.2GB sz=109MB | 0.72/s eta=4.3min
+  [700/878] EVO_0803: N=2329 fwd=1.12s peak=52.9GB sz=296MB | 0.72/s eta=4.1min
+  [710/878] EVO_0816: N=6391 fwd=2.32s peak=57.5GB sz=811MB | 0.72/s eta=3.9min
+  [720/878] EVO_0828: N=2294 fwd=1.11s peak=52.8GB sz=291MB | 0.72/s eta=3.7min
+  [730/878] EVO_0839: N=1418 fwd=0.85s peak=51.8GB sz=180MB | 0.72/s eta=3.4min
+  [740/878] EVO_0849: N=1553 fwd=0.88s peak=52.0GB sz=197MB | 0.72/s eta=3.2min
+  [750/878] EVO_0860: N=1751 fwd=0.94s peak=52.2GB sz=222MB | 0.72/s eta=3.0min
+  [755/878] EVO_0865: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [760/878] EVO_0870: N=2128 fwd=1.06s peak=52.7GB sz=270MB | 0.72/s eta=2.7min
+  [770/878] EVO_0880: N=2060 fwd=1.02s peak=52.6GB sz=262MB | 0.72/s eta=2.5min
+  [779/878] EVO_0892: FAIL TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+  [780/878] EVO_0893: N=2426 fwd=1.09s peak=55.2GB sz=308MB | 0.72/s eta=2.3min
+  [790/878] EVO_0904: N=5628 fwd=2.08s peak=56.6GB sz=715MB | 0.72/s eta=2.0min
+  [800/878] EVO_0915: N=1656 fwd=0.91s peak=52.1GB sz=210MB | 0.72/s eta=1.8min
+  [810/878] EVO_0927: N=4306 fwd=1.72s peak=55.1GB sz=547MB | 0.72/s eta=1.6min
+  [820/878] EVO_0937: N=819 fwd=0.65s peak=51.2GB sz=104MB | 0.72/s eta=1.3min
+  [830/878] EVO_0948: N=390 fwd=0.54s peak=50.7GB sz=50MB | 0.72/s eta=1.1min
+  [840/878] EVO_0958: N=641 fwd=0.59s peak=51.0GB sz=81MB | 0.72/s eta=0.9min
+  [850/878] EVO_0969: N=6673 fwd=2.43s peak=57.8GB sz=847MB | 0.72/s eta=0.7min
+  [860/878] EVO_0979: N=2476 fwd=1.16s peak=53.1GB sz=314MB | 0.72/s eta=0.4min
+  [870/878] EVO_0991: N=745 fwd=0.63s peak=51.1GB sz=95MB | 0.71/s eta=0.2min
+  [878/878] EVO_1000: N=849 fwd=0.66s peak=51.2GB sz=108MB | 0.71/s eta=0.0min
+
+=== DONE ok=859 err=16 | total 20.5 min ===
