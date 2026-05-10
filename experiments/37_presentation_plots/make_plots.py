@@ -73,6 +73,9 @@ def plot_refusal_family():
     q4r = load_q4r()
 
     # Curate one probe per family — best layer per family
+    # NOTE: Constitutional probe (8.9M params on 555 train samples / 13×5376
+    # input) catastrophically overfits (train 0.996, test 0.500) — excluded
+    # from the headline to avoid confusion. See README for explanation.
     families = {
         "LR last-tok L40": q4r.get("LR_last_L40"),
         "LR last-tok L45": q4r.get("LR_last_L45"),
@@ -81,7 +84,6 @@ def plot_refusal_family():
         "LR mean-of-layers": q4r.get("LR_mean_of_layers"),
         "MLP (1-hidden, L40)": q4r.get("MLP_L40"),
         "Pleshkov d=16 L50\n(quadratic)": q4r.get("Pleshkov_d16_L50"),
-        "Constitutional\nconcat MLP": q4r.get("Constitutional_concat"),
     }
     # Add baselines from other sources
     tfidf_p = REPO_ROOT / "experiments" / "21_probe_zoo_omar" / "results" / "refusal_baselines.json"
@@ -132,7 +134,9 @@ def plot_refusal_family():
     ax.set_title("Refusal-Gemma probe family comparison — honest test split\n"
                  "(train on n=555, evaluate on n=277)")
     ax.set_ylim(0.45, 1.05)
-    ax.axhline(0.50, ls="--", c="grey", alpha=0.5, label="chance")
+    # Chance lines: AUC chance = 0.5 regardless of class balance.
+    # Accuracy chance = max(prior_pos, prior_neg) = 0.524 for refusal (47.6% pos)
+    ax.axhline(0.50, ls="--", c="grey", alpha=0.5, label="chance AUC = 0.50")
     ax.legend(loc="lower left", framealpha=0.9)
     plt.tight_layout()
     out = FIG_DIR / "refusal_probe_family_comparison.png"

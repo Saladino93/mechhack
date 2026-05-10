@@ -241,26 +241,9 @@ def main():
     means_edit = z["mean"]; lasts_edit = z["last"]; y = z["labels"]
     print(f"  features: mean={means_edit.shape}, labels={y.shape}", flush=True)
 
-    # Stage 3 — load originals from refusal cache for the SAME sample_ids (refusal
-    # half) and use cached features for compliance.
-    z2 = np.load(REFUSAL_CACHE, allow_pickle=True)
-    cache_sids = list(z2["X"][:1].astype(np.float32) and ["dummy"])  # placeholder
-    # Actually need to load proper sids — re-read cache npz
-    # Quick approach: forward original prompts through Gemma too to keep apples-to-apples.
-
-    # We have features for ALL refusal training prompts cached (832 samples). The
-    # compliance prompts in `complied` are TEST-SPLIT — may not be in cache. Forward
-    # them too.
-    # For SIMPLICITY: just forward originals (refused + compliance, both unchanged)
-    # in the same Stage 2 if we don't have them.
-
-    # Skip: compute AUC of EDITED refusal + UNTOUCHED compliance.
-    # Since refusal samples are positives in the original "refusal probe" labeling
-    # (label=1 = refused), and compliance is label=0, the probe's job is to
-    # distinguish them. If the EDITED refusal still gets high probe scores
-    # (refusal direction still active), the probe is robust to first-word edits.
-    # If the EDITED refusal gets low probe scores (probe was using first-words),
-    # the AUC drops.
+    # We have features for the EDITED refusal + UNTOUCHED compliance from Stage 2.
+    # That's enough: positives = edited refusal, negatives = unchanged compliance.
+    # If probe AUC stays high → robust to first-word edits.
 
     # Stage 4 — score under each fitted probe + compute AUC on EDITED data
     print("\n  Stage 3: scoring under each fitted probe...", flush=True)
