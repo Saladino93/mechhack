@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/score_edits_multi_probe.py", line 203, in <module>
+    main()
+  File "/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/score_edits_multi_probe.py", line 124, in main
+    probes = load_probes()
+  File "/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/score_edits_multi_probe.py", line 42, in load_probes
+    specs = json.loads(SPECS.read_text())
+  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/probe_specs.json'
