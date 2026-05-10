@@ -36,3 +36,7 @@ experiments/31_qwen_level1_omar/pool_cache.npz
 
 # NFS phantom-files (created by remote NFS when a file is unlinked while open)
 .nfs*
+
+# Exp 38 (cross-model) — pool feature caches are 200-350 MB, derivable
+experiments/38_cross_model_qwen_omar/pool_cache_*.npz
+experiments/38_cross_model_qwen_omar/pool_cache_*_meta.json

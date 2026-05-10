@@ -1,5 +1,25 @@
 # Qwen / Gemma cross-model story — figures
 
+## `qwen_gemma_refusal_auc_by_layer.png` — side-by-side Level-1
+
+Gemma 4-31B-it (left, 60 layers) and Qwen 3.6-27B (right, 64 layers) on the
+**same 878 refusal prompts**. Same probe heads, same protocol.
+
+| Probe | Gemma best | Qwen best | Δ (Gemma − Qwen) |
+|---|---:|---:|---:|
+| linear_last | **L40 = 0.952** | **L60 = 0.876** | **+0.076** |
+| linear_mean | L40 = 0.919 | L35 = 0.850 | +0.069 |
+| mlp_mean    | L40 = 0.920 | L35 = 0.852 | +0.068 |
+| arditi      | L55 = 0.828 | L60 = 0.827 | +0.001 |
+| cc_concat   | C=0.1, 0.920 | C=0.01, 0.838 | +0.082 |
+| **TF-IDF word baseline** | _not run_ | 0.852 | — |
+
+**Two stories on one slide:**
+1. **Gemma's refusal signal is materially stronger (+0.07–0.08 AUC).** It also peaks earlier (L40 vs L60). Linear_last L40 cleanly clears the cc_concat band; on Qwen, only linear_last L60 squeaks above the TF-IDF line.
+2. **Arditi is essentially equal across the two models** (0.828 vs 0.827). The directional signal is the same; the LR probe pulls more juice out of Gemma than out of Qwen.
+
+
+
 Selected plots from this session's Refusal-Qwen Level-1 sweep + cross-model
 direction agreement.
 
