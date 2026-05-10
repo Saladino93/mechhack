@@ -1,5 +1,0 @@
-Loaded 862 samples (train=581, test=281)
-    multimax_simple L30 seed0: AUC 0.7522  186s
-    multimax_simple L30 seed1: AUC 0.8129  212s
-    multimax_simple L30 seed2: AUC 0.8120  263s
-  multimax_simple L30: AUC 0.8302 [0.7774,0.8768]  seed mean±std 0.7924±0.0284

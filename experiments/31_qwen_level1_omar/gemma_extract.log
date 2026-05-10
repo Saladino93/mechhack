@@ -1,0 +1,99 @@
+Loading Gemma...
+  config: n_layers=60  head_dim=256  chunked_sdpa=False
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   2%|▏         | 29/1188 [00:00<00:04, 287.03it/s]Loading weights:   5%|▍         | 58/1188 [00:00<00:06, 184.75it/s]Loading weights:   7%|▋         | 79/1188 [00:00<00:06, 174.20it/s]Loading weights:   8%|▊         | 98/1188 [00:00<00:06, 164.30it/s]Loading weights:  10%|▉         | 115/1188 [00:00<00:06, 159.15it/s]Loading weights:  11%|█         | 132/1188 [00:00<00:07, 148.20it/s]Loading weights:  13%|█▎        | 150/1188 [00:00<00:06, 153.26it/s]Loading weights:  14%|█▍        | 167/1188 [00:01<00:06, 157.74it/s]Loading weights:  15%|█▌        | 183/1188 [00:01<00:06, 154.16it/s]Loading weights:  17%|█▋        | 200/1188 [00:01<00:06, 155.44it/s]Loading weights:  18%|█▊        | 216/1188 [00:01<00:06, 152.11it/s]Loading weights:  20%|█▉        | 237/1188 [00:01<00:05, 165.58it/s]Loading weights:  21%|██▏       | 254/1188 [00:01<00:06, 151.41it/s]Loading weights:  23%|██▎       | 270/1188 [00:01<00:06, 151.26it/s]Loading weights:  25%|██▍       | 292/1188 [00:01<00:05, 165.80it/s]Loading weights:  26%|██▌       | 309/1188 [00:01<00:05, 163.80it/s]Loading weights:  27%|██▋       | 326/1188 [00:02<00:05, 154.53it/s]Loading weights:  29%|██▉       | 343/1188 [00:02<00:05, 152.62it/s]Loading weights:  30%|███       | 362/1188 [00:02<00:05, 158.57it/s]Loading weights:  32%|███▏      | 380/1188 [00:02<00:05, 153.32it/s]Loading weights:  34%|███▍      | 403/1188 [00:02<00:04, 168.95it/s]Loading weights:  35%|███▌      | 421/1188 [00:02<00:04, 156.73it/s]Loading weights:  37%|███▋      | 437/1188 [00:02<00:04, 154.84it/s]Loading weights:  38%|███▊      | 455/1188 [00:02<00:04, 159.09it/s]Loading weights:  40%|███▉      | 473/1188 [00:02<00:04, 160.58it/s]Loading weights:  41%|████▏     | 491/1188 [00:03<00:04, 153.60it/s]Loading weights:  43%|████▎     | 509/1188 [00:03<00:04, 154.30it/s]Loading weights:  44%|████▍     | 527/1188 [00:03<00:04, 157.42it/s]Loading weights:  46%|████▌     | 546/1188 [00:03<00:03, 162.94it/s]Loading weights:  47%|████▋     | 563/1188 [00:03<00:03, 161.45it/s]Loading weights:  49%|████▉     | 580/1188 [00:03<00:03, 155.77it/s]Loading weights:  50%|█████     | 597/1188 [00:03<00:03, 157.11it/s]Loading weights:  52%|█████▏    | 614/1188 [00:03<00:03, 157.70it/s]Loading weights:  53%|█████▎    | 630/1188 [00:03<00:03, 153.70it/s]Loading weights:  55%|█████▍    | 649/1188 [00:04<00:03, 163.82it/s]Loading weights:  56%|█████▌    | 666/1188 [00:04<00:03, 153.90it/s]Loading weights:  58%|█████▊    | 684/1188 [00:04<00:03, 158.11it/s]Loading weights:  59%|█████▉    | 700/1188 [00:04<00:03, 156.11it/s]Loading weights:  60%|██████    | 717/1188 [00:04<00:03, 156.88it/s]Loading weights:  62%|██████▏   | 737/1188 [00:04<00:02, 164.54it/s]Loading weights:  63%|██████▎   | 754/1188 [00:04<00:02, 151.02it/s]Loading weights:  65%|██████▌   | 776/1188 [00:04<00:02, 165.33it/s]Loading weights:  67%|██████▋   | 793/1188 [00:04<00:02, 163.66it/s]Loading weights:  68%|██████▊   | 810/1188 [00:05<00:02, 154.36it/s]Loading weights:  70%|██████▉   | 830/1188 [00:05<00:02, 164.04it/s]Loading weights:  86%|████████▋ | 1027/1188 [00:05<00:00, 659.36it/s]Loading weights: 100%|██████████| 1188/1188 [00:05<00:00, 221.00it/s]
+Gemma loaded | n_layers=60 | extracting 13 layers: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+
+=== rewrites ===  jsonl=/lambda/nfs/jsWnew/mechhack/datasets/refusal_probes/gemma4_31b/rewrites_k7.json  out=/home/ubuntu/extracts/gemma_rewrites
+  loaded 567 samples
+  [25/567] EVO_0076_rw3: N=385 fwd=0.10s peak=59.3GB sz=51MB | 6.79/s eta=1.3min  done=25 skip=0 fail=0
+  [50/567] EVO_0137_rw0: N=194 fwd=0.10s peak=58.8GB sz=26MB | 7.33/s eta=1.2min  done=50 skip=0 fail=0
+  [75/567] EVO_0161_rw4: N=815 fwd=0.14s peak=60.3GB sz=109MB | 7.27/s eta=1.1min  done=75 skip=0 fail=0
+  [100/567] EVO_0183_rw1: N=320 fwd=0.11s peak=59.1GB sz=43MB | 6.76/s eta=1.2min  done=100 skip=0 fail=0
+  [125/567] EVO_0209_rw5: N=255 fwd=0.10s peak=58.9GB sz=34MB | 6.93/s eta=1.1min  done=125 skip=0 fail=0
+  [150/567] EVO_0226_rw2: N=487 fwd=0.11s peak=59.5GB sz=65MB | 7.05/s eta=1.0min  done=150 skip=0 fail=0
+  [175/567] EVO_0288_rw6: N=310 fwd=0.10s peak=59.1GB sz=41MB | 7.14/s eta=0.9min  done=175 skip=0 fail=0
+  [200/567] EVO_0348_rw3: N=263 fwd=0.10s peak=59.0GB sz=35MB | 7.27/s eta=0.8min  done=200 skip=0 fail=0
+  [225/567] EVO_0389_rw0: N=258 fwd=0.10s peak=59.0GB sz=34MB | 7.39/s eta=0.8min  done=225 skip=0 fail=0
+  [250/567] EVO_0440_rw4: N=157 fwd=0.09s peak=58.7GB sz=21MB | 7.50/s eta=0.7min  done=250 skip=0 fail=0
+  [275/567] EVO_0508_rw1: N=320 fwd=0.10s peak=59.1GB sz=43MB | 7.58/s eta=0.6min  done=275 skip=0 fail=0
+  [300/567] EVO_0546_rw5: N=195 fwd=0.10s peak=58.8GB sz=26MB | 7.68/s eta=0.6min  done=300 skip=0 fail=0
+  [325/567] EVO_0626_rw2: N=227 fwd=0.09s peak=58.9GB sz=30MB | 7.76/s eta=0.5min  done=325 skip=0 fail=0
+  [350/567] EVO_0663_rw6: N=268 fwd=0.09s peak=59.0GB sz=36MB | 7.81/s eta=0.5min  done=350 skip=0 fail=0
+  [375/567] EVO_0708_rw3: N=292 fwd=0.10s peak=59.0GB sz=39MB | 7.61/s eta=0.4min  done=375 skip=0 fail=0
+  [400/567] EVO_0726_rw0: N=1563 fwd=0.32s peak=62.1GB sz=208MB | 7.53/s eta=0.4min  done=400 skip=0 fail=0
+  [425/567] EVO_0753_rw4: N=168 fwd=0.10s peak=58.7GB sz=22MB | 7.56/s eta=0.3min  done=425 skip=0 fail=0
+  [450/567] EVO_0831_rw1: N=203 fwd=0.09s peak=58.8GB sz=27MB | 7.59/s eta=0.3min  done=450 skip=0 fail=0
+  [475/567] EVO_0851_rw5: N=160 fwd=0.09s peak=58.7GB sz=21MB | 7.63/s eta=0.2min  done=475 skip=0 fail=0
+  [500/567] EVO_0871_rw2: N=316 fwd=0.10s peak=59.1GB sz=42MB | 7.68/s eta=0.1min  done=500 skip=0 fail=0
+  [525/567] EVO_0898_rw6: N=343 fwd=0.10s peak=59.2GB sz=46MB | 7.70/s eta=0.1min  done=525 skip=0 fail=0
+  [550/567] EVO_0968_rw3: N=383 fwd=0.10s peak=59.2GB sz=51MB | 7.71/s eta=0.0min  done=550 skip=0 fail=0
+  [567/567] EVO_0994_rw6: N=345 fwd=0.10s peak=59.2GB sz=46MB | 7.72/s eta=0.0min  done=567 skip=0 fail=0
+=== rewrites done: ok=567 skip=0 fail=0 in 1.2min ===
+
+=== refusal ===  jsonl=/lambda/nfs/jsWnew/mechhack/datasets/refusal_probes/gemma4_31b/attacks_full.jsonl  out=/home/ubuntu/extracts/gemma_refusal
+  loaded 878 samples
+  [14/878] EVO_0014: FAIL OutOfMemoryError: CUDA out of memory. Tried to allocate 1.75 GiB. GPU 0 has a total capacity of 94.50 GiB of which 2.58 GiB is free. Including non-PyTorch memory, this 
+  [19/878] EVO_0019: FAIL OutOfMemoryError: CUDA out of memory. Tried to allocate 1.95 GiB. GPU 0 has a total capacity of 94.50 GiB of which 1.23 GiB is free. Including non-PyTorch memory, this 
+  [25/878] EVO_0025: N=1828 fwd=0.39s peak=62.7GB sz=244MB | 1.02/s eta=13.9min  done=23 skip=0 fail=2
+  [46/878] EVO_0048: FAIL OutOfMemoryError: CUDA out of memory. Tried to allocate 1.93 GiB. GPU 0 has a total capacity of 94.50 GiB of which 1.62 GiB is free. Including non-PyTorch memory, this 
+  [50/878] EVO_0053: N=2686 fwd=0.63s peak=64.9GB sz=358MB | 1.10/s eta=12.6min  done=47 skip=0 fail=3
+Loading Gemma...
+  config: n_layers=60  enabling chunked_sdpa unconditionally for Gemma
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   2%|▏         | 29/1188 [00:00<00:04, 239.82it/s]Loading weights:   4%|▍         | 53/1188 [00:00<00:05, 193.05it/s]Loading weights:   6%|▌         | 73/1188 [00:00<00:06, 180.64it/s]Loading weights:   8%|▊         | 92/1188 [00:00<00:08, 134.41it/s]Loading weights:   9%|▉         | 108/1188 [00:00<00:07, 138.89it/s]Loading weights:  11%|█         | 128/1188 [00:00<00:07, 150.70it/s]Loading weights:  12%|█▏        | 145/1188 [00:00<00:06, 152.64it/s]Loading weights:  14%|█▎        | 161/1188 [00:01<00:06, 152.11it/s]Loading weights:  15%|█▍        | 177/1188 [00:01<00:06, 147.91it/s]Loading weights:  16%|█▋        | 196/1188 [00:01<00:06, 154.78it/s]Loading weights:  18%|█▊        | 214/1188 [00:01<00:06, 158.52it/s]Loading weights:  19%|█▉        | 231/1188 [00:01<00:06, 159.16it/s]Loading weights:  21%|██        | 248/1188 [00:01<00:05, 160.90it/s]Loading weights:  22%|██▏       | 265/1188 [00:01<00:05, 163.14it/s]Loading weights:  24%|██▎       | 282/1188 [00:01<00:05, 163.38it/s]Loading weights:  25%|██▌       | 299/1188 [00:01<00:05, 153.85it/s]Loading weights:  27%|██▋       | 320/1188 [00:02<00:05, 165.55it/s]Loading weights:  28%|██▊       | 337/1188 [00:02<00:05, 160.63it/s]Loading weights:  30%|██▉       | 354/1188 [00:02<00:05, 152.81it/s]Loading weights:  31%|███       | 371/1188 [00:02<00:05, 155.99it/s]Loading weights:  33%|███▎      | 389/1188 [00:02<00:05, 159.13it/s]Loading weights:  34%|███▍      | 408/1188 [00:02<00:04, 156.98it/s]Loading weights:  36%|███▌      | 426/1188 [00:02<00:04, 162.21it/s]Loading weights:  37%|███▋      | 445/1188 [00:02<00:04, 161.38it/s]Loading weights:  39%|███▉      | 463/1188 [00:02<00:04, 155.78it/s]Loading weights:  41%|████      | 486/1188 [00:03<00:04, 172.46it/s]Loading weights:  42%|████▏     | 504/1188 [00:03<00:04, 152.11it/s]Loading weights:  44%|████▍     | 523/1188 [00:03<00:04, 159.71it/s]Loading weights:  46%|████▌     | 541/1188 [00:03<00:03, 162.05it/s]Loading weights:  47%|████▋     | 560/1188 [00:03<00:03, 158.36it/s]Loading weights:  49%|████▉     | 581/1188 [00:03<00:03, 164.74it/s]Loading weights:  50%|█████     | 598/1188 [00:03<00:03, 164.37it/s]Loading weights:  52%|█████▏    | 615/1188 [00:03<00:03, 155.34it/s]Loading weights:  54%|█████▎    | 638/1188 [00:03<00:03, 171.72it/s]Loading weights:  55%|█████▌    | 656/1188 [00:04<00:03, 171.36it/s]Loading weights:  57%|█████▋    | 674/1188 [00:04<00:03, 157.61it/s]Loading weights:  58%|█████▊    | 693/1188 [00:04<00:03, 164.92it/s]Loading weights:  60%|█████▉    | 710/1188 [00:04<00:02, 163.69it/s]Loading weights:  61%|██████    | 727/1188 [00:04<00:02, 154.68it/s]Loading weights:  63%|██████▎   | 745/1188 [00:04<00:02, 154.78it/s]Loading weights:  64%|██████▍   | 766/1188 [00:04<00:02, 162.00it/s]Loading weights:  66%|██████▌   | 783/1188 [00:04<00:02, 148.49it/s]Loading weights:  67%|██████▋   | 800/1188 [00:05<00:02, 153.83it/s]Loading weights:  69%|██████▊   | 816/1188 [00:05<00:02, 138.07it/s]Loading weights:  70%|██████▉   | 831/1188 [00:05<00:02, 138.63it/s]Loading weights:  90%|████████▉ | 1066/1188 [00:05<00:00, 718.45it/s]Loading weights: 100%|██████████| 1188/1188 [00:05<00:00, 218.31it/s]
+Gemma loaded | n_layers=60 | extracting 13 layers: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+
+=== rewrites ===  jsonl=/lambda/nfs/jsWnew/mechhack/datasets/refusal_probes/gemma4_31b/rewrites_k7.json  out=/home/ubuntu/extracts/gemma_rewrites
+  loaded 567 samples
+=== rewrites done: ok=0 skip=567 fail=0 in 0.0min ===
+
+=== refusal ===  jsonl=/lambda/nfs/jsWnew/mechhack/datasets/refusal_probes/gemma4_31b/attacks_full.jsonl  out=/home/ubuntu/extracts/gemma_refusal
+  loaded 878 samples
+  [75/878] EVO_0085: N=7011 fwd=2.68s peak=75.3GB sz=935MB | 0.86/s eta=15.5min  done=23 skip=52 fail=0
+  [100/878] EVO_0112: N=5866 fwd=2.01s peak=72.5GB sz=782MB | 0.95/s eta=13.7min  done=48 skip=52 fail=0
+  [125/878] EVO_0141: N=3841 fwd=1.09s peak=67.6GB sz=512MB | 0.96/s eta=13.1min  done=73 skip=52 fail=0
+  [150/878] EVO_0173: N=4519 fwd=1.37s peak=69.2GB sz=602MB | 0.95/s eta=12.8min  done=98 skip=52 fail=0
+  [175/878] EVO_0201: N=3259 fwd=0.85s peak=66.2GB sz=434MB | 1.04/s eta=11.3min  done=123 skip=52 fail=0
+  [200/878] EVO_0230: N=1249 fwd=0.26s peak=61.3GB sz=167MB | 1.01/s eta=11.2min  done=148 skip=52 fail=0
+  [225/878] EVO_0259: N=2061 fwd=0.47s peak=63.3GB sz=275MB | 1.01/s eta=10.8min  done=173 skip=52 fail=0
+  [250/878] EVO_0288: N=1260 fwd=0.25s peak=61.3GB sz=168MB | 0.96/s eta=10.9min  done=198 skip=52 fail=0
+  [275/878] EVO_0318: N=5009 fwd=1.60s peak=70.4GB sz=668MB | 0.94/s eta=10.7min  done=223 skip=52 fail=0
+  [300/878] EVO_0344: N=866 fwd=0.15s peak=60.4GB sz=115MB | 0.94/s eta=10.2min  done=248 skip=52 fail=0
+  [325/878] EVO_0370: N=7281 fwd=2.86s peak=76.0GB sz=971MB | 0.95/s eta=9.7min  done=273 skip=52 fail=0
+  [350/878] EVO_0400: N=3979 fwd=1.13s peak=67.9GB sz=530MB | 0.95/s eta=9.2min  done=298 skip=52 fail=0
+  [375/878] EVO_0429: N=2325 fwd=0.55s peak=63.9GB sz=310MB | 0.92/s eta=9.1min  done=323 skip=52 fail=0
+  [400/878] EVO_0456: N=2497 fwd=0.60s peak=64.3GB sz=333MB | 0.92/s eta=8.7min  done=348 skip=52 fail=0
+  [425/878] EVO_0486: N=1943 fwd=0.43s peak=63.0GB sz=259MB | 0.92/s eta=8.2min  done=373 skip=52 fail=0
+  [450/878] EVO_0517: N=1163 fwd=0.24s peak=61.1GB sz=155MB | 0.91/s eta=7.9min  done=398 skip=52 fail=0
+  [475/878] EVO_0546: N=1509 fwd=0.31s peak=61.9GB sz=201MB | 0.92/s eta=7.3min  done=423 skip=52 fail=0
+  [500/878] EVO_0574: N=5706 fwd=1.93s peak=72.1GB sz=761MB | 0.91/s eta=6.9min  done=448 skip=52 fail=0
+  [525/878] EVO_0603: N=2286 fwd=0.53s peak=63.8GB sz=305MB | 0.90/s eta=6.5min  done=473 skip=52 fail=0
+  [550/878] EVO_0629: N=2388 fwd=0.56s peak=64.1GB sz=318MB | 0.91/s eta=6.0min  done=498 skip=52 fail=0
+  [575/878] EVO_0657: N=2519 fwd=0.60s peak=64.4GB sz=336MB | 0.92/s eta=5.5min  done=523 skip=52 fail=0
+  [600/878] EVO_0689: N=6760 fwd=2.53s peak=74.7GB sz=901MB | 0.91/s eta=5.1min  done=548 skip=52 fail=0
+  [625/878] EVO_0716: N=7494 fwd=3.01s peak=76.5GB sz=999MB | 0.90/s eta=4.7min  done=573 skip=52 fail=0
+  [650/878] EVO_0748: N=1854 fwd=0.40s peak=62.8GB sz=247MB | 0.91/s eta=4.2min  done=598 skip=52 fail=0
+  [675/878] EVO_0775: N=7073 fwd=2.74s peak=75.4GB sz=943MB | 0.91/s eta=3.7min  done=623 skip=52 fail=0
+  [700/878] EVO_0803: N=2501 fwd=0.60s peak=64.4GB sz=333MB | 0.90/s eta=3.3min  done=648 skip=52 fail=0
+  [725/878] EVO_0833: N=656 fwd=0.13s peak=59.9GB sz=87MB | 0.91/s eta=2.8min  done=673 skip=52 fail=0
+  [750/878] EVO_0860: N=1847 fwd=0.40s peak=62.8GB sz=246MB | 0.91/s eta=2.3min  done=698 skip=52 fail=0
+  [775/878] EVO_0887: N=2716 fwd=0.66s peak=64.9GB sz=362MB | 0.91/s eta=1.9min  done=723 skip=52 fail=0
+  [800/878] EVO_0915: N=1807 fwd=0.39s peak=62.7GB sz=241MB | 0.91/s eta=1.4min  done=748 skip=52 fail=0
+  [825/878] EVO_0942: N=6015 fwd=2.07s peak=72.9GB sz=802MB | 0.90/s eta=1.0min  done=773 skip=52 fail=0
+  [850/878] EVO_0969: N=7209 fwd=2.83s peak=75.8GB sz=961MB | 0.90/s eta=0.5min  done=798 skip=52 fail=0
+  [875/878] EVO_0996: N=2380 fwd=0.56s peak=64.1GB sz=317MB | 0.89/s eta=0.1min  done=823 skip=52 fail=0
+  [878/878] EVO_1000: N=869 fwd=0.16s peak=60.4GB sz=116MB | 0.89/s eta=0.0min  done=826 skip=52 fail=0
+=== refusal done: ok=826 skip=52 fail=0 in 15.4min ===
+
+=== cyber_test ===  jsonl=/lambda/nfs/jsWnew/mechhack/datasets/cyber_probes/test.jsonl  out=/home/ubuntu/extracts/gemma_cyber
+  loaded 2180 samples
+  [25/2180] cyber_91: N=669 fwd=0.13s peak=59.9GB sz=89MB | 4.82/s eta=7.4min  done=25 skip=0 fail=0
+  [50/2180] cyber_173: N=612 fwd=0.12s peak=59.8GB sz=82MB | 2.98/s eta=11.9min  done=50 skip=0 fail=0
+  [75/2180] cyber_239: N=1382 fwd=0.28s peak=61.6GB sz=184MB | 2.43/s eta=14.5min  done=75 skip=0 fail=0
+  [100/2180] cyber_326: N=1466 fwd=0.30s peak=61.8GB sz=195MB | 2.47/s eta=14.0min  done=100 skip=0 fail=0
+  [125/2180] cyber_390: N=345 fwd=0.11s peak=59.2GB sz=46MB | 2.53/s eta=13.5min  done=125 skip=0 fail=0
+  [150/2180] cyber_475: N=2491 fwd=0.59s peak=64.3GB sz=332MB | 2.63/s eta=12.9min  done=150 skip=0 fail=0
+  [175/2180] cyber_555: N=283 fwd=0.10s peak=59.0GB sz=38MB | 2.74/s eta=12.2min  done=175 skip=0 fail=0
+  [200/2180] cyber_640: N=1728 fwd=0.37s peak=62.5GB sz=230MB | 2.85/s eta=11.6min  done=200 skip=0 fail=0
+  [225/2180] cyber_727: N=1234 fwd=0.25s peak=61.3GB sz=165MB | 2.90/s eta=11.3min  done=225 skip=0 fail=0
+  [250/2180] cyber_789: N=970 fwd=0.17s peak=60.6GB sz=129MB | 2.87/s eta=11.2min  done=250 skip=0 fail=0
+  [275/2180] cyber_874: N=3699 fwd=1.03s peak=67.3GB sz=493MB | 2.78/s eta=11.4min  done=275 skip=0 fail=0

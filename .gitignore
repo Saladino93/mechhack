@@ -33,3 +33,6 @@ experiments/29_pleshkov_causality_omar/edits_pleshkov_scored.jsonl
 
 # Exp 31 (Qwen Level 1) — pool feature cache is 322 MB, not a result
 experiments/31_qwen_level1_omar/pool_cache.npz
+
+# NFS phantom-files (created by remote NFS when a file is unlinked while open)
+.nfs*
