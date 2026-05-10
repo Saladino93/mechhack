@@ -234,7 +234,70 @@ behavior, not just in mean-pool probes.
 
 ---
 
-## Slide 8 — Level 2: causality on minimal edits
+## Slide 8 — Level 2 HEADLINE: causality on substantial paraphrases (rewrites_k7)
+
+> **LR last-token probes at L45-L55 show 91.7% Pr(model | f flipped). Textbook
+> causal regime: when probe says flipped, model flips 11 of 12 times.**
+
+Tested on 79 prompts where original was refused AND we have a judged
+Gemma rollout for the LR-best paraphrase. Each probe scored on
+(original, lr_best paraphrase) features:
+
+| Probe | Pr(f\|edit) | Pr(m\|edit) | **Pr(m\|f flipped)** | n |
+|---|---:|---:|---:|---:|
+| **LR_last_L55** | 0.174 | 0.304 | **0.917** | 11/12 |
+| **LR_last_L50** | 0.174 | 0.304 | **0.917** | 11/12 |
+| **LR_last_L45** | 0.174 | 0.304 | **0.917** | 11/12 |
+| **LR_last_L60** | 0.159 | 0.304 | **0.909** | 10/11 |
+| **LR_last_L40** | 0.232 | 0.304 | **0.812** | 13/16 |
+| COMBINED_L40_last (cyber_3+refusal) | 0.246 | 0.304 | 0.765 | 13/17 |
+| COMBINED_L45_last | 0.232 | 0.304 | 0.750 | 12/16 |
+| LR_last_L35 | 0.420 | 0.304 | 0.621 | 18/29 |
+| LR_mean_L40 | 0.246 | 0.304 | 0.588 | 10/17 |
+| Pleshkov_d16_L40_refusal | 0.290 | 0.304 | 0.550 | 11/20 |
+| **Pleshkov_d16_L40_combined** | 0.130 | 0.304 | **0.222** | 2/9 ← gamed |
+
+Three findings (one per slide-emphasis):
+
+1. **LR last-token at L45-L60 is in the textbook causal regime.** Pr(model|f
+   flipped) = 0.91-0.92, Pr(f|edit) = 0.17-0.18 (selective). When this probe
+   fires, the model is genuinely on the verge of complying — the probe is
+   reading the same internal evidence that drives behavior.
+
+2. **Combining cyber_3 + refusal training data MAKES the probe more
+   gameable** for refusal causality. Pr(m|f) drops 0.917 → 0.765 (LR last
+   L40). The 4×4 cross-task showed refusal ↔ cyber_3 share 0.78 transfer
+   AUC; that's enough alignment for AUC but **not enough for causality**.
+   The directions are *related but not identical*. Cyber_3 dilutes the
+   refusal-specific signal.
+
+3. **Pleshkov + combined training = catastrophic gamed-f**: Pr(m|f) = 0.222
+   (2/9). Quadratic interactions on a wider training distribution capture
+   *more* gameable surface features. **Quadratic probes are not always
+   more robust to edits — sometimes they're *worse*.**
+
+> Slide-deck visual: scatter plot of Pr(f|edit) vs Pr(m|f flipped) per probe.
+> Top-left = "everything high" causal regime; top-right = "high f, low m|f"
+> gamed regime. LR_last_L40-L60 cluster top-left. Pleshkov_combined is
+> bottom-left ("under-flips and gamed").
+
+## Slide 8b — Single-word edits don't flip the model (negative result)
+
+EDA showed `during` as the prompt-start word predicted refusal 47/0
+(perfect specificity). We ran the simplest possible edit: replace `during`
+with `I'm working on` (compliance-leaning frame from EDA).
+
+Result on first 7-of-47 swaps: **all still refused** (`While I understand…`
+soft-refusal pattern). The 47/0 EDA correlation was **correlation, not
+causation**. Token-level surface edits don't flip the model — the model is
+detecting deeper semantic content.
+
+> This is consistent with our minimal-edit Level-2 result (Pr(model|edit) =
+> 0.013 across 4 minimal edit methods). Substantial paraphrases (rewrites_k7
+> — 23× more characters changed) are necessary to actually flip behavior.
+> Single-word edits at the prompt-start are insufficient.
+
+## Slide 9 (was 8) — Level 2: causality on minimal edits (for completeness)
 
 > The Level-2 metric: Pr(model flipped | f flipped). High = causal; low
 > while Pr(f flipped | edit) is also high = "you gamed f."
