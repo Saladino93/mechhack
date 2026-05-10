@@ -28,18 +28,42 @@ for Level 2.
 > overfits. Quadratic loses (PCA bottleneck). Kramar Rolling buys long-context
 > robustness at a small AUC cost.**
 
-| Task | Best probe | Test AUC* | Layer | Pooling |
-|---|---|---:|---:|---|
-| Cyber-1 | LR mean | **0.988** | L40 | mean |
-| Cyber-2 | LR last-tok | **0.955** | L60 | last |
-| Cyber-3 | LR mean | **0.955** | L35 | mean |
-| Refusal-Gemma | LR last-tok | **0.953** | L45 | last |
-| **Mean (4 tasks)** | | **~0.96** | | |
-| **Std across tasks** | | **0.014** | | |
+| Task | Best probe | Test AUC | Layer | Pooling | Source |
+|---|---|---:|---:|---|---|
+| Cyber-1 | LR mean | **0.988** | L40 | mean | exp 08, 923-sample held-out |
+| Cyber-2 | LR last-tok | **0.955** | L60 | last | 5-fold CV (contaminated) |
+| Cyber-3 | LR mean | **0.955** | L35 | mean | 5-fold CV (contaminated) |
+| **Refusal-Gemma** | **LR last-tok** | **0.9417** | **L40** | **last** | **Q4r honest test (n=277)** |
+| **Mean (4 tasks)** | | **0.960** | | | |
+| **Std across tasks** | | **0.018** | | | |
 
-\* Cyber-1 = 923-sample held-out (exp 08); cyber-2/3 = 5-fold CV (need to
-re-run on `split=='test'` for honest number — Q4 multi-layer eval was killed
-to free disk; refusal honest eval Q4r in flight).
+> **Refusal-Gemma honest number = 0.9417** (test split, train on train only).
+> Slightly below the contaminated 5-fold CV number (0.9528), as expected. This
+> is the rules-compliant Level 1 figure. Cyber 2/3 honest test split was not
+> feasible in time (Q4 cyber multi-layer eval killed for disk-IO budget).
+
+### Refusal probe family on honest test split (n_train=555, n_test=277)
+
+Top 8 probes by test AUC:
+
+| Probe | test AUC | train AUC | gap |
+|---|---:|---:|---:|
+| LR_last_L40 | **0.9417** | 1.0000 | +0.058 |
+| LR_last_L45 | 0.9368 | 1.0000 | |
+| LR_last_L55 | 0.9350 | 1.0000 | |
+| LR_last_L50 | 0.9331 | 1.0000 | |
+| LR_last_L60 | 0.9295 | 1.0000 | |
+| LR_mean_L40 | 0.9269 | 0.9999 | |
+| MLP_L30 | 0.9207 | 0.9996 | |
+| LR_multi_concat (69,888d) | 0.9137 | 0.9999 | overfit |
+| Pleshkov_L50 (best layer) | 0.854 | 0.955 | |
+| Constitutional_concat | **0.5000** | 0.996 | catastrophic |
+
+Read: train AUC ≈ 1.0 across all probes — they fully fit the 555-sample
+training set. Test AUC distinguishes generalization. **LR last-token at
+mid-late layers (L35-L60) dominates** with test AUCs 0.93-0.94. Pleshkov
+loses 0.09 AUC. Constitutional probe (multi-layer concat → MLP head)
+catastrophically fails at test 0.5 — too many parameters, 555 samples.
 
 **Random predictor**: AUC=0.50.
 **TF-IDF baseline**: 0.877–0.946 across tasks (refusal 0.877, cyber_1 0.946).
