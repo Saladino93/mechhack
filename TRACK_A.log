@@ -60,3 +60,9 @@ To github.com:Saladino93/mechhack.git
 [2026-05-10 08:59:59] cyber_2 d=16 done
 [2026-05-10 08:59:59] cyber_3 d=16 done
 [2026-05-10 08:59:59] pleshkov refusal d=32 done
+[main bd0e2f8] Track A: Pleshkov 13-layer sweep complete: cyber_1/2/3 d=16 + refusal d=16/32
+ 1 file changed, 8 insertions(+)
+To github.com:Saladino93/mechhack.git
+   b029b7a..bd0e2f8  main -> main
+[2026-05-10 09:00:00] START cross_task_4x4
+[2026-05-10 09:05:55] DONE  cross_task_4x4 (rc=0)

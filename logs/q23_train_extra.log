@@ -1,0 +1,4 @@
+[train extra probes]
+  refusal training data: (832, 13, 5376), n_pos=419, n_neg=413
+
+  training MLP probe (L40 mean)...
