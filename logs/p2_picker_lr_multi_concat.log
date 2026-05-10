@@ -1,13 +1,9 @@
 [probe-gradient edits] probe=lr_multi_concat
-Traceback (most recent call last):
-  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 241, in <module>
-    main()
-  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 144, in main
-    coef, bias, spec = load_probe(args.probe)
-  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 62, in load_probe
-    specs = json.loads(PROBE_SPECS.read_text())
-  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
-    with self.open(mode='r', encoding=encoding, errors=errors) as f:
-  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
-    return self._accessor.open(self, mode, buffering, encoding, errors,
-FileNotFoundError: [Errno 2] No such file or directory: '/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/probe_specs.json'
+  coef shape: (69888,)  spec: {'name': 'lr_multi_concat', 'kind': 'lr_multi_layer', 'layers': [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60], 'pooling': 'mean', 'shape': [69888]}
+  81 attribution_eval prompts with originals
+  loading tokenizer...
+
+wrote /lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/gradient_edits_lr_multi_concat.jsonl: 243 candidates over 81 prompts
+           delete_top1_word_grad: n=81, median chars=6, words=1
+          delete_top3_words_grad: n=81, median chars=17, words=2
+       delete_top1_sentence_grad: n=81, median chars=81, words=11

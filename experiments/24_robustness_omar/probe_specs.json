@@ -1,0 +1,285 @@
+{
+  "layers": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "n_train_samples": 832,
+  "d_model": 5376,
+  "probes": [
+    {
+      "name": "lr_mean_L0",
+      "kind": "lr_single_layer",
+      "layer": 0,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L5",
+      "kind": "lr_single_layer",
+      "layer": 5,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L10",
+      "kind": "lr_single_layer",
+      "layer": 10,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L15",
+      "kind": "lr_single_layer",
+      "layer": 15,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L20",
+      "kind": "lr_single_layer",
+      "layer": 20,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L25",
+      "kind": "lr_single_layer",
+      "layer": 25,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L30",
+      "kind": "lr_single_layer",
+      "layer": 30,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L35",
+      "kind": "lr_single_layer",
+      "layer": 35,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L40",
+      "kind": "lr_single_layer",
+      "layer": 40,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L45",
+      "kind": "lr_single_layer",
+      "layer": 45,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L50",
+      "kind": "lr_single_layer",
+      "layer": 50,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L55",
+      "kind": "lr_single_layer",
+      "layer": 55,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_mean_L60",
+      "kind": "lr_single_layer",
+      "layer": 60,
+      "pooling": "mean",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L5",
+      "kind": "lr_single_layer",
+      "layer": 5,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L10",
+      "kind": "lr_single_layer",
+      "layer": 10,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L15",
+      "kind": "lr_single_layer",
+      "layer": 15,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L20",
+      "kind": "lr_single_layer",
+      "layer": 20,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L25",
+      "kind": "lr_single_layer",
+      "layer": 25,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L30",
+      "kind": "lr_single_layer",
+      "layer": 30,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L35",
+      "kind": "lr_single_layer",
+      "layer": 35,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L40",
+      "kind": "lr_single_layer",
+      "layer": 40,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L45",
+      "kind": "lr_single_layer",
+      "layer": 45,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L50",
+      "kind": "lr_single_layer",
+      "layer": 50,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L55",
+      "kind": "lr_single_layer",
+      "layer": 55,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_last_L60",
+      "kind": "lr_single_layer",
+      "layer": 60,
+      "pooling": "last_token",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_multi_concat",
+      "kind": "lr_multi_layer",
+      "layers": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55,
+        60
+      ],
+      "pooling": "mean",
+      "shape": [
+        69888
+      ]
+    },
+    {
+      "name": "lr_mean_of_layers",
+      "kind": "lr_aggregate",
+      "agg": "mean_over_layers",
+      "shape": [
+        5376
+      ]
+    },
+    {
+      "name": "lr_max_of_layers",
+      "kind": "lr_aggregate",
+      "agg": "max_over_layers",
+      "shape": [
+        5376
+      ]
+    }
+  ]
+}

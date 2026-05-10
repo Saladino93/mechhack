@@ -1,13 +1,9 @@
 [probe-gradient edits] probe=lr_mean_L40
-Traceback (most recent call last):
-  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 241, in <module>
-    main()
-  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 144, in main
-    coef, bias, spec = load_probe(args.probe)
-  File "/lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/picker.py", line 62, in load_probe
-    specs = json.loads(PROBE_SPECS.read_text())
-  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
-    with self.open(mode='r', encoding=encoding, errors=errors) as f:
-  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
-    return self._accessor.open(self, mode, buffering, encoding, errors,
-FileNotFoundError: [Errno 2] No such file or directory: '/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/probe_specs.json'
+  coef shape: (5376,)  spec: {'name': 'lr_mean_L40', 'kind': 'lr_single_layer', 'layer': 40, 'pooling': 'mean', 'shape': [5376]}
+  81 attribution_eval prompts with originals
+  loading tokenizer...
+
+wrote /lambda/nfs/georgia/mechhack/experiments/26_probe_gradient_edits_omar/gradient_edits_lr_mean_L40.jsonl: 229 candidates over 81 prompts
+           delete_top1_word_grad: n=76, median chars=9, words=1
+          delete_top3_words_grad: n=77, median chars=23, words=3
+       delete_top1_sentence_grad: n=76, median chars=72, words=8
