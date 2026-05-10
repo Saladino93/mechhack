@@ -18,3 +18,8 @@ To github.com:Saladino93/mechhack.git
    6dcf14e..3258e1c  main -> main
 [2026-05-10 07:41:03] launching P1 (gradient edit rollouts)
 Terminated
+ 5 files changed, 197 insertions(+), 18 deletions(-)
+ create mode 100644 experiments/26_probe_gradient_edits_omar/gradient_rollouts.jsonl
+ rewrite logs/p1_gradient_rollouts.log (86%)
+To github.com:Saladino93/mechhack.git
+   993f0d8..8644ff5  main -> main
