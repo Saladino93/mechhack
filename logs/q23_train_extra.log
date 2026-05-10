@@ -2,3 +2,7 @@
   refusal training data: (832, 13, 5376), n_pos=419, n_neg=413
 
   training MLP probe (L40 mean)...
+    MLP (L40 mean): train AUC=0.9999, val AUC=0.9293, final loss=0.0335 (266.1s)
+
+  training Constitutional probe (13-layer mean concat)...
+    Constitutional (concat): train AUC=0.9958, val AUC=0.8989, final loss=0.2436 (786.3s)

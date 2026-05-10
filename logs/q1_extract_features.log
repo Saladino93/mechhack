@@ -9,3 +9,12 @@ loading Gemma...
   [150/648] 153s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
   [200/648] 213s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
   [250/648] 272s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [300/648] 303s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [350/648] 353s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [400/648] 417s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [450/648] 480s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [500/648] 543s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [550/648] 608s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+  [600/648] 670s; saved /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz
+
+finished. wrote /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz (648 entries)

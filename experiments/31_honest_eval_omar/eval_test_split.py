@@ -168,50 +168,62 @@ def eval_task(name, X_tr_mean, X_tr_last, y_tr, X_te_mean, X_te_last, y_te):
     print(f"  test  pos/neg = {int((y_te==1).sum())}/{int((y_te==0).sum())}", flush=True)
     out = {}
 
-    # LR mean L40
-    li = LAYERS.index(40)
-    tr, te = lr_eval(X_tr_mean[:, li, :], y_tr, X_te_mean[:, li, :], y_te)
-    out["LR_mean_L40"] = {"train_auc": tr, "test_auc": te}
-    print(f"  LR_mean_L40             train={tr:.4f}, test={te:.4f}", flush=True)
+    # ===== LR mean per layer =====
+    print("  -- LR mean per layer --", flush=True)
+    for li, L in enumerate(LAYERS):
+        tr, te = lr_eval(X_tr_mean[:, li, :], y_tr, X_te_mean[:, li, :], y_te)
+        out[f"LR_mean_L{L}"] = {"train_auc": tr, "test_auc": te}
+        print(f"    LR_mean_L{L:<3}            train={tr:.4f}, test={te:.4f}", flush=True)
 
-    # LR last-tok L45
-    li = LAYERS.index(45)
-    tr, te = lr_eval(X_tr_last[:, li, :], y_tr, X_te_last[:, li, :], y_te)
-    out["LR_last_L45"] = {"train_auc": tr, "test_auc": te}
-    print(f"  LR_last_L45             train={tr:.4f}, test={te:.4f}", flush=True)
+    # ===== LR last-token per layer (skip L0 — degenerate) =====
+    print("  -- LR last-token per layer --", flush=True)
+    for li, L in enumerate(LAYERS):
+        if L == 0: continue
+        tr, te = lr_eval(X_tr_last[:, li, :], y_tr, X_te_last[:, li, :], y_te)
+        out[f"LR_last_L{L}"] = {"train_auc": tr, "test_auc": te}
+        print(f"    LR_last_L{L:<3}            train={tr:.4f}, test={te:.4f}", flush=True)
 
-    # LR multi-layer concat
+    # ===== Aggregate / multi-layer LR =====
     Xtr_concat = X_tr_mean.reshape(len(X_tr_mean), -1)
     Xte_concat = X_te_mean.reshape(len(X_te_mean), -1)
     tr, te = lr_eval(Xtr_concat, y_tr, Xte_concat, y_te, C=0.1)
     out["LR_multi_concat"] = {"train_auc": tr, "test_auc": te}
     print(f"  LR_multi_concat         train={tr:.4f}, test={te:.4f}", flush=True)
 
-    # LR mean-of-layers
     Xtr_mol = X_tr_mean.mean(axis=1)
     Xte_mol = X_te_mean.mean(axis=1)
     tr, te = lr_eval(Xtr_mol, y_tr, Xte_mol, y_te)
     out["LR_mean_of_layers"] = {"train_auc": tr, "test_auc": te}
     print(f"  LR_mean_of_layers       train={tr:.4f}, test={te:.4f}", flush=True)
 
-    # Pleshkov d=16 @ L40 mean
-    t0 = time.time()
-    li = LAYERS.index(40)
-    p = QuadraticProbe(d_pca=16, alpha=10.0, random_state=0).fit(X_tr_mean[:, li, :], y_tr)
-    auc_tr = roc_auc_score(y_tr, p.decision_function(X_tr_mean[:, li, :]))
-    auc_te = roc_auc_score(y_te, p.decision_function(X_te_mean[:, li, :]))
-    out["Pleshkov_d16_L40"] = {"train_auc": float(auc_tr), "test_auc": float(auc_te)}
-    print(f"  Pleshkov_d16_L40        train={auc_tr:.4f}, test={auc_te:.4f}  ({time.time()-t0:.0f}s)", flush=True)
+    Xtr_max = X_tr_mean.max(axis=1)
+    Xte_max = X_te_mean.max(axis=1)
+    tr, te = lr_eval(Xtr_max, y_tr, Xte_max, y_te)
+    out["LR_max_of_layers"] = {"train_auc": tr, "test_auc": te}
+    print(f"  LR_max_of_layers        train={tr:.4f}, test={te:.4f}", flush=True)
 
-    # MLP probe @ L40 mean
-    t0 = time.time()
-    li = LAYERS.index(40)
-    tr, te = train_torch_probe(MLPProbe, X_tr_mean[:, li, :], y_tr, X_te_mean[:, li, :], y_te,
-                                epochs=50, lr=1e-3, batch=32, d_in=X_tr_mean.shape[2])
-    out["MLP_L40"] = {"train_auc": tr, "test_auc": te}
-    print(f"  MLP_L40                 train={tr:.4f}, test={te:.4f}  ({time.time()-t0:.0f}s)", flush=True)
+    # ===== Pleshkov per layer (4 layers — slow; cap to interesting band) =====
+    print("  -- Pleshkov d=16 per layer --", flush=True)
+    for L in [20, 30, 40, 50]:
+        li = LAYERS.index(L)
+        t0 = time.time()
+        p = QuadraticProbe(d_pca=16, alpha=10.0, random_state=0).fit(X_tr_mean[:, li, :], y_tr)
+        auc_tr = float(roc_auc_score(y_tr, p.decision_function(X_tr_mean[:, li, :])))
+        auc_te = float(roc_auc_score(y_te, p.decision_function(X_te_mean[:, li, :])))
+        out[f"Pleshkov_d16_L{L}"] = {"train_auc": auc_tr, "test_auc": auc_te}
+        print(f"    Pleshkov_d16_L{L:<3}      train={auc_tr:.4f}, test={auc_te:.4f}  ({time.time()-t0:.0f}s)", flush=True)
 
-    # Constitutional probe (multi-layer concat)
+    # ===== MLP per layer (4 layers) =====
+    print("  -- MLP per layer (mean pool) --", flush=True)
+    for L in [20, 30, 40, 50]:
+        li = LAYERS.index(L)
+        t0 = time.time()
+        tr, te = train_torch_probe(MLPProbe, X_tr_mean[:, li, :], y_tr, X_te_mean[:, li, :], y_te,
+                                    epochs=50, lr=1e-3, batch=32, d_in=X_tr_mean.shape[2])
+        out[f"MLP_L{L}"] = {"train_auc": tr, "test_auc": te}
+        print(f"    MLP_L{L:<3}               train={tr:.4f}, test={te:.4f}  ({time.time()-t0:.0f}s)", flush=True)
+
+    # ===== Constitutional probe (multi-layer concat) =====
     t0 = time.time()
     tr, te = train_torch_probe(ConstitutionalProbe, X_tr_mean, y_tr, X_te_mean, y_te,
                                 epochs=30, lr=5e-4, batch=16, l2=1e-3,
@@ -251,7 +263,7 @@ def main():
     # Save per-task
     (HERE / "honest_per_task.json").write_text(json.dumps(per_task, indent=2))
 
-    # Aggregate per probe
+    # Aggregate per probe (full table, all layers)
     probes = sorted(next(iter(per_task.values())).keys())
     summary = {}
     for probe in probes:
@@ -265,11 +277,52 @@ def main():
         }
     (HERE / "honest_summary.json").write_text(json.dumps(summary, indent=2))
 
-    # Pretty md table
-    md = ["# HONEST evaluation: test-split AUC per probe per task\n"]
-    md.append("Train on `split==\"train\"` rows only; eval on `split==\"test\"` rows.")
-    md.append("Qwen excluded (model not downloaded). 4-task mean.\n")
+    # ===== Per-family, per-task BEST-LAYER summary =====
+    # Family heuristic: same prefix up to `_L<n>`. Aggregates have no `_L<n>`.
+    import re
+    def family_of(name):
+        m = re.match(r"(.+?)_L\d+$", name)
+        return m.group(1) if m else name
+    families = {}
+    for probe in probes:
+        families.setdefault(family_of(probe), []).append(probe)
+    family_best = {}
+    for fam, members in sorted(families.items()):
+        per_task_best = {}
+        per_task_best_layer = {}
+        for t in per_task:
+            best_probe, best_auc = None, -1.0
+            for m in members:
+                a = per_task[t][m]["test_auc"]
+                if a > best_auc:
+                    best_auc, best_probe = a, m
+            per_task_best[t] = best_auc
+            per_task_best_layer[t] = best_probe
+        aucs = list(per_task_best.values())
+        family_best[fam] = {
+            "mean_best_test_auc": float(np.mean(aucs)),
+            "std_best_test_auc": float(np.std(aucs, ddof=1)),
+            "per_task_best": per_task_best,
+            "per_task_best_probe": per_task_best_layer,
+            "n_layers_in_family": len(members),
+        }
+    (HERE / "honest_family_best.json").write_text(json.dumps(family_best, indent=2))
+
+    # Pretty md tables
     cols = ["cyber_1", "cyber_2", "cyber_3", "refusal_gemma"]
+    md = ["# HONEST evaluation: test-split AUC, train on train-split only\n"]
+    md.append("Qwen excluded (model not downloaded). 4-task mean.\n")
+    md.append("## Per-family BEST-LAYER table (headline)\n")
+    md.append("Best layer per task per family. The mean is the rules-compliant 'mean AUC across tasks'.")
+    md.append("Variance across tasks (std) measures whether the probe family is task-robust.\n")
+    md.append("| Family | " + " | ".join(cols) + " | **mean** | std |")
+    md.append("|---|" + "|".join(["---:" for _ in cols]) + "|---:|---:|")
+    fam_rows = sorted([(d["mean_best_test_auc"], fam, d) for fam, d in family_best.items()], reverse=True)
+    for mean_auc, fam, d in fam_rows:
+        cells = [f'{d["per_task_best"][t]:.4f}' for t in cols]
+        md.append(f"| {fam} | " + " | ".join(cells) + f" | **{mean_auc:.4f}** | {d['std_best_test_auc']:.4f} |")
+
+    md.append("\n## Full per-probe-per-layer table (sorted by mean test AUC)\n")
     md.append("| Probe | " + " | ".join(cols) + " | **mean** | std |")
     md.append("|---|" + "|".join(["---:" for _ in cols]) + "|---:|---:|")
     rows = []
@@ -280,12 +333,15 @@ def main():
     rows.sort(reverse=True)
     for _, r in rows:
         md.append("| " + " | ".join(r) + " |")
+
     (HERE / "honest_table.md").write_text("\n".join(md) + "\n")
 
-    print(f"\n=== HEADLINE: 4-task mean test AUC (sorted desc) ===")
-    for mean_auc, r in rows:
-        print(f"  {r[0]:>22}  {mean_auc:.4f}  std={r[-1]}")
-    print(f"\nwrote {HERE/'honest_per_task.json'}, {HERE/'honest_summary.json'}, {HERE/'honest_table.md'}")
+    print(f"\n=== HEADLINE: per-family best-layer mean test AUC (sorted desc) ===")
+    for mean_auc, fam, d in fam_rows:
+        print(f"  {fam:>22}  mean={mean_auc:.4f}  std={d['std_best_test_auc']:.4f}  "
+              f"per_task={d['per_task_best']}")
+    print(f"\nwrote {HERE/'honest_per_task.json'}, {HERE/'honest_summary.json'},")
+    print(f"  {HERE/'honest_family_best.json'}, {HERE/'honest_table.md'}")
 
 
 if __name__ == "__main__":
