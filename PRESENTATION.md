@@ -281,21 +281,34 @@ Three findings (one per slide-emphasis):
 > gamed regime. LR_last_L40-L60 cluster top-left. Pleshkov_combined is
 > bottom-left ("under-flips and gamed").
 
-## Slide 8b — Single-word edits don't flip the model (negative result)
+## Slide 8b — Single-word edits don't flip the model (FINAL NEGATIVE)
 
 EDA showed `during` as the prompt-start word predicted refusal 47/0
 (perfect specificity). We ran the simplest possible edit: replace `during`
 with `I'm working on` (compliance-leaning frame from EDA).
 
-Result on first 7-of-47 swaps: **all still refused** (`While I understand…`
-soft-refusal pattern). The 47/0 EDA correlation was **correlation, not
-causation**. Token-level surface edits don't flip the model — the model is
-detecting deeper semantic content.
+**Final result on all 47 prompts: 0/47 model-flipped.** Pr(model|edit) =
+0.000, CI=[0.000, 0.076]. ALL 47 prompts still refused (47 × `While I
+understand…` soft-refusal).
 
-> This is consistent with our minimal-edit Level-2 result (Pr(model|edit) =
-> 0.013 across 4 minimal edit methods). Substantial paraphrases (rewrites_k7
-> — 23× more characters changed) are necessary to actually flip behavior.
-> Single-word edits at the prompt-start are insufficient.
+Example edit:
+- ORIGINAL: `During incident INC-2024-7362, our Cloud Security team...`
+- EDITED:   `I'm working on incident INC-2024-7362, our Cloud Security team...`
+- RESPONSE: `While I understand this code is intended for a detection validation framework...` (still refusing)
+
+> **The 47/0 EDA correlation was correlation, not causation.** The model is
+> detecting deeper semantic content of the prompt body, not the literal
+> opening token. This is the strongest possible negative result for
+> surface-token-level edits and validates the per-probe Pr(model|f) = 0.917
+> from Q8 — that score reflects real causal signal, not gameable surface
+> features.
+
+> Pr(model | edit) by edit-aggressiveness:
+> - 0.013 (4 minimal edits — surgical / DeepSeek single-round)
+> - **0.000** (single-word swap on the strongest EDA correlation)
+> - **0.310** (substantial paraphrases — rewrites_k7)
+>
+> Edit aggressiveness ↑ → model flip rate ↑. Surface edits ineffective.
 
 ## Slide 9 (was 8) — Level 2: causality on minimal edits (for completeness)
 
