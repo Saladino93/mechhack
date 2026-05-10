@@ -1,0 +1,10 @@
+[combined-probe causality on rewrites_k7]
+  loading rewrite features...
+Traceback (most recent call last):
+  File "/lambda/nfs/georgia/mechhack/experiments/34_combined_causality_omar/score.py", line 261, in <module>
+    main()
+  File "/lambda/nfs/georgia/mechhack/experiments/34_combined_causality_omar/score.py", line 113, in main
+    z = np.load(REWRITES_FEATURES, allow_pickle=True)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/features_rewrites.npz'

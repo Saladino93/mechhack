@@ -1,0 +1,72 @@
+[transfer + combined eval]
+loading cyber_3 train+test...
+  cyber_3 train (3266, 13, 5376), test (2180, 13, 5376) (2639s)
+loading refusal train+test...
+  refusal train (555, 13, 5376), test (277, 13, 5376) (183s)
+
+--- L30 mean ---
+  cyber_3-only  → cyber_3 test  AUC=0.9652
+                 → refusal test  AUC=0.8068  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.9125
+                 → cyber_3 test  AUC=0.7868  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9520
+                 → refusal test  AUC=0.8640
+
+--- L30 last ---
+  cyber_3-only  → cyber_3 test  AUC=0.9147
+                 → refusal test  AUC=0.7877  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.8991
+                 → cyber_3 test  AUC=0.7786  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.8992
+                 → refusal test  AUC=0.8324
+
+--- L35 mean ---
+  cyber_3-only  → cyber_3 test  AUC=0.9727
+                 → refusal test  AUC=0.8048  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.9126
+                 → cyber_3 test  AUC=0.7946  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9557
+                 → refusal test  AUC=0.8616
+
+--- L35 last ---
+  cyber_3-only  → cyber_3 test  AUC=0.9377
+                 → refusal test  AUC=0.8096  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.9198
+                 → cyber_3 test  AUC=0.7618  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9199
+                 → refusal test  AUC=0.8579
+
+--- L40 mean ---
+  cyber_3-only  → cyber_3 test  AUC=0.9695
+                 → refusal test  AUC=0.8113  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.9269
+                 → cyber_3 test  AUC=0.7687  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9513
+                 → refusal test  AUC=0.8704
+
+--- L40 last ---
+  cyber_3-only  → cyber_3 test  AUC=0.9368
+                 → refusal test  AUC=0.8055  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.9417
+                 → cyber_3 test  AUC=0.8113  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9178
+                 → refusal test  AUC=0.8673
+
+--- L45 mean ---
+  cyber_3-only  → cyber_3 test  AUC=0.9681
+                 → refusal test  AUC=0.7716  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.8916
+                 → cyber_3 test  AUC=0.7574  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9494
+                 → refusal test  AUC=0.8401
+
+--- L45 last ---
+  cyber_3-only  → cyber_3 test  AUC=0.9369
+                 → refusal test  AUC=0.8238  (TRANSFER)
+  refusal-only  → refusal test  AUC=0.9368
+                 → cyber_3 test  AUC=0.7783  (TRANSFER)
+  combined      → cyber_3 test  AUC=0.9218
+                 → refusal test  AUC=0.8799
+
+--- multi-layer concat (mean, 13 layers) ---
+  cyber_3-only concat → cyber_3 AUC=0.6476, refusal AUC=0.7412
