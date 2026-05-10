@@ -3,7 +3,7 @@
 Inputs:
   --extracts_dir   /home/ubuntu/extracts/qwen36/  (per-sample .pt with key 'residuals' (13, N, d))
   --samples_file   datasets/refusal_probes/qwen36/attacks_full.jsonl
-  --out_dir        experiments/30_qwen_level1_omar/
+  --out_dir        experiments/31_qwen_level1_omar/
 
 Per-layer (13 layers): linear (mean), linear (last), MLP (mean), attention (full+mask).
 Global head: CC++ Head A — concat all 13 mean-pooled vectors, sklearn LR with C-sweep.
@@ -348,7 +348,7 @@ def main():
     ap.add_argument("--samples_file",
                     default="/lambda/nfs/jsWnew/mechhack/datasets/refusal_probes/qwen36/attacks_full.jsonl")
     ap.add_argument("--out_dir",
-                    default="/lambda/nfs/jsWnew/mechhack/experiments/30_qwen_level1_omar")
+                    default="/lambda/nfs/jsWnew/mechhack/experiments/31_qwen_level1_omar")
     ap.add_argument("--archs",
                     default="arditi,linear_mean,linear_last,mlp_mean,cc_concat,attention,multimax",
                     help="comma-separated subset of {arditi,linear_mean,linear_last,mlp_mean,cc_concat,attention,multimax}")

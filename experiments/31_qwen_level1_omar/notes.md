@@ -1,4 +1,4 @@
-# Experiment 30 (omar): Qwen Refusal — Level 1 layer sweep × 4 probe heads
+# Experiment 31 (omar): Qwen Refusal — Level 1 layer sweep × 4 probe heads
 
 ## Goal
 
