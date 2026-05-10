@@ -1,2 +1,21 @@
 [AUC+ACC vs layer for refusal_gemma]
 loading train+test...
+  train (555, 13, 5376) test (277, 13, 5376) (680s)
+
+fitting LR per layer (mean + last)...
+  L  0  mean: AUC=0.8414 CI=[0.795,0.888] ACC=0.7617  |  last: AUC=nan
+  L  5  mean: AUC=0.8474 CI=[0.804,0.887] ACC=0.7834  |  last: AUC=0.7999
+  L 10  mean: AUC=0.8815 CI=[0.849,0.920] ACC=0.8087  |  last: AUC=0.8316
+  L 15  mean: AUC=0.8812 CI=[0.844,0.922] ACC=0.8014  |  last: AUC=0.8599
+  L 20  mean: AUC=0.8841 CI=[0.847,0.921] ACC=0.8123  |  last: AUC=0.8683
+  L 25  mean: AUC=0.8862 CI=[0.846,0.922] ACC=0.7978  |  last: AUC=0.8767
+  L 30  mean: AUC=0.9125 CI=[0.878,0.940] ACC=0.8231  |  last: AUC=0.8991
+  L 35  mean: AUC=0.9126 CI=[0.877,0.943] ACC=0.8339  |  last: AUC=0.9198
+  L 40  mean: AUC=0.9269 CI=[0.897,0.953] ACC=0.8375  |  last: AUC=0.9417
+  L 45  mean: AUC=0.8916 CI=[0.854,0.929] ACC=0.8195  |  last: AUC=0.9368
+  L 50  mean: AUC=0.8950 CI=[0.858,0.929] ACC=0.8051  |  last: AUC=0.9331
+  L 55  mean: AUC=0.9051 CI=[0.872,0.937] ACC=0.8231  |  last: AUC=0.9350
+  L 60  mean: AUC=0.9020 CI=[0.865,0.935] ACC=0.8231  |  last: AUC=0.9295
+
+wrote /lambda/nfs/georgia/mechhack/experiments/37_presentation_plots/figures/refusal_auc_acc_vs_layer.png
+wrote raw data to /lambda/nfs/georgia/mechhack/experiments/37_presentation_plots/figures/refusal_auc_acc_vs_layer.json
