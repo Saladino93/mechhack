@@ -16,3 +16,4 @@
   L 60: AUC=0.9082 ± 0.0176  train=1.000  med|w|_1=170
 
 === consecutive pair concat ===
+  L0+L5: AUC=0.8415 ± 0.0339  train=0.976
