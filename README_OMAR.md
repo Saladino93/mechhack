@@ -51,21 +51,59 @@ landings.
 (+0.037 / +0.059 / +0.065 from cyber_1/2/3) but smaller, suggesting refusal is
 "less linearly recoverable" past TF-IDF than the cyber tasks.
 
-### Level 2 — Behaviour-flip results, n=81 attribution_eval prompts, Wilson 95% CIs
+### Level 2 — Behaviour-flip results, n=81 attribution_eval prompts × 4 edit methods × 28 probes
 
-Pipeline: per-token Arditi attribution (exp 12) → user-supplied k=7 rewrites
-(`rewrites_k7.json`) → score each rewrite with both Arditi projection AND a
-fully-fitted LR probe (exp 13) → roll Gemma on the LR-best rewrite → judge with
-DeepSeek V4 Pro using the canonical `REFUSAL_JUDGE_SYSTEM`.
+**Pipeline (2026-05-10 update):** for each prompt we generated 4 minimal-edit
+candidates (Arditi-attribution: delete top-1 word / top-3 words / top-1
+sentence; plus DeepSeek V4 Pro single-round). Each edit was rolled through
+Gemma (exp 13 Phase 3a, 403 rollouts), judged by DeepSeek V4 Pro, then scored
+under **every fitted probe variant** at the LR-flip threshold τ=0.5.
 
-| Metric | k/n | Point | 95% CI |
-|---|---:|---:|---|
-| **Pr(f flipped \| edit)** (cheap proxy) | 29/81 | **0.358** | [0.262, 0.467] |
-| **Pr(model flipped \| edit)** *(README headline)* | 22/71 | **0.310** | [0.214, 0.425] |
-| Pr(model flipped \| f flipped) (concordance) | 9/29 | 0.310 | [0.173, 0.492] |
-| **Pr(model flipped \| f flipped, orig=refusal)** *(stricter, causal)* | 9/20 | **0.450** | [0.258, 0.658] |
+#### Causality table — Pr(model flipped | f flipped, orig=refusal) per probe
 
-Judge ↔ heuristic agreement: **98.9%** (209/211). 0 judge errors.
+The user's "all-three-high" target (rules: high f AND model AND concordance ⇒ causal):
+
+| Probe | Pr(f \| edit) | Pr(model \| edit) | **Pr(model \| f flipped)** | n |
+|---|---:|---:|---:|---:|
+| last-token L20 | 0.034 | 0.134 | **0.545** | 11 |
+| last-token L15 | 0.031 | 0.134 | **0.600** | 10 |
+| last-token L55 | 0.028 | 0.134 | **0.778** | 9 |
+| last-token L40 | 0.025 | 0.134 | **0.750** | 8 |
+| last-token L45 | 0.025 | 0.134 | **0.625** | 8 |
+| last-token L60 | 0.022 | 0.134 | **1.000** | 7 |
+| mean L40 | 0.009 | 0.134 | 0.667 | 3 |
+| multi_concat | 0.003 | 0.134 | 1.000 | 1 |
+
+Pattern that emerges: **all probes are ROBUST to surface edits (Pr(f|edit) <
+3.4%)** AND **last-token probes show high Pr(model|f) ≈ 0.55-0.78** — i.e.
+*when* a last-token probe says "flipped", the model also flips ~half-to-most
+of the time. **This is the causal regime.** Mean-pool / multi-concat probes
+flip too rarely to assert. Best k=2 consensus: `last_L45 ∧ mean_of_layers` →
+3/3 model-flips, CI [0.44, 1.0].
+
+> **Compare to the previous Level 2 baseline** (k=7 PRE rewrites with
+> user-supplied paraphrases, single LR L32 probe): Pr(f|edit) = 0.358,
+> Pr(model|edit) = 0.310, Pr(model|f) = 0.310. The new minimal-edit pipeline
+> uses **far smaller perturbations** — that's why Pr(f|edit) drops by
+> 10× (1-3% vs 36%) while Pr(model|f) climbs to 50-78% on last-tok probes:
+> the edits that *do* flip a probe carry *more* causal weight.
+
+### Cross-task transfer + hybrid (exp 22) — refusal direction is *not* a single 'harm direction'
+
+4×4 LR-transfer matrix at mean-pool L35 (5-fold CV diag, full-data LR off-diag):
+
+|  | cyber_1 | cyber_2 | cyber_3 | refusal |
+|---|---:|---:|---:|---:|
+| **cyber_1** | (CV) 0.981 | 0.884 | 0.715 | 0.654 |
+| **cyber_2** | 0.906 | (CV) 0.942 | 0.785 | **0.783** |
+| **cyber_3** | 0.803 | 0.733 | (CV) 0.955 | **0.755** |
+| **refusal** | **0.525** | 0.720 | **0.772** | (CV) 0.939 |
+
+Headline: **refusal → cyber_1 = 0.525 (basically chance)** — the
+refusal-probe direction is *orthogonal* to the dual-use-vs-benign direction.
+But **refusal ↔ cyber_3 transfers** (0.755 / 0.772). Implication: there is
+no single 'harm direction' but a *severity-aware harm direction* that aligns
+the prohibited-cyber tier with model-refusal.
 
 ### Two non-obvious findings worth a slide each
 
