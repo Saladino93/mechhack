@@ -32,8 +32,12 @@ PROBES = [
     ("LR last-tok L40",    "lr_last_L40",        "LR_last_L40",        "#ff7f0e"),
     ("LR last-tok L45",    "lr_last_L45",        "LR_last_L45",        "#2ca02c"),
     ("LR multi-concat",    "lr_multi_concat",    "LR_multi_concat",    "#17becf"),
-    ("Pleshkov d=16 L40",  None,                  "Pleshkov_d16_L40_refusal", "#9467bd"),
-    ("COMBINED L45 last",  None,                  "COMBINED_L45_last",  "#d62728"),
+    ("Pleshkov d=16 L40 (refusal-only)",  None, "Pleshkov_d16_L40_refusal", "#9467bd"),
+    ("Pleshkov d=16 L40 (cyber+refusal)",  None, "Pleshkov_d16_L40_combined", "#bcbd22"),
+    ("COMBINED L40 last (cyber+refusal)",  None, "COMBINED_L40_last",  "#d62728"),
+    ("LR mean L15 (early layer)", None, "LR_mean_L15", "#8c564b"),
+    ("LR last L5 (very early)",   None, "LR_last_L5",  "#e377c2"),
+    ("LR last L20 (mid-early)",   None, "LR_last_L20", "#7f7f7f"),
 ]
 
 
@@ -43,11 +47,11 @@ def main():
 
     fig, ax = plt.subplots(figsize=(11, 7.5))
 
-    # Quadrant shading
-    ax.axhspan(0.5, 1.05, xmin=0, xmax=0.4, alpha=0.07, color="green")  # top-left
-    ax.axhspan(0.5, 1.05, xmin=0.4, xmax=1.0, alpha=0.05, color="green")  # top-right
-    ax.axhspan(-0.05, 0.5, xmin=0.4, xmax=1.0, alpha=0.07, color="red")  # bot-right
-    ax.axhspan(-0.05, 0.5, xmin=0, xmax=0.4, alpha=0.05, color="orange")  # bot-left
+    # Quadrant shading — boundaries at Pr(f|edit)=0.10 (vline) and Pr(m|f)=0.5
+    ax.axhspan(0.5, 1.05, xmin=0,    xmax=0.222, alpha=0.07, color="green")  # top-left robust+causal
+    ax.axhspan(0.5, 1.05, xmin=0.222, xmax=1.0,  alpha=0.10, color="green")  # top-right TARGET
+    ax.axhspan(-0.05, 0.5, xmin=0.222, xmax=1.0, alpha=0.10, color="red")    # bot-right gamed
+    ax.axhspan(-0.05, 0.5, xmin=0,    xmax=0.222, alpha=0.07, color="orange")  # bot-left weak
 
     # Points
     for label, k_min, k_sub, color in PROBES:
@@ -76,18 +80,18 @@ def main():
                              xytext=(5, -20), textcoords="offset points",
                              fontsize=8.5, color=color, alpha=0.85, fontweight="bold")
 
-    # Quadrant labels
-    ax.text(0.02, 0.97, "ROBUST + CAUSAL\n(rare flips, model follows)",
+    # Quadrant labels — boundaries at Pr(f|edit)=0.10 and Pr(m|f)=0.50
+    ax.text(0.02, 0.97, "ROBUST + CAUSAL\n(low f-flip, high m|f)",
             transform=ax.transAxes, fontsize=11, color="#117733", fontweight="bold", va="top")
-    ax.text(0.42, 0.97, "PERMISSIVE + CAUSAL\n(many flips, model follows)",
-            transform=ax.transAxes, fontsize=11, color="#117733", va="top")
-    ax.text(0.42, 0.04, "GAMED  f\n(many flips, model doesn't follow)",
+    ax.text(0.32, 0.97, "PERMISSIVE + CAUSAL\n(high f-flip, high m|f)\n← TARGET REGIME ('high everything')",
+            transform=ax.transAxes, fontsize=11, color="#117733", fontweight="bold", va="top")
+    ax.text(0.32, 0.04, "GAMED f\n(high f-flip, low m|f)\nflip.md: 'gaming f, not causal features'",
             transform=ax.transAxes, fontsize=11, color="#cc0033", fontweight="bold", va="bottom")
-    ax.text(0.02, 0.04, "OVER-ROBUST\n(rare flips, those don't follow)",
+    ax.text(0.02, 0.04, "WEAK ATTRIBUTION\n(low f-flip, low m|f)\nflip.md: edit agent is weak",
             transform=ax.transAxes, fontsize=11, color="#cc6600", va="bottom")
 
     ax.axhline(0.5, ls="--", c="grey", alpha=0.6, lw=1.2)
-    ax.axvline(0.40 * 0.5, ls="--", c="grey", alpha=0.4, lw=1)
+    ax.axvline(0.10, ls="--", c="grey", alpha=0.4, lw=1)
 
     # Legend — manual: shape = edit aggressiveness; color = probe family
     edit_handles = [
