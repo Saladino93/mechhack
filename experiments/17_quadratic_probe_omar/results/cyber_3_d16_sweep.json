@@ -407,6 +407,44 @@
       "delta_quad_vs_linear": -0.053139999999999965,
       "delta_quad_vs_lin_on_pcs": 0.029779999999999918,
       "elapsed_s": 927.1
+    },
+    "50": {
+      "linear": {
+        "auc_mean": 0.93774,
+        "auc_std": 0.022354485008606192,
+        "auc_min": 0.9056000000000001,
+        "auc_max": 0.9597,
+        "auc_wilson95_lo": 0.9130413845229534,
+        "auc_wilson95_hi": 0.9557634144456114,
+        "acc_mean": 0.8619999999999999,
+        "acc_std": 0.03817721833764214,
+        "train_auc_mean": 1.0
+      },
+      "linear_on_pcs": {
+        "auc_mean": 0.85032,
+        "auc_std": 0.015877405329587025,
+        "auc_min": 0.8278000000000001,
+        "auc_max": 0.8662,
+        "auc_wilson95_lo": 0.8163829123966382,
+        "auc_wilson95_hi": 0.8789149748758696,
+        "acc_mean": 0.7540000000000001,
+        "acc_std": 0.026315394733881555,
+        "train_auc_mean": 0.86435
+      },
+      "quadratic": {
+        "auc_mean": 0.8800000000000001,
+        "auc_std": 0.02650877213301291,
+        "auc_min": 0.8479,
+        "auc_max": 0.9207000000000001,
+        "auc_wilson95_lo": 0.8485797702240842,
+        "auc_wilson95_hi": 0.9056255196924295,
+        "acc_mean": 0.799,
+        "acc_std": 0.037316216314090565,
+        "train_auc_mean": 0.9495912499999999
+      },
+      "delta_quad_vs_linear": -0.0577399999999999,
+      "delta_quad_vs_lin_on_pcs": 0.02968000000000015,
+      "elapsed_s": 827.8
     }
   }
 }

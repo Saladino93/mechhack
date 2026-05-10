@@ -146,3 +146,7 @@ loading 832 refusal 13-layer extracts...
     fold 0: test_AUC=0.9389 train_AUC=1.0000 acc=0.8563 | 198.6s
     fold 1: test_AUC=0.9376 train_AUC=1.0000 acc=0.8383 | 226.1s
     fold 2: test_AUC=0.9289 train_AUC=0.9999 acc=0.8494 | 246.5s
+    fold 3: test_AUC=0.9601 train_AUC=0.9999 acc=0.8614 | 240.4s
+    fold 4: test_AUC=0.9277 train_AUC=0.9999 acc=0.8494 | 200.2s
+    linear:  AUC=0.9386 ± 0.0130
+    lin-PCs: AUC=0.8832 ± 0.0186

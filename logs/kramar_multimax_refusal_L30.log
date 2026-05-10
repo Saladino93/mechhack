@@ -14,3 +14,4 @@
   d_model=5376, char-length cuts: [6489.723, 11253.0]
 
   --- fold 1/5 ---
+    fold 0 step 200/600: loss(last50)=0.3761

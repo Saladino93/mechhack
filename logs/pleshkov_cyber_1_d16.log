@@ -204,3 +204,23 @@ loading cyber cyber_1 13-layer extracts...
     fold 0: alpha=10.0 test_AUC=0.9414 train_AUC=0.9780 acc=0.8800 | 33.8s
     fold 1: alpha=0.1 test_AUC=0.9801 train_AUC=0.9748 acc=0.9300 | 27.9s
     fold 2: alpha=100.0 test_AUC=0.9382 train_AUC=0.9787 acc=0.8850 | 30.8s
+    fold 3: alpha=0.1 test_AUC=0.9649 train_AUC=0.9794 acc=0.9050 | 24.5s
+    fold 4: alpha=10.0 test_AUC=0.9513 train_AUC=0.9770 acc=0.8744 | 25.1s
+    quad:    AUC=0.9552 ± 0.0174
+
+  === L55 ===
+    fold 0: test_AUC=0.9519 train_AUC=1.0000 acc=0.9000 | 33.8s
+    fold 1: test_AUC=0.9838 train_AUC=1.0000 acc=0.9500 | 47.3s
+    fold 2: test_AUC=0.9590 train_AUC=1.0000 acc=0.9100 | 31.7s
+    fold 3: test_AUC=0.9803 train_AUC=1.0000 acc=0.9250 | 46.9s
+    fold 4: test_AUC=0.9729 train_AUC=1.0000 acc=0.9246 | 32.5s
+    linear:  AUC=0.9696 ± 0.0137
+    lin-PCs: AUC=0.9487 ± 0.0253
+    fold 0: alpha=100.0 test_AUC=0.9302 train_AUC=0.9851 acc=0.8850 | 28.1s
+    fold 1: alpha=100.0 test_AUC=0.9780 train_AUC=0.9798 acc=0.9250 | 34.3s
+    fold 2: alpha=100.0 test_AUC=0.9411 train_AUC=0.9835 acc=0.9000 | 22.9s
+    fold 3: alpha=0.1 test_AUC=0.9682 train_AUC=0.9803 acc=0.8950 | 24.3s
+    fold 4: alpha=100.0 test_AUC=0.9526 train_AUC=0.9825 acc=0.8744 | 28.0s
+    quad:    AUC=0.9540 ± 0.0194
+
+  === L60 ===

@@ -1,2 +1,24 @@
 [2026-05-09 22:42:01] waiting for fitted_probes.npz...
 [2026-05-10 00:14:35] fitted_probes.npz ready; running P2 for 3 probe variants
+ delete mode 100755 .nfs64f4b6d00dd0e5f900000003
+ create mode 100644 logs/p2_picker_lr_last_L45.log
+ create mode 100644 logs/p2_picker_lr_multi_concat.log
+To github.com:Saladino93/mechhack.git
+   7c1f78a..0482c8b  main -> main
+[2026-05-10 00:15:00] waiting for edits_scored_multi.jsonl (Track E E1b)...
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:16:00] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:17:00] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:18:00] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:19:01] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:20:01] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:21:01] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:22:01] waiting... edits_scored_multi=0
+/home/ubuntu/georgia/mechhack/run_track_p.sh: line 43: experiments/24_robustness_omar/edits_scored_multi.jsonl: No such file or directory
+[2026-05-10 00:23:01] waiting... edits_scored_multi=0
