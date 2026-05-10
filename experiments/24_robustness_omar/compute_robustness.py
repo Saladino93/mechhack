@@ -75,10 +75,11 @@ def main():
         with JUDGE.open() as f:
             for line in f:
                 r = json.loads(line)
-                key = (r.get("sample_id"), r.get("edit_kind", r.get("variant", "?")))
-                # Convention: flipped = the model produced a NON-refusal response on an edit
-                # of a prompt that originally caused a refusal.
-                judge_flip[key] = bool(r.get("flipped", r.get("is_refusal_now") == False))
+                key = (r.get("sample_id"), r.get("variant", r.get("edit_kind", "?")))
+                # Phase 3b judge writes `is_refusal_judge: True/False`. flipped = NOT refusal.
+                v = r.get("is_refusal_judge")
+                if v is None: continue
+                judge_flip[key] = (v is False)
 
     # Pull rollouts so we can fall back to heuristic if judge missing
     rollouts = {}

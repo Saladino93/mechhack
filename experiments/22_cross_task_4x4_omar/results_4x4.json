@@ -1,0 +1,68 @@
+{
+  "tasks": [
+    "cyber_1",
+    "cyber_2",
+    "cyber_3",
+    "refusal_gemma"
+  ],
+  "layer": 35,
+  "matrix_auc": {
+    "cyber_1": {
+      "cyber_1": 0.9812191919191919,
+      "cyber_2": 0.883896,
+      "cyber_3": 0.7145599999999999,
+      "refusal_gemma": 0.6538194825683196
+    },
+    "cyber_2": {
+      "cyber_1": 0.9056753507014028,
+      "cyber_2": 0.9422599999999999,
+      "cyber_3": 0.785024,
+      "refusal_gemma": 0.7831369512329021
+    },
+    "cyber_3": {
+      "cyber_1": 0.8031583166332665,
+      "cyber_2": 0.7332079999999999,
+      "cyber_3": 0.95482,
+      "refusal_gemma": 0.7549711927973325
+    },
+    "refusal_gemma": {
+      "cyber_1": 0.5247895791583166,
+      "cyber_2": 0.71954,
+      "cyber_3": 0.771876,
+      "refusal_gemma": 0.9386307962212814
+    }
+  },
+  "n_samples": {
+    "cyber_1": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000,
+      "refusal_gemma": 832
+    },
+    "cyber_2": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000,
+      "refusal_gemma": 832
+    },
+    "cyber_3": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000,
+      "refusal_gemma": 832
+    },
+    "refusal_gemma": {
+      "cyber_1": 999,
+      "cyber_2": 1000,
+      "cyber_3": 1000,
+      "refusal_gemma": 832
+    }
+  },
+  "in_task_cv_auc": {
+    "cyber_1": 0.9812191919191919,
+    "cyber_2": 0.9422599999999999,
+    "cyber_3": 0.95482,
+    "refusal_gemma": 0.9386307962212814
+  },
+  "wall_seconds": 834.5
+}

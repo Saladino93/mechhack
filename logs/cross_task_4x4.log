@@ -9,3 +9,21 @@
     →          cyber_2 AUC=0.8839  n=1000
     →          cyber_3 AUC=0.7146  n=1000
     →    refusal_gemma AUC=0.6538  n=832
+
+  train cyber_2:
+    →          cyber_1 AUC=0.9057  n=999
+    →          cyber_2 AUC=0.9423  n=1000  (CV)
+    →          cyber_3 AUC=0.7850  n=1000
+    →    refusal_gemma AUC=0.7831  n=832
+
+  train cyber_3:
+    →          cyber_1 AUC=0.8032  n=999
+    →          cyber_2 AUC=0.7332  n=1000
+    →          cyber_3 AUC=0.9548  n=1000  (CV)
+    →    refusal_gemma AUC=0.7550  n=832
+
+  train refusal_gemma:
+    →          cyber_1 AUC=0.5248  n=999
+    →          cyber_2 AUC=0.7195  n=1000
+    →          cyber_3 AUC=0.7719  n=1000
+    →    refusal_gemma AUC=0.9386  n=832  (CV)

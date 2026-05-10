@@ -837,3 +837,9 @@ To github.com:Saladino93/mechhack.git
    18d0777..0f64943  main -> main
 [2026-05-10 07:07:41] waiting for GPU to clear (Track B + Track E + Track G)...
 [2026-05-10 07:07:41] GPU free; rolling Gemma on gradient edits
+[main ca09d6b] Track P: P1: gradient-edit rollouts (Gemma)
+ 4 files changed, 43 insertions(+)
+ create mode 100644 logs/p1_gradient_rollouts.log
+To github.com:Saladino93/mechhack.git
+   0f64943..ca09d6b  main -> main
+[2026-05-10 07:08:04] ===== TRACK P complete =====

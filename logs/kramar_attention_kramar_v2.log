@@ -1,0 +1,4 @@
+
+=== task=refusal_gemma4_31b layer=30 ===
+  found 832 refusal extracts
+  ... loaded 100/832 (13.0s, trunc=12, skip=0)

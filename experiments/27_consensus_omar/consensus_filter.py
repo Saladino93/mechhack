@@ -65,8 +65,10 @@ def main():
         with JUDGE.open() as f:
             for line in f:
                 r = json.loads(line)
-                key = (r.get("sample_id"), r.get("edit_kind", r.get("variant", "?")))
-                judge_flip[key] = bool(r.get("flipped", r.get("is_refusal_now") == False))
+                key = (r.get("sample_id"), r.get("variant", r.get("edit_kind", "?")))
+                v = r.get("is_refusal_judge")
+                if v is None: continue
+                judge_flip[key] = (v is False)
     rollouts = {}
     if ROLLOUTS.exists():
         with ROLLOUTS.open() as f:

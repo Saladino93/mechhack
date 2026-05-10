@@ -7,3 +7,19 @@ loading Gemma...
   [25/403] 30s elapsed
   [50/403] 62s elapsed
   [75/403] 96s elapsed
+  [100/403] 135s elapsed
+  [125/403] 168s elapsed
+  [150/403] 199s elapsed
+  [175/403] 229s elapsed
+  [200/403] 269s elapsed
+  [225/403] 312s elapsed
+  [250/403] 357s elapsed
+  [275/403] 401s elapsed
+  [300/403] 443s elapsed
+  [325/403] 483s elapsed
+  [350/403] 525s elapsed
+  [375/403] 566s elapsed
+  [400/403] 610s elapsed
+  [403/403] 615s elapsed
+
+finished. wrote 403 new rows to /lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/edits_scored_multi.jsonl

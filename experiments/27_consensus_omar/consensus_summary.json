@@ -11,272 +11,272 @@
     "k=1": {
       "lr_last_L10": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 8,
+          "n": 314,
+          "point": 0.025477707006369428,
           "ci": [
-            NaN,
-            NaN
+            0.01296514620366281,
+            0.04946091759667044
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 6,
+          "n": 8,
+          "point": 0.75,
           "ci": [
-            NaN,
-            NaN
+            0.40926987910258916,
+            0.9285223111419724
           ]
         }
       },
       "lr_last_L15": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 10,
+          "n": 310,
+          "point": 0.03225806451612903,
           "ci": [
-            NaN,
-            NaN
+            0.017614391024539926,
+            0.058352593594452586
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 6,
+          "n": 10,
+          "point": 0.6,
           "ci": [
-            NaN,
-            NaN
+            0.3126695474501864,
+            0.8318224187964902
           ]
         }
       },
       "lr_last_L20": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 11,
+          "n": 318,
+          "point": 0.03459119496855346,
           "ci": [
-            NaN,
-            NaN
+            0.019422807647175536,
+            0.06087010663115269
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 6,
+          "n": 11,
+          "point": 0.5454545454545454,
           "ci": [
-            NaN,
-            NaN
+            0.28008775568998817,
+            0.7872904245601196
           ]
         }
       },
       "lr_last_L25": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 318,
+          "point": 0.006289308176100629,
           "ci": [
-            NaN,
-            NaN
+            0.0017264168117718075,
+            0.02263836387537367
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 2,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.34237195288961925,
+            1.0
           ]
         }
       },
       "lr_last_L30": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 5,
+          "n": 322,
+          "point": 0.015527950310559006,
           "ci": [
-            NaN,
-            NaN
+            0.006650277846010404,
+            0.03582925822304891
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 3,
+          "n": 5,
+          "point": 0.6,
           "ci": [
-            NaN,
-            NaN
+            0.23071993220883708,
+            0.8823817688407467
           ]
         }
       },
       "lr_last_L35": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 6,
+          "n": 322,
+          "point": 0.018633540372670808,
           "ci": [
-            NaN,
-            NaN
+            0.00856708840594813,
+            0.040050399354976195
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 3,
+          "n": 6,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.18761280689940868,
+            0.8123871931005913
           ]
         }
       },
       "lr_last_L40": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 8,
+          "n": 322,
+          "point": 0.024844720496894408,
           "ci": [
-            NaN,
-            NaN
+            0.012641682389443479,
+            0.04825170875521085
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 6,
+          "n": 8,
+          "point": 0.75,
           "ci": [
-            NaN,
-            NaN
+            0.40926987910258916,
+            0.9285223111419724
           ]
         }
       },
       "lr_last_L45": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 8,
+          "n": 322,
+          "point": 0.024844720496894408,
           "ci": [
-            NaN,
-            NaN
+            0.012641682389443479,
+            0.04825170875521085
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 5,
+          "n": 8,
+          "point": 0.625,
           "ci": [
-            NaN,
-            NaN
+            0.30573785458380187,
+            0.863158240538479
           ]
         }
       },
       "lr_last_L5": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 298,
+          "point": 0.006711409395973154,
           "ci": [
-            NaN,
-            NaN
+            0.0018424055690966328,
+            0.02413678351550933
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 2,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.34237195288961925,
+            1.0
           ]
         }
       },
       "lr_last_L50": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 7,
+          "n": 322,
+          "point": 0.021739130434782608,
           "ci": [
-            NaN,
-            NaN
+            0.010569344614399102,
+            0.04418609483839022
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 5,
+          "n": 7,
+          "point": 0.7142857142857143,
           "ci": [
-            NaN,
-            NaN
+            0.35892909014821267,
+            0.9177828342909844
           ]
         }
       },
       "lr_last_L55": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 9,
+          "n": 322,
+          "point": 0.027950310559006212,
           "ci": [
-            NaN,
-            NaN
+            0.014772918720493314,
+            0.05225842411602602
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 7,
+          "n": 9,
+          "point": 0.7777777777777778,
           "ci": [
-            NaN,
-            NaN
+            0.4525833436728054,
+            0.9367762376877727
           ]
         }
       },
       "lr_last_L60": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 7,
+          "n": 318,
+          "point": 0.0220125786163522,
           "ci": [
-            NaN,
-            NaN
+            0.010702791407389379,
+            0.044733174608190956
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 7,
+          "n": 7,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.6456611570247934,
+            1.0
           ]
         }
       },
       "lr_max_of_layers": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 5,
+          "n": 322,
+          "point": 0.015527950310559006,
           "ci": [
-            NaN,
-            NaN
+            0.006650277846010404,
+            0.03582925822304891
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 5,
+          "point": 0.2,
           "ci": [
-            NaN,
-            NaN
+            0.03622316096978745,
+            0.6244717358814613
           ]
         }
       },
       "lr_mean_L0": {
         "Pr_f_given_edit": {
           "k": 0,
-          "n": 0,
-          "point": NaN,
+          "n": 318,
+          "point": 0.0,
           "ci": [
-            NaN,
-            NaN
+            -8.673617379884035e-19,
+            0.011936306555771534
           ]
         },
         "Pr_model_given_f": {
@@ -292,11 +292,11 @@
       "lr_mean_L10": {
         "Pr_f_given_edit": {
           "k": 0,
-          "n": 0,
-          "point": NaN,
+          "n": 318,
+          "point": 0.0,
           "ci": [
-            NaN,
-            NaN
+            -8.673617379884035e-19,
+            0.011936306555771534
           ]
         },
         "Pr_model_given_f": {
@@ -311,261 +311,261 @@
       },
       "lr_mean_L15": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 318,
+          "point": 0.006289308176100629,
           "ci": [
-            NaN,
-            NaN
+            0.0017264168117718075,
+            0.02263836387537367
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 2,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.09452865480086614,
+            0.9054713451991339
           ]
         }
       },
       "lr_mean_L20": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 318,
+          "point": 0.006289308176100629,
           "ci": [
-            NaN,
-            NaN
+            0.0017264168117718075,
+            0.02263836387537367
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 2,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.09452865480086614,
+            0.9054713451991339
           ]
         }
       },
       "lr_mean_L25": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 318,
+          "point": 0.0031446540880503146,
           "ci": [
-            NaN,
-            NaN
+            0.0005553102238291183,
+            0.017595233397629386
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L30": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 318,
+          "point": 0.006289308176100629,
           "ci": [
-            NaN,
-            NaN
+            0.0017264168117718075,
+            0.02263836387537367
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 2,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.09452865480086614,
+            0.9054713451991339
           ]
         }
       },
       "lr_mean_L35": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 318,
+          "point": 0.006289308176100629,
           "ci": [
-            NaN,
-            NaN
+            0.0017264168117718075,
+            0.02263836387537367
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 2,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.09452865480086614,
+            0.9054713451991339
           ]
         }
       },
       "lr_mean_L40": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 3,
+          "n": 318,
+          "point": 0.009433962264150943,
           "ci": [
-            NaN,
-            NaN
+            0.0032134265350796092,
+            0.027365591217752838
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 3,
+          "point": 0.6666666666666666,
           "ci": [
-            NaN,
-            NaN
+            0.2076549551264879,
+            0.9385096847238394
           ]
         }
       },
       "lr_mean_L45": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 318,
+          "point": 0.0031446540880503146,
           "ci": [
-            NaN,
-            NaN
+            0.0005553102238291183,
+            0.017595233397629386
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L5": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 3,
+          "n": 318,
+          "point": 0.009433962264150943,
           "ci": [
-            NaN,
-            NaN
+            0.0032134265350796092,
+            0.027365591217752838
           ]
         },
         "Pr_model_given_f": {
           "k": 0,
-          "n": 0,
-          "point": NaN,
+          "n": 3,
+          "point": 0.0,
           "ci": [
-            NaN,
-            NaN
+            0.0,
+            0.5615060804490177
           ]
         }
       },
       "lr_mean_L50": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 318,
+          "point": 0.0031446540880503146,
           "ci": [
-            NaN,
-            NaN
+            0.0005553102238291183,
+            0.017595233397629386
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L55": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 318,
+          "point": 0.0031446540880503146,
           "ci": [
-            NaN,
-            NaN
+            0.0005553102238291183,
+            0.017595233397629386
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L60": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 2,
+          "n": 318,
+          "point": 0.006289308176100629,
           "ci": [
-            NaN,
-            NaN
+            0.0017264168117718075,
+            0.02263836387537367
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 2,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.09452865480086614,
+            0.9054713451991339
           ]
         }
       },
       "lr_mean_of_layers": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 4,
+          "n": 318,
+          "point": 0.012578616352201259,
           "ci": [
-            NaN,
-            NaN
+            0.004902076950155302,
+            0.03189117786836412
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 4,
+          "n": 4,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.5100999795960008,
+            1.0
           ]
         }
       },
       "lr_multi_concat": {
         "Pr_f_given_edit": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 318,
+          "point": 0.0031446540880503146,
           "ci": [
-            NaN,
-            NaN
+            0.0005553102238291183,
+            0.017595233397629386
           ]
         },
         "Pr_model_given_f": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       }
@@ -573,111 +573,111 @@
     "k=2": {
       "lr_last_L45 \u2227 lr_max_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 4,
+          "point": 0.25,
           "ci": [
-            NaN,
-            NaN
+            0.045586062644636216,
+            0.6993639475573634
           ]
         }
       },
       "lr_last_L45 \u2227 lr_mean_L40": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_mean_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 3,
+          "n": 3,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.43849391955098227,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_max_of_layers \u2227 lr_mean_L40": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 2,
+          "point": 0.5,
           "ci": [
-            NaN,
-            NaN
+            0.09452865480086614,
+            0.9054713451991339
           ]
         }
       },
       "lr_max_of_layers \u2227 lr_mean_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_max_of_layers \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L40 \u2227 lr_mean_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L40 \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_of_layers \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       }
@@ -685,111 +685,111 @@
     "k=3": {
       "lr_last_L45 \u2227 lr_max_of_layers \u2227 lr_mean_L40": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_max_of_layers \u2227 lr_mean_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_max_of_layers \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_mean_L40 \u2227 lr_mean_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_mean_L40 \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_last_L45 \u2227 lr_mean_of_layers \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_max_of_layers \u2227 lr_mean_L40 \u2227 lr_mean_of_layers": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_max_of_layers \u2227 lr_mean_L40 \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_max_of_layers \u2227 lr_mean_of_layers \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       },
       "lr_mean_L40 \u2227 lr_mean_of_layers \u2227 lr_multi_concat": {
         "Pr_model_given_consensus": {
-          "k": 0,
-          "n": 0,
-          "point": NaN,
+          "k": 1,
+          "n": 1,
+          "point": 1.0,
           "ci": [
-            NaN,
-            NaN
+            0.20654329147389294,
+            1.0
           ]
         }
       }
