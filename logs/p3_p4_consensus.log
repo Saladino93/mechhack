@@ -1,0 +1,34 @@
+loaded 58 multi-probe scored edits
+  probes: 28
+
+[P3 multi-probe consensus]
+  k=2/3 limited to: ['lr_last_L45', 'lr_max_of_layers', 'lr_mean_L40', 'lr_mean_of_layers', 'lr_multi_concat']
+
+  k=2 consensus (sorted desc by Pr_model|consensus):
+    lr_last_L45 ∧ lr_max_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_mean_L40: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_mean_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_multi_concat: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_max_of_layers ∧ lr_mean_L40: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_max_of_layers ∧ lr_mean_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_max_of_layers ∧ lr_multi_concat: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_mean_L40 ∧ lr_mean_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+
+  k=3 consensus (sorted desc):
+    lr_last_L45 ∧ lr_max_of_layers ∧ lr_mean_L40: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_max_of_layers ∧ lr_mean_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_max_of_layers ∧ lr_multi_concat: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_mean_L40 ∧ lr_mean_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_mean_L40 ∧ lr_multi_concat: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_last_L45 ∧ lr_mean_of_layers ∧ lr_multi_concat: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_max_of_layers ∧ lr_mean_L40 ∧ lr_mean_of_layers: Pr=nan  (0/0)  CI=[nan,nan]
+    lr_max_of_layers ∧ lr_mean_L40 ∧ lr_multi_concat: Pr=nan  (0/0)  CI=[nan,nan]
+
+[P4 best-of-N edit picker]
+               lr_last_L45: best-edit Pr(model|edit)=0.000  (0/58)  CI=[0.000,0.062]
+          lr_max_of_layers: best-edit Pr(model|edit)=0.000  (0/58)  CI=[0.000,0.062]
+               lr_mean_L40: best-edit Pr(model|edit)=0.000  (0/58)  CI=[0.000,0.062]
+         lr_mean_of_layers: best-edit Pr(model|edit)=0.000  (0/58)  CI=[0.000,0.062]
+           lr_multi_concat: best-edit Pr(model|edit)=0.000  (0/58)  CI=[0.000,0.062]
+
+wrote /lambda/nfs/georgia/mechhack/experiments/27_consensus_omar/consensus_summary.json and /lambda/nfs/georgia/mechhack/experiments/27_consensus_omar/best_of_n_summary.json

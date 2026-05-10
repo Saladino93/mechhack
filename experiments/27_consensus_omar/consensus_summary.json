@@ -1,0 +1,798 @@
+{
+  "threshold": 0.5,
+  "candidate_probes": [
+    "lr_last_L45",
+    "lr_max_of_layers",
+    "lr_mean_L40",
+    "lr_mean_of_layers",
+    "lr_multi_concat"
+  ],
+  "consensus": {
+    "k=1": {
+      "lr_last_L10": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L15": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L20": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L25": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L30": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L35": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L40": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L5": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L50": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L55": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L60": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L0": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L10": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L15": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L20": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L25": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L30": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L35": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L40": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L45": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L5": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L50": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L55": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L60": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_of_layers": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_multi_concat": {
+        "Pr_f_given_edit": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        },
+        "Pr_model_given_f": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      }
+    },
+    "k=2": {
+      "lr_last_L45 \u2227 lr_max_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_mean_L40": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_mean_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers \u2227 lr_mean_L40": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers \u2227 lr_mean_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L40 \u2227 lr_mean_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L40 \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_of_layers \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      }
+    },
+    "k=3": {
+      "lr_last_L45 \u2227 lr_max_of_layers \u2227 lr_mean_L40": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_max_of_layers \u2227 lr_mean_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_max_of_layers \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_mean_L40 \u2227 lr_mean_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_mean_L40 \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_last_L45 \u2227 lr_mean_of_layers \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers \u2227 lr_mean_L40 \u2227 lr_mean_of_layers": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers \u2227 lr_mean_L40 \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_max_of_layers \u2227 lr_mean_of_layers \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      },
+      "lr_mean_L40 \u2227 lr_mean_of_layers \u2227 lr_multi_concat": {
+        "Pr_model_given_consensus": {
+          "k": 0,
+          "n": 0,
+          "point": NaN,
+          "ci": [
+            NaN,
+            NaN
+          ]
+        }
+      }
+    }
+  }
+}

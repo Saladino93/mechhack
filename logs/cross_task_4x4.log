@@ -1,0 +1,11 @@
+[4×4 cross-task] layer=35
+  loaded cyber_1: n=999 pos=500 neg=499 (1s)
+  loaded cyber_2: n=1000 pos=500 neg=500 (3s)
+  loaded cyber_3: n=1000 pos=500 neg=500 (4s)
+  loaded refusal_gemma: n=832 pos=419 neg=413 (5s)
+
+  train cyber_1:
+    →          cyber_1 AUC=0.9812  n=999  (CV)
+    →          cyber_2 AUC=0.8839  n=1000
+    →          cyber_3 AUC=0.7146  n=1000
+    →    refusal_gemma AUC=0.6538  n=832

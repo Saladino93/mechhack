@@ -149,3 +149,9 @@ To github.com:Saladino93/mechhack.git
 [2026-05-10 03:52:42] ===== CC++ on cyber_1 (GPU) =====
 [2026-05-10 03:52:42] START cc_plus_plus_cyber_1
 [2026-05-10 06:17:14] DONE  cc_plus_plus_cyber_1 (rc=0)
+ create mode 100644 experiments/05_cc_plus_plus_omar/results.json
+ create mode 100644 experiments/05_cc_plus_plus_omar/swim_traces.npz
+ create mode 100644 logs/cc_plus_plus_cyber_1.log
+To github.com:Saladino93/mechhack.git
+   90dd021..18d0777  main -> main
+[2026-05-10 06:17:16] ===== TRACK B complete =====
