@@ -227,3 +227,40 @@ loading cyber cyber_3 13-layer extracts...
     fold 1: alpha=0.1 test_AUC=0.8746 train_AUC=0.9675 acc=0.7950 | 26.3s
     fold 2: alpha=0.1 test_AUC=0.9108 train_AUC=0.9578 acc=0.8100 | 28.7s
     fold 3: alpha=100.0 test_AUC=0.8912 train_AUC=0.9598 acc=0.8300 | 27.7s
+    fold 4: alpha=0.1 test_AUC=0.9156 train_AUC=0.9580 acc=0.8250 | 27.9s
+    quad:    AUC=0.9010 ± 0.0176
+
+  === L40 ===
+    fold 0: test_AUC=0.9525 train_AUC=1.0000 acc=0.8950 | 144.6s
+    fold 1: test_AUC=0.9263 train_AUC=1.0000 acc=0.8250 | 135.7s
+    fold 2: test_AUC=0.9591 train_AUC=1.0000 acc=0.8800 | 78.6s
+    fold 3: test_AUC=0.9453 train_AUC=1.0000 acc=0.8900 | 131.3s
+    fold 4: test_AUC=0.9716 train_AUC=1.0000 acc=0.9250 | 126.7s
+    linear:  AUC=0.9510 ± 0.0168
+    lin-PCs: AUC=0.9010 ± 0.0207
+    fold 0: alpha=100.0 test_AUC=0.9284 train_AUC=0.9515 acc=0.8350 | 26.3s
+    fold 1: alpha=0.1 test_AUC=0.8855 train_AUC=0.9611 acc=0.8100 | 35.2s
+    fold 2: alpha=100.0 test_AUC=0.9076 train_AUC=0.9538 acc=0.8150 | 30.6s
+    fold 3: alpha=100.0 test_AUC=0.8916 train_AUC=0.9563 acc=0.8150 | 28.7s
+    fold 4: alpha=0.1 test_AUC=0.9255 train_AUC=0.9508 acc=0.8300 | 28.4s
+    quad:    AUC=0.9077 ± 0.0193
+
+  === L45 ===
+    fold 0: test_AUC=0.9509 train_AUC=1.0000 acc=0.8950 | 151.0s
+    fold 1: test_AUC=0.9051 train_AUC=1.0000 acc=0.8050 | 141.7s
+    fold 2: test_AUC=0.9443 train_AUC=1.0000 acc=0.8950 | 143.1s
+    fold 3: test_AUC=0.9206 train_AUC=1.0000 acc=0.8400 | 126.5s
+    fold 4: test_AUC=0.9638 train_AUC=1.0000 acc=0.8900 | 147.1s
+    linear:  AUC=0.9369 ± 0.0237
+    lin-PCs: AUC=0.8540 ± 0.0192
+    fold 0: alpha=100.0 test_AUC=0.8838 train_AUC=0.9478 acc=0.8150 | 30.3s
+    fold 1: alpha=100.0 test_AUC=0.8760 train_AUC=0.9540 acc=0.7850 | 26.1s
+    fold 2: alpha=100.0 test_AUC=0.8821 train_AUC=0.9478 acc=0.8200 | 30.6s
+    fold 3: alpha=100.0 test_AUC=0.8551 train_AUC=0.9498 acc=0.7550 | 28.4s
+    fold 4: alpha=0.1 test_AUC=0.9220 train_AUC=0.9416 acc=0.8550 | 30.6s
+    quad:    AUC=0.8838 ± 0.0242
+
+  === L50 ===
+    fold 0: test_AUC=0.9511 train_AUC=1.0000 acc=0.8900 | 138.5s
+    fold 1: test_AUC=0.9056 train_AUC=1.0000 acc=0.8050 | 147.5s
+    fold 2: test_AUC=0.9484 train_AUC=1.0000 acc=0.8900 | 125.3s

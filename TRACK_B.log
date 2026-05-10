@@ -127,3 +127,9 @@
 [2026-05-09 23:37:35] START kramar_attention_kramar_refusal_L30
 Terminated
 [2026-05-09 23:37:48] DONE  kramar_attention_kramar_refusal_L30 (rc=143)
+[main ac0a827] Track B: Kramar arch attention_kramar on refusal L30
+ 7 files changed, 23 insertions(+)
+ create mode 100644 logs/kramar_attention_kramar_refusal_L30.log
+To github.com:Saladino93/mechhack.git
+   eb6df51..ac0a827  main -> main
+[2026-05-09 23:37:49] START kramar_multimax_refusal_L30

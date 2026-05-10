@@ -10,3 +10,25 @@
   fitting per-layer mean-pool LR...
   fitting per-layer last-tok LR...
   fitting multi-layer mean concat LR (69,888d)...
+  fitting mean-of-layers LR (5376d)...
+  fitting max-of-layers LR (5376d)...
+Traceback (most recent call last):
+  File "/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/fit_probes.py", line 144, in <module>
+    main()
+  File "/lambda/nfs/georgia/mechhack/experiments/24_robustness_omar/fit_probes.py", line 138, in main
+    (HERE / "probe_specs.json").write_text(json.dumps(specs, indent=2))
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

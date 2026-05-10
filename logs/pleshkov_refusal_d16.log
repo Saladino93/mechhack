@@ -122,3 +122,26 @@ loading 832 refusal 13-layer extracts...
     lin-PCs: AUC=0.8565 ± 0.0273
     fold 0: alpha=0.1 test_AUC=0.8526 train_AUC=0.9487 acc=0.7605 | 26.8s
     fold 1: alpha=10.0 test_AUC=0.8481 train_AUC=0.9461 acc=0.7904 | 27.2s
+    fold 2: alpha=0.1 test_AUC=0.8464 train_AUC=0.9553 acc=0.7590 | 27.3s
+    fold 3: alpha=10.0 test_AUC=0.8418 train_AUC=0.9460 acc=0.7651 | 29.9s
+    fold 4: alpha=1.0 test_AUC=0.8062 train_AUC=0.9587 acc=0.7108 | 30.6s
+    quad:    AUC=0.8390 ± 0.0187
+
+  === L30 ===
+    fold 0: test_AUC=0.9276 train_AUC=0.9997 acc=0.8503 | 275.1s
+    fold 1: test_AUC=0.9379 train_AUC=0.9997 acc=0.8503 | 239.2s
+    fold 2: test_AUC=0.9226 train_AUC=0.9994 acc=0.8554 | 239.1s
+    fold 3: test_AUC=0.9514 train_AUC=0.9995 acc=0.8855 | 264.9s
+    fold 4: test_AUC=0.9186 train_AUC=0.9995 acc=0.8373 | 241.1s
+    linear:  AUC=0.9316 ± 0.0132
+    lin-PCs: AUC=0.8753 ± 0.0224
+    fold 0: alpha=0.1 test_AUC=0.8574 train_AUC=0.9481 acc=0.7784 | 21.1s
+    fold 1: alpha=100.0 test_AUC=0.8673 train_AUC=0.9486 acc=0.7964 | 29.1s
+    fold 2: alpha=0.1 test_AUC=0.8583 train_AUC=0.9533 acc=0.7952 | 25.3s
+    fold 3: alpha=100.0 test_AUC=0.8509 train_AUC=0.9528 acc=0.7651 | 32.7s
+    fold 4: alpha=0.1 test_AUC=0.8165 train_AUC=0.9561 acc=0.7711 | 42.7s
+    quad:    AUC=0.8501 ± 0.0197
+
+  === L35 ===
+    fold 0: test_AUC=0.9389 train_AUC=1.0000 acc=0.8563 | 198.6s
+    fold 1: test_AUC=0.9376 train_AUC=1.0000 acc=0.8383 | 226.1s

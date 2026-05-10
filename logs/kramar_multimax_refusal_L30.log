@@ -1,0 +1,16 @@
+
+=== task=refusal_gemma4_31b layer=30 ===
+  found 832 refusal extracts
+  ... loaded 100/832 (26.7s, trunc=12, skip=0)
+  ... loaded 200/832 (59.7s, trunc=31, skip=0)
+  ... loaded 300/832 (94.2s, trunc=51, skip=0)
+  ... loaded 400/832 (129.9s, trunc=68, skip=0)
+  ... loaded 500/832 (163.5s, trunc=86, skip=0)
+  ... loaded 600/832 (193.0s, trunc=104, skip=0)
+  ... loaded 700/832 (222.0s, trunc=123, skip=0)
+  ... loaded 800/832 (245.4s, trunc=144, skip=0)
+  loaded 832 samples (skipped 0, truncated 153 to 4096 tokens)
+  pos=419, neg=413
+  d_model=5376, char-length cuts: [6489.723, 11253.0]
+
+  --- fold 1/5 ---
