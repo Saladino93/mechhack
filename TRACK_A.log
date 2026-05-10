@@ -52,3 +52,11 @@ To github.com:Saladino93/mechhack.git
 [2026-05-10 01:39:43] DONE  aggregate_layers (rc=0)
 /home/ubuntu/georgia/mechhack/run_track_a.sh: line 38: 257467 Killed                  "$@" > "logs/${name}.log" 2>&1
 [2026-05-10 08:59:58] DONE  pair_triple_concat (rc=0)
+[main b029b7a] Track A: refusal probe zoo: pair/triple concat + aggregate-layers + tfidf baselines
+ 2 files changed, 8 insertions(+)
+To github.com:Saladino93/mechhack.git
+   929fe4c..b029b7a  main -> main
+[2026-05-10 08:59:59] cyber_1 d=16 done
+[2026-05-10 08:59:59] cyber_2 d=16 done
+[2026-05-10 08:59:59] cyber_3 d=16 done
+[2026-05-10 08:59:59] pleshkov refusal d=32 done
