@@ -1,0 +1,16 @@
+{
+  "MLP_L40": {
+    "train_auc": 0.9998733444307737,
+    "val_auc": 0.9292682926829269,
+    "final_loss": 0.033455295272563634,
+    "epochs": 50
+  },
+  "Constitutional_concat": {
+    "train_auc": 0.9958248896287183,
+    "val_auc": 0.8988522238163559,
+    "final_loss": 0.2435690925085455,
+    "epochs": 30
+  },
+  "n_train": 665,
+  "n_val": 167
+}

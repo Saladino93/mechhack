@@ -25,3 +25,8 @@ __pycache__/
 experiments/17_quadratic_probe_omar/cache/
 experiments/24_robustness_omar/refusal_13layer_last_tok.npz
 experiments/24_robustness_omar/fitted_probes.npz
+
+# Large feature dumps
+experiments/30_rewrites_causality_omar/features_rewrites.npz
+experiments/30_rewrites_causality_omar/L30_pertoken/
+experiments/29_pleshkov_causality_omar/edits_pleshkov_scored.jsonl

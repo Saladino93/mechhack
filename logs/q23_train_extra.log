@@ -6,3 +6,5 @@
 
   training Constitutional probe (13-layer mean concat)...
     Constitutional (concat): train AUC=0.9958, val AUC=0.8989, final loss=0.2436 (786.3s)
+
+wrote /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/fitted_extra_probes.pt and /lambda/nfs/georgia/mechhack/experiments/30_rewrites_causality_omar/extra_probes_summary.json
