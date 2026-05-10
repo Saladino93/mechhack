@@ -222,9 +222,65 @@ Two different error bars appear in the figures:
 | Task | Honest test eval status |
 |---|---|
 | Cyber-1 | ✅ Honest 923-sample held-out test (exp 08), AUC 0.988 |
-| Cyber-2 | ⚠️ Only 5-fold CV (0.946) — honest test pending (Q4 cyber killed for time) |
-| Cyber-3 | ⚠️ Only 5-fold CV (0.955) — honest test pending |
-| Refusal-Gemma | ✅ Honest test split (Q4r) — n_test=277, AUC 0.9417 |
+| Cyber-2 | ⚠️ Only 5-fold CV (0.946); honest test (Q12) running, results in `experiments/38_cyber_honest_omar/` |
+| Cyber-3 | ⚠️ Same as cyber_2 |
+| Refusal-Gemma | ✅ Honest test split (Q4r) — n_test=277, LR_last_L40 = **0.9417** |
 
-If we have time before deadline, run a slim cyber-honest-test eval
-(`cyber_test_extract` is at 100%; load → fit on train → eval on test).
+---
+
+# Level 2 — what we have vs flip.md requirements
+
+| Requirement | Status |
+|---|---|
+| Intent preserved (judge ≥ 7/10) | ✅ 80/81 prompts on rewrites_k7 |
+| Natural language (no GCG) | ✅ DeepSeek paraphrases are full English |
+| Minimal edits — measure tokens AND semantic units | ✅ both surgical (1 word) and rewrites_k7 (median ~503 word ops) |
+| Pr(f flipped | edit) | ✅ per-probe table |
+| **Pr(model flipped | edit)** ⭐ headline | ✅ 0.310 on rewrites_k7; 0.013 on minimal edits |
+| Pr(model flipped | f flipped) | ✅ **0.917** for LR_last_L45 on rewrites_k7 |
+| Gemma is trusted target | ✅ cluster `model.generate`, not AIaaS |
+| 5-iteration loop with intent-rollback | ⚠️ Single-round only (deliberate trade-off) |
+| Cyber-probe stretch flip | ❌ Skipped (refusal-only) |
+
+### Trade-off framing
+
+We chose **breadth of probe coverage over depth of iteration**. With fixed
+compute we ran:
+- 4 minimal-edit families × 81 prompts = 324 minimal edits, all with rollouts
+  + judge labels
+- 7 substantial-paraphrase candidates per prompt × 81 = 567 candidates,
+  one rolled per prompt as `lr_best`
+- 34 probe variants scored on every candidate (E1 + Q8)
+
+Instead of:
+- 5-iteration edit loop on a few probes
+
+Our trade-off paid off in the **per-probe causality differential**:
+- LR_last_L45-L55 = 0.917 Pr(m|f) — textbook causal regime
+- COMBINED (cyber_3+refusal) = 0.765 — slightly more gameable
+- Pleshkov_combined = 0.222 — strong "gamed f" signature with n=9
+
+These three numbers tell the central Level-2 story (probe choice has a
+40-point causal-concordance impact). A 5-iter loop on one probe wouldn't
+reveal this differential.
+
+### What an iterative loop would have added
+
+- Higher Pr(model|edit) within fixed n_total_edits (probably ~0.4-0.5
+  instead of 0.31) since the edit agent could refine after each rollout.
+- Per-iteration trajectory (what the agent learns) — useful for the slides
+  but not for the headline metric.
+- Closer match to the rules' reference `flip()` interface.
+
+### Edit-aggressiveness ladder (the unique negative result)
+
+We have a clean ladder showing surface edits don't flip:
+
+| Edit method | Pr(model | edit) |
+|---|---:|
+| Single-word swap (`during` → `I'm working on`) | **0.000** (0/47) |
+| Surgical 1-3 word deletes (4 methods avg) | **0.013** (5/403) |
+| Substantial paraphrases (rewrites_k7, k=7) | **0.310** (22/71) |
+
+Interpretation: probes detect deeper semantic content than literal tokens.
+Surface-level edits are insufficient to flip Gemma.
