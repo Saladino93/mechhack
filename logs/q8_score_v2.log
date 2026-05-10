@@ -1,0 +1,33 @@
+[causality on rewrites_k7 — apples-to-apples across all probes]
+  648 feature entries (81 originals + 81×7 rewrites = 648 expected)
+  matched lr_best rewrite_idx for 79/81 prompts
+  matched arditi_best rewrite_idx for 48/49 prompts
+
+  building probes...
+    fitting Pleshkov d=16 @ L40 mean (refusal train)...
+    fitting combined (cyber_3+refusal) LR @ L40 mean...
+    fitting combined Pleshkov d=16 @ L40 mean...
+    fitting combined (cyber_3+refusal) LR @ L45 last...
+    fitting combined (cyber_3+refusal) LR @ L35 mean...
+    fitting combined (cyber_3+refusal) LR @ L40 last...
+  total 34 probes
+
+  79 sids with full data (lr_best matched + judge orig + judge lr_best)
+
+  computing causality across 34 probes...
+
+wrote /lambda/nfs/georgia/mechhack/experiments/34_combined_causality_omar/causality_rewrites_k7.json and /lambda/nfs/georgia/mechhack/experiments/34_combined_causality_omar/causality_rewrites_k7.md
+
+TOP 12 probes on Pr(model|f flipped):
+                     LR_mean_L60  Pr(m|f)=1.000  (1/1)
+                LR_max_of_layers  Pr(m|f)=1.000  (1/1)
+                     LR_last_L55  Pr(m|f)=0.917  (11/12)
+                     LR_last_L50  Pr(m|f)=0.917  (11/12)
+                     LR_last_L45  Pr(m|f)=0.917  (11/12)
+                     LR_last_L60  Pr(m|f)=0.909  (10/11)
+                     LR_mean_L50  Pr(m|f)=0.833  (5/6)
+                     LR_last_L40  Pr(m|f)=0.812  (13/16)
+               COMBINED_L40_last  Pr(m|f)=0.765  (13/17)
+                     LR_mean_L45  Pr(m|f)=0.750  (3/4)
+               COMBINED_L45_last  Pr(m|f)=0.750  (12/16)
+                     LR_mean_L55  Pr(m|f)=0.667  (2/3)
