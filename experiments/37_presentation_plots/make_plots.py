@@ -167,12 +167,16 @@ def plot_refusal_layer_sweep():
                 label="Linear LR on 16 PCs", capsize=3)
     ax.errorbar(layers, quad, yerr=quad_e, marker="^", color="#2ca02c", lw=2,
                 label="Pleshkov quadratic (16 PCs + degree-2 + ridge)", capsize=3)
+    # TF-IDF baseline (exp 21 refusal_baselines)
+    ax.axhline(0.877, ls="--", color="#9467bd", lw=2.2,
+                label="TF-IDF baseline = 0.877")
+    ax.axhline(0.5, ls=":", color="grey", alpha=0.5)
     ax.set_xlabel("Layer")
     ax.set_ylabel("AUC (5-fold CV mean ± 1σ)")
     ax.set_xticks(layers)
-    ax.set_title("Refusal-Gemma — layer sweep: linear vs quadratic vs PCA-bottleneck")
-    ax.set_ylim(0.7, 1.0)
-    ax.legend(loc="lower right", framealpha=0.9)
+    ax.set_title("Refusal-Gemma — layer sweep: linear vs quadratic vs PCA-bottleneck vs TF-IDF")
+    ax.set_ylim(0.5, 1.0)
+    ax.legend(loc="lower right", framealpha=0.9, fontsize=9)
     # Annotation
     best_layer = layers[int(np.argmax(lin))]
     best = max(lin)
@@ -191,6 +195,8 @@ def plot_refusal_layer_sweep():
 # PLOT 3 — Cyber Pleshkov sweeps (3 panels)
 # ============================================================================
 def plot_cyber_layer_sweeps():
+    # TF-IDF baseline AUC per cyber task (exp 09 D1)
+    tfidf = {"cyber_1": 0.946, "cyber_2": 0.887, "cyber_3": 0.890}
     fig, axes = plt.subplots(1, 3, figsize=(16, 5), sharey=True)
     for ax, task in zip(axes, ["cyber_1", "cyber_2", "cyber_3"]):
         d = load_pleshkov_sweep(task)
@@ -210,11 +216,15 @@ def plot_cyber_layer_sweeps():
                     label="Linear-on-16-PCs", capsize=3)
         ax.errorbar(layers, quad, yerr=quad_e, marker="^", color="#2ca02c", lw=2,
                     label="Pleshkov quadratic", capsize=3)
+        # TF-IDF baseline horizontal line
+        ax.axhline(tfidf[task], ls="--", color="#9467bd", lw=2.2,
+                    label=f"TF-IDF baseline = {tfidf[task]:.3f}")
+        ax.axhline(0.5, ls=":", color="grey", alpha=0.5, label="chance = 0.5")
         ax.set_xlabel("Layer"); ax.set_xticks(layers[::2])
-        ax.set_title(f"{task}")
-        ax.set_ylim(0.5, 1.05)
+        ax.set_title(f"{task}  (TF-IDF baseline = {tfidf[task]:.3f})")
+        ax.set_ylim(0.45, 1.05)
         if task == "cyber_1":
-            ax.legend(loc="lower right", framealpha=0.9, fontsize=9)
+            ax.legend(loc="lower right", framealpha=0.9, fontsize=8.5)
             ax.set_ylabel("AUC (5-fold CV mean ± 1σ)")
     fig.suptitle("Cyber tasks — linear vs quadratic vs PCA-bottleneck per layer", y=1.02)
     plt.tight_layout()
