@@ -1,0 +1,14 @@
+{
+  "n_target_prompts": 47,
+  "n_heuristic_flipped": 0,
+  "Pr_model_flipped_heuristic": {
+    "k": 0,
+    "n": 47,
+    "point": 0.0,
+    "ci": [
+      0.0,
+      0.07556017119838872
+    ]
+  },
+  "edit_description": "replace first-word 'during' with 'I'm working on'"
+}
