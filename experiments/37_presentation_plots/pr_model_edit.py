@@ -47,8 +47,8 @@ for k, v in phase3.items():
     methods.append((k.replace("_", " "), v["Pr_model_given_edit"]["k"], v["Pr_model_given_edit"]["n"]))
 methods.insert(0, ("first-word swap\n(during → I'm working on)", q9["n_heuristic_flipped"], q9["n_target_prompts"]))
 # rewrites_k7 from level2_metrics — Pr_model_given_edit
-pme = level2["Pr_model_flipped_given_edit"]
-methods.append(("substantial paraphrases\n(rewrites_k7, k=7)", pme["n_yes"], pme["n_total"]))
+pme = level2["metrics"]["pr_model_flipped_given_edit"]
+methods.append(("substantial paraphrases\n(rewrites_k7, k=7)", pme["k"], pme["n"]))
 
 names = [m[0] for m in methods]
 pts, los, his = zip(*[wilson(m[1], m[2]) for m in methods])
