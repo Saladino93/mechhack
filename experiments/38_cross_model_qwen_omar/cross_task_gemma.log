@@ -1,0 +1,46 @@
+=== Gemma cross-task @ L35 ===
+cyber_train_1500: 1500
+cyber_test:       2180
+refusal:          878  (with split=test/train; we use the dataset-defined splits)
+
+--- cyber_1: train_pool=750 test_pool=923 ---
+  caching 750 samples → crosstask_cyber_1_train_L35.npz (L35)
+    (750, 5376)  pos_rate=0.500  skipped=0  in 110.6s
+  caching 923 samples → crosstask_cyber_1_test_L35.npz (L35)
+    (918, 5376)  pos_rate=0.291  skipped=5  in 128.5s
+
+--- cyber_2: train_pool=1125 test_pool=1366 ---
+  caching 1125 samples → crosstask_cyber_2_train_L35.npz (L35)
+    (1125, 5376)  pos_rate=0.333  skipped=0  in 153.9s
+  caching 1366 samples → crosstask_cyber_2_test_L35.npz (L35)
+    (1361, 5376)  pos_rate=0.325  skipped=5  in 182.6s
+
+--- cyber_3: train_pool=1500 test_pool=2180 ---
+  caching 1500 samples → crosstask_cyber_3_train_L35.npz (L35)
+    (1500, 5376)  pos_rate=0.250  skipped=0  in 189.0s
+  caching 2180 samples → crosstask_cyber_3_test_L35.npz (L35)
+    (2175, 5376)  pos_rate=0.374  skipped=5  in 268.6s
+
+--- refusal: train_pool=589 test_pool=289 ---
+  caching 589 samples → crosstask_refusal_train_L35.npz (L35)
+    (589, 5376)  pos_rate=0.477  skipped=0  in 107.1s
+  caching 289 samples → crosstask_refusal_test_L35.npz (L35)
+    (289, 5376)  pos_rate=0.484  skipped=0  in 51.2s
+  train=cyber_1  → test=cyber_1 : AUC 0.9806  (bestC=10.0 on cyber_1)
+  train=cyber_1  → test=cyber_2 : AUC 0.9405  (bestC=10.0 on cyber_1)
+  train=cyber_1  → test=cyber_3 : AUC 0.7357  (bestC=10.0 on cyber_1)
+  train=cyber_1  → test=refusal : AUC 0.6602  (bestC=10.0 on cyber_1)
+  train=cyber_2  → test=cyber_1 : AUC 0.9478  (bestC=0.1 on cyber_2)
+  train=cyber_2  → test=cyber_2 : AUC 0.9722  (bestC=0.1 on cyber_2)
+  train=cyber_2  → test=cyber_3 : AUC 0.7769  (bestC=0.1 on cyber_2)
+  train=cyber_2  → test=refusal : AUC 0.7774  (bestC=0.1 on cyber_2)
+  train=cyber_3  → test=cyber_1 : AUC 0.8458  (bestC=0.1 on cyber_3)
+  train=cyber_3  → test=cyber_2 : AUC 0.8131  (bestC=0.1 on cyber_3)
+  train=cyber_3  → test=cyber_3 : AUC 0.9679  (bestC=0.1 on cyber_3)
+  train=cyber_3  → test=refusal : AUC 0.8130  (bestC=0.1 on cyber_3)
+  train=refusal  → test=cyber_1 : AUC 0.6818  (bestC=1.0 on refusal)
+  train=refusal  → test=cyber_2 : AUC 0.8269  (bestC=1.0 on refusal)
+  train=refusal  → test=cyber_3 : AUC 0.7957  (bestC=1.0 on refusal)
+  train=refusal  → test=refusal : AUC 0.9170  (bestC=1.0 on refusal)
+Saved /lambda/nfs/jsWnew/mechhack/experiments/38_cross_model_qwen_omar/gemma_cross_task_results.json
+Saved /lambda/nfs/jsWnew/mechhack/experiments/38_cross_model_qwen_omar/gemma_cross_task_matrix.png
