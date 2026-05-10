@@ -70,3 +70,4 @@ loading refusal train+test...
 
 --- multi-layer concat (mean, 13 layers) ---
   cyber_3-only concat → cyber_3 AUC=0.6476, refusal AUC=0.7412
+  refusal-only concat → refusal AUC=0.9137, cyber_3 AUC=0.8624

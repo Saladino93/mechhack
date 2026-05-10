@@ -1,0 +1,542 @@
+[
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 30,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9652026577356007
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 30,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.806830031282586
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 30,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.912460896767466
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 30,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7867669013349834
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 30,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9519922224900264
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 30,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.8640250260688218
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 30,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9147207902698385
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 30,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.787747653806048
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 30,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.8990615224191867
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 30,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7786431446753556
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 30,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.8992395163698239
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 30,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.832429614181439
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 35,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9727265532536397
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 35,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.8047966631908238
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 35,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.9126173096976017
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 35,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7946010698572924
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 35,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9556957130163573
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 35,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.8616266944734099
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 35,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9377034761368583
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 35,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.8095933263816476
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 35,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.9198123044838373
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 35,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7617948708724698
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 35,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9199288800313692
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 35,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.857924921793535
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 40,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9694988146671895
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 40,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.8112617309697602
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 40,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.9268508863399374
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 40,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7687234019591266
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 40,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9513096218806322
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 40,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.8704379562043796
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 40,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9367672610717999
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 40,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.8054744525547446
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 40,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.941657977059437
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 40,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.8113243351164288
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 40,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9178370104431598
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 40,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.8673096976016683
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 45,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9680733575316298
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "mean",
+    "layer": 45,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.7716371220020855
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 45,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.8916058394160584
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "mean",
+    "layer": 45,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7574186724991996
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 45,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9493922246484472
+  },
+  {
+    "variant": "combined",
+    "pooling": "mean",
+    "layer": 45,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.8401459854014598
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 45,
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.9368679873804324
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "last",
+    "layer": 45,
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.8238269030239833
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 45,
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.9367570385818561
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "last",
+    "layer": 45,
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.7782510315453215
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 45,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.9217653364798313
+  },
+  {
+    "variant": "combined",
+    "pooling": "last",
+    "layer": 45,
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.8798748696558916
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "concat_13_mean",
+    "layer": "all",
+    "train_set": "cyber_3_train",
+    "test_task": "cyber_3",
+    "n_train": 3266,
+    "n_test": 2180,
+    "auc": 0.6475523507002278
+  },
+  {
+    "variant": "cyber_3_only",
+    "pooling": "concat_13_mean",
+    "layer": "all",
+    "train_set": "cyber_3_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3266,
+    "n_test": 277,
+    "auc": 0.7411887382690302
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "concat_13_mean",
+    "layer": "all",
+    "train_set": "refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 555,
+    "n_test": 277,
+    "auc": 0.9137122002085506
+  },
+  {
+    "variant": "refusal_only",
+    "pooling": "concat_13_mean",
+    "layer": "all",
+    "train_set": "refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 555,
+    "n_test": 2180,
+    "auc": 0.8624186545123588
+  },
+  {
+    "variant": "combined",
+    "pooling": "concat_13_mean",
+    "layer": "all",
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "cyber_3",
+    "n_train": 3821,
+    "n_test": 2180,
+    "auc": 0.8826448570226022
+  },
+  {
+    "variant": "combined",
+    "pooling": "concat_13_mean",
+    "layer": "all",
+    "train_set": "cyber_3_train \u222a refusal_train",
+    "test_task": "refusal_gemma",
+    "n_train": 3821,
+    "n_test": 277,
+    "auc": 0.9005213764337852
+  }
+]
