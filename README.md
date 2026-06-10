@@ -1,5 +1,6 @@
 # Red-Team Mech-Interp Hackathon
 
+The task was to classify prompts across a four-tier cyber-harm taxonomy (benign, dual-use, high-risk dual-use, prohibited) from model internals, and to use that signal to flip model behavior. 
 
 
 Two open questions, in order:
